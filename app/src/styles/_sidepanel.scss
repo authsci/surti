@@ -1,0 +1,26 @@
+.sidepanel {
+
+  ul {
+    padding: 0;
+    margin: 96px 0 0 0;
+  }
+    
+    li {
+      list-style: none;
+      padding: 12px 12px;
+      border-top: 1px solid $color-gray-light;
+      margin: 0;
+      cursor: pointer;
+      color: $color-gray-dark;
+      
+      &:hover {
+        background: $color-gray-note;
+        color: $color-gray-darkest;
+      }
+      
+      &:last-child {
+        border-bottom: 1px solid $color-gray-light;
+
+      }
+    }
+}

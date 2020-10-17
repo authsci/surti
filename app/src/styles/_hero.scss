@@ -1,0 +1,263 @@
+.hero {
+  margin-top: 20px;
+
+  &-text {
+    height: 220px;
+
+    @media (min-width: $break-sm) {
+      height: 150px;
+    }
+  }
+
+  &-title {
+    font-size: $type-h1;
+    font-family: $font-default;
+    font-weight: $light;
+    color: $color-white;
+    text-transform: uppercase;
+    padding: 125px 50px 8px 50px;
+    line-height: $type-xxl;
+
+    @media (min-width: $break-sm) {
+      padding: 155px 50px 8px 50px;
+      line-height: $type-xxl;
+    }
+
+    &-dark {
+      @extend .hero-title;
+      color: $color-gray-darker;
+      padding: 125px 50px 8px 50px;
+
+      @media (min-width: $break-sm) {
+        padding: 155px 50px 8px 50px;
+      }
+    }
+  }
+
+  &-sub {
+    font-size: $type-base;
+    color: $color-white;
+    font-weight: $regular;
+    line-height: $type-xl;
+    text-align: left;
+    padding: 0 50px;
+    text-shadow: 1px 1px 0 $color-black;
+
+    @media (min-width: $break-sm) {
+      font-weight: $light;
+      text-align: justify;
+      text-shadow: none;
+    }
+
+    &-dark {
+      @extend .hero-sub;
+      color: $color-gray-medium;
+      font-weight: $regular;
+    }
+  }
+  &-h1 {
+    font-size: $type-h1;
+    font-family: $font-default;
+    font-weight: $light;
+    color: $color-white;
+    text-transform: uppercase;
+    padding: 125px 50px 8px 50px;
+    line-height: $type-xxl;
+
+    @media (min-width: $break-sm) {
+      padding: 155px 50px 8px 50px;
+      line-height: $type-xxl;
+    }
+
+    &-dark {
+      @extend .hero-title;
+      color: $color-gray-darker;
+      padding: 125px 50px 8px 50px;
+
+      @media (min-width: $break-sm) {
+        padding: 155px 50px 8px 50px;
+      }
+    }
+
+    &-warning {
+      @extend .hero-h1;
+      background: $color-pink;
+      color: $color-white;
+    }
+
+    &-covid {
+      @extend .hero-h1;
+      color: $color-pink;
+    }
+  }
+
+  &-h2 {
+    font-size: $type-base;
+    color: $color-white;
+    font-weight: $regular;
+    line-height: $type-xl;
+    text-align: left;
+    padding: 0 50px;
+    text-shadow: 1px 1px 0 $color-black;
+
+    &-covid {
+      @extend .hero-h2;
+      color: $color-gray-darker;
+      text-shadow: none;
+    }
+
+    @media (min-width: $break-sm) {
+      font-weight: $light;
+      text-align: justify;
+      text-shadow: none;
+    }
+
+    &-dark {
+      @extend .hero-sub;
+      color: $color-gray-medium;
+      font-weight: $regular;
+    }
+  }
+}
+
+.slide-hero {
+  background: $color-blue;
+  background: linear-gradient(to right, $color-blue 25%, $color-blue-half 72%);
+  height: 400px;
+  width: 100%;
+  display: flex;
+
+  &-covid {
+    @extend .slide-hero;
+    background-image: url("/img/virus.jpg?2069");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // filter: grayscale(25%); 
+
+    &-title {
+      font-size: $type-hero;
+      font-family: $font-hero;
+      font-weight: $ultra;
+      color: $color-red;
+      padding: 40px 50px 0 50px;
+      line-height: $type-xxl;
+      z-index: $z-ultimate;
+
+      @media (min-width: $break-sm) {
+        line-height: inherit;
+      }
+    }
+
+    &-sub {
+      padding: 12px 20px 0 50px;
+    }
+  }
+
+  &-white {
+    @extend .slide-hero;
+    background: $color-gray-slate;
+  }
+
+  &-lang {
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    font-size: $type-base;
+    color: $color-white-half;
+    font-family: $font-default;
+    padding: 12px 24px;
+    align-self: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    li {
+      color: $color-white;
+      background: transparent;
+      text-align: center;
+      margin-left: 5px;
+      border: none;
+
+      .selected {
+        color: $color-white;
+        background: #4aa988;
+
+        &:hover {
+          background: #4aa988;
+        }
+      }
+
+      a {
+        padding: 0 8px;
+
+        &:hover {
+          color: $color-white;
+          background: $color-white-slight;
+        }
+      }
+
+      &:first-child {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &-main {
+    align-self: center;
+  }
+
+  &-title {
+    font-size: $type-h1;
+    font-family: $font-default;
+    font-weight: $light;
+    color: $color-white;
+    text-transform: uppercase;
+    padding: 40px 50px 0 50px;
+    line-height: $type-xxl;
+    z-index: $z-ultimate;
+
+    @media (min-width: $break-sm) {
+      line-height: inherit;
+    }
+  }
+
+  &-sub {
+    font-size: $type-sm;
+    font-family: $font-default;
+    color: $color-blue-light;
+    font-weight: $light;
+    max-width: $break-xxs;
+    text-transform: uppercase;
+    padding: 0 80px;
+  }
+}
+
+.slide-hero-2 {
+  @extend .slide-hero;
+  background: $color-gray-slate !important;
+}
+
+.slide-text {
+  font-size: $type-xs;
+  color: $color-white;
+  margin: 10px 50px 10px 50px;
+  font-weight: $regular;
+  line-height: $type-lg;
+  text-align: left;
+
+  @media (min-width: $break-sm) {
+    line-height: $type-xl;
+    text-align: justify;
+    display: block;
+  }
+
+  &-covid {
+    @extend .slide-text;
+    color: $color-gray-dark;
+
+    img {
+      vertical-align: middle;
+      height: 25px;
+    }
+  }
+}

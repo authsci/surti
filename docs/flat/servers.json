@@ -1,0 +1,1443 @@
+[
+   {
+    "serverID": 1,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+   {
+    "serverID": 2,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 3,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 72
+},
+  {
+    "serverID": 4,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 72 
+},
+  {
+    "serverID": 5,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 6,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 7,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 71
+},
+  {
+    "serverID": 8,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 72
+},
+  {
+    "serverID": 9,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 10,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 11,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 12,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 13,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 14,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 15,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 16,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 17,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 18,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 19,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 20,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 21,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 22,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 23,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 24,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 25,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 1
+},
+  {
+    "serverID": 26,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 27,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 28,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 29,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 30,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 31,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 32,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 33,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 34,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 35,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 36,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 37,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 38,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 39,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 40,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 41,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 42,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 43,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 44,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 45,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 46,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 47,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 48,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 49,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 50,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 51,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 52,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 53,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 54,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 55,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 56,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 57,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 58,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 59,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 60,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 61,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 62,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 63,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 64,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 65,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 66,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 67,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 68,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 69,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 70,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 71,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 72,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 73,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 74,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 75,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 76,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 77,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 78,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 79,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 80,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 81,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 82,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 83,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 84,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 85,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 86,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 87,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 88,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 89,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 90,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 91,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 92,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 93,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 94,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 95,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 96,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 97,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 98,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 99,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+},
+  {
+    "serverID": 100,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 101,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 102,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 103,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 104,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 105,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 106,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 107,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 108,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 109,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 110,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 111,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 112,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 113,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 114,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 115,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 116,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 117,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 118,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 119,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 120,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 121,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 122,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 10
+
+  },
+  {
+    "serverID": 123,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 124,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 83
+
+  },
+  {
+    "serverID": 125,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 126,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 127,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 128,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 129,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 130,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 131,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 132,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 133,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 134,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 135,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 136,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 137,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 138,
+    "uptime": 1575283930,
+      "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 139,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  },
+  {
+    "serverID": 140,
+    "uptime": 1575283930,
+    "os": "linux",
+    "ip": "192.168.0.35",
+    "serverName": "test.web.test.local",
+    "platform": "Generic x86 64bit",
+    "location": "data center",
+    "value": 70 
+
+  }
+]

@@ -1,0 +1,111 @@
+.meter {
+  height: 7px;
+  width: 100%;
+  margin: 0 auto;
+
+  #meter-total {
+    display: block;
+    height: 5px;
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+    left: 0;
+    top: 7px;
+  }
+
+  #meter-progress {
+    display: block;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+  }
+
+  #meter-current {
+    display: inline-flex;
+    padding: 0;
+    position: relative;
+    right: 0;
+  }
+
+  #meter-end {
+    display: inline-flex;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    top: 3px;
+    position: relative;
+    float: right;
+  }
+
+}
+
+.progress::before {
+  content: "";
+  padding: 0 0;
+  color: $color-black;
+  display: inline-block;
+  animation: load 0.5s;
+}
+
+@for $i from 0 through 0 {
+  .level-#{$i}::before {
+    background: transparent;
+    width: 0;
+  }
+  .level-#{$i} {
+    left: 0;
+  }
+}
+
+@for $i from 1 through 25 {
+  .level-#{$i}::before {
+    background: linear-gradient(to right, $color-green-medium 0%, $color-green-medium 100%);
+    width: #{$i}#{"%"};
+  }
+  .level-#{$i} {
+    left: #{$i}#{"%"};
+  }
+}
+
+@for $i from 25 through 50 {
+  .level-#{$i}::before {
+    background: linear-gradient(to right, $color-green-medium 0%, $color-green-medium 50%, $color-yellow-medium 100%);
+    width: #{$i}#{"%"};
+  }
+
+  .level-#{$i} {
+    left: #{$i}#{"%"};
+  }
+}
+
+@for $i from 50 through 75 {
+  .level-#{$i}::before {
+    background: linear-gradient(to right, $color-green-medium 0%, $color-green-medium 25%, $color-yellow-medium 75%, $color-orange-medium 100%,);
+    width: #{$i}#{"%"};
+  }
+
+  .level-#{$i} {
+    left: #{$i}#{"%"};
+  }
+}
+
+@for $i from 75 through 100 {
+  .level-#{$i}::before {
+    background: linear-gradient(
+      to right,
+      $color-green-medium 0%,
+      $color-green-medium 25%,
+      $color-yellow-medium 50%,
+      $color-red-medium 75%,
+      $color-red-medium 100%
+    );
+    width: #{$i}#{"%"};
+  }
+
+  .level-#{$i} {
+    left: #{$i}#{"%"};
+  }
+}
+
+

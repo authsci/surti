@@ -1,0 +1,131 @@
+
+.blog-card {
+  display: flex;
+  flex-direction: row;
+  margin: 12px 24px;
+  background: $color-background;
+  line-height: 1.4;
+  border: 1px solid $color-blue-slight;
+  font-family: $font-default;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+
+  @media (min-width: $break-sm) {
+    margin: 12px 0;
+  }
+
+  &:hover {
+    .photo{
+      transform: scale(1.1) rotate(1deg);
+    }
+  }
+
+  a {
+    color: inherit;
+    &:hover {
+      color: $color-brand;
+    }
+  }
+  .meta {
+    position: relative;
+    z-index: 0;
+    height: 200px;
+  }
+  .photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform .2s;
+  }
+  
+  .description {
+
+    padding: 36px 24px;
+
+    a {
+     color: $color-gray-darkest;
+
+    }
+    background: $color-background;
+    position: relative;
+    z-index: 1;
+    
+    h1 {
+      font-family: $font-default;
+      margin: 0;
+      padding: 10px 0 0 0;
+      line-height: $type-sm !important;
+      font-size: $type-md !important;
+      font-weight: $light;
+
+    }
+   
+  }
+  p {
+    position: relative;
+    color: $color-gray-darkest !important;
+    margin: 5px 0;
+ 
+  }
+  &:hover {
+    .details {
+      left: 0%;
+    }
+  }
+
+    flex-direction: row;
+
+    .meta {
+      flex-basis: 33%;
+      height: auto;
+    }
+    .description {
+      flex-basis: 66%;
+      &:before {
+        // transform: skewX(-9deg);
+        content: "";
+        background: $color-background;
+        width: 50px;
+        position: absolute;
+        left: -10px;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
+    &.alt {
+      flex-direction: row-reverse;
+      .description {
+        &:before {
+          left: inherit;
+          right: -10px;
+          
+          // transform: skew(9deg)
+        }
+      }
+      .details {
+        // padding-left: 25px;
+      }
+    }
+    &-covid {
+      @extend .blog-card;
+      border: 1px solid $color-red-half;
+
+      h1 {
+        color: $color-red;
+      }
+
+      p {
+        color: $color-red;
+      }
+      }
+    
+}
+
+
+

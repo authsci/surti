@@ -1,0 +1,1064 @@
+.link,
+a {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+
+  &-urgent {
+    font-size: $type-tiny;
+    color: $color-blue-default;
+    border-bottom: 1px solid $color-blue-light;
+    cursor: pointer;
+  }
+
+  &-show {
+    color: $color-red-default;
+    border-bottom: 1px solid $color-red-light;
+    margin: 6px 0;
+    font-weight: $bold;
+    font-size: $type-default;
+    cursor: pointer;
+    transition: $transition-border, $transition-color;
+    
+    &:hover {
+      color: $color-red;
+      border-bottom: 1px solid $color-red-default;
+      transition: $transition-border, $transition-color;
+    }
+  }
+  
+  &-hide {
+    color: $color-blue-default;
+    border-bottom: 1px solid $color-blue-light;
+    margin: 6px 0;
+    font-weight: $bold;
+    font-size: $type-default;
+    cursor: pointer;
+    transition: $transition-border, $transition-color;
+    
+    &:hover {
+      color: $color-blue;
+      border-bottom: 1px solid $color-blue-default;
+      transition: $transition-border, $transition-color;
+    }
+  }
+
+  &-video {
+    color: $color-blue-medium;
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    font-size: $type-tiny;
+    align-items: center;
+    align-self: center;
+
+    i {
+      vertical-align: middle;
+      font-size: $type-md;
+    }
+  }
+
+  &-clear {
+    font-size: $type-teeny;
+    float: right;
+    color: $color-gray-dark;
+    border-bottom: 1px solid $color-gray-light;
+    cursor: pointer;
+    &:hover {
+      color: $color-gray-darkest;
+    }
+  }
+
+  &-org {
+    color: $color-blue-default;
+    font-size: $type-default;
+    border-bottom: 1px solid $color-blue-light;
+    cursor: pointer;
+    transition: $transition-border, $transition-color;
+
+    &:hover {
+      border-bottom: 1px solid $color-blue-half;
+      color: $color-blue;
+      transition: $transition-border, $transition-color;
+    }
+  }
+
+  &-list {
+    @extend .link-default;
+    padding: 4px 6px;
+    margin: 6px !important;
+    display: inline-block;
+    min-width: 65px;
+    text-align: center;
+    font-size: $type-default;
+    font-weight: $regular;
+    background: $color-brand-note;
+    color: $color-brand;
+
+    &:hover {
+      background: $color-brand-slight;
+
+      .MuiBadge-badge {
+        margin: -14px -24px 0 0;
+        background-color: $color-blue-medium !important;
+        color: $color-white !important;
+        font-size: $type-teeny !important;
+        flex-wrap: nowrap !important;
+        transform: scale(1) !important;
+
+        &:after {
+          content: "";
+          font-size: $type-note !important;
+          white-space: pre;
+        }
+      }
+    }
+
+    &-more {
+      @extend .link-list;
+      background: transparent !important;
+      color: $color-gray-dark;
+      min-width: 65px !important;
+      padding: 0 4px;
+      font-size: $type-default;
+
+      strong {
+        color: $color-black;
+      }
+
+      &:hover {
+        background: transparent;
+        color: $color-gray-darker;
+      }
+    }
+
+    &-alert {
+      @extend .link-list;
+      background: $color-red-note !important;
+      color: $color-red-medium !important;
+
+      &:hover {
+        background: $color-red-slight;
+        color: $color-red;
+      }
+    }
+  }
+
+
+
+  // &-list {
+  //   @extend .link-default;
+  //   padding: 4px 6px;
+  //   margin: 6px;
+  //   display: inline-block;
+  //   min-width: 65px;
+  //   text-align: center;
+  //   font-size: $type-default;
+  //   font-weight: $regular;
+  //   background: $color-brand-note;
+  //   color: $color-brand;
+
+  //   &:hover {
+  //     background: $color-brand-slight;
+
+  //     .MuiBadge-badge {
+  //       margin: -14px -24px 0 0;
+  //       background-color: $color-blue-medium !important;
+  //       color: $color-white !important;
+  //       font-size: $type-teeny !important;
+  //       flex-wrap: nowrap !important;
+  //       transform: scale(1) !important;
+
+  //       &:after {
+  //         content: "";
+  //         font-size: $type-note !important;
+  //         white-space: pre;
+  //       }
+  //     }
+  //   }
+
+  //   &-more {
+  //     @extend .link-list;
+  //     background: transparent;
+  //     color: $color-gray-dark;
+  //     min-width: 65px !important;
+  //     padding: 0 4px;
+  //     font-size: $type-default;
+
+  //     strong {
+  //       color: $color-black;
+  //     }
+
+  //     &:hover {
+  //       background: transparent;
+  //       color: $color-gray-darker;
+  //     }
+  //   }
+
+  //   &-alert {
+  //     @extend .link-list;
+  //     background: $color-red-note;
+  //     color: $color-red-medium;
+
+  //     &:hover {
+  //       background: $color-red-slight;
+  //       color: $color-red;
+  //     }
+  //   }
+  // }
+
+  &-cta {
+    text-align: center;
+    justify-content: center;
+    font-size: $type-default;
+    display: inline-flex;
+    padding: 2px;
+    min-width: 150px;
+    background: $color-blue-default;
+    color: $color-white;
+    border-radius: $radius-slight;
+    cursor: pointer;
+    transition: $transition-background;
+    text-decoration: none !important;
+
+    &--submitted {
+      @extend .link-cta;
+      background: transparent;
+      color: $color-blue;
+      padding: 1px 0;
+      border: 1px solid transparent;
+    }
+
+    &--register {
+      @extend .link-cta;
+      background: $color-blue;
+      color: $color-white;
+      padding: 1px 0;
+      border: 1px solid transparent;
+    }
+
+    &--registered {
+      @extend .link-cta;
+      background: transparent;
+      color: $color-green;
+      padding: 1px 0;
+      border: 1px solid transparent;
+
+      i {
+        color: $color-green;
+      }
+
+      &:hover {
+        color: $color-white !important;
+        background: $color-green !important;
+        transition: $transition-background;
+
+        i {
+          color: $color-white;
+        }
+      }
+    }
+
+    &--excluded {
+      color: $color-gray-darkest;
+      font-size: $type-default;
+      text-align: center;
+    }
+
+    i {
+      font-size: $type-tiny;
+      padding: 0 0 0 6px;
+      align-self: center;
+      color: $color-blue-half;
+    }
+
+    &:hover {
+      color: $color-white !important;
+      background: $color-blue;
+      transition: $transition-background;
+
+      i {
+        color: $color-white;
+      }
+    }
+  }
+
+  &-switch {
+    @extend .link-cta;
+    font-size: $type-teeny;
+    color: $color-white;
+    border: 1px solid $color-white-half;
+    cursor: pointer;
+    margin-left: 6px;
+    transition: $transition-background;
+
+    &-role {
+      // align-items: center;
+
+      i {
+        font-size: $type-xxs;
+        background: $color-blue-slight;
+        color: $color-blue-medium;
+        border-radius: $radius-slight;
+        display: inline-flex;
+        padding: 4px;
+      }
+    }
+
+    &:hover {
+      border: 1px solid $color-mid;
+      color: $color-white;
+      background: $color-mid;
+      transition: $transition-background;
+    }
+  }
+
+  &-default {
+    cursor: pointer !important;
+    color: $color-blue-medium;
+    background: $color-blue-note;
+    border-radius: $radius-slight;
+    font-size: $type-xxs;
+    padding: 4px 12px;
+    text-decoration: none;
+    width: auto;
+    margin: 0 24px;
+
+    i {
+      margin-right: 4px;
+      align-self: center;
+    }
+
+    &:hover {
+      background: $color-blue-slight;
+      color: $color-blue;
+    }
+
+    &-wide {
+      @extend .link-default;
+      display: block;
+      text-align: center;
+      margin: 0 24px;
+    }
+  }
+
+  &-top {
+    color: $color-gray-dark;
+
+    font-size: $type-default;
+    padding: 3px 8px;
+    position: fixed;
+    right: 12px;
+    bottom: 48px;
+    cursor: pointer;
+    z-index: $z-base;
+    transition: $transition-background;
+    text-align: center;
+
+    &:after {
+      content: "TOP";
+      display: block;
+      font-size: $type-teeny;
+    }
+
+    &:hover {
+      transition: $transition-background;
+      background: $color-gray-darker;
+      color: $color-white;
+
+      &:after {
+        content: "TOP";
+        display: block;
+        font-size: $type-teeny;
+      }
+    }
+  }
+
+  &-subscription {
+    &-full {
+      // border-radius: $radius-slight;
+      background: $color-brand-slight;
+      color: $color-brand;
+      border: none;
+      padding: 1px 6px;
+      font-size: $type-default;
+    }
+    &-alt {
+      // border-radius: $radius-slight;
+      background: $color-white;
+      border: 1px solid $color-brand-medium;
+      color: $color-brand;
+      padding: 0 6px;
+      font-size: $type-default;
+    }
+  }
+
+  &-title {
+    cursor: pointer !important;
+    color: $color-blue-default;
+    border-radius: $radius-slight;
+    font-size: $type-h2;
+    text-decoration: none;
+    border-bottom: 1px solid $color-blue-light;
+    width: auto;
+
+    &:hover {
+      color: $color-blue;
+      border-bottom: 1px solid $color-blue-half;
+    }
+
+    &-wide {
+      @extend .link-default;
+      display: block;
+      text-align: center;
+      margin: 0 24px;
+    }
+  }
+
+  &-small {
+    font-size: $type-default;
+    padding: 1px 6px;
+    margin: 0 3px 0 3px;
+    background: $color-gray-slight;
+    color: $color-gray-darker;
+    border-radius: $radius-slight;
+    cursor: pointer;
+    transition: $transition-background;
+
+    i {
+      margin-left: 2px;
+      font-size: $type-note;
+      color: $color-gray;
+      transition: $transition-color;
+    }
+    &:hover {
+      transition: $transition-background;
+      background: $color-gray-light;
+      i {
+        transition: $transition-color;
+        color: $color-gray-medium;
+      }
+    }
+
+    &-keyword {
+      @extend .link-small;
+      color: $color-white;
+      background: $color-mid-default;
+
+      i {
+        color: $color-white-medium;
+      }
+
+      &:hover {
+        background: $color-mid;
+        i {
+          color: $color-white;
+        }
+      }
+    }
+
+    &-urgent {
+      @extend .link-small;
+      background: $color-red-medium;
+      color: $color-white;
+
+      i {
+        color: $color-white-medium;
+      }
+
+      &:hover {
+        background: $color-red-default;
+        i {
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  &-sidenav {
+    @extend .link-default;
+    display: block;
+    text-align: left;
+    padding: 6px 12px;
+    color: $color-white;
+    background: transparent;
+    margin: 12px;
+
+    &:hover {
+      background: $color-blue-half;
+      color: $color-white;
+    }
+  }
+
+  &-more {
+    cursor: pointer !important;
+    color: $color-blue;
+    font-weight: $regular;
+    font-size: inherit;
+    text-decoration: none;
+    transition: $transition-opacity;
+    opacity: 0;
+    &:before {
+      content: "...";
+    }
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  &-text {
+    cursor: pointer;
+    color: $color-blue;
+    font-size: $type-default;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid $color-brand-slight;
+    transition: $transition-border;
+
+    &:hover {
+      color: $color-blue;
+      border-bottom: 1px solid $color-blue-medium;
+      transition: $transition-border;
+    }
+  }
+
+  &-user {
+    cursor: pointer !important;
+    color: $color-white;
+    background: $color-blue-default;
+    border-radius: $radius-slight;
+    display: flex;
+    padding: 2px 12px;
+    margin: 0 3px;
+    text-decoration: none;
+    width: auto;
+    align-items: center;
+    transition: $transition-background;
+    font-size: $type-xxs;
+
+    &:hover {
+      background: $color-blue;
+      transition: $transition-background;
+    }
+  }
+
+  &-sidepanel {
+    cursor: pointer !important;
+    color: $color-white;
+    display: flex;
+    text-decoration: none;
+    width: auto;
+    align-items: center;
+    transition: $transition-background;
+    font-size: $type-md;
+
+  }
+
+  &-lab {
+    cursor: pointer !important;
+    color: $color-white;
+    background: $color-gray-darkest;
+    border-radius: $radius-slight;
+    display: flex;
+    padding: 2px 12px;
+    margin: 0 3px;
+    text-decoration: none;
+    width: auto;
+    align-items: center;
+    transition: $transition-background;
+    font-size: $type-xxs;
+
+    &:hover {
+      background: $color-black;
+      transition: $transition-background;
+    }
+  }
+
+  &-logout {
+    @extend .link-user;
+    background: $color-white;
+    color: $color-red-medium;
+    width: auto !important;
+    padding: 2px 8px;
+    font-size: $type-xxs;
+
+    &:hover {
+      background: $color-white;
+      color: $color-red;
+    }
+  }
+
+  &-dialog {
+    color: $color-white;
+    font-size: $type-xxs !important;
+    padding: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin: 6px 0;
+    font-weight: $regular;
+
+    @media (min-width: $break-sm) {
+      font-size: $type-xxs !important;
+      line-height: $type-md;
+      width: 100%;
+    }
+
+    &:hover {
+      background: $color-blue-medium;
+      color: $color-white;
+    }
+  }
+
+  &-cart {
+    color: $color-white;
+    font-size: $type-default;
+    border-radius: $radius-slight;
+    padding: 4px;
+    margin: 0 12px;
+    align-self: center;
+    outline: none;
+    text-decoration: none;
+    transition: $transition-scale;
+    transform: scale(1);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+
+    i {
+      font-size: $type-md;
+      color: $color-blue-default;
+    }
+  }
+
+  &-oasys {
+    background: $color-blue-default;
+    color: $color-white;
+    font-size: $type-xxs;
+    border-radius: $radius-slight;
+    padding: 4px 10px;
+    align-self: center;
+    outline: none;
+    text-decoration: none;
+    transition: $transition-background;
+    margin: 0 12px;
+
+    cursor: pointer;
+
+    &:hover {
+      transition: $transition-background;
+      background: $color-blue;
+      color: $color-white;
+    }
+  }
+
+  &-signup {
+    font-size: $type-xxs;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    color: $color-blue;
+    margin: 0 6px;
+    padding: 2px 0;
+    transition: $transition-background;
+    border-radius: $radius-slight;
+    border-bottom: 1px solid $color-blue-half;
+    font-weight: $regular;
+
+    &:hover {
+      padding: 2px 6px;
+      margin: 2px 0;
+      color: $color-white;
+      transition: $transition-color;
+      background: $color-blue-default;
+      border-bottom: 1px solid transparent !important;
+    }
+  }
+
+  &-inert {
+    text-decoration: none !important;
+    color: $color-gray-darkest !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+
+
+    span {
+      font-weight: $light;
+      align-items: center;
+      align-self: center;
+      color: $color-white;
+    }
+    strong {
+      color: $color-white;
+      align-self: center;
+      align-items: center;
+      font-weight: $bold;
+    }
+
+    &:hover {
+    }
+  }
+
+  &-close {
+    background: transparent;
+    color: $color-gray;
+    font-size: $type-default;
+    justify-content: flex-end;
+    display: flex;
+    cursor: pointer;
+    outline: none;
+    transition: $transition-color;
+
+    &:hover {
+      transition: $transition-color;
+      color: $color-gray-darkest;
+    }
+
+    &--modal {
+      @extend .link-close;
+      padding: 0 0 6px 0;
+    }
+
+    &--menu {
+      @extend .link-close--modal;
+      color: $color-white;
+      padding: 6px 12px 6px 12px;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+  &-forgot {
+    text-decoration: none;
+    color: $color-blue-medium;
+    font-size: $type-xxs;
+    padding: 0 6px;
+    margin: 0 auto;
+    width: auto;
+    cursor: pointer !important;
+
+    &:hover {
+      color: $color-blue-medium;
+    }
+  }
+
+  &-sso {
+    background: $color-blue-default;
+    color: $color-white;
+    font-size: $type-xxs;
+    text-decoration: none;
+    padding: 4px 6px;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    width: 120px;
+    margin: 0 auto;
+    border-radius: $radius-slight;
+    transition: $transition-background;
+
+    &:hover {
+      background: $color-blue;
+    }
+
+    &-disabled {
+      @extend .link-sso;
+      background: $color-gray-light;
+      color: $color-gray;
+      cursor: not-allowed;
+
+      &:hover {
+        background: $color-gray-light;
+        color: $color-gray;
+      }
+    }
+  }
+
+  &-login {
+    font-size: $type-xxs;
+    font-weight: $regular;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background: $color-blue-default;
+    color: $color-white;
+    padding: 2px 12px;
+    border-radius: $radius-slight;
+    text-decoration: none;
+    margin: 0 6px;
+
+    &:hover {
+      transition: $transition-background;
+      background: $color-blue;
+    }
+  }
+
+  &-download {
+    font-size: $type-xxs;
+    font-weight: $regular;
+    justify-content: center;
+    display: block;
+    cursor: pointer;
+    background: $color-blue-default;
+    color: $color-white;
+    padding: 4px 12px;
+    border-radius: $radius-slight;
+    text-decoration: none;
+    margin: 0 6px;
+
+    &:hover {
+      transition: $transition-background;
+      background: $color-blue;
+    }
+  }
+
+  &-cancel {
+    @extend .link-login;
+    font-size: $type-xxs;
+    padding: 4px 6px;
+    background: $color-gray-slight;
+    color: $color-gray-dark;
+    width: 50%;
+    flex: 1;
+    margin: 6px 3px;
+    transition: $transition-background;
+    display: inline-flex;
+
+    &:hover {
+      background: $color-gray-light;
+      color: $color-gray-dark;
+      transition: $transition-background;
+    }
+  }
+
+  &-save {
+    @extend .link-login;
+    font-size: $type-xxs;
+    padding: 4px 6px;
+    background: $color-gray-darker;
+    color: $color-white;
+    width: 50%;
+    flex: 1;
+    margin: 6px 3px;
+    transition: $transition-background;
+    display: inline-flex;
+
+    &:hover {
+      background: $color-gray-darkest;
+      transition: $transition-background;
+    }
+  }
+
+  &-menu {
+    cursor: pointer;
+    color: $color-gray-darker;
+    font-size: $type-xxs;
+    margin: 24px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0;
+    border-bottom: 1px solid transparent;
+
+    i {
+      color: $color-blue-medium;
+      font-size: $type-md;
+    }
+
+    b {
+      font-weight: $regular;
+    }
+
+    &-hilite b {
+      @extend .link-menu;
+      margin: 0;
+      font-weight: $regular;
+      border-bottom: 1px solid $color-blue-half;
+
+      &:hover {
+        border-bottom: 1px solid $color-blue-medium;
+      }
+
+    }
+
+
+    &--top {
+      @extend .link-menu;
+
+      i {
+        color: $color-white;
+        font-size: $type-md;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &-nav {
+      // @extend .link-menu;
+      margin: 0 6px;
+      cursor: pointer;
+
+      i {
+        color: $color-white !important;
+        font-size: $type-md;
+        justify-content: center;
+        align-items: flex-end;
+      }
+    }
+  }
+
+  &-signout {
+    color: $color-red-medium;
+    padding: 2px 6px;
+    font-size: $type-default;
+    border-radius: $radius-slight;
+    text-decoration: none;
+    float: right;
+
+    i {
+      margin-left: 3px;
+      color: $color-red-half;
+    }
+
+    &:hover {
+      color: $color-red-default;
+      i {
+        color: $color-red-default;
+      }
+    }
+  }
+
+  &-novel {
+    background: $color-gray-darker;
+    color: $color-white;
+    font-size: $type-xxs;
+    border-radius: $radius-slight;
+    padding: 4px 6px;
+    align-self: center;
+    outline: none;
+    text-decoration: none;
+    transition: $transition-scale;
+    margin-right: 12px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: $transition-color, $transition-background;
+
+    &:hover {
+      background: transparent;
+      color: $color-gray-darker;
+      border: 2px solid $color-gray-darker;
+      transition: $transition-color, $transition-background;
+    }
+  }
+
+  &-breadcrumbs {
+    text-decoration: none !important;
+    color: $color-blue !important;
+    border-bottom: 1px solid $color-blue-slight !important;
+    font-weight: $light;
+    font-size: $type-default !important;
+
+    i {
+      font-size: $type-xs;
+      color: $color-blue;
+      transition: $transition-color;
+      margin: 0 10px;
+      border-bottom: 1px solid transparent !important;
+    }
+
+    &:hover {
+      color: $color-blue !important;
+      border-bottom: 1px solid $color-blue-medium !important;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer !important;
+    padding: 10px;
+    background: transparent;
+    transition: $transition-background;
+    margin: 0 0 30px 0;
+    color: $color-gray;
+    text-decoration: none;
+    border-radius: $radius-slight;
+
+    i {
+      font-size: $type-md;
+      transition: $transition-scale;
+    }
+
+    &:hover {
+      color: $color-blue-medium;
+      background: $color-blue-slight;
+      transition: $transition-background;
+
+      i {
+        transform: scale(1.3);
+        transition: $transition-scale;
+      }
+    }
+  }
+
+  &-logo {
+    @extend .link-nav;
+    transition: $transition-scale;
+
+    i {
+      color: $color-blue-medium;
+      font-size: $type-lg;
+    }
+
+    &:hover {
+      background: transparent;
+      transition: $transition-scale;
+
+      i {
+        color: $color-blue-medium;
+      }
+    }
+  }
+
+  &-avatar {
+    color: $color-gray-light;
+    font-size: $type-md;
+  }
+
+  &-profile {
+    color: $color-white-medium;
+    font-size: $type-md;
+    margin-right: 8px;
+    i {
+      cursor: pointer !important;
+    }
+  }
+
+  &-icon {
+    color: $color-blue;
+    font-size: $type-xs;
+    padding: 4px 8px;
+    display: inline-flex;
+    border-radius: $radius-slight;
+
+    i {
+      font-size: $type-md !important;
+    }
+
+    &:hover {
+      color: $color-white;
+      background: $color-blue-slight;
+      transition: $transition-background;
+    }
+
+    cursor: pointer !important;
+  }
+}

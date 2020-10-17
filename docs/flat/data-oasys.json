@@ -1,0 +1,212 @@
+[
+  {
+    "id": "0",
+    "title": "Business Value Velocity",
+    "identifier": "business-value-velocity",
+    "chartType": "line",
+    "threshold": 7,
+    "tooltip": "Business Value Velocity tracks the sprint over sprint delivery of the business value within the software.",
+    "entries": [
+      {
+        "sprint": null,
+        "value": null
+      },
+      {
+        "sprint": 1,
+        "value": 15
+      },
+      {
+        "sprint": 2,
+        "value": 10
+      },
+      {
+        "sprint": 3,
+        "value": 5
+      },
+      {
+        "sprint": 4,
+        "value": 14
+      },
+      {
+        "sprint": 5,
+        "value": 13
+      },
+      {
+        "sprint": 6,
+        "value": 22
+      },
+      {
+        "sprint": null,
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "title": "Story Point Velocity",
+    "identifier": "story-point-velocity",
+    "chartType": "line",
+    "threshold": 15,
+    "tooltip": "Story Point Velocity track the sprint over sprint execution of effort by the team.",
+    "entries": [
+      {
+        "sprint": null,
+        "value": null
+      },
+      {
+        "sprint": 1,
+        "value": 10
+      },
+      {
+        "sprint": 2,
+        "value": 45
+      },
+      {
+        "sprint": 3,
+        "value": 13
+      },
+      {
+        "sprint": 4,
+        "value": 33
+      },
+      {
+        "sprint": 5,
+        "value": 21
+      },
+      {
+        "sprint": 6,
+        "value": 9
+      },
+      {
+        "sprint": null,
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Defects/Stories Completed",
+    "identifier": "defects-per-stories",
+    "chartType": "line",
+    "threshold": 12,
+    "tooltip": "Software flaws found during software development should be minimized to speed delivery of features.",
+    "entries": [
+      {
+        "sprint": null,
+        "value": null
+      },
+      {
+        "sprint": 1,
+        "value": 4
+      },
+      {
+        "sprint": 2,
+        "value": 7
+      },
+      {
+        "sprint": 3,
+        "value": 9
+      },
+      {
+        "sprint": 4,
+        "value": 15
+      },
+      {
+        "sprint": 5,
+        "value": 3
+      },
+      {
+        "sprint": 6,
+        "value": 12
+      },
+      {
+        "sprint": null,
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Current Bug Count",
+    "identifier": "bug-count",
+    "chartType": "line",
+    "threshold": 6,
+    "tooltip": "Software flaws found in production software, should not accumulate.",
+    "entries": [
+      {
+        "sprint": null,
+        "value": null
+      },
+      {
+        "sprint": 1,
+        "value": 1
+      },
+      {
+        "sprint": 2,
+        "value": 3
+      },
+      {
+        "sprint": 3,
+        "value": 5
+      },
+      {
+        "sprint": 4,
+        "value": 5
+      },
+      {
+        "sprint": 5,
+        "value": 7
+      },
+      {
+        "sprint": 6,
+        "value": 13
+      },
+      {
+        "sprint": null,
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Average Age of Bugs",
+    "identifier": "bugs-average-age",
+    "chartType": "bar",
+    "threshold": 1,
+    "tooltip": "Software flaws found in production software, should be dealt with promptly",
+    "entries": [
+      {
+        "sprint": null,
+        "value": null
+      },
+      {
+        "sprint": 1,
+        "value": 15
+      },
+      {
+        "sprint": 2,
+        "value": 11
+      },
+      {
+        "sprint": 3,
+        "value": 10
+      },
+      {
+        "sprint": 4,
+        "value": 7
+      },
+      {
+        "sprint": 5,
+        "value": 6
+      },
+      {
+        "sprint": 6,
+        "value": 3
+      },
+      {
+        "sprint": null,
+        "value": null
+      }
+    ]
+  }
+]

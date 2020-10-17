@@ -1,0 +1,169 @@
+
+$font-hero: "Prompt", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif, -apple-system;
+$font-brand: "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif, -apple-system;
+$font-default: "Menlo","Monaco","Consolas","Liberation Mono","Courier New",monospace;
+// $font-default: "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif, -apple-system;
+$font-awesome: "Font Awesome 5 Free", "FontAwesome", "Material Icons";
+$font-script: "Audiowide", "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif, -apple-system;
+
+$color-yellow: rgba(255, 222, 99, 1);
+$color-yellow-default: rgba(255, 222, 99, 0.9);
+$color-yellow-medium: rgba(255, 222, 99, 0.75);
+$color-yellow-half: rgba(255, 222, 99, 0.5);
+$color-yellow-light: rgba(255, 222, 99, 0.3);
+$color-yellow-slight: rgba(255, 222, 99, 0.15);
+$color-yellow-note: rgba(255, 222, 99, 0.06);
+
+$color-orange: rgba(255, 157, 99, 1);
+$color-orange-default: rgba(255, 157, 99, 0.9);
+$color-orange-medium: rgba(255, 157, 99, 0.75);
+$color-orange-half: rgba(255, 157, 99, 0.5);
+$color-orange-light: rgba(255, 157, 99, 0.3);
+$color-orange-slight: rgba(255, 157, 99, 0.15);
+$color-orange-note: rgba(255, 157, 99, 0.06);
+
+$color-pink: rgba(255, 123, 123, 1);
+$color-pink-default: rgba(255, 123, 123, 0.9);
+$color-pink-medium: rgba(255, 123, 123, 0.75);
+$color-pink-half: rgba(255, 123, 123, 0.5);
+$color-pink-light: rgba(255, 123, 123, 0.3);
+$color-pink-slight: rgba(255, 123, 123, 0.15);
+$color-pink-note: rgba(255, 123, 123, 0.06);
+
+$color-white: #fff;
+$color-white-light: rgba(255, 255, 255, 0.3);
+$color-white-half: rgba(255, 255, 255, 0.5);
+$color-white-medium: rgba(255, 255, 255, 0.75);
+$color-white-default: rgba(255, 255, 255, 0.9);
+$color-white-slight: rgba(255, 255, 255, 0.15);
+$color-white-note: rgba(255, 255, 255, 0.06);
+
+
+$color-blue: rgba(29,79,127, 1); 
+$color-blue-default: rgba(29,79,127, 0.85);
+$color-blue-medium: rgba(29,79,127, 0.75);
+$color-blue-half: rgba(29,79,127, 0.5);
+$color-blue-light: rgba(29,79,127, 0.3);
+$color-blue-slight: rgba(29,79,127, 0.2);
+$color-blue-note: rgba(22, 38, 53, 0.06);
+$color-blue-hover: rgba(29,79,127, 0.1);
+
+
+$color-red: rgba(183, 5, 0, 1); // C23F42
+$color-red-default: rgba(183, 5, 0, 0.85);
+$color-red-medium: rgba(183, 5, 0, 0.75);
+$color-red-half: rgba(183, 5, 0, 0.5);
+$color-red-light: rgba(183, 5, 0, 0.3);
+$color-red-slight: rgba(183, 5, 0, 0.15);
+$color-red-note: rgba(183, 5, 0, 0.06);
+
+// alt blue is 0b4693 or 11, 70, 147
+
+$color-mid: #0077A1;
+$color-mid-default: rgba(0,119,161,.85);
+$color-mid-medium: rgba(0,119,161,.75);
+$color-mid-half: rgba(0,119,161,.5);
+$color-mid-light: rgba(0,119,161,.3);
+$color-mid-slight: rgba(0,119,161,.15);
+$color-mid-note: rgba(0,119,161,.06);
+
+$color-brand: rgba(60, 120, 198, 1); // 3c78c6
+$color-brand-default: rgba(60, 120, 198, 0.9);
+$color-brand-medium: rgba(60, 120, 198, 0.75);
+$color-brand-half: rgba(60, 120, 198, 0.5);
+$color-brand-light: #c5d7ed;
+// $color-brand-light: rgba(60, 120, 198, 0.3);
+$color-brand-slight: rgba(60, 120, 198, 0.15);
+$color-brand-note: rgba(60, 120, 198, 0.06);
+
+$color-green: #009EAB;
+$color-green-default: rgba(0, 158, 171, 0.9);
+$color-green-medium: rgba(0, 158, 171, 0.75);
+$color-green-half: rgba(0, 158, 171, 0.5);
+$color-green-light: rgba(0, 158, 171, 0.3);
+$color-green-slight: rgba(0, 158, 171, 0.15);
+$color-green-note: rgba(0, 158, 171, 0.06);
+
+$color-gray-solid: #e3e6eb; // #788898
+$color-gray: #9eadbd; // #788898
+$color-gray-slate: #f5f7f8;
+$color-gray-light: rgba(158, 173, 189, 0.3);
+// $color-gray-medium: rgba(158, 173, 189, 0.75);
+$color-gray-medium: #71879D;
+$color-gray-half: rgba(158, 173, 189, 0.5);
+$color-gray-slight: rgba(158, 173, 189, 0.15);
+$color-gray-subtle: rgba(158, 173, 189, 0.1);
+$color-gray-note: rgba(158, 173, 189, 0.06);
+$color-gray-dark: #576573;
+$color-gray-darker: #273a54;
+$color-gray-darkest: #182333;
+$color-black: #121d2d;
+
+$color-background: $color-white;
+
+$color-indicator: $color-green;
+$color-indicator-text: $color-white;
+
+$ultra: 200;
+$light: 300;
+$regular: 400;
+$bold: 600;
+
+$radius-round: 25px;
+$radius-default: 3px;
+$radius-module: 6px;
+$radius-slight: 2px;
+
+$type-h1: 24px;
+$type-h2: 19px;
+$type-h3: 15px;
+$type-h4: 13px;
+$type-huge: 90px;
+$type-big: 50px;
+$type-metric: 35px;
+$type-hero: 36px;
+$type-xxl: 32px;
+$type-dashboard: 21px;
+$type-xl: 23px;
+$type-lg: 21px;
+$type-icon: 22px;
+$type-md: 16px;
+$type-sm: 14px;
+$type-xs: 13px;
+$type-xxs: 12px;
+$type-default: 11px;
+$type-tiny: 10px;
+$type-teeny: 9px;
+$type-note: 8px;
+$type-base: $type-xxs;
+
+$transition-opacity: opacity 0.2s linear;
+$transition-background: color 0.1s ease-in, background 0.1s ease-in;
+$transition-color: color 0.2s linear;
+$transition-scale: transform 0.2s linear;
+$transition-filter: filter 0.4s ease-in;
+$transition-boxshadow: box-shadow 0.2s ease-in;
+$transition-shift: margin-left 0.2s linear;
+$transition-font: font-size 0.2s linear;
+$transition-border: border 0.2s linear;
+$transition-indent: margin-left 0.2s ease-in;
+
+$transition-all: all 0.2s ease-in;
+
+$z-ultimate: 20000;
+$z-penultimate: 10000;
+$z-menu: 7000;
+$z-nav: 1400;
+$z-slider: 2000;
+$z-footer: 1000;
+$z-default: 400;
+$z-title: 300;
+$z-base: 0;
+
+$break-xxs: 480px;
+$break-xs: 720px;
+$break-sm: 840px;
+$break-md: 960px;
+$break-lg: 1280px;
+$break-xl: 1440px;
+$break-xxl: 1700px;

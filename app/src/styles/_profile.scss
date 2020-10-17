@@ -1,0 +1,33 @@
+.profile {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+
+  #profile-contain {
+    flex: 1;
+  }
+
+  h3 {
+    font-size: $type-h3;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-weight: $regular;
+    color: $color-gray-dark;
+  }
+
+  div {
+    font-size: $type-xxs;
+    font-weight: $regular;
+
+    small {
+      font-size: $type-tiny;
+    }
+
+    strong {
+      font-weight: $bold;
+      color: $color-gray-darker;
+    }
+  }
+}
+

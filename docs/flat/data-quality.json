@@ -1,0 +1,212 @@
+[
+  {
+    "id": "0",
+    "title": "Average Age of QDI",
+    "identifier": "resolution-time-report",
+    "chartType": "line",
+    "threshold": 14,
+    "tooltip": "TBD",
+    "entries": [
+      {
+        "sprint": null,
+        "value": null
+      },
+      {
+        "sprint": 1,
+        "value": 15
+      },
+      {
+        "sprint": 2,
+        "value": 10
+      },
+      {
+        "sprint": 3,
+        "value": 5
+      },
+      {
+        "sprint": 4,
+        "value": 14
+      },
+      {
+        "sprint": 5,
+        "value": 13
+      },
+      {
+        "sprint": 6,
+        "value": 22
+      },
+      {
+        "sprint": null,
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "title": "Resolved QDIs",
+    "identifier": "resolved",
+    "chartType": "line",
+    "threshold": 4,
+    "tooltip": "TBD",
+    "entries": [
+      {
+        "sprint": null,
+        "value": null
+      },
+      {
+        "sprint": 1,
+        "value": 1
+      },
+      {
+        "sprint": 2,
+        "value": 6
+      },
+      {
+        "sprint": 3,
+        "value": 4
+      },
+      {
+        "sprint": 4,
+        "value": 8
+      },
+      {
+        "sprint": 5,
+        "value": 6
+      },
+      {
+        "sprint": 6,
+        "value": 7
+      },
+      {
+        "sprint": null,
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Opened QDI",
+    "identifier": "open",
+    "chartType": "line",
+    "threshold": 4,
+    "tooltip": "TBD",
+    "entries": [
+      {
+        "sprint": null,
+        "value": null
+      },
+      {
+        "sprint": 1,
+        "value": 9
+      },
+      {
+        "sprint": 2,
+        "value": 12
+      },
+      {
+        "sprint": 3,
+        "value": 10
+      },
+      {
+        "sprint": 4,
+        "value": 7
+      },
+      {
+        "sprint": 5,
+        "value": 11
+      },
+      {
+        "sprint": 6,
+        "value": 10
+      },
+      {
+        "sprint": null,
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "QDI Count",
+    "identifier": "bug-count",
+    "chartType": "line",
+    "threshold": 6,
+    "tooltip": "TBD",
+    "entries": [
+      {
+        "sprint": null,
+        "value": null
+      },
+      {
+        "sprint": 1,
+        "value": 1
+      },
+      {
+        "sprint": 2,
+        "value": 3
+      },
+      {
+        "sprint": 3,
+        "value": 5
+      },
+      {
+        "sprint": 4,
+        "value": 5
+      },
+      {
+        "sprint": 5,
+        "value": 7
+      },
+      {
+        "sprint": 6,
+        "value": 13
+      },
+      {
+        "sprint": null,
+        "value": null
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Oldest QDI",
+    "identifier": "bugs-average-age",
+    "chartType": "bar",
+    "threshold": 1,
+    "tooltip": "TBD",
+    "entries": [
+      {
+        "sprint": null,
+        "value": null
+      },
+      {
+        "sprint": 1,
+        "value": 15
+      },
+      {
+        "sprint": 2,
+        "value": 11
+      },
+      {
+        "sprint": 3,
+        "value": 10
+      },
+      {
+        "sprint": 4,
+        "value": 7
+      },
+      {
+        "sprint": 5,
+        "value": 6
+      },
+      {
+        "sprint": 6,
+        "value": 3
+      },
+      {
+        "sprint": null,
+        "value": null
+      }
+    ]
+  }
+]

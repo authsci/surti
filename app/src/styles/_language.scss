@@ -1,0 +1,61 @@
+.lang {
+  font-size: $type-xs;
+
+  ul {
+    display: inline-flex;
+    list-style: none;
+    color: $color-gray-dark;
+    padding: 0;
+    margin: 3px 0;
+
+    li {
+      justify-content: flex-end;
+      color: $color-gray-dark !important;
+      background: transparent;
+      text-align: center;
+      border: none !important;
+      margin-right: 9px;
+
+      a {
+        cursor: pointer;
+        padding: 1px 3px;
+        text-transform: uppercase;
+        font-size: $type-tiny;
+
+        &:hover {
+          color: $color-white;
+          background: $color-brand-half;
+        }
+      }
+
+      .selected {
+        color: $color-white;
+        background: $color-brand-medium;
+        border-radius: 0;
+        min-width: 50px !important;
+        display: block;
+        padding: 3px;
+
+        &:hover {
+          color: $color-white;
+          background: $color-brand;
+        }
+      }
+
+      .unselected {
+        
+        color: $color-brand;
+        background: $color-brand-slight;
+        border-radius: 0;
+        min-width: 50px !important;
+        display: block;
+        padding: 3px;
+
+        &:hover {
+          color: $color-brand;
+          background: $color-brand-light;
+        }
+      }
+    }
+  }
+}
