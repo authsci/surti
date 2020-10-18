@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+import { Link } from 'react-router-dom';
 
 import ReactTooltip from "react-tooltip";
 
@@ -29,7 +30,6 @@ export default function SwipeableTemporaryDrawer() {
 		right: false,
 	});
 
-
 	const toggleDrawer = (side, open) => (event) => {
 		if (
 			event &&
@@ -42,7 +42,6 @@ export default function SwipeableTemporaryDrawer() {
 		setState({ ...state, [side]: open });
 	};
 
-
 	return (
 		<Fragment>
 			{state.right ? (
@@ -52,10 +51,10 @@ export default function SwipeableTemporaryDrawer() {
 					</a>
 				</div>
 			) : (
-        <div className="layout-row flex-right">
+				<div className="layout-row flex-right">
 					<a className="link-sidepanel" onClick={toggleDrawer("right", true)}>
 						{/* <i className="fas fa-bars"></i> */}
-        <span className="material-icons">menu</span>
+						<span className="material-icons">menu</span>
 					</a>
 				</div>
 			)}
@@ -69,17 +68,25 @@ export default function SwipeableTemporaryDrawer() {
 			>
 				<div className="sidepanel">
 					<div className="dock-top">{/* nothing here yet */}</div>
-					<div className="nudge-xl"></div>
+					<div className="nudge-xxl"></div>
 
-					<ul>
-						<li>About</li>
+						<h3>Extimacies Programs</h3>
+						<a>About</a>
 						<li>People</li>
 						<li>Events</li>
 						<li>Publications</li>
 						<li>Initiatives</li>
 						<li>Courses</li>
-					</ul>
 
+            <div className="nudge-md"></div>
+
+						<h3>Extimacies Institutions</h3>
+						<Link to={"/institution/" + 1} onClick={toggleDrawer("right", false)}>The American University of Beirut</Link>
+						<Link to={"/institution/" + 2} onClick={toggleDrawer("right", false)}>The American University in Cairo</Link>
+						<Link to={"/institution/" + 3} onClick={toggleDrawer("right", false)}>Federal University of ABC</Link>
+						<Link to={"/institution/" + 4} onClick={toggleDrawer("right", false)}>The Ibero-American University</Link>
+
+					<div className="nudge-xxl"></div>
 					{/* 					
 					<Link to="/login" className="link-text" data-tip data-for="username">
 						Change Password?

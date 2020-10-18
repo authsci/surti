@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Moment from "react-moment";
-import Markdown from "markdown-to-jsx";
 import ReactTooltip from "react-tooltip";
 import { Events, animateScroll as scroll } from "react-scroll";
 import { FilterableContent, FilterableSection } from "react-filterable-content";
@@ -24,7 +23,9 @@ export default class Activities extends React.Component {
 			loading: true,
 			keyword: "",
 			organizations: [],
-		};
+    };
+    
+    console.log(this.props.match.params.id);
 	}
 
 	componentDidMount() {
@@ -35,7 +36,10 @@ export default class Activities extends React.Component {
 		});
 
 		window.scrollTo(0, 0);
+
+
 	}
+
 
 	handleChange = () => {
 		if (event && event.target) {
@@ -90,41 +94,21 @@ export default class Activities extends React.Component {
 						</div>
 					</div>
 				) : (
-					<Fragment>
-						<div className="mainmenu">
-							{organizations.map(
-								(item, index) =>
-									item.fields.type == "org" && (
-										<Fragment key={index}>
-											<Link
-												to={"/institution/" + index}
-												className="link-title"
-											>
-												<h1>{item.fields.code}</h1>
-												<div
-													className={`link-block-` + item.fields.color}
-												></div>
-												<small>{item.fields.name}</small>
-											</Link>
-											<br />
-										</Fragment>
-									)
-							)}
-						</div>
-
-						<div className="nudge-xl"></div>
-
-						<div className="about">
-							{organizations.map(
-								(item, index) =>
-									item.fields.type == "about" && (
-										<Fragment key={index}>
-											<Markdown>{item.fields.body}</Markdown>
-										</Fragment>
-									)
-							)}
-						</div>
-					</Fragment>
+					<div className="mainmenu">
+						{organizations.map(
+							(item, index) =>
+								item.fields.type == "org" && (
+									<Fragment key={index}>
+										<div className="link-title">
+											<h1>{item.fields.code}</h1>
+											<div className={`link-block-` + item.fields.color}></div>
+											<small>{item.fields.name}</small>
+										</div>
+										<br />
+									</Fragment>
+								)
+						)}
+					</div>
 				)}
 
 				<div className="footer">

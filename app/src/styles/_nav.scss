@@ -67,6 +67,8 @@
       font-size: $type-sm;
       align-items: center;
 
+      
+
       a {
         text-decoration: none;
         color: $color-brand-light;
@@ -74,7 +76,16 @@
 
         img {
           height: 65px;
+          align-self: center;
+          justify-content: center;
+
+          @media (min-width: $break-sm) {
+            align-self: flex-start;
+          }
+
         }
+
+       
         
 
         span {

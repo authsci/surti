@@ -20,14 +20,14 @@ a {
     font-size: $type-default;
     cursor: pointer;
     transition: $transition-border, $transition-color;
-    
+
     &:hover {
       color: $color-red;
       border-bottom: 1px solid $color-red-default;
       transition: $transition-border, $transition-color;
     }
   }
-  
+
   &-hide {
     color: $color-blue-default;
     border-bottom: 1px solid $color-blue-light;
@@ -36,7 +36,7 @@ a {
     font-size: $type-default;
     cursor: pointer;
     transition: $transition-border, $transition-color;
-    
+
     &:hover {
       color: $color-blue;
       border-bottom: 1px solid $color-blue-default;
@@ -144,8 +144,6 @@ a {
       }
     }
   }
-
-
 
   // &-list {
   //   @extend .link-default;
@@ -396,23 +394,70 @@ a {
 
   &-title {
     cursor: pointer !important;
-    color: $color-blue-default;
-    border-radius: $radius-slight;
-    font-size: $type-h2;
+    color: $color-gray-darker;
     text-decoration: none;
-    border-bottom: 1px solid $color-blue-light;
+    margin: 12px 0;
+    text-align: center;
     width: auto;
+    display: block;
 
-    &:hover {
-      color: $color-blue;
-      border-bottom: 1px solid $color-blue-half;
+    h1 {
+      font-size: $type-h1 !important;
+      color: $color-gray-darker;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    small {
+      font-size: $type-default !important;
+      color: $color-gray-dark !important;
     }
 
-    &-wide {
-      @extend .link-default;
-      display: block;
-      text-align: center;
-      margin: 0 24px;
+    .link-block {
+      opacity: .6;
+      transform: scaleX(.3);
+      transition: $transition-scale;
+    }
+    
+    &:hover {
+      .link-block {
+        opacity: 1;
+        transform: scaleX(.7);
+        transition: $transition-scale;
+      }
+      h1 {
+        color: $color-gray-darkest;
+        
+      }
+      small {
+        color: $color-gray-darkest !important;
+      }
+    }
+    
+  }
+
+
+  &-block {
+    height: 4px;
+
+    &-blue {
+      @extend .link-block;
+      background: $color-mid-default;
+      margin: 3px 0;
+    }
+    &-pink {
+      @extend .link-block;
+      background: $color-pink-default;
+      margin: 3px 0;
+    }
+    &-yellow {
+      @extend .link-block;
+      background: $color-yellow-default;
+      margin: 3px 0;
+    }
+    &-green {
+      @extend .link-block;
+      background: $color-green-default;
+      margin: 3px 0;
     }
   }
 
@@ -554,11 +599,10 @@ a {
     width: auto;
     transition: $transition-background;
     font-size: $type-md;
-    
+
     &:active {
       color: $color-white-half;
     }
-
   }
 
   &-lab {
@@ -902,9 +946,7 @@ a {
       &:hover {
         border-bottom: 1px solid $color-blue-medium;
       }
-
     }
-
 
     &--top {
       @extend .link-menu;

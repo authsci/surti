@@ -23,8 +23,12 @@ export default class Activities extends React.Component {
 		this.state = {
 			loading: true,
 			keyword: "",
-			organizations: [],
-		};
+      organizations: [],
+      id: this.props.match.params
+    };
+
+    
+
 	}
 
 	componentDidMount() {
@@ -91,39 +95,22 @@ export default class Activities extends React.Component {
 					</div>
 				) : (
 					<Fragment>
-						<div className="mainmenu">
+<div className="about">
+
+<div className="nudge-xl"></div>
+            <p>Content will go here for institution.</p>
+</div>
+					
+						{/* <div className="about">
 							{organizations.map(
 								(item, index) =>
 									item.fields.type == "org" && (
-										<Fragment key={index}>
-											<Link
-												to={"/institution/" + index}
-												className="link-title"
-											>
-												<h1>{item.fields.code}</h1>
-												<div
-													className={`link-block-` + item.fields.color}
-												></div>
-												<small>{item.fields.name}</small>
-											</Link>
-											<br />
-										</Fragment>
-									)
-							)}
-						</div>
-
-						<div className="nudge-xl"></div>
-
-						<div className="about">
-							{organizations.map(
-								(item, index) =>
-									item.fields.type == "about" && (
 										<Fragment key={index}>
 											<Markdown>{item.fields.body}</Markdown>
 										</Fragment>
 									)
 							)}
-						</div>
+						</div> */}
 					</Fragment>
 				)}
 

@@ -418,6 +418,37 @@ h4 {
   padding: 0 6px;
 }
 
+.mainmenu {
+  margin: 0 auto;
+  display: block;
+  // text-align: center;
+  width: 240px;
+}
+
+.about {
+  margin: 0 auto;
+  display: block;
+  // text-align: center;
+  width: 85%;
+  font-size: $type-md;
+    line-height: $type-lg;
+
+    @media (min-width: $break-sm) {
+      width: 70%;
+    }
+
+    p {
+      margin-bottom: 24px !important;
+    }
+
+
+    strong {
+      font-weight: $bold;
+    }
+
+   
+}
+
 .contain {
   padding: 12px 24px;
 
@@ -505,6 +536,6 @@ h4 {
     margin-bottom: 65px;
   }
   &-xxl {
-    margin-bottom: 250px;
+    margin-bottom: 85px;
   }
 }
