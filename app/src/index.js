@@ -8,7 +8,7 @@ import {
 import { Offline, Online } from "react-detect-offline";
 import NavActivities from "./NavActivities";
 import NavBranded from "./NavBranded";
-// import Start from "./Start";
+import Start from "./Start";
 
 import "./styles/main.scss";
 
@@ -74,7 +74,7 @@ class App extends React.Component {
                         <NavActivities />
                         <NavBranded />
                         {/* <NavBranded {...props} /> */}
-                        {/* <Start /> */}
+                        <Start />
                       </Fragment>
                     )}
                   />

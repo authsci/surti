@@ -1,7 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import axios from "axios";
 
 import ReactTooltip from "react-tooltip";
 
@@ -30,14 +29,6 @@ export default function SwipeableTemporaryDrawer() {
 		right: false,
 	});
 
-	useEffect(() => {
-		axios
-			.get("https://devoasys.1wa.org/portal/users/" + user)
-			.then(({ data }) => {
-				setInfo(data);
-				console.log("current user", data);
-			});
-	}, []);
 
 	const toggleDrawer = (side, open) => (event) => {
 		if (
@@ -51,22 +42,20 @@ export default function SwipeableTemporaryDrawer() {
 		setState({ ...state, [side]: open });
 	};
 
-	const handleSignout = () => {
-		localStorage.removeItem("user");
-	};
 
 	return (
 		<Fragment>
 			{state.right ? (
 				<div className="layout-row flex-right">
 					<a className="link-sidepanel" onClick={toggleDrawer("right", false)}>
-						<span class="material-icons fade-in">close</span>
+						<span className="material-icons">close</span>
 					</a>
 				</div>
 			) : (
-				<div className="layout-row flex-right" style={{ fontSize: "13px" }}>
+        <div className="layout-row flex-right">
 					<a className="link-sidepanel" onClick={toggleDrawer("right", true)}>
-						<i className="fas fa-bars"></i>
+						{/* <i className="fas fa-bars"></i> */}
+        <span className="material-icons">menu</span>
 					</a>
 				</div>
 			)}
@@ -79,7 +68,7 @@ export default function SwipeableTemporaryDrawer() {
 				id="user"
 			>
 				<div className="sidepanel">
-					<div className="dock-top">{/* noth9ng here */}</div>
+					<div className="dock-top">{/* nothing here yet */}</div>
 					<div className="nudge-xl"></div>
 
 					<ul>

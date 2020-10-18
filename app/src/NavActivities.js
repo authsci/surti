@@ -42,15 +42,15 @@ render() {
 
           <div className={this.state.showMenu ? 'nav-activities-left nudge-right desktop' : 'nav-activities-left desktop'}>
           { this.state.showMenu && 
-          <Link to="/" className="link-inert fade-in">
-            <img src="/img/logo-icon.png" height="30" /> <strong>Extimacies</strong>&nbsp;<span>Critical Theory from the Global South</span>
+          <Link to="/" className="link-slug fade-in">
+            <img src="img/logo-icon.png" /> <strong>Extimacies</strong>&nbsp;<span>Critical Theory from the Global South</span>
           </Link> }  
           </div>
          
           <div className={this.state.showMenu ? 'nav-activities-left nudge-right mobile' : 'nav-activities-left mobile'}>
           { this.state.showMenu && 
-          <Link to="/" className="link-inert fade-in">
-            <img src="/img/logo-icon.png" height="30" />
+          <Link to="/" className="link-slug fade-in">
+            <img src="img/logo-icon.png" />
           </Link> }  
           </div>
 
@@ -58,7 +58,7 @@ render() {
           { this.state.showMenu && <UserSettings /> }
           </div>
       
-          <div className={this.state.showMenu ? 'nav-activities-right nudge-left mobile' : 'nav-activities-right nudge-right mobile'}>
+          <div className={this.state.showMenu ? 'nav-activities-right mobile' : 'nav-activities-right nudge-right mobile'}>
           <UserSettings/>
           </div>
 

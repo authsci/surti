@@ -549,11 +549,15 @@ a {
     cursor: pointer !important;
     color: $color-white;
     display: flex;
+    text-align: center;
     text-decoration: none;
     width: auto;
-    align-items: center;
     transition: $transition-background;
     font-size: $type-md;
+    
+    &:active {
+      color: $color-white-half;
+    }
 
   }
 
@@ -686,7 +690,20 @@ a {
     padding: 0 !important;
     margin: 0 !important;
     display: flex;
+  }
 
+  &-slug {
+    text-decoration: none !important;
+    color: $color-gray-darkest !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    font-size: $type-default;
+
+    img {
+      height: 32px;
+    }
 
     span {
       font-weight: $light;
