@@ -24,7 +24,13 @@ export default class Activities extends React.Component {
 			loading: true,
 			keyword: "",
 			organizations: [],
+			videoURL: `
+			<video autoPlay muted loop playsInline>
+			<source src="img/surti.webm" type="video/webm"/>
+			</video>`
 		};
+
+		
 	}
 
 	componentDidMount() {
@@ -76,7 +82,7 @@ export default class Activities extends React.Component {
 	};
 
 	render() {
-		let { loading, organizations } = this.state;
+		let { loading, organizations, videoURL } = this.state;
 
 		return (
 			<Fragment>
@@ -91,15 +97,14 @@ export default class Activities extends React.Component {
 					</div>
 				) : (
 					<Fragment>
+						<div dangerouslySetInnerHTML={{ __html: videoURL }} />
+
 						<div className="mainmenu">
 							{organizations.map(
 								(item, index) =>
 									item.fields.type == "org" && (
 										<Fragment key={index}>
-											<Link
-												to={"/institution/" + index}
-												className="link-title"
-											>
+											<Link to={"/institution/" + index} className="link-title">
 												<h1>{item.fields.code}</h1>
 												<div
 													className={`link-block-` + item.fields.color}
