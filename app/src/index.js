@@ -68,7 +68,6 @@ class App extends React.Component {
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
-												<NavBranded />
 												{/* <NavBranded {...props} /> */}
 												<Start />
 											</Fragment>

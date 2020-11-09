@@ -51,7 +51,6 @@ small {
   }
 }
 
-
 .user-list {
   padding: 0;
   margin: 0 !important;
@@ -94,7 +93,6 @@ small {
 section {
   // background: $color-background;
   z-index: $z-base !important;
-
 }
 
 .footer {
@@ -110,43 +108,54 @@ section {
   z-index: $z-nav;
 }
 
-.video {
-  i {
-    font-size: $type-md !important;
-    color: $color-blue-default;
-  }
+// .video-container-full {
+//   position: relative;
+//   z-index: 0 !important;
+
+//   video {
+//     z-index: 0 !important;
+//     min-width: 100%;
+//     min-height: 500px;
+//     position: absolute;
+//     top: 40px;
+//     left: 50%;
+//     transform: translateX(-50%) translateY(-50%);
+//     opacity: 1;
+//   }
+// }
+
+.outer-container {
+  width: 100%;
+  // height: 100%;
+  position: absolute;
+  top: 50px;
+  
+  text-align: center;
 }
-
-
-.video-container {
-  overflow: hidden;
+.inner-container {
+  height: 450px !important;
+  background-color: black;
+  display: inline-block;
   position: relative;
 
   video {
     min-width: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    opacity: 0.1;
-    z-index: $z-base !important;
+    height: 450px !important;
   }
 }
+.video-overlay {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  margin: 10px;
+  padding: 5px 5px;
+  font-size: 20px;
+  font-family: Helvetica;
+  color: #fff;
+  
 
-.video-container-full {
-  overflow: hidden;
-  position: relative;
-
-  video {
-    min-width: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    opacity: 1;
-    z-index: $z-base !important;
+  img {
+    height: 90px;
   }
 }
 
@@ -459,11 +468,10 @@ h4 {
 }
 
 canvas {
-	
-	position: absolute;
-	top: calc( 50% - 200px );
-	left: calc( 50% - 200px );
-	background-color: #222;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+  background-color: #222;
 }
 
 .about {
@@ -472,22 +480,19 @@ canvas {
   // text-align: center;
   width: 85%;
   font-size: $type-md;
-    line-height: $type-lg;
+  line-height: $type-lg;
 
-    @media (min-width: $break-sm) {
-      width: 70%;
-    }
+  @media (min-width: $break-sm) {
+    width: 70%;
+  }
 
-    p {
-      margin-bottom: 24px !important;
-    }
+  p {
+    margin-bottom: 24px !important;
+  }
 
-
-    strong {
-      font-weight: $bold;
-    }
-
-   
+  strong {
+    font-weight: $bold;
+  }
 }
 
 .contain {
@@ -521,7 +526,7 @@ canvas {
     display: flex;
     flex-direction: column;
   }
-  
+
   &-manage {
     @extend .contain;
     display: flex;

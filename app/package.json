@@ -52,6 +52,7 @@
     "react-lodash": "^0.1.2",
     "react-moment": "^0.9.7",
     "react-multi-select-component": "^2.0.13",
+    "react-player": "^0.18.0",
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.7.16",
     "react-slideshow-image": "^1.4.2",

@@ -1,8 +1,7 @@
 
 $font-hero: "Prompt", "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif, -apple-system;
-$font-brand: "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif, -apple-system;
+$font-brand: "Prompt", "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif, -apple-system;
 $font-default: "Menlo","Monaco","Consolas","Liberation Mono","Courier New",monospace;
-// $font-default: "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif, -apple-system;
 $font-awesome: "Font Awesome 5 Free", "FontAwesome", "Material Icons";
 $font-script: "Audiowide", "Avenir Next", "Prompt", "Helvetica Neue", Helvetica, Arial, sans-serif, -apple-system;
 
@@ -105,8 +104,9 @@ $color-indicator: $color-green;
 $color-indicator-text: $color-white;
 
 $ultra: 200;
-$light: 300;
-$regular: 400;
+$slim: 300;
+$light: 400;
+$regular: 500;
 $bold: 600;
 
 $radius-round: 25px;
@@ -118,6 +118,7 @@ $type-h1: 24px;
 $type-h2: 19px;
 $type-h3: 15px;
 $type-h4: 13px;
+$type-massive: 100px;
 $type-huge: 90px;
 $type-big: 50px;
 $type-metric: 35px;
@@ -135,7 +136,7 @@ $type-default: 11px;
 $type-tiny: 10px;
 $type-teeny: 9px;
 $type-note: 8px;
-$type-base: $type-xxs;
+$type-base: $type-xs;
 
 $transition-opacity: opacity 0.2s linear;
 $transition-background: color 0.1s ease-in, background 0.1s ease-in;

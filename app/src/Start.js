@@ -7,6 +7,7 @@ import ReactTooltip from "react-tooltip";
 import { Events, animateScroll as scroll } from "react-scroll";
 import { FilterableContent, FilterableSection } from "react-filterable-content";
 import TextField from "@material-ui/core/TextField";
+import NavBranded from "./NavBranded"
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -24,13 +25,12 @@ export default class Activities extends React.Component {
 			loading: true,
 			keyword: "",
 			organizations: [],
-			videoURL: `
-			<video autoPlay muted loop playsInline>
-			<source src="img/surti.webm" type="video/webm"/>
-			</video>`
+			videoURL: `<video muted loop playsInline="" autoplay disablePictureInPicture="true" poster="img/particles.png" onClick="this.play();">
+			<source src="/img/mobius-1080.mp4" />
+			<source src="/img/particles.webm" />
+			<source src="/img/particles-1080.ogv" />
+			</video>`,
 		};
-
-		
 	}
 
 	componentDidMount() {
@@ -97,7 +97,35 @@ export default class Activities extends React.Component {
 					</div>
 				) : (
 					<Fragment>
-						<div dangerouslySetInnerHTML={{ __html: videoURL }} />
+						{/* <div className="video-container-full">
+							<div dangerouslySetInnerHTML={{ __html: videoURL }} />
+						</div> */}
+
+
+						<div className="outer-container">
+							<div className="inner-container">
+								<div className="video-overlay">
+								<img src="img/logo-white.png" />
+
+								 {/* <strong>Extimacies</strong>&nbsp;<span>Critical Theory from the Global South</span> */}
+
+								</div>
+								{/* <div dangerouslySetInnerHTML={{ __html: videoURL }} /> */}
+								{/* <video
+									muted
+									loop
+									playsInline={true}
+									autoPlay
+									disablePictureInPicture={true}
+									poster="img/particles.png"
+								>
+									<source src="/img/mobius-1080-h264.mp4" />
+								</video> */}
+
+								<video role="presentation" preload="auto" playsInline="" crossOrigin="anonymous"  loop autoPlay muted src="img/mobius-1080-h264.mp4"  type="video/mp4" ></video>
+								
+							</div>
+						</div>
 
 						<div className="mainmenu">
 							{organizations.map(

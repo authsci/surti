@@ -1,0 +1,1 @@
+  2020-11-07 9:39:16 PM PST: Starting composition “AdobeStock_203322103_Video_HD_Preview”.  Output To: /Users/ganderson/Desktop/mobius.mov    2020-11-07 9:40:14 PM PST: Finished composition “AdobeStock_203322103_Video_HD_Preview”.  Total Time Elapsed: 58 SecondsLog closed on 2020-11-07 at 9:40:15 PM PST
