@@ -1,0 +1,1 @@
+  2020-11-10 12:44:35 PM PST: Starting composition “AdobeStock_203322103_Video_HD_Preview”.  Output To: /Users/ganderson/Desktop/mobius-masked.mov    2020-11-10 12:45:39 PM PST: Finished composition “AdobeStock_203322103_Video_HD_Preview”.  Total Time Elapsed: 1 Min, 4 SecLog closed on 2020-11-10 at 12:45:40 PM PST

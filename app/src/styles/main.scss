@@ -125,22 +125,22 @@ section {
 // }
 
 .outer-container {
-  width: 100%;
+  width: 100% !important;
   // height: 100%;
   position: absolute;
   top: 50px;
-  
   text-align: center;
+  background: $color-black;
 }
 .inner-container {
-  height: 450px !important;
+  // height: 450px !important;
   background-color: black;
   display: inline-block;
   position: relative;
 
   video {
     min-width: 100%;
-    height: 450px !important;
+    // height: 450px !important;
   }
 }
 .video-overlay {

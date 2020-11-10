@@ -50,7 +50,6 @@ class App extends React.Component {
 				<Online>
 					{this.state.loading ? (
 						<div className="loader fade-in">
-							{/* <i className="fas fa-circle-notch spinner"></i> */}
 							<div className="loader-ellipsis">
 								<div></div>
 								<div></div>
@@ -68,23 +67,10 @@ class App extends React.Component {
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
-												{/* <NavBranded {...props} /> */}
 												<Start />
 											</Fragment>
 										)}
 									/>
-
-									{/* <Route
-										exact
-										path="/institution/:id"
-										render={(props) => (
-											<Fragment>
-													<NavActivities />
-												<NavBranded />
-												<Organization {...props} />
-											</Fragment>
-										)}
-									/> */}
 								
                 	<Route
 										exact
