@@ -394,27 +394,37 @@ a {
 
   &-title {
     cursor: pointer !important;
-    color: $color-gray-darker;
+    color: $color-white-default;
     text-decoration: none;
-    margin: 12px 0;
+    margin: 12px;
     text-align: center;
     width: auto;
     display: block;
+    width: 140px;
+    height: 140px;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 0 0 6px $color-black !important;
 
+    
     h1 {
-      font-size: $type-h1 !important;
-      color: $color-gray-darker;
-      padding: 0 !important;
-      margin: 0 !important;
+      font-size: $type-h1;
+      color: $color-white-default;
+      padding: 0;
+      margin: 0;
     }
     small {
       font-size: $type-default !important;
-      color: $color-gray-dark !important;
+      color: $color-white-default !important;
     }
 
     .link-block {
-      opacity: .6;
+      opacity:1;
       transform: scaleX(.3);
+      margin: 6px 0 !important;
       transition: $transition-scale;
     }
     
@@ -425,11 +435,11 @@ a {
         transition: $transition-scale;
       }
       h1 {
-        color: $color-gray-darkest;
+        color: $color-white;
         
       }
       small {
-        color: $color-gray-darkest !important;
+        color: $color-white !important;
       }
     }
     
@@ -441,22 +451,27 @@ a {
 
     &-blue {
       @extend .link-block;
-      background: $color-mid-default;
+      background: $color-mid;
       margin: 3px 0;
     }
     &-pink {
       @extend .link-block;
-      background: $color-pink-default;
+      background: $color-pink;
+      margin: 3px 0;
+    }
+    &-orange {
+      @extend .link-block;
+      background: $color-orange;
       margin: 3px 0;
     }
     &-yellow {
       @extend .link-block;
-      background: $color-yellow-default;
+      background: $color-yellow;
       margin: 3px 0;
     }
     &-green {
       @extend .link-block;
-      background: $color-green-default;
+      background: $color-green;
       margin: 3px 0;
     }
   }

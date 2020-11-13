@@ -9,9 +9,9 @@
   justify-content: flex-end;
   background: linear-gradient(
     -90deg,
-    $color-gray-darker,
-    $color-gray-darker,
-    $color-gray-darkest,
+    $color-black,
+    $color-black,
+    $color-black,
     $color-green,
     $color-mid,
     $color-blue
@@ -48,7 +48,6 @@
     justify-content: flex-end;
     align-items: center;
     font-weight: $regular;
-
   }
 
   &-branded {
@@ -67,40 +66,14 @@
       font-size: $type-sm;
       align-items: center;
 
-      
-
-      a {
-        text-decoration: none;
-        color: $color-brand-light;
-        align-self: center;
-
-        img {
-          height: 65px;
-          align-self: center;
-          justify-content: center;
-
-          @media (min-width: $break-sm) {
-            align-self: flex-start;
+      .logo {
+        div {
+          a,
+          span,
+          strong {
+            color: $color-gray-darkest;
+            text-decoration: none !important;
           }
-
-        }
-
-       
-        
-
-        span {
-          color: $color-brand;
-          font-size: $type-md;
-          line-height: 30px;
-          font-family: $font-brand;
-          
-        }
-
-        strong {
-          font-family: $font-brand;
-          color: $color-brand;
-          font-size: $type-md;
-          font-weight: $regular;
         }
       }
     }
@@ -114,79 +87,6 @@
     }
   }
 
-  &-public {
-    @extend .nav;
-    background: linear-gradient(to right, $color-gray-slate 0%, $color-gray-slate 60%,  $color-white 100%);
-
-    &-left {
-      @extend .nav-left;
-      color: $color-gray-darker;
-    }
-    &-right {
-      @extend .nav-right;
-      color: $color-gray-darker;
-      i {
-        color: $color-gray-darker;
-      }
-    }
-  }
-
-  &-support {
-    @extend .nav;
-    background: linear-gradient(
-      -90deg,
-      $color-pink,
-      $color-orange,
-      $color-orange,
-      $color-gray-slate,
-      $color-white
-    );
-
-    background-size: 400% 400%;
-    animation-name: black2blue;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-play-state: running;
-
-    &-left {
-      @extend .nav-left;
-      color: $color-gray-darker;
-      animation: dark2light;
-      animation-duration: 1s;
-      animation-timing-function: linear;
-      animation-direction: normal;
-      animation-fill-mode: forwards;
-      animation-iteration-count: 1;
-      animation-play-state: running;
-    }
-    &-right {
-      @extend .nav-right;
-      color: $color-gray-darker;
-      animation: dark2light;
-      animation-duration: 1s;
-      animation-timing-function: linear;
-      animation-direction: normal;
-      animation-fill-mode: forwards;
-      animation-iteration-count: 1;
-      animation-play-state: running;
-      i {
-        color: $color-gray-darker;
-      }
-      a {
-        animation: dark2light;
-        animation-duration: 1s;
-        animation-timing-function: linear;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-play-state: running;
-      }
-    }
-  }
-
   &-auth {
     @extend .nav;
     background: linear-gradient(
@@ -194,9 +94,9 @@
       $color-green,
       $color-mid,
       $color-blue,
-      $color-gray-darkest,
-      $color-gray-darker,
-      $color-gray-darker
+      $color-black,
+      $color-black,
+      $color-black
     );
     background-size: 400% 400%;
     animation-name: black2blue;
@@ -214,44 +114,6 @@
     &-right {
       @extend .nav-right;
       color: $color-white;
-      i {
-        color: $color-white;
-      }
-    }
-  }
-
-  &-signout {
-    @extend .nav;
-    background: linear-gradient(
-      -90deg,
-      $color-green,
-      $color-mid,
-      $color-blue,
-      $color-gray-darkest,
-      $color-gray-darker,
-      $color-gray-darker
-    );
-    background-size: 400% 400%;
-    animation-name: black2blue;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-play-state: running;
-
-    &-left {
-      @extend .nav-left;
-      color: $color-white;
-    }
-    &-right {
-      @extend .nav-right;
-      color: $color-white !important;
-
-      a {
-        color: $color-white !important;
-        // border-bottom: 1px solid $color-white-half !important;
-      }
       i {
         color: $color-white;
       }
@@ -265,9 +127,9 @@
       $color-green,
       $color-mid,
       $color-blue,
-      $color-gray-darkest,
-      $color-gray-darker,
-      $color-gray-darker
+      $color-black,
+      $color-black,
+      $color-black
     );
 
     background-size: 400% 400%;
@@ -288,65 +150,6 @@
     &-right {
       @extend .nav-right;
       color: $color-white;
-      i {
-        color: $color-white;
-      }
-    }
-  }
-
-  &-login {
-    @extend .nav;
-    background: linear-gradient(
-      -90deg,
-      $color-green,
-      $color-mid,
-      $color-blue,
-      $color-gray-slate,
-      $color-gray-slate,
-      $color-gray-slate
-    );
-    background-size: 400% 400%;
-    animation: black2blue;
-    background-position: 100% 50%;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-play-state: running;
-
-    &-left {
-      @extend .nav-left;
-      color: $color-gray-dark;
-      animation: dark2light;
-      animation-duration: 1s;
-      animation-timing-function: ease-in-out;
-      animation-direction: normal;
-      animation-fill-mode: forwards;
-      animation-iteration-count: 1;
-      animation-play-state: running;
-    }
-
-    &-right {
-      @extend .nav-right;
-      color: $color-gray-dark;
-      animation: dark2light;
-      animation-duration: 1s;
-      animation-timing-function: ease-in-out;
-      animation-direction: normal;
-      animation-fill-mode: forwards;
-      animation-iteration-count: 1;
-      animation-play-state: running;
-
-      a {
-        color: $color-white !important;
-        padding: 2px 6px;
-        margin: 2px 0;
-        color: $color-white;
-        transition: $transition-color;
-        background: $color-blue-default;
-        border-bottom: none;
-      }
       i {
         color: $color-white;
       }

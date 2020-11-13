@@ -108,7 +108,36 @@ export default class Activities extends React.Component {
 						<div className="outer-container">
 							<div className="inner-container">
 								<div className="video-overlay">
-									<img src="img/logo-white.png" />
+									<div className="logo">
+										<img src="img/logo-icon-white.png" />
+										<div>
+											<strong>Extimacies</strong>
+											<span>
+												Critical Theory from the Global South
+											</span>
+										</div>
+									</div>
+
+									<div className="mainmenu">
+										{organizations.map(
+											(item, index) =>
+												item.fields.type == "org" && (
+													<Fragment key={index}>
+														<Link
+															to={"/institution/" + index}
+															className="link-title"
+														>
+															<h1>{item.fields.code}</h1>
+															<div
+																className={`link-block-` + item.fields.color}
+															></div>
+															<small>{item.fields.name}</small>
+														</Link>
+														<br />
+													</Fragment>
+												)
+										)}
+									</div>
 								</div>
 
 								<video
@@ -125,35 +154,19 @@ export default class Activities extends React.Component {
 							</div>
 						</div>
 
-						<div className="mainmenu">
-							{organizations.map(
-								(item, index) =>
-									item.fields.type == "org" && (
-										<Fragment key={index}>
-											<Link to={"/institution/" + index} className="link-title">
-												<h1>{item.fields.code}</h1>
-												<div
-													className={`link-block-` + item.fields.color}
-												></div>
-												<small>{item.fields.name}</small>
-											</Link>
-											<br />
-										</Fragment>
-									)
-							)}
-						</div>
-
 						<div className="nudge-xl"></div>
 
-						<div className="about">
-							{organizations.map(
-								(item, index) =>
-									item.fields.type == "about" && (
-										<Fragment key={index}>
-											<Markdown>{item.fields.body}</Markdown>
-										</Fragment>
-									)
-							)}
+						<div className="contain">
+							<div className="about">
+								{organizations.map(
+									(item, index) =>
+										item.fields.type == "about" && (
+											<Fragment key={index}>
+												<Markdown>{item.fields.body}</Markdown>
+											</Fragment>
+										)
+								)}
+							</div>
 						</div>
 					</Fragment>
 				)}

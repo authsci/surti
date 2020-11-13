@@ -25,7 +25,18 @@ export default class Nav extends React.Component {
 					<div className="nav-branded">
 						<div className="nav-branded-left">
 							<NavLink to="/">
-								<img src="img/logo.png" />
+								<div className="logo">
+									<img src="img/logo-icon.png" />
+									<div>
+										<strong>Extimacies</strong>
+										<br />
+										<span>
+											Critical Theory from
+											<br />
+											the Global South
+										</span>
+									</div>
+								</div>
 							</NavLink>
 						</div>
 
