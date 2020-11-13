@@ -22,18 +22,15 @@ export default class Nav extends React.Component {
 		return (
 			<Fragment>
 				<div className="contain">
-					<div className="nav-branded">
+					<div className="nav-branded fade-in">
 						<div className="nav-branded-left">
 							<NavLink to="/">
 								<div className="logo">
 									<img src="img/logo-icon.png" />
 									<div>
 										<strong>Extimacies</strong>
-										<br />
 										<span>
-											Critical Theory from
-											<br />
-											the Global South
+											Critical Theory from the Global South
 										</span>
 									</div>
 								</div>

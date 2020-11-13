@@ -157,7 +157,7 @@ export default class Activities extends React.Component {
 						<div className="nudge-xl"></div>
 
 						<div className="contain">
-							<div className="about">
+							<div className="about-hero">
 								{organizations.map(
 									(item, index) =>
 										item.fields.type == "about" && (

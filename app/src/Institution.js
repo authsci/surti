@@ -23,12 +23,9 @@ export default class Activities extends React.Component {
 		this.state = {
 			loading: true,
 			keyword: "",
-      organizations: [],
-      id: this.props.match.params
-    };
-
-    
-
+			organizations: [],
+			id: this.props.match.params,
+		};
 	}
 
 	componentDidMount() {
@@ -95,12 +92,13 @@ export default class Activities extends React.Component {
 					</div>
 				) : (
 					<Fragment>
-<div className="about">
+						<div className="contain">
+							<div className="about">
+								<div className="nudge-xl"></div>
+								<p>Content will go here for institution.</p>
+							</div>
+						</div>
 
-<div className="nudge-xl"></div>
-            <p>Content will go here for institution.</p>
-</div>
-					
 						{/* <div className="about">
 							{organizations.map(
 								(item, index) =>

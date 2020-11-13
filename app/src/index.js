@@ -42,7 +42,6 @@ class App extends React.Component {
 						<p>
 							<strong>OFFLINE.</strong>
 						</p>
-						<i className="fas fa-skull-crossbones"></i>
 						<p>PLEASE CHECK YOUR INTERNET CONNECTION.</p>
 					</div>
 				</Offline>

@@ -36,7 +36,7 @@ body {
     color: $color-white;
     font-size: $type-md;
     display: block;
-    padding: 6px 0;
+    padding: 4px 0;
   }
   span {
     color: $color-white-medium;
@@ -540,12 +540,17 @@ canvas {
   // text-align: center;
   font-size: $type-md;
   position: relative;
-  top: 500px;
+  
   line-height: $type-lg;
   width: 85%;
 
   @media (min-width: $break-sm) {
     width: 100%;
+  }
+
+  &-hero {
+    @extend .about;
+    top: 500px;
   }
 
   p {
