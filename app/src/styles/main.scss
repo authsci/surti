@@ -527,6 +527,17 @@ h4 {
   padding: 0 6px;
 }
 
+input {
+  border: none !important;
+  background: $color-gray-darker !important;
+  color: $color-white !important;
+  padding: 6px;
+  outline: none;
+  border-radius: 0;
+  margin-right: 12px;
+  
+}
+
 canvas {
   position: absolute;
   top: calc(50% - 200px);

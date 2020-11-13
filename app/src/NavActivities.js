@@ -40,6 +40,7 @@ render() {
 
         <div className="nav-activities">
 
+          
           <div className={this.state.showMenu ? 'nav-activities-left nudge-right desktop' : 'nav-activities-left desktop'}>
           { this.state.showMenu && 
           <Link to="/" className="link-slug fade-in">
@@ -55,7 +56,7 @@ render() {
           </div>
 
           <div className={this.state.showMenu ? 'nav-activities-right nudge-left desktop' : 'nav-activities-right nudge-right desktop'}>
-          { this.state.showMenu && <UserSettings /> }
+          <input placeholder="search" /> { this.state.showMenu && <UserSettings /> } 
           </div>
       
           <div className={this.state.showMenu ? 'nav-activities-right mobile' : 'nav-activities-right nudge-right mobile'}>
