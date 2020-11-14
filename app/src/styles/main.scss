@@ -18,19 +18,57 @@ body {
   margin: 0;
   font-weight: $regular;
   height: 2000px;
+  overflow-x: hidden;
+}
+
+.mobile-placeholder {
+  background-image: url("/img/mobius.png");
+  background-size: cover;
+  background-position: 25% center;
+  background-repeat: no-repeat;
+  width: 100% !important;
+  position: absolute;
+  height: 450px;
+  top: 55px;
+  text-align: center;
+  overflow: visible;
+  opacity: 1;
 }
 
 .logo {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-gap: 6px;
-  grid-template-columns: auto 100px;
-  align-items: center;
-  // justify-content: flex-start;
-  color: $color-white;
-  text-align: left;
-  position: absolute;
-  line-height: $type-xxs;
+  display: none;
+  //hide on mobile
+
+  @media (min-width: $break-sm) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: auto 100px;
+    align-items: center;
+    color: $color-white;
+    text-align: left;
+    position: absolute;
+    line-height: $type-xxs;
+  }
+
+  &-mobile {
+    @extend .logo;
+     grid-column: 1 / -1;
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: auto 100px;
+    align-items: center;
+    color: $color-white;
+    text-align: left;
+    position: absolute;
+    line-height: $type-xxs;
+    left: 28%;
+
+    @media (min-width: $break-sm) {
+      display: none;
+      //hide on desktop
+    }
+  }
 
   strong {
     color: $color-white;
@@ -53,16 +91,39 @@ body {
 .mainmenu {
   display: flex;
   width: 100%;
+  // height: 300px;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 85px 0 0 0;
+
+  @media (min-width: $break-sm) {
+    flex-direction: row;
+    display: flex;
+  }
+}
+
+.nav-down {
+  display: flex;
+  width: 100%;
   position: absolute;
-  top: 150px;
+  top: 425px;
   left: 0;
   right: 0;
   justify-content: center;
   align-self: center;
   align-content: center;
   align-items: center;
+  flex-direction: column;
+  i {
+    color: $color-white;
+  }
 
-  // padding: 96px;
+  @media (min-width: $break-sm) {
+    top: 450px;
+  }
 }
 
 small {
@@ -149,7 +210,8 @@ section {
 
 video {
   pointer-events: none;
-  height: 450px;
+  //height: 720px;  // for full
+  min-height: 550px; // for strip
   opacity: 1;
 }
 
@@ -157,50 +219,19 @@ video {
   width: 100% !important;
   position: absolute;
   top: 55px;
-  padding: 0 !important;
   text-align: center;
   background: $color-black;
+  min-width: 100%;
+  overflow: hidden;
 }
 
 .inner-container {
   width: 100% !important;
-  height: 450px;
-  padding: 0 !important;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
+  margin: 0 auto;
   max-width: 100%;
-  padding: 100px;
-
-  @media (min-width: $break-sm) {
-    max-width: 100%;
-  }
-
-  @media (min-width: $break-md) {
-    max-width: 1100px;
-  }
-
-  @media (min-width: $break-lg) {
-    max-width: 1200px;
-  }
-
-  @media (min-width: $break-xl) {
-    max-width: 1440px;
-  }
-
-  @media (min-width: $break-xxl) {
-    max-width: 1440px;
-  }
-  .video-overlay {
-    position: absolute;
-    display: inline-flex;
-    top: 24px;
-    text-align: left;
-    padding: 24px 0;
-    margin: 0 auto;
-    width: 100%;
-    opacity: 1;
-
-
+  padding: 0 36px !important;
 
   @media (min-width: $break-sm) {
     max-width: 100%;
@@ -221,9 +252,39 @@ video {
   @media (min-width: $break-xxl) {
     max-width: $break-lg;
   }
-  }
 
- 
+  .video-overlay {
+    position: absolute;
+    display: inline-flex;
+    top: 24px;
+    // text-align: left;
+    padding: 24px 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    // width: 100%;
+    opacity: 1;
+
+    @media (min-width: $break-sm) {
+      max-width: 100%;
+    }
+
+    @media (min-width: $break-md) {
+      max-width: $break-md;
+    }
+
+    @media (min-width: $break-lg) {
+      max-width: $break-lg;
+    }
+
+    @media (min-width: $break-xl) {
+      max-width: $break-lg;
+    }
+
+    @media (min-width: $break-xxl) {
+      max-width: $break-lg;
+    }
+  }
 }
 
 .dock {
@@ -286,7 +347,7 @@ strong {
   display: none;
 
   @media (min-width: $break-sm) {
-    display: flex;
+    display: block;
   }
 }
 
@@ -515,16 +576,13 @@ h4 {
 }
 
 ::-webkit-input-placeholder {
-  color: $color-gray-medium;
-  padding: 0 6px;
+  color: $color-white-half;
 }
 :-ms-input-placeholder {
-  color: $color-gray-medium;
-  padding: 0 6px;
+  color: $color-white-half;
 }
 ::placeholder {
-  color: $color-gray-medium;
-  padding: 0 6px;
+  color: $color-white-half;
 }
 
 input {
@@ -535,7 +593,7 @@ input {
   outline: none;
   border-radius: 0;
   margin-right: 12px;
-  
+  font-family: $font-default !important;
 }
 
 canvas {
@@ -549,11 +607,10 @@ canvas {
   margin: 0 auto;
   display: block;
   // text-align: center;
-  font-size: $type-md;
-  position: relative;
-  
-  line-height: $type-lg;
-  width: 85%;
+  position: absolute;
+  padding: 12px 36px !important;
+
+  line-height: $type-xl;
 
   @media (min-width: $break-sm) {
     width: 100%;
@@ -561,11 +618,23 @@ canvas {
 
   &-hero {
     @extend .about;
-    top: 500px;
+    position: absolute;
+    top: 620px;
+
+    @media (min-width: $break-sm) {
+      position: relative;
+
+      top: 600px;
+    }
   }
 
   p {
     margin-bottom: 24px !important;
+    font-size: $type-sm;
+
+    @media (min-width: $break-sm) {
+      font-size: $type-xxs;
+    }
   }
 
   strong {
@@ -573,12 +642,9 @@ canvas {
   }
 }
 
-
-
 .contain {
-  padding: 12px 24px !important;
   margin: 0 auto;
-  width: 100%;
+  max-width: 100%;
 
   @media (min-width: $break-sm) {
     max-width: 100%;

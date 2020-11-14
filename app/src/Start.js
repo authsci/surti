@@ -29,6 +29,8 @@ export default class Activities extends React.Component {
 	}
 
 	componentDidMount() {
+		
+
 		axios.get(contentfulAPI).then((response) => {
 			const organizations = response.data.items;
 			this.setState({ organizations, loading: false });
@@ -38,31 +40,6 @@ export default class Activities extends React.Component {
 		window.scrollTo(0, 0);
 	}
 
-	handleChange = () => {
-		if (event && event.target) {
-			const { value } = event.target;
-			this.setState({ keyword: value });
-			window.scrollTo(0, 0);
-		}
-	};
-
-	handleSelectDiscipline = (event) => {
-		//console.log(event.target.value);
-		this.setState({ disciplineFilter: event.target.value });
-		window.scrollTo(0, 0);
-	};
-
-	handleClearFilters = () => {
-		this.setState({
-			disciplineFilter: "",
-			showOpen: true,
-			showUpcoming: true,
-			showClosed: false,
-			showActions: false,
-			showEval: true,
-			keyword: "",
-		});
-	};
 
 	handleClearKeyword = () => {
 		this.setState({ keyword: "" });
@@ -92,33 +69,31 @@ export default class Activities extends React.Component {
 					</div>
 				) : (
 					<Fragment>
-						{/* <div className="video-container-full">
-							<video
-								muted
-								loop
-								playsInline=""
-								autoPlay
-								disablePictureInPicture
-								poster="img/particles.png"
-							>
-								<source src="img/mobius-1080-h264.mp4" />
-							</video>
+						{/* <div className="mobile-placeholder mobile">
+							&nbsp;
 						</div> */}
 
 						<div className="outer-container">
 							<div className="inner-container">
-								<div className="video-overlay">
+								<div className="video-overlay fade-in">
 									<div className="logo">
 										<img src="img/logo-icon-white.png" />
 										<div>
 											<strong>Extimacies</strong>
-											<span>
-												Critical Theory from the Global South
-											</span>
+											<span>Critical Theory from the Global South</span>
+										</div>
+									</div>
+
+									<div className="logo-mobile">
+										<img src="img/logo-icon-white.png" />
+										<div>
+											<strong>Extimacies</strong>
+											<span>Critical Theory from the Global South</span>
 										</div>
 									</div>
 
 									<div className="mainmenu">
+								
 										{organizations.map(
 											(item, index) =>
 												item.fields.type == "org" && (
@@ -131,25 +106,29 @@ export default class Activities extends React.Component {
 															<div
 																className={`link-block-` + item.fields.color}
 															></div>
-															<small>{item.fields.name}</small>
+															<small className="desktop">{item.fields.name}</small>
 														</Link>
 														<br />
 													</Fragment>
 												)
 										)}
 									</div>
+
+								<div className="nav-down"><i className="fas fa-chevron-down indicate"></i></div>
+
 								</div>
 
 								<video
 									role="presentation"
 									preload="auto"
-									playsInline=""
+									playsInline={true}
 									crossOrigin="anonymous"
 									loop
 									autoPlay
 									muted
 									src="img/mobius.mp4"
 									type="video/mp4"
+									poster="img/mobius.jpg"
 								></video>
 							</div>
 						</div>
@@ -158,6 +137,7 @@ export default class Activities extends React.Component {
 
 						<div className="contain">
 							<div className="about-hero">
+
 								{organizations.map(
 									(item, index) =>
 										item.fields.type == "about" && (
@@ -171,7 +151,7 @@ export default class Activities extends React.Component {
 					</Fragment>
 				)}
 
-				<div className="footer">
+				<div className="footer desktop">
 					Copyright ©<Moment format="YYYY" /> Extimacies Program |{" "}
 					<Moment format="D-MMM-YYYY" />
 				</div>

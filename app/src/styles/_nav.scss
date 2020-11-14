@@ -154,6 +154,9 @@
     &-right {
       @extend .nav-right;
       color: $color-white;
+      align-content: center;
+      align-items: center;
+      align-self: center;
       i {
         color: $color-white;
       }

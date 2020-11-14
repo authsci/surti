@@ -396,12 +396,13 @@ a {
     cursor: pointer !important;
     color: $color-white-default;
     text-decoration: none;
-    margin: 12px;
+    margin: 0 12px;
     text-align: center;
     width: auto;
     display: block;
     width: 140px;
-    height: 140px;
+    // height: 140px;
+    padding: 0;
     align-content: center;
     align-items: center;
     align-self: center;
@@ -424,7 +425,7 @@ a {
     .link-block {
       opacity:1;
       transform: scaleX(.3);
-      margin: 6px 0 !important;
+      margin: 3px 0 !important;
       transition: $transition-scale;
     }
     
