@@ -3,6 +3,7 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 import UserSettings from "./UserSettings";
 
+
 export default class Nav extends React.Component {
 	constructor(props) {
 		super(props);
@@ -22,7 +23,7 @@ export default class Nav extends React.Component {
 		return (
 			<Fragment>
 				<div className="contain">
-					<div className="nav-branded fade-in">
+					<div className="nav-branded">
 						<div className="nav-branded-left">
 							<NavLink to="/">
 								<div className="logo">

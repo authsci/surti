@@ -115,9 +115,9 @@ $radius-default: 3px;
 $radius-module: 6px;
 $radius-slight: 2px;
 
-$type-h1: 24px;
+$type-h1: 29px;
 $type-h2: 19px;
-$type-h3: 15px;
+$type-h3: 14px;
 $type-h4: 13px;
 $type-massive: 100px;
 $type-huge: 90px;
@@ -130,6 +130,7 @@ $type-xl: 23px;
 $type-lg: 21px;
 $type-icon: 22px;
 $type-md: 16px;
+$type-copy: 15px;
 $type-sm: 14px;
 $type-xs: 13px;
 $type-xxs: 12px;
@@ -140,7 +141,7 @@ $type-note: 8px;
 $type-base: $type-xs;
 
 $transition-opacity: opacity 0.2s linear;
-$transition-background: color 0.1s ease-in, background 0.1s ease-in;
+$transition-background: color 0.1s ease-in, background 0.4s ease-in;
 $transition-color: color 0.2s linear;
 $transition-scale: transform 0.2s linear;
 $transition-filter: filter 0.4s ease-in;

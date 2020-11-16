@@ -149,12 +149,19 @@
 }
 
 #user .MuiDrawer-paper {
-  width: 320px !important;
+  width: 100% !important;
+  height: 100% !important;
   background: $color-white !important;
   box-shadow: -4px 0 10px $color-gray-slight !important;
   z-index: $z-ultimate !important;
   padding: 0 !important;
   margin: 0 !important;
+  overflow: hidden;
+
+  @media (min-width: $break-sm) {
+    width: 400px !important;
+  }
+
 }
 
 #video .MuiDrawer-paper {
@@ -183,7 +190,11 @@
 }
 
 .MuiBackdrop-root {
-  background: $color-gray-light !important;
+  background: $color-gray-darkest !important;
+  
+  @media (min-width: $break-sm) {
+    background: $color-gray-light !important;
+  }
 }
 
 #reports .MuiFormControl-marginNormal, #filters .MuiFormControl-marginNormal, #filters .MuiFormControl-root  {

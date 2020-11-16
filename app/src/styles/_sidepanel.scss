@@ -1,17 +1,23 @@
 .sidepanel {
 
+  position: relative;
+  top: 72px;
+
   ul {
     padding: 0;
-    margin: 48px 0 0 0;
+    margin: 0;
   }
 
   h3 {
-    font-size: $type-xxs;
+    font-size: $type-sm;
     color: $color-gray-dark;
     padding: 6px 12px !important;
     font-weight: $bold;
     border-bottom: 1px solid $color-gray-light;
 
+    @media (min-width: $break-sm) {
+      font-size: $type-xxs;
+    }
 
   }
     
@@ -19,12 +25,14 @@
       list-style: none;
       display: block;
       text-decoration: none;
-      padding: 7px 12px;
+      padding: 6px 12px;
       border-bottom: 1px solid $color-gray-light;
       margin: 0;
       width: 100%;
       cursor: pointer;
       color: $color-gray-dark;
+      font-size: $type-sm;
+
       
       &:hover {
         background: $color-gray-note;
@@ -33,6 +41,10 @@
       
       &:last-child {
         border-bottom: 1px solid $color-gray-light;
+      }
+
+      @media (min-width: $break-sm) {
+        font-size: $type-xxs;
       }
     }
 }

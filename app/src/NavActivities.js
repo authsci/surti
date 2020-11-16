@@ -1,73 +1,84 @@
-import React, {Fragment} from "react";
-import UserSettings from './UserSettings';
-
-import { Link } from 'react-router-dom';
+import React, { Fragment } from "react";
+import UserSettings from "./UserSettings";
+import { Link } from "react-router-dom";
 
 export default class Nav extends React.Component {
+	constructor(props) {
+		super(props);
 
-  constructor(props) {
-    super(props);
+		this.state = {
+			login: [],
+			loading: true,
+			isActive: false,
+			showMenu: false,
+		};
+	}
 
-    this.state = {
-      login: [],
-      loading: true,
-      isActive: false,
-      showMenu: false
-    }
+	componentDidMount() {
+		window.addEventListener("scroll", this.handleScroll);
+	}
 
-  }
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.handleScroll);
+	}
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
+	handleScroll = () => {
+		if (window.scrollY < 60) {
+			this.setState({ showMenu: false });
+		} else {
+			this.setState({ showMenu: true });
+		}
+	};
 
-  componentWillUnmount () {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
 
-  handleScroll = () => {
-    if (window.scrollY < 60) {
-        this.setState({ showMenu: false });
-    } else {
-        this.setState({ showMenu: true });
-    }
+	render() {
+		return (
+			<Fragment>
+				<div className="nav-activities">
+					<div
+						className={
+							this.state.showMenu
+								? "nav-activities-left nudge-right desktop"
+								: "nav-activities-left desktop"
+						}
+					>
+						{this.state.showMenu && (
+								<Link to="/" className="link-slug fade-in">
+                <img src="img/logo-icon-white.png" />{" "}
+                <div>
+                  <strong>Extimacies</strong>
+                  <span>Critical Theory from the Global South</span>
+                </div>
+              </Link>
+						)}
+					</div>
+
+					<div className="nav-activities-left mobile">
+						<Link to="/" className="link-slug fade-in">
+							<img src="img/logo-icon-white.png" />{" "}
+							<div>
+								<strong>Extimacies</strong>
+								<span>Critical Theory from the Global South</span>
+							</div>
+						</Link>
+					</div>
+
+					{/* <div
+						className={
+							this.state.showMenu
+								? "nav-activities-right nudge-left desktop"
+								: "nav-activities-right nudge-right desktop"
+						}
+					>
+						{this.state.showMenu && <UserSettings />}
+					</div> */}
+
+					<div
+						className="nav-activities-right nudge-right">
+						<UserSettings />
+					</div>
+				</div>
+			</Fragment>
+		);
+	}
 }
-  
-render() {
-
-  return (
-
-    <Fragment>
-
-        <div className="nav-activities">
-
-          
-          <div className={this.state.showMenu ? 'nav-activities-left nudge-right desktop' : 'nav-activities-left desktop'}>
-          { this.state.showMenu && 
-          <Link to="/" className="link-slug fade-in">
-            <img src="img/logo-icon-white.png" /> <strong>Extimacies</strong>&nbsp;<span>Critical Theory from the Global South</span>
-          </Link> }  
-          </div>
-         
-          <div className={this.state.showMenu ? 'nav-activities-left nudge-right mobile' : 'nav-activities-left mobile'}>
-          { this.state.showMenu && 
-          <Link to="/" className="link-slug fade-in">
-            <img src="img/logo-icon-white.png" />
-          </Link> }  
-          </div>
-
-          <div className={this.state.showMenu ? 'nav-activities-right nudge-left desktop' : 'nav-activities-right nudge-right desktop'}>
-          <input placeholder="search" /> { this.state.showMenu && <UserSettings /> } 
-          </div>
-      
-          <div className={this.state.showMenu ? 'nav-activities-right mobile' : 'nav-activities-right nudge-right mobile'}>
-          <UserSettings/>
-          </div>
-
-        </div>
-            
-      </Fragment>
-
-    )
-  }
-};

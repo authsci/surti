@@ -39,6 +39,8 @@ export default function SwipeableTemporaryDrawer() {
 			return;
 		}
 
+		window.scrollTo(0, 0);
+
 		setState({ ...state, [side]: open });
 	};
 
@@ -67,12 +69,10 @@ export default function SwipeableTemporaryDrawer() {
 				id="user"
 			>
 				<div className="sidepanel">
-					<div className="dock-top">{/* nothing here yet */}</div>
-					<div className="nudge-xxl"></div>
-
-						<h3>Extimacies Programs</h3>
+				<h3></h3>
+						<Link to="/" onClick={toggleDrawer("right", false)}>Home</Link>
 						<a>About</a>
-						<li>People</li>
+						<Link to={"/people/" + 0} onClick={toggleDrawer("right", false)}>People</Link>
 						<li>Events</li>
 						<li>Publications</li>
 						<li>Initiatives</li>
@@ -80,13 +80,13 @@ export default function SwipeableTemporaryDrawer() {
 
             <div className="nudge-md"></div>
 
-						<h3>Extimacies Institutions</h3>
-						<Link to={"/institution/" + 1} onClick={toggleDrawer("right", false)}>The American University of Beirut</Link>
-						<Link to={"/institution/" + 2} onClick={toggleDrawer("right", false)}>The American University in Cairo</Link>
-						<Link to={"/institution/" + 3} onClick={toggleDrawer("right", false)}>Federal University of ABC</Link>
-						<Link to={"/institution/" + 4} onClick={toggleDrawer("right", false)}>The Ibero-American University</Link>
+						<h3>Institutions</h3>
+						<Link to={"/institution/" + 0} onClick={toggleDrawer("right", false)}>VU - Villanova University</Link>
+						<Link to={"/institution/" + 1} onClick={toggleDrawer("right", false)}>AUB - The American University of Beirut</Link>
+						<Link to={"/institution/" + 2} onClick={toggleDrawer("right", false)}>AUC - The American University in Cairo</Link>
+						<Link to={"/institution/" + 3} onClick={toggleDrawer("right", false)}>FUABC - Federal University of ABC</Link>
+						<Link to={"/institution/" + 4} onClick={toggleDrawer("right", false)}>IUA - The Ibero-American University</Link>
 
-					<div className="nudge-xxl"></div>
 					{/* 					
 					<Link to="/login" className="link-text" data-tip data-for="username">
 						Change Password?
@@ -95,7 +95,6 @@ export default function SwipeableTemporaryDrawer() {
 					<ReactTooltip place="top" type="dark" effect="float" id="username">
 						This will trigger SSO/Keycloak Flow
 					</ReactTooltip> */}
-					<div className="nudge-md"></div>
 					{/* <div className="dock-drawer">
 						<a className="link-save" onClick={toggleDrawer("right", false)}>
 							Save

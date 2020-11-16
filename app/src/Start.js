@@ -1,13 +1,8 @@
 import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Moment from "react-moment";
 import Markdown from "markdown-to-jsx";
-import ReactTooltip from "react-tooltip";
 import { Events, animateScroll as scroll } from "react-scroll";
-import { FilterableContent, FilterableSection } from "react-filterable-content";
-import TextField from "@material-ui/core/TextField";
-import NavBranded from "./NavBranded";
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -29,17 +24,14 @@ export default class Activities extends React.Component {
 	}
 
 	componentDidMount() {
-		
-
 		axios.get(contentfulAPI).then((response) => {
 			const organizations = response.data.items;
 			this.setState({ organizations, loading: false });
-			console.log(organizations);
+			console.log("organizations", organizations);
 		});
 
 		window.scrollTo(0, 0);
 	}
-
 
 	handleClearKeyword = () => {
 		this.setState({ keyword: "" });
@@ -84,38 +76,29 @@ export default class Activities extends React.Component {
 										</div>
 									</div>
 
-									<div className="logo-mobile">
-										<img src="img/logo-icon-white.png" />
-										<div>
-											<strong>Extimacies</strong>
-											<span>Critical Theory from the Global South</span>
-										</div>
-									</div>
-
 									<div className="mainmenu">
-								
 										{organizations.map(
 											(item, index) =>
 												item.fields.type == "org" && (
 													<Fragment key={index}>
 														<Link
 															to={"/institution/" + index}
-															className="link-title"
+															className={`link-title-` + item.fields.color}
 														>
-															<h1>{item.fields.code}</h1>
-															<div
-																className={`link-block-` + item.fields.color}
-															></div>
-															<small className="desktop">{item.fields.name}</small>
+															<div>
+																<h1>{item.fields.code}</h1>
+																<small>{item.fields.name}</small>
+															</div>
 														</Link>
-														<br />
 													</Fragment>
 												)
+											
 										)}
 									</div>
 
-								<div className="nav-down"><i className="fas fa-chevron-down indicate"></i></div>
-
+									<div className="nav-down">
+										<i className="fas fa-chevron-down indicate"></i>
+									</div>
 								</div>
 
 								<video
@@ -128,7 +111,7 @@ export default class Activities extends React.Component {
 									muted
 									src="img/mobius.mp4"
 									type="video/mp4"
-									poster="img/mobius.jpg"
+									// poster="img/mobius.jpg"
 								></video>
 							</div>
 						</div>
@@ -136,25 +119,39 @@ export default class Activities extends React.Component {
 						<div className="nudge-xl"></div>
 
 						<div className="contain">
-							<div className="about-hero">
-
+							<div className="copy-hero">
 								{organizations.map(
 									(item, index) =>
-										item.fields.type == "about" && (
-											<Fragment key={index}>
+									item.fields.type == "about" && (
+										<Fragment key={index}>
 												<Markdown>{item.fields.body}</Markdown>
 											</Fragment>
 										)
+										)}
+
+										<div className="nudge-lg"></div>
+
+								{organizations.map(
+									(item, index) =>
+										item.fields.type == "people" && (
+											<div key={index} className="profile">
+												<h3><strong>{item.fields.firstname + " " + item.fields.lastname}</strong>&nbsp;({item.fields.code})&nbsp;{item.fields.position}</h3>
+										<Link  to={"/people/" + index} className="link-default">View {item.fields.firstname}'s Profile</Link>
+												{/* <Markdown>{item.fields.bio}</Markdown> */}
+											</div>
+										)
 								)}
+
+								
 							</div>
 						</div>
 					</Fragment>
 				)}
 
-				<div className="footer desktop">
+				{/* <div className="footer desktop">
 					Copyright ©<Moment format="YYYY" /> Extimacies Program |{" "}
 					<Moment format="D-MMM-YYYY" />
-				</div>
+				</div> */}
 			</Fragment>
 		);
 	}

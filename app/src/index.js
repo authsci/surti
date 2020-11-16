@@ -5,8 +5,8 @@ import { Offline, Online } from "react-detect-offline";
 import NavActivities from "./NavActivities";
 import NavBranded from "./NavBranded";
 import Start from "./Start";
-import Organization from "./Organization";
 import Institution from "./Institution";
+import People from "./People";
 
 import "./styles/main.scss";
 
@@ -21,6 +21,9 @@ class App extends React.Component {
 		this.state = {
 			loading: true,
 		};
+
+		document.addEventListener("touchstart", function() {}, true);
+
 	}
 
 	componentDidMount() {
@@ -79,6 +82,18 @@ class App extends React.Component {
 													<NavActivities />
 												<NavBranded />
 												<Institution {...props} />
+											</Fragment>
+										)}
+									/>
+                	
+									<Route
+										exact
+										path="/people/:id"
+										render={(props) => (
+											<Fragment>
+													<NavActivities />
+												<NavBranded />
+												<People {...props} />
 											</Fragment>
 										)}
 									/>

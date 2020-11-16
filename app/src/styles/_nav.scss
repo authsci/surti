@@ -4,7 +4,7 @@
   right: 0;
   left: 0;
   display: flex;
-  padding: 0 24px;
+  padding: 0 12px;
   height: 55px;
   justify-content: flex-end;
   background: linear-gradient(
@@ -36,9 +36,6 @@
     padding: 2px 0 3px 0;
     align-items: center;
 
-    img {
-      padding-right: 12px !important;
-    }
   }
 
   &-right {
@@ -55,16 +52,13 @@
     margin-top: 80px;
     padding: 0;
     height: 80px;
-    justify-content: flex-end;
     background: transparent;
     z-index: $z-base !important;
 
     &-left {
       display: inline-flex;
       flex: 1;
-      align-items: center;
       font-size: $type-sm;
-      align-items: center;
 
       .logo {
         top: 95px;
@@ -85,9 +79,8 @@
     &-right {
       display: flex;
       color: $color-gray;
-      align-items: center;
       font-size: $type-xs;
-      justify-content: flex-end;
+      align-self: center;
     }
   }
 
@@ -150,6 +143,11 @@
       color: $color-white;
       padding: 0;
       align-self: center;
+
+      @media (min-width: $break-sm) {
+        padding: 0 12px;
+      }
+
     }
     &-right {
       @extend .nav-right;
@@ -157,6 +155,7 @@
       align-content: center;
       align-items: center;
       align-self: center;
+      padding: 0 12px;
       i {
         color: $color-white;
       }
