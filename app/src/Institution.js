@@ -67,6 +67,8 @@ export default class Activities extends React.Component {
 
 								<h1>{organizations.name}</h1>
 
+								<div className="nudge-md"></div>
+
 								<a className="link-main">
 									People
 								</a>
