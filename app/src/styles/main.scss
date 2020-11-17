@@ -651,8 +651,8 @@ canvas {
   }
 
   @media (min-width: $break-sm) {
-    position: absolute;
-    top: 150px;
+    position: relative;
+    top: 0px;
     padding: 12px;
     font-size: $type-xxs;
   }

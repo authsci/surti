@@ -4,13 +4,6 @@ import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const SPACE_ID = "yzeyubafmmte";
-const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
-const contentfulAPI =
-	"https://cdn.contentful.com/spaces/" +
-	SPACE_ID +
-	"/entries?access_token=" +
-	ACCESS_TOKEN;
 
 const useStyles = makeStyles({
 	list: {
@@ -32,17 +25,17 @@ const useStyles = makeStyles({
 export default function SwipeableTemporaryDrawer() {
 	const classes = useStyles();
 	const [info, setInfo] = useState();
-  const user = localStorage.getItem("user");
+
   const [state, setState] = useState({
     right: false,
   });
 
-	useEffect(() => {
-		axios.get(contentfulAPI).then(({ data }) => {
-			setInfo(data);
-			console.log(data);
-		});
-	});
+	// useEffect(() => {
+	// 	axios.get(contentfulAPI).then(({ data }) => {
+	// 		setInfo(data);
+	// 		console.log(data);
+	// 	});
+	// });
 
 	const toggleDrawer = (side, open) => (event) => {
 		if (
@@ -58,7 +51,7 @@ export default function SwipeableTemporaryDrawer() {
 		setState({ ...state, [side]: open });
 	};
 
-	return info ? (
+	return  (
 			<Fragment>
 				{state.right ? (
 					<div className="layout-row flex-right">
@@ -138,7 +131,5 @@ export default function SwipeableTemporaryDrawer() {
 				</SwipeableDrawer>
 			</Fragment>
 			
-			) : (
-				<Fragment></Fragment>
-			)
+	)
 }
