@@ -40,7 +40,7 @@ export default class Nav extends React.Component {
 
 						<div className="nav-branded-right desktop">
 							<NavLink
-								to="/about"
+								to="/"
 								exact
 								activeClassName="link-menu-hilite"
 								className="link-menu"
@@ -49,7 +49,7 @@ export default class Nav extends React.Component {
 							</NavLink>
 
 							<NavLink
-								to="/people"
+								to="/list"
 								activeClassName="link-menu-hilite"
 								className="link-menu"
 							>

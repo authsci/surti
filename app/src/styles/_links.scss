@@ -1,10 +1,9 @@
 .link,
-a  {
+a {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  
 
   &-urgent {
     font-size: $type-tiny;
@@ -146,7 +145,6 @@ a  {
     }
   }
 
-
   &-cta {
     text-align: center;
     justify-content: center;
@@ -253,6 +251,27 @@ a  {
     }
   }
 
+  &-main {
+    cursor: pointer !important;
+    color: $color-blue-default;
+    font-size: $type-lg;
+    text-decoration: none;
+    border-bottom: 1px solid $color-blue-light;
+    width: 300px;
+    font-weight: $regular;
+    font-size: $type-xs;
+    display: flex;
+    
+
+    &:hover {
+      color: $color-blue;
+      border-bottom: 1px solid $color-blue-medium;
+    }
+
+    @media (min-width: $break-sm) {
+      font-size: $type-xxs;
+    }
+  }
   &-default {
     cursor: pointer !important;
     color: $color-blue-default;
@@ -262,18 +281,16 @@ a  {
     width: auto;
     font-weight: $regular;
     font-size: $type-xs;
-    
+
     &:hover {
       color: $color-blue;
       border-bottom: 1px solid $color-blue-medium;
     }
-    
+
     @media (min-width: $break-sm) {
       font-size: $type-xxs;
     }
-
   }
-
 
   &-title {
     cursor: pointer !important;
@@ -300,11 +317,10 @@ a  {
       min-width: 200px;
       margin: 12px;
     }
-    
+
     transition: $transition-border;
 
     &:hover {
-
       transition: $transition-border;
 
       small {
@@ -943,23 +959,17 @@ a  {
   }
 
   &-breadcrumbs {
-    text-decoration: none !important;
-    color: $color-blue !important;
-    border-bottom: 1px solid $color-blue-slight !important;
-    font-weight: $light;
-    font-size: $type-default !important;
-
-    i {
-      font-size: $type-xs;
-      color: $color-blue;
-      transition: $transition-color;
-      margin: 0 10px;
-      border-bottom: 1px solid transparent !important;
-    }
+    text-decoration: none;
+    color: $color-blue-default;
+    font-weight: $regular;
+    // font-size: $type-teeny;
+    padding: 1px 6px;
+    background: $color-blue-note;
+    border-radius: $radius-slight;
 
     &:hover {
-      color: $color-blue !important;
-      border-bottom: 1px solid $color-blue-medium !important;
+      color: $color-white !important;
+      background: $color-blue-medium;
     }
   }
 
@@ -1016,7 +1026,6 @@ a  {
     color: $color-gray-light;
     font-size: $type-md;
   }
-
 
   &-icon {
     color: $color-blue;

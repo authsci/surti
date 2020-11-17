@@ -129,7 +129,7 @@ export default class Activities extends React.Component {
 									(item, index) =>
 										item.fields.type == "people" && (
 											<div key={index} className="profile">
-												<Link to={"/people/" + index} className="link-default">
+												<Link to={`/people/` + index} className="link-default">
 													{item.fields.firstname + " " + item.fields.lastname}
 												</Link>
 												<span

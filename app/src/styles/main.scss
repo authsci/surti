@@ -18,7 +18,7 @@ body {
   margin: 0;
   font-weight: $regular;
   overflow-x: hidden;
-  height: 2500px;
+  height: 1500px;
   display: block;
 }
 
@@ -302,15 +302,18 @@ strong {
 }
 
 .breadcrumbs {
-  display: flex;
-  align-items: center;
-  font-weight: $light !important;
-  font-size: $type-default !important;
-  font-family: $font-default !important;
-  color: $color-gray-dark !important;
+  padding: 24px 0;
+  font-size: $type-tiny;
 
-  div {
-    color: $color-gray-darkest;
+  span {
+    color: $color-gray-half;
+    padding: 0 6px;
+  }
+  
+  b {
+    color: $color-gray-dark;
+    font-weight: $regular !important;
+    padding: 0;
   }
 }
 
@@ -618,7 +621,7 @@ canvas {
   line-height: $type-xl;
   font-size: $type-copy;
   position: absolute;
-  top: 90px;
+  top: 60px;
 
   a {
     color: $color-blue-default;
@@ -648,8 +651,8 @@ canvas {
   }
 
   @media (min-width: $break-sm) {
-    position: relative;
-    top: 60px;
+    position: absolute;
+    top: 150px;
     padding: 12px;
     font-size: $type-xxs;
   }

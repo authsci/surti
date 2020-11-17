@@ -28,19 +28,14 @@ export default class Activities extends React.Component {
 			id: this.props.match.params.id,
 			name: this.props.match.params.name,
 		};
-
-		// this.props.history.push({
-		//   pathname: `/people/` + this.props.match.params.name
-		// });
 	}
 
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
 			const media = response.data;
-			const people = response.data.items[this.state.id].fields;
+			const people = response.data.items;
 			this.setState({ media, people, loading: false });
 		});
-
 		window.scrollTo(0, 0);
 	}
 
@@ -67,42 +62,67 @@ export default class Activities extends React.Component {
 										Home
 									</Link>
 									<span>/</span>
-									<Link to="/list" className="link-breadcrumbs">
-										People
-									</Link>
-									<span>/</span>
-									<b>{people.firstname + " " + people.lastname}</b>
+									<b>People</b>
 								</div>
 
-								<h2>{people.firstname + " " + people.lastname}</h2>
-								<span className={`dept-` + people.dept.toLowerCase()}>
-									{people.dept}
-								</span>
-								<br />
-								<div>{people.position}</div>
-								<a href={`mailto:` + people.email}>
-									<i className="far fa-envelope"></i>
-								</a>
-								<a className="link-default" href={`mailto:` + people.email}>
-									{people.email}
-								</a>
-								<div className="nudge-sm"></div>
+								<Fragment>
+									
+										{people.map(
+											(item, index) =>
+												item.fields.type == "people" && (
+													<Fragment key={index}>
+														<h2>
+															{item.fields.firstname +
+																" " +
+																item.fields.lastname}
+														</h2>
+														<span
+															className={
+																`dept-` + item.fields.dept.toLowerCase()
+															}
+														>
+															{item.fields.dept}
+														</span>
+														<br />
+														<div>{item.fields.position}</div>
+														<a href={`mailto:` + item.fields.email}>
+															<i className="far fa-envelope"></i>
+														</a>
+														<a
+															className="link-default"
+															href={`mailto:` + item.fields.email}
+														>
+															{item.fields.email}
+														</a>
+														<div className="nudge-sm"></div>
 
-									<div className="profile">
-										{people.photo &&
-											media.includes.Asset.map(
-												(image, index) =>
-													people.photo.sys.id ==
-														media.includes.Asset[index].sys.id && (
-														<img
-															key={index}
-															src={media.includes.Asset[index].fields.file.url}
-														/>
-													)
-											)}
-									</div>
+                            <div className="profile">
 
-									<Markdown>{people.bio}</Markdown>
+														{item.fields.photo &&
+															media.includes.Asset.map(
+																(image, index) =>
+																	item.fields.photo.sys.id ==
+																		media.includes.Asset[index].sys.id && (
+																		<img
+																			key={index}
+																			src={
+																				media.includes.Asset[index].fields.file
+																					.url
+																			}
+																		/>
+																	)
+															)} 
+                            
+                            </div>
+
+                            <Markdown>{item.fields.bio}</Markdown>
+
+
+														<div className="nudge-lg"></div>
+													</Fragment>
+												)
+										)}
+								</Fragment>
 								<div className="nudge-xxl"></div>
 							</div>
 						</div>

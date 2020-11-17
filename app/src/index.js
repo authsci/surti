@@ -7,6 +7,7 @@ import NavBranded from "./NavBranded";
 import Start from "./Start";
 import Institution from "./Institution";
 import People from "./People";
+import PeopleList from "./PeopleList";
 
 import "./styles/main.scss";
 
@@ -88,12 +89,25 @@ class App extends React.Component {
                 	
 									<Route
 										exact
+										// path="/people/:id/:name"
 										path="/people/:id"
 										render={(props) => (
 											<Fragment>
 													<NavActivities />
 												<NavBranded />
 												<People {...props} />
+											</Fragment>
+										)}
+									/>
+                	
+									<Route
+										exact
+										path="/list"
+										render={(props) => (
+											<Fragment>
+													<NavActivities />
+												<NavBranded />
+												<PeopleList {...props} />
 											</Fragment>
 										)}
 									/>
