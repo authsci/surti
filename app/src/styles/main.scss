@@ -663,8 +663,8 @@ canvas {
     top: 620px;
 
     @media (min-width: $break-sm) {
-      position: absolute;
-      top: 630px;
+      position: relative;
+      top: 570px;
     }
   }
 }
