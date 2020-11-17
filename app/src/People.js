@@ -24,22 +24,23 @@ export default class Activities extends React.Component {
 			loading: true,
 			keyword: "",
 			people: [],
+			media: [],
 			id: this.props.match.params.id,
 		};
 	}
 
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
+			const media = response.data;
 			const people = response.data.items[this.state.id].fields;
-			this.setState({ people, loading: false });
-			console.log(people);
+			this.setState({ media, people, loading: false });
 		});
 
 		window.scrollTo(0, 0);
 	}
 
 	render() {
-		let { loading, people } = this.state;
+		let { loading, media, people } = this.state;
 
 		return (
 			<Fragment>
@@ -62,8 +63,33 @@ export default class Activities extends React.Component {
 								<a className="link-default" href={`mailto:` + people.email}>
 									{people.email}
 								</a>
-                <div className="nudge-sm"></div>
-								<p>{people.bio}</p>
+								<div className="nudge-sm"></div>
+
+								{people.photo && (
+                  <Fragment>
+
+									<div className="profile">
+										{media.includes.Asset.map(
+                      (image, index) =>
+                      people.photo.sys.id ==
+                      media.includes.Asset[index].sys.id && (
+                        <img
+                        key={index}
+                        src={media.includes.Asset[index].fields.file.url}
+                        height="200"
+                        />
+												)
+                        )}
+
+									</div>
+
+										<Markdown>{people.bio}</Markdown>
+
+
+                        </Fragment>
+
+                  
+								)}
 							</div>
 						</div>
 					</Fragment>

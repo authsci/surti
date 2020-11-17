@@ -528,7 +528,17 @@ h4 {
 }
 
 .profile {
-  padding: 0 0 24px 0;
+  padding: 12px 0 12px 0;
+  font-size: $type-copy;
+
+  @media (min-width: $break-sm) {
+    font-size: $type-xxs;
+  }
+
+  img {
+    padding: 0;
+    margin: 0 12px 0 0;
+  }
 }
 
 .toggle {
