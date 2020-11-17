@@ -58,38 +58,31 @@ export default class Activities extends React.Component {
 						<div className="contain">
 							<div className="copy">
 								<h2>{people.firstname + " " + people.lastname}</h2>
-								<p>{people.code}</p>
-								<p>{people.position}</p>
-								<a className="link-default" href={`mailto:` + people.email}>
-									{people.email}
-								</a>
+                <span className={ `dept-`+ people.dept.toLowerCase() }>{people.dept}</span><br/>
+                <div>{people.position}</div>
+                <a href={`mailto:` + people.email}><i className="far fa-envelope"></i></a>
+								<a className="link-default" href={`mailto:` + people.email}>{people.email}</a>
 								<div className="nudge-sm"></div>
 
 								{people.photo && (
-                  <Fragment>
-
-									<div className="profile">
-										{media.includes.Asset.map(
-                      (image, index) =>
-                      people.photo.sys.id ==
-                      media.includes.Asset[index].sys.id && (
-                        <img
-                        key={index}
-                        src={media.includes.Asset[index].fields.file.url}
-                        height="200"
-                        />
-												)
-                        )}
-
-									</div>
+									<Fragment>
+										<div className="profile">
+											{media.includes.Asset.map(
+												(image, index) =>
+													people.photo.sys.id ==
+														media.includes.Asset[index].sys.id && (
+														<img
+															key={index}
+															src={media.includes.Asset[index].fields.file.url}
+														/>
+													)
+											)}
+										</div>
 
 										<Markdown>{people.bio}</Markdown>
-
-
-                        </Fragment>
-
-                  
+									</Fragment>
 								)}
+              <div className="nudge-xxl"></div>
 							</div>
 						</div>
 					</Fragment>

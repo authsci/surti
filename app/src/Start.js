@@ -33,11 +33,6 @@ export default class Activities extends React.Component {
 		window.scrollTo(0, 0);
 	}
 
-	handleClearKeyword = () => {
-		this.setState({ keyword: "" });
-		this.goTop();
-	};
-
 	goTop = () => {
 		scroll.scrollToTop({
 			duration: 400,
@@ -92,7 +87,6 @@ export default class Activities extends React.Component {
 														</Link>
 													</Fragment>
 												)
-											
 										)}
 									</div>
 
@@ -122,27 +116,32 @@ export default class Activities extends React.Component {
 							<div className="copy-hero">
 								{organizations.map(
 									(item, index) =>
-									item.fields.type == "about" && (
-										<Fragment key={index}>
+										item.fields.type == "about" && (
+											<Fragment key={index}>
 												<Markdown>{item.fields.body}</Markdown>
 											</Fragment>
 										)
-										)}
+								)}
 
-										<div className="nudge-lg"></div>
+								<div className="nudge-lg"></div>
 
 								{organizations.map(
 									(item, index) =>
 										item.fields.type == "people" && (
 											<div key={index} className="profile">
-												<h3><strong>{item.fields.firstname + " " + item.fields.lastname}</strong>&nbsp;({item.fields.code})&nbsp;{item.fields.position}</h3>
-										<Link  to={"/people/" + index} className="link-default">View {item.fields.firstname}'s Profile</Link>
-												{/* <Markdown>{item.fields.bio}</Markdown> */}
+												<Link to={"/people/" + index} className="link-default">
+													{item.fields.firstname + " " + item.fields.lastname}
+												</Link>
+												<span
+													className={`dept-` + item.fields.dept.toLowerCase()}
+												>
+													{item.fields.dept}
+												</span>
+												<span>{item.fields.position}</span>
 											</div>
 										)
 								)}
-
-								
+								<div className="nudge-xl"></div>
 							</div>
 						</div>
 					</Fragment>

@@ -17,8 +17,9 @@ body {
   padding: 0;
   margin: 0;
   font-weight: $regular;
-  height: 2000px;
   overflow-x: hidden;
+  height: 2500px;
+  display: block;
 }
 
 .mobile-placeholder {
@@ -288,58 +289,6 @@ video {
   }
 }
 
-.dock {
-  position: fixed;
-  padding: 6px 12px;
-  background: linear-gradient(to right, $color-gray-darker 0%, $color-gray-darkest 50%, $color-gray-darker 100%);
-  color: $color-white;
-  bottom: 0;
-  justify-content: flex-end;
-  align-items: center;
-  left: 0;
-  right: 0;
-  font-size: $type-teeny;
-
-  &-top {
-    position: fixed;
-    top: 45px;
-    right: 24px;
-    font-size: $type-teeny;
-    // background: $color-white;
-    width: 320px;
-    padding: 20px 0;
-    z-index: $z-nav;
-  }
-
-  span {
-    padding: 2px 3px;
-  }
-
-  &-drawer {
-    position: relative;
-    right: 48px;
-    left: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-    z-index: $z-nav;
-    width: 320px;
-
-    &-bottom {
-      position: fixed;
-      bottom: 65px;
-      right: 0;
-      padding: 0 48px;
-      z-index: $z-nav;
-      display: flex;
-    }
-  }
-}
-
-body {
-  overflow-x: hidden;
-}
-
 strong {
   font-weight: $regular;
 }
@@ -464,8 +413,6 @@ label {
 p {
   font-size: $type-base;
   color: $color-gray-darker;
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
 h1 {
@@ -491,11 +438,11 @@ h3 {
   padding: 0 !important;
   margin: 0 !important;
   display: flex;
-  
+
   @media (min-width: $break-sm) {
     font-size: $type-xs;
   }
-  
+
   strong {
   }
 
@@ -505,8 +452,6 @@ h3 {
     margin-left: 6px;
     color: $color-blue-default;
   }
-  
-  
 }
 
 h4 {
@@ -535,8 +480,14 @@ h4 {
     font-size: $type-xxs;
   }
 
+  span {
+    margin: 0 0 0 6px;
+  }
+
   img {
     padding: 0;
+    max-width: 255px;
+    max-height: 200px;
     margin: 0 12px 0 0;
   }
 }
@@ -630,14 +581,59 @@ canvas {
   background-color: #222;
 }
 
+.dept {
+  color: $color-white;
+  padding: 1px 3px;
+  font-size: $type-tiny;
+  text-transform: uppercase;
+  color: $color-white;
+
+  &-auc {
+    @extend .dept;
+    background: $color-green;
+  }
+  &-aub {
+    @extend .dept;
+    background: $color-yellow;
+    color: $color-gray-darkest;
+  }
+  &-fuabc {
+    @extend .dept;
+    background: $color-mid;
+  }
+  &-vu {
+    @extend .dept;
+    background: $color-orange;
+  }
+  &-iua {
+    @extend .dept;
+    background: $color-pink;
+  }
+}
+
 .copy {
   margin: 0 auto;
   display: block;
   padding: 12px 36px;
   line-height: $type-xl;
+  font-size: $type-copy;
   position: absolute;
   top: 90px;
-  font-size: $type-copy;
+
+  a {
+    color: $color-blue-default;
+  
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  i {
+    color: $color-blue-medium;
+    vertical-align: middle;
+    padding: 0 3px;
+    font-size: $type-tiny;
+  }
 
   p {
     font-size: $type-copy;
@@ -653,10 +649,9 @@ canvas {
 
   @media (min-width: $break-sm) {
     position: relative;
-    top: 40px;
+    top: 60px;
     padding: 12px;
-  font-size: $type-xxs;
-
+    font-size: $type-xxs;
   }
 
   &-hero {
@@ -665,11 +660,10 @@ canvas {
     top: 620px;
 
     @media (min-width: $break-sm) {
-      position: relative;
-      top: 570px;
+      position: absolute;
+      top: 630px;
     }
   }
-
 }
 
 // .about {
@@ -684,11 +678,6 @@ canvas {
 //     width: 100%;
 //     padding: 12px 0 !important;
 //   }
-
-
-
-
- 
 
 // }
 

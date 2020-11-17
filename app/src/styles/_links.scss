@@ -4,6 +4,7 @@ a  {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  
 
   &-urgent {
     font-size: $type-tiny;
@@ -270,58 +271,9 @@ a  {
     @media (min-width: $break-sm) {
       font-size: $type-xxs;
     }
+
   }
 
-  &-top {
-    color: $color-gray-dark;
-
-    font-size: $type-default;
-    padding: 3px 8px;
-    position: fixed;
-    right: 12px;
-    bottom: 48px;
-    cursor: pointer;
-    z-index: $z-base;
-    transition: $transition-background;
-    text-align: center;
-
-    &:after {
-      content: "TOP";
-      display: block;
-      font-size: $type-teeny;
-    }
-
-    &:hover {
-      transition: $transition-background;
-      background: $color-gray-darker;
-      color: $color-white;
-
-      &:after {
-        content: "TOP";
-        display: block;
-        font-size: $type-teeny;
-      }
-    }
-  }
-
-  &-subscription {
-    &-full {
-      // border-radius: $radius-slight;
-      background: $color-brand-slight;
-      color: $color-brand;
-      border: none;
-      padding: 1px 6px;
-      font-size: $type-default;
-    }
-    &-alt {
-      // border-radius: $radius-slight;
-      background: $color-white;
-      border: 1px solid $color-brand-medium;
-      color: $color-brand;
-      padding: 0 6px;
-      font-size: $type-default;
-    }
-  }
 
   &-title {
     cursor: pointer !important;
@@ -1065,14 +1017,6 @@ a  {
     font-size: $type-md;
   }
 
-  &-profile {
-    color: $color-white-medium;
-    font-size: $type-md;
-    margin-right: 8px;
-    i {
-      cursor: pointer !important;
-    }
-  }
 
   &-icon {
     color: $color-blue;

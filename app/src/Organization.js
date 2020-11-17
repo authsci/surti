@@ -100,7 +100,7 @@ export default class Activities extends React.Component {
 								item.fields.type == "org" && (
 									<Fragment key={index}>
 										<div className="link-title">
-											<h1>{item.fields.code}</h1>
+											<h1>{item.fields.dept}</h1>
 											<div className={`link-block-` + item.fields.color}></div>
 											<small>{item.fields.name}</small>
 										</div>
