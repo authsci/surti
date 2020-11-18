@@ -22,7 +22,7 @@ export default class Activities extends React.Component {
 		this.state = {
 			loading: true,
 			keyword: "",
-			organizations: [],
+			institutions: [],
     };
     
     console.log(this.props.match.params.id);
@@ -30,9 +30,9 @@ export default class Activities extends React.Component {
 
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
-			const organizations = response.data.items;
-			this.setState({ organizations, loading: false });
-			console.log(organizations);
+			const institutions = response.data.items;
+			this.setState({ institutions, loading: false });
+			console.log(institutions);
 		});
 
 		window.scrollTo(0, 0);
@@ -80,7 +80,7 @@ export default class Activities extends React.Component {
 	};
 
 	render() {
-		let { loading, organizations } = this.state;
+		let { loading, institutions } = this.state;
 
 		return (
 			<Fragment>
@@ -95,7 +95,7 @@ export default class Activities extends React.Component {
 					</div>
 				) : (
 					<div className="mainmenu">
-						{organizations.map(
+						{institutions.map(
 							(item, index) =>
 								item.fields.type == "org" && (
 									<Fragment key={index}>

@@ -94,7 +94,7 @@ export default class Activities extends React.Component {
 														>
 															{item.fields.email}
 														</a>
-														<div className="nudge-sm"></div>
+														<div className="nudge-xs"></div>
 
                             <div className="profile">
 
@@ -116,7 +116,6 @@ export default class Activities extends React.Component {
                             </div>
 
                             <Markdown>{item.fields.bio}</Markdown>
-
 
 														<div className="nudge-lg"></div>
 													</Fragment>

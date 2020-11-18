@@ -19,15 +19,15 @@ export default class Activities extends React.Component {
 		this.state = {
 			loading: true,
 			keyword: "",
-			organizations: [],
+			institutions: [],
 		};
 	}
 
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
-			const organizations = response.data.items;
-			this.setState({ organizations, loading: false });
-			console.log("organizations", organizations);
+			const institutions = response.data.items;
+			this.setState({ institutions, loading: false });
+			console.log("institutions", institutions);
 		});
 
 		window.scrollTo(0, 0);
@@ -41,7 +41,7 @@ export default class Activities extends React.Component {
 	};
 
 	render() {
-		let { loading, organizations } = this.state;
+		let { loading, institutions } = this.state;
 
 		return (
 			<Fragment>
@@ -72,7 +72,7 @@ export default class Activities extends React.Component {
 									</div>
 
 									<div className="mainmenu">
-										{organizations.map(
+										{institutions.map(
 											(item, index) =>
 												item.fields.type == "org" && (
 													<Fragment key={index}>
@@ -114,7 +114,7 @@ export default class Activities extends React.Component {
 
 						<div className="contain">
 							<div className="copy-hero">
-								{organizations.map(
+								{institutions.map(
 									(item, index) =>
 										item.fields.type == "about" && (
 											<Fragment key={index}>
@@ -125,7 +125,7 @@ export default class Activities extends React.Component {
 
 								<div className="nudge-lg"></div>
 
-								{organizations.map(
+								{institutions.map(
 									(item, index) =>
 										item.fields.type == "people" && (
 											<div key={index} className="profile">
@@ -141,6 +141,8 @@ export default class Activities extends React.Component {
 											</div>
 										)
 								)}
+
+
 								<div className="nudge-xl"></div>
 							</div>
 						</div>

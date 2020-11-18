@@ -24,7 +24,7 @@ export default class Nav extends React.Component {
 			<Fragment>
 				<div className="contain">
 					<div className="nav-branded">
-						<div className="nav-branded-left">
+						<div className="nav-branded-left desktop">
 							<NavLink to="/">
 								<div className="logo">
 									<img src="img/logo-icon.png" />

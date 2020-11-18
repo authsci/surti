@@ -93,7 +93,7 @@ class App extends React.Component {
 										path="/people/:id"
 										render={(props) => (
 											<Fragment>
-													<NavActivities />
+												<NavActivities />
 												<NavBranded />
 												<People {...props} />
 											</Fragment>
@@ -105,7 +105,7 @@ class App extends React.Component {
 										path="/list"
 										render={(props) => (
 											<Fragment>
-													<NavActivities />
+												<NavActivities />
 												<NavBranded />
 												<PeopleList {...props} />
 											</Fragment>

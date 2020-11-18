@@ -75,9 +75,14 @@ export default class Activities extends React.Component {
 								</div>
 
 								<h2>{people.firstname + " " + people.lastname}</h2>
-								<span className={`dept-` + people.dept.toLowerCase()}>
+								<span className={`dept-` + people.dept.toLowerCase()}  data-tip data-for="profile">
 									{people.dept}
 								</span>
+
+								<ReactTooltip place="top" type="dark" effect="float" id="profile">
+								American University of Cairo
+					</ReactTooltip>
+
 								<br />
 								<div>{people.position}</div>
 								<a href={`mailto:` + people.email}>
@@ -103,6 +108,31 @@ export default class Activities extends React.Component {
 									</div>
 
 									<Markdown>{people.bio}</Markdown>
+									<div className="nudge-lg"></div>
+
+									<h3>Publications</h3>
+									<p>
+									<strong>Psychoanalysis and the Love of Arabic</strong><br/>
+									Hall of Mirrors<br/>
+									Nadia Bou Ali<br/>
+
+										<a href="https://edinburghuniversitypress.com/book-psychoanalysis-and-the-love-of-arabic.html" target="_blank" className="link-small">
+										https://edinburghuniversitypress.com/book-psychoanalysis-and-the-love-of-arabic.html
+										</a>
+									</p>
+									<p>
+										Book2
+									</p>
+									
+									<div className="nudge-lg"></div>
+
+									<h3>Courses</h3>
+									<p>
+										
+									</p>
+									<p>
+										Book2
+									</p>
 								<div className="nudge-xxl"></div>
 							</div>
 						</div>

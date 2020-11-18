@@ -18,7 +18,7 @@ export default class Activities extends React.Component {
 		this.state = {
 			loading: true,
 			keyword: "",
-			organizations: [],
+			institutions: [],
 			id: this.props.match.params,
 		};
 		console.log("inst props", this.props.match.params);
@@ -27,16 +27,16 @@ export default class Activities extends React.Component {
 
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
-			const organizations = response.data.items[this.props.match.params.id].fields;
-			this.setState({ organizations, loading: false });
-			console.log("organizations", organizations);
+			const institutions = response.data.items[this.props.match.params.id].fields;
+			this.setState({ institutions, loading: false });
+			console.log("institutions", institutions);
 		});
 
 		window.scrollTo(0, 0);
 	}
 
 	render() {
-		let { loading, organizations } = this.state;
+		let { loading, institutions } = this.state;
 
 		return (
 			<Fragment>
@@ -62,10 +62,15 @@ export default class Activities extends React.Component {
 										Institutions
 									</Link>
 									<span>/</span>
-									<b>{organizations.name}</b>
+									<b>{institutions.name}</b>
 								</div>
 
-								<h1>{organizations.name}</h1>
+								<h1>{institutions.name}</h1>
+
+								<p> The only Augustinian Catholic university in the nation, Villanova values a personalized experience where teachers and students are partners in learning and scholarly inquiry. From undergraduate to doctoral students, Villanovans are intellectually inspired, morally grounded, globally minded. Villanova attracts and forges world changers—people who ignite positive change everywhere life takes them. During this unprecedented time of the COVID-19 pandemic, Villanova's Augustinian values of Veritas, Unitas, Caritas can be seen in our work towards the common good and our support for one another.</p>
+
+								<h3>Publications</h3>
+								<p>The only Augustinian Catholic university in the nation, Villanova values a personalized experience where teachers and students are partners in learning and scholarly inquiry. From undergraduate to doctoral students, Villanovans are intellectually inspired, morally grounded, globally minded. Villanova attracts and forges world changers—people who ignite positive change everywhere life takes them. During this unprecedented time of the COVID-19 pandemic, Villanova's Augustinian values of Veritas, Unitas, Caritas can be seen in our work towards the common good and our support for one another.</p>
 
 								<div className="nudge-md"></div>
 
@@ -76,14 +81,12 @@ export default class Activities extends React.Component {
 									Events
 								</a>
 								<a className="link-main">
-									Publications
-								</a>
-								<a className="link-main">
 									Initiatives
 								</a>
 								<a className="link-main">
-									Courses
+									Publications
 								</a>
+					
 
 								{/* <h2>{people.firstname + " " + people.lastname}</h2>
 								<span className={`dept-` + people.dept.toLowerCase()}>

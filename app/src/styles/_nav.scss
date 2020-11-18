@@ -49,7 +49,8 @@
 
   &-branded {
     display: flex;
-    margin-top: 80px;
+    position: relative;
+    top: 80px;
     padding: 0;
     height: 80px;
     background: transparent;
@@ -61,7 +62,7 @@
       font-size: $type-sm;
 
       .logo {
-        top: 95px;
+        // top: 95px;
         div {
           a,
           strong {
@@ -84,38 +85,6 @@
     }
   }
 
-  &-auth {
-    @extend .nav;
-    background: linear-gradient(
-      -90deg,
-      $color-green,
-      $color-mid,
-      $color-blue,
-      $color-black,
-      $color-black,
-      $color-black
-    );
-    background-size: 400% 400%;
-    animation-name: black2blue;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-play-state: running;
-
-    &-left {
-      @extend .nav-left;
-      color: $color-white;
-    }
-    &-right {
-      @extend .nav-right;
-      color: $color-white;
-      i {
-        color: $color-white;
-      }
-    }
-  }
 
   &-activities {
     @extend .nav;
