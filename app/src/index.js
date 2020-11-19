@@ -80,7 +80,7 @@ class App extends React.Component {
 										path="/institution/:id"
 										render={(props) => (
 											<Fragment>
-													<NavActivities />
+												<NavActivities />
 												<NavBranded />
 												<Institution {...props} />
 											</Fragment>

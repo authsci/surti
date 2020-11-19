@@ -261,7 +261,6 @@ a {
     font-weight: $regular;
     font-size: $type-xs;
     display: flex;
-    
 
     &:hover {
       color: $color-blue;
@@ -275,22 +274,30 @@ a {
   &-default {
     cursor: pointer !important;
     color: $color-blue-default;
-    font-size: inherit;
     text-decoration: none;
     border-bottom: 1px solid $color-blue-light;
     width: auto;
     font-weight: $regular;
-    font-size: $type-xs;
+    font-size: $type-sm;
 
     &:hover {
       color: $color-blue;
       border-bottom: 1px solid $color-blue-medium;
     }
-
-    @media (min-width: $break-sm) {
-      font-size: $type-xxs;
-    }
   }
+  
+  &-icon {
+      cursor: pointer !important;
+    color: $color-blue-default;
+    text-decoration: none;
+    width: auto;
+    font-weight: $regular;
+    font-size: $type-sm;
+    border: none;
+    padding: 0 3px 0 0;
+    align-self: flex-start;
+  }
+
 
   &-title {
     cursor: pointer !important;
@@ -1027,23 +1034,4 @@ a {
     font-size: $type-md;
   }
 
-  &-icon {
-    color: $color-blue;
-    font-size: $type-xs;
-    padding: 4px 8px;
-    display: inline-flex;
-    border-radius: $radius-slight;
-
-    i {
-      font-size: $type-md !important;
-    }
-
-    &:hover {
-      color: $color-white;
-      background: $color-blue-slight;
-      transition: $transition-background;
-    }
-
-    cursor: pointer !important;
-  }
 }

@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import { Events, animateScroll as scroll } from "react-scroll";
+import Team from "./Team";
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -103,7 +104,7 @@ export default class Activities extends React.Component {
 									loop
 									autoPlay
 									muted
-									src="img/mobius.mp4"
+									src="img/starfield.mp4"
 									type="video/mp4"
 									// poster="img/mobius.jpg"
 								></video>
@@ -125,22 +126,7 @@ export default class Activities extends React.Component {
 
 								<div className="nudge-lg"></div>
 
-								{institutions.map(
-									(item, index) =>
-										item.fields.type == "people" && (
-											<div key={index} className="profile">
-												<Link to={`/people/` + index} className="link-default">
-													{item.fields.firstname + " " + item.fields.lastname}
-												</Link>
-												<span
-													className={`dept-` + item.fields.dept.toLowerCase()}
-												>
-													{item.fields.dept}
-												</span>
-												<span>{item.fields.position}</span>
-											</div>
-										)
-								)}
+								<Team/>
 
 
 								<div className="nudge-xl"></div>

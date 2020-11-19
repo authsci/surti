@@ -7,6 +7,7 @@
 @import "nav";
 @import "material";
 @import "sidepanel";
+@import "tooltip";
 
 html,
 body {
@@ -296,22 +297,31 @@ strong {
   display: none;
 
   @media (min-width: $break-sm) {
-    display: block;
+    display: flex;
+  }
+}
+
+.mobile {
+  display: flex;
+
+  @media (min-width: $break-sm) {
+    display: none !important;
   }
 }
 
 .breadcrumbs {
   padding: 24px 0;
-  font-size: $type-tiny;
+  font-size: $type-xxs;
+  font-weight: $regular;
 
   span {
     color: $color-gray-half;
     padding: 0 6px;
   }
-  
+
   b {
     color: $color-gray-dark;
-    font-weight: $regular !important;
+    font-weight: $regular;
     padding: 0;
   }
 }
@@ -350,14 +360,6 @@ strong {
   &-right {
     flex: 1;
     align-self: center;
-  }
-}
-
-.mobile {
-  display: flex;
-
-  @media (min-width: $break-sm) {
-    display: none !important;
   }
 }
 
@@ -421,8 +423,6 @@ h1 {
   font-size: $type-h1;
   color: $color-gray-darker;
   font-weight: $light;
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
 h2 {
@@ -475,22 +475,41 @@ h4 {
 }
 
 .profile {
-  padding: 12px 0 12px 0;
-  font-size: $type-copy;
+  // display: flex;
 
   @media (min-width: $break-sm) {
-    font-size: $type-xxs;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 300px auto;
+    align-items: flex-start;
   }
 
-  span {
-    margin: 0 0 0 6px;
+  h1 {
+    font-size: $type-hero;
+    color: $color-gray-darkest;
+    padding: 6px 0;
+    margin: 0;
+    font-weight: $light;
+  }
+
+  h2 {
+    font-size: $type-h2;
+    color: $color-gray-darker;
+    padding: 6px 0;
+    margin: 0;
+    font-weight: $light;
   }
 
   img {
+    width: 300px;
     padding: 0;
-    max-width: 255px;
-    max-height: 200px;
-    margin: 0 12px 0 0;
+  }
+
+  &-bio {
+    width: 100%;
+    font-size: $type-md;
+    font-weight: $light;
   }
 }
 
@@ -585,11 +604,14 @@ canvas {
 
 .dept {
   color: $color-white;
-  padding: 2px 4px;
-  font-size: $type-xxs;
+  display: inline-flex;
+  padding: 0 4px;
   text-transform: uppercase;
   color: $color-white;
   cursor: pointer;
+  margin: 0;
+  font-size: $type-xxs;
+  font-weight: $bold;
 
   &-auc {
     @extend .dept;
@@ -614,18 +636,66 @@ canvas {
   }
 }
 
+.card {
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 24px 0;
+  box-shadow: 6px 6px 6px $color-gray-note !important;
+  width: 100%;
+  border-radius: $radius-default !important;
+  border: 1px solid $color-gray-light;
+
+  @media (min-width: $break-sm) {
+    width: auto;
+    padding: 24px;
+    margin: 0 24px 24px 0;
+  }
+
+  h1 {
+    font-size: $type-lg;
+    color: $color-gray-darkest;
+    padding: 0;
+    margin: 0;
+    font-weight: $light;
+  }
+
+  h2 {
+    font-size: $type-md;
+    color: $color-gray-darker;
+    padding: 0;
+    margin: 0;
+    font-weight: $light;
+  }
+
+  img {
+    width: 100%;
+    border: 1px solid $color-gray-light;
+
+    @media (min-width: $break-sm) {
+      width: 200px;
+    }
+  }
+}
+
 .copy {
   margin: 0 auto;
   display: block;
-  padding: 12px 36px;
+  padding: 0 36px;
   line-height: $type-xl;
   font-size: $type-copy;
   position: absolute;
   top: 60px;
+  left: 0;
+  right: 0;
+  color: $color-black;
+
+  h1 {
+    line-height: $type-h1-height;
+  }
 
   a {
     color: $color-blue-default;
-  
+
     &:hover {
       color: $color-blue;
     }
@@ -642,7 +712,7 @@ canvas {
     font-size: $type-copy;
 
     @media (min-width: $break-sm) {
-      font-size: $type-xxs;
+      font-size: $type-sm;
     }
   }
 

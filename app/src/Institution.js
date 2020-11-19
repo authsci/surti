@@ -24,10 +24,10 @@ export default class Activities extends React.Component {
 		console.log("inst props", this.props.match.params);
 	}
 
-
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
-			const institutions = response.data.items[this.props.match.params.id].fields;
+			const institutions =
+				response.data.items[this.props.match.params.id].fields;
 			this.setState({ institutions, loading: false });
 			console.log("institutions", institutions);
 		});
@@ -67,26 +67,14 @@ export default class Activities extends React.Component {
 
 								<h1>{institutions.name}</h1>
 
-								<p> The only Augustinian Catholic university in the nation, Villanova values a personalized experience where teachers and students are partners in learning and scholarly inquiry. From undergraduate to doctoral students, Villanovans are intellectually inspired, morally grounded, globally minded. Villanova attracts and forges world changers—people who ignite positive change everywhere life takes them. During this unprecedented time of the COVID-19 pandemic, Villanova's Augustinian values of Veritas, Unitas, Caritas can be seen in our work towards the common good and our support for one another.</p>
-
-								<h3>Publications</h3>
-								<p>The only Augustinian Catholic university in the nation, Villanova values a personalized experience where teachers and students are partners in learning and scholarly inquiry. From undergraduate to doctoral students, Villanovans are intellectually inspired, morally grounded, globally minded. Villanova attracts and forges world changers—people who ignite positive change everywhere life takes them. During this unprecedented time of the COVID-19 pandemic, Villanova's Augustinian values of Veritas, Unitas, Caritas can be seen in our work towards the common good and our support for one another.</p>
+								<p>{institutions.desc}</p>
 
 								<div className="nudge-md"></div>
 
-								<a className="link-main">
-									People
-								</a>
-								<a className="link-main">
-									Events
-								</a>
-								<a className="link-main">
-									Initiatives
-								</a>
-								<a className="link-main">
-									Publications
-								</a>
-					
+								<a className="link-main">People</a>
+								<a className="link-main">Events</a>
+								<a className="link-main">Initiatives</a>
+								<a className="link-main">Publications</a>
 
 								{/* <h2>{people.firstname + " " + people.lastname}</h2>
 								<span className={`dept-` + people.dept.toLowerCase()}>

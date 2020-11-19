@@ -74,26 +74,9 @@ export default class Activities extends React.Component {
 									<b>{people.firstname + " " + people.lastname}</b>
 								</div>
 
-								<h2>{people.firstname + " " + people.lastname}</h2>
-								<span className={`dept-` + people.dept.toLowerCase()}  data-tip data-for="profile">
-									{people.dept}
-								</span>
-
-								<ReactTooltip place="top" type="dark" effect="float" id="profile">
-								American University of Cairo
-					</ReactTooltip>
-
-								<br />
-								<div>{people.position}</div>
-								<a href={`mailto:` + people.email}>
-									<i className="far fa-envelope"></i>
-								</a>
-								<a className="link-default" href={`mailto:` + people.email}>
-									{people.email}
-								</a>
-								<div className="nudge-sm"></div>
-
-									<div className="profile">
+							<div className="desktop">
+								<div className="profile">
+									<div>
 										{people.photo &&
 											media.includes.Asset.map(
 												(image, index) =>
@@ -106,33 +89,82 @@ export default class Activities extends React.Component {
 													)
 											)}
 									</div>
+									<div>
+										<div
+											className={`dept-` + people.dept.toLowerCase()}
+											data-tip
+											data-for="profile"
+										>
+											{people.dept}
+										</div>
 
-									<Markdown>{people.bio}</Markdown>
-									<div className="nudge-lg"></div>
+										<h1>{people.firstname + " " + people.lastname}</h1>
 
-									<h3>Publications</h3>
-									<p>
-									<strong>Psychoanalysis and the Love of Arabic</strong><br/>
-									Hall of Mirrors<br/>
-									Nadia Bou Ali<br/>
+										<ReactTooltip
+											place="top"
+											type="dark"
+											effect="float"
+											id="profile"
+											className="desktop"
+										>
+											{people.institution}
+										</ReactTooltip>
 
-										<a href="https://edinburghuniversitypress.com/book-psychoanalysis-and-the-love-of-arabic.html" target="_blank" className="link-small">
-										https://edinburghuniversitypress.com/book-psychoanalysis-and-the-love-of-arabic.html
+										<h2>{people.position}</h2>
+
+										<a href={`mailto:` + people.email} className="link-icon">
+											<i className="far fa-envelope"></i>
 										</a>
-									</p>
-									<p>
-										Book2
-									</p>
-									
-									<div className="nudge-lg"></div>
+										<a className="link-default" href={`mailto:` + people.email}>
+											{people.email}
+										</a>
+									</div>
+								</div>
+							</div>
 
-									<h3>Courses</h3>
-									<p>
-										
-									</p>
-									<p>
-										Book2
-									</p>
+							<div className="mobile">
+
+								<div className="profile">
+									<div
+										className={`dept-` + people.dept.toLowerCase()}
+									>
+										{people.dept}
+									</div>
+
+									<h1>{people.firstname + " " + people.lastname}</h1>
+
+									<h2>{people.position}</h2>
+
+									<a href={`mailto:` + people.email} className="link-icon">
+										<i className="far fa-envelope"></i>
+									</a>
+									<a className="link-default" href={`mailto:` + people.email}>
+										{people.email}
+									</a>
+
+								<div className="nudge-sm"></div>
+
+
+									{people.photo &&
+										media.includes.Asset.map(
+											(image, index) =>
+												people.photo.sys.id ==
+													media.includes.Asset[index].sys.id && (
+													<img
+														key={index}
+														src={media.includes.Asset[index].fields.file.url}
+													/>
+												)
+										)}
+								</div>
+								</div>
+
+								<div className="nudge-sm"></div>
+
+								<div className="profile-bio">
+									<Markdown>{people.bio}</Markdown>
+								</div>
+
 								<div className="nudge-xxl"></div>
 							</div>
 						</div>

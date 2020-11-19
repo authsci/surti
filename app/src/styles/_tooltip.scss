@@ -1,0 +1,22 @@
+.__react_component_tooltip.type-dark {
+  background-color: $color-gray-darkest;
+  opacity: 1;
+  padding: 6px 12px !important;
+  line-height: $type-tiny !important;
+  font-size: $type-tiny !important;
+  text-align: center !important;
+  margin-top: -6px !important;
+  border-radius: 2px !important;
+  text-transform: uppercase !important;
+  z-index: $z-ultimate !important;
+
+  &:after {
+    opacity: 1;
+    border-top-color: $color-gray-darkest !important;
+    border-top-style: solid;
+    border-top-width: 6px;
+    bottom: -5px !important;
+  }
+}
+
+
