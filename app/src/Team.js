@@ -39,10 +39,10 @@ export default class Activities extends React.Component {
 
 		return (
 		
-								<Fragment>
+								<div style={{position: "absolute"}}>
 									{people.map(
 										(item, index) =>
-											item.fields.type == "people" && (
+											item.fields.type == "people" && item.fields.scholar && (
 												<Card key={index} className="card">
 													<CardContent>
 														<div
@@ -116,7 +116,7 @@ export default class Activities extends React.Component {
 												</Card>
 											)
 									)}
-								</Fragment>
+								</div>
 		);
 	}
 }

@@ -486,9 +486,9 @@ h4 {
   }
 
   h1 {
-    font-size: $type-hero;
+    font-size: $type-big;
     color: $color-gray-darkest;
-    padding: 6px 0;
+    padding: 12px 0;
     margin: 0;
     font-weight: $light;
   }
@@ -508,8 +508,9 @@ h4 {
 
   &-bio {
     width: 100%;
-    font-size: $type-md;
+    font-size: $type-lg;
     font-weight: $light;
+    line-height: $type-xxl;
   }
 }
 

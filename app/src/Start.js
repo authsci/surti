@@ -105,6 +105,7 @@ export default class Activities extends React.Component {
 									autoPlay
 									muted
 									src="img/starfield.mp4"
+									// src="img/mobius.mp4"
 									type="video/mp4"
 									// poster="img/mobius.jpg"
 								></video>
@@ -116,7 +117,7 @@ export default class Activities extends React.Component {
 						<div className="contain">
 							<div className="copy-hero">
 								{institutions.map(
-									(item, index) =>
+									(item, index) => 
 										item.fields.type == "about" && (
 											<Fragment key={index}>
 												<Markdown>{item.fields.body}</Markdown>
@@ -124,10 +125,9 @@ export default class Activities extends React.Component {
 										)
 								)}
 
-								<div className="nudge-lg"></div>
+								<div className="nudge-xl"></div>
 
 								<Team/>
-
 
 								<div className="nudge-xl"></div>
 							</div>

@@ -63,6 +63,10 @@ export default class Activities extends React.Component {
 								</div>
 
 								<Fragment>
+
+									<h1>
+									Scholars
+									</h1>
 									{people.map(
 										(item, index) =>
 											item.fields.type == "people" && (

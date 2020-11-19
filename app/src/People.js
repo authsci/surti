@@ -115,7 +115,7 @@ export default class Activities extends React.Component {
 										<a href={`mailto:` + people.email} className="link-icon">
 											<i className="far fa-envelope"></i>
 										</a>
-										<a className="link-default" href={`mailto:` + people.email}>
+										<a className="link-email" href={`mailto:` + people.email}>
 											{people.email}
 										</a>
 									</div>
@@ -138,7 +138,7 @@ export default class Activities extends React.Component {
 									<a href={`mailto:` + people.email} className="link-icon">
 										<i className="far fa-envelope"></i>
 									</a>
-									<a className="link-default" href={`mailto:` + people.email}>
+									<a className="link-email" href={`mailto:` + people.email}>
 										{people.email}
 									</a>
 

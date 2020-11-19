@@ -285,6 +285,21 @@ a {
       border-bottom: 1px solid $color-blue-medium;
     }
   }
+  &-email {
+    cursor: pointer !important;
+    color: $color-blue-default;
+    text-decoration: none;
+    border-bottom: 1px solid $color-blue-light;
+    width: auto;
+    font-weight: $regular;
+    font-size: $type-md;
+    padding: 3px 0;
+
+    &:hover {
+      color: $color-blue;
+      border-bottom: 1px solid $color-blue-medium;
+    }
+  }
   
   &-icon {
       cursor: pointer !important;
