@@ -8,6 +8,7 @@
 @import "material";
 @import "sidepanel";
 @import "tooltip";
+@import "video";
 
 html,
 body {
@@ -19,7 +20,6 @@ body {
   margin: 0;
   font-weight: $regular;
   overflow-x: hidden;
-  height: 1500px;
 }
 
 .mobile-placeholder {
@@ -104,6 +104,23 @@ body {
     flex-direction: row;
     display: flex;
     margin: 180px 0 0 0;
+  }
+}
+
+.mainmenu-overlay {
+  display: flex;
+  width: 100%;
+  // height: 300px;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+
+  @media (min-width: $break-sm) {
+    flex-direction: row;
+    display: flex;
   }
 }
 
@@ -192,101 +209,6 @@ section {
   bottom: 0;
   padding: 12px;
   z-index: $z-nav;
-}
-
-// .video-container-full {
-//   position: relative;
-//   z-index: 0 !important;
-
-//   video {
-//     z-index: 0 !important;
-//     min-width: 100%;
-//     min-height: 500px;
-//     position: absolute;
-//     top: 40px;
-//     left: 50%;
-//     transform: translateX(-50%) translateY(-50%);
-//     opacity: 1;
-//   }
-// }
-
-video {
-  pointer-events: none;
-  //height: 720px;  // for full
-  min-height: 550px; // for strip
-  opacity: 1;
-}
-
-.outer-container {
-  width: 100% !important;
-  position: absolute;
-  top: 55px;
-  text-align: center;
-  background: $color-black;
-  min-width: 100%;
-  overflow: hidden;
-}
-
-.inner-container {
-  width: 100% !important;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 0 36px !important;
-
-  @media (min-width: $break-sm) {
-    max-width: 100%;
-  }
-
-  @media (min-width: $break-md) {
-    max-width: $break-md;
-  }
-
-  @media (min-width: $break-lg) {
-    max-width: $break-lg;
-  }
-
-  @media (min-width: $break-xl) {
-    max-width: $break-lg;
-  }
-
-  @media (min-width: $break-xxl) {
-    max-width: $break-lg;
-  }
-
-  .video-overlay {
-    position: absolute;
-    display: inline-flex;
-    top: 24px;
-    // text-align: left;
-    padding: 24px 0;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    // width: 100%;
-    opacity: 1;
-
-    @media (min-width: $break-sm) {
-      max-width: 100%;
-    }
-
-    @media (min-width: $break-md) {
-      max-width: $break-md;
-    }
-
-    @media (min-width: $break-lg) {
-      max-width: $break-lg;
-    }
-
-    @media (min-width: $break-xl) {
-      max-width: $break-lg;
-    }
-
-    @media (min-width: $break-xxl) {
-      max-width: $break-lg;
-    }
-  }
 }
 
 strong {
@@ -678,17 +600,14 @@ canvas {
   }
 }
 
-.copy {
+.home-hero {
   margin: 0 auto;
   display: block;
   padding: 0 36px;
   line-height: $type-xl;
   font-size: $type-copy;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
   color: $color-black;
+
 
   h1 {
     line-height: $type-h1-height;
@@ -722,21 +641,54 @@ canvas {
   }
 
   @media (min-width: $break-sm) {
-    position: relative;
-    top: 80px;
-    padding: 12px;
     font-size: $type-xxs;
   }
 
-  &-hero {
-    @extend .copy;
-    position: absolute;
-    top: 620px;
+}
+
+.copy {
+  margin: 0 auto;
+  display: block;
+  padding: 0 36px;
+  line-height: $type-xl;
+  font-size: $type-copy;
+  color: $color-black;
+  margin-top: 60px;
+
+  h1 {
+    line-height: $type-h1-height;
+  }
+
+  a {
+    color: $color-blue-default;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  i {
+    color: $color-blue-medium;
+    vertical-align: middle;
+    padding: 0 3px;
+    font-size: $type-tiny;
+  }
+
+  p {
+    font-size: $type-copy;
 
     @media (min-width: $break-sm) {
-      position: relative;
-      top: 570px;
+      font-size: $type-sm;
     }
+  }
+
+  strong {
+    font-weight: $bold;
+  }
+
+
+  &-hero {
+    
   }
 }
 

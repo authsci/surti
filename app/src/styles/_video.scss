@@ -1,0 +1,145 @@
+
+.video-fullscreen {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  
+}
+.iframe-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  video {
+    box-sizing: border-box;
+    height: 56.25vw;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    width: 177.77777778vh;
+  }
+}
+
+.iframe-overlay {
+  position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+
+// .video-container-full {
+//   position: relative;
+//   z-index: 0 !important;
+
+//   video {
+//     z-index: 0 !important;
+//     min-width: 100%;
+//     min-height: 500px;
+//     position: absolute;
+//     top: 40px;
+//     left: 50%;
+//     transform: translateX(-50%) translateY(-50%);
+//     opacity: 1;
+//   }
+// }
+
+// video {
+//   pointer-events: none;
+//   //height: 720px;  // for full
+//   min-height: 550px; // for strip
+//   opacity: 1;
+// }
+
+.outer-container {
+  width: 100% !important;
+  position: absolute;
+  top: 55px;
+  text-align: center;
+  background: $color-black;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.inner-container {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 36px !important;
+
+  @media (min-width: $break-sm) {
+    max-width: 100%;
+  }
+
+  @media (min-width: $break-md) {
+    max-width: $break-md;
+  }
+
+  @media (min-width: $break-lg) {
+    max-width: $break-lg;
+  }
+
+  @media (min-width: $break-xl) {
+    max-width: $break-lg;
+  }
+
+  @media (min-width: $break-xxl) {
+    max-width: $break-lg;
+  }
+
+  .video-overlay {
+    // position: absolute;
+    display: inline-flex;
+    top: 24px;
+    // text-align: left;
+    padding: 24px 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    // width: 100%;
+    opacity: 1;
+
+    @media (min-width: $break-sm) {
+      max-width: 100%;
+    }
+
+    @media (min-width: $break-md) {
+      max-width: $break-md;
+    }
+
+    @media (min-width: $break-lg) {
+      max-width: $break-lg;
+    }
+
+    @media (min-width: $break-xl) {
+      max-width: $break-lg;
+    }
+
+    @media (min-width: $break-xxl) {
+      max-width: $break-lg;
+    }
+  }
+}

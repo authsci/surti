@@ -4,7 +4,8 @@ import { Route, Switch, HashRouter as Router } from "react-router-dom";
 import { Offline, Online } from "react-detect-offline";
 import NavActivities from "./NavActivities";
 import NavBranded from "./NavBranded";
-import Start from "./Start";
+import StartFull from "./StartFull";
+// import Start from "./Start";
 import Institution from "./Institution";
 import People from "./People";
 import PeopleList from "./PeopleList";
@@ -69,8 +70,8 @@ class App extends React.Component {
 										path="/"
 										render={(props) => (
 											<Fragment>
-												<NavActivities />
-												<Start />
+												{/* <NavActivities /> */}
+												<StartFull />
 											</Fragment>
 										)}
 									/>

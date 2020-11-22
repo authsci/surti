@@ -1,0 +1,1 @@
+  2020-11-20 9:35:35 PM PST: Starting composition “AdobeStock_203322103_Video_HD_Preview”.  Output To: /Users/ganderson/Desktop/full-out.mov    2020-11-20 9:36:16 PM PST: Finished composition “AdobeStock_203322103_Video_HD_Preview”.  Total Time Elapsed: 42 SecondsLog closed on 2020-11-20 at 9:36:17 PM PST

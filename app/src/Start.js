@@ -104,8 +104,8 @@ export default class Activities extends React.Component {
 									loop
 									autoPlay
 									muted
-									src="img/starfield.mp4"
-									// src="img/mobius.mp4"
+									// src="img/starfield.mp4"
+									src="img/mobius.mp4"
 									type="video/mp4"
 									// poster="img/mobius.jpg"
 								></video>
