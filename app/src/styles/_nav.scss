@@ -7,15 +7,7 @@
   padding: 0 12px;
   height: 55px;
   justify-content: flex-end;
-  background: linear-gradient(
-    -90deg,
-    $color-black,
-    $color-black,
-    $color-black,
-    $color-green,
-    $color-mid,
-    $color-blue
-  );
+  background: linear-gradient(-90deg, $color-black, $color-black, $color-black, $color-green, $color-mid, $color-blue);
   background-size: 400% 400%;
   animation-name: black2blue;
   animation-duration: 1s;
@@ -35,7 +27,6 @@
     font-weight: $regular;
     padding: 2px 0 3px 0;
     align-items: center;
-
   }
 
   &-right {
@@ -85,9 +76,12 @@
     }
   }
 
-
   &-activities {
     @extend .nav;
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky !important;
+    top: 0;
     background: linear-gradient(
       -90deg,
       $color-green,
@@ -116,7 +110,6 @@
       @media (min-width: $break-sm) {
         padding: 0 12px;
       }
-
     }
     &-right {
       @extend .nav-right;

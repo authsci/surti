@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import { Events, animateScroll as scroll } from "react-scroll";
 import Team from "./Team";
+import NavActivities from "./NavActivities";
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -106,6 +107,8 @@ export default class Activities extends React.Component {
 								</video>
 							</div>
 						</div>
+
+            <NavActivities />
 
 						<div className="nudge-xl"></div>
 
