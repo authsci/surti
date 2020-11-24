@@ -120,8 +120,8 @@ export default class Activities extends React.Component {
 									autoPlay
 									muted
 								>
-									{/* <source src="img/full.webm" type="video/webm"/> */}
-									{/* <source src="img/full.ogv" type="video/ogv"/> */}
+									<source src="img/full.webm" type="video/webm"/>
+									<source src="img/full.ogv" type="video/ogv"/>
 									<source src="img/full.mp4" type="video/mp4" />
 									{/* <source src="img/watermark.mp4" type="video/mp4" /> */}
 								</video>
