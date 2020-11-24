@@ -353,15 +353,16 @@
 @keyframes hideThenShow {
   0% {
     opacity: 0;
+
   }
   25% {
     opacity: 0;
     transform: translateX(-10px);
+
   }
   100% {
     opacity: 1;
     transform: translateX(0px);
-    pointer-events: visible;
   }
 }
 
@@ -374,7 +375,6 @@
 }
 .show6toInfinity {
   opacity: 0;
-  pointer-events: none;
   animation-fill-mode: forwards;
   animation-name: hideThenShow;
   animation-delay: 2s;
