@@ -333,51 +333,70 @@
   }
 }
 
-@keyframes showThenHide {
+@keyframes step1 {
   0% {
     opacity: 0;
-    transform: translateX(30px);
+    transform: scale(1.3);
   }
   15% {
-    opacity: 0;
+    opacity: 1;
   }
-  75% {
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes step2 {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes step3 {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  40% {
+    opacity: 1;
+    
+  }
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
-  100% {
-    opacity: 0;
-  }
 }
 
-@keyframes hideThenShow {
-  0% {
-    opacity: 0;
-
-  }
-  25% {
-    opacity: 0;
-    transform: translateX(-10px);
-
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
-.show0to5 {
+.show0to3 {
   opacity: 0;
   animation-fill-mode: forwards;
-  animation-name: showThenHide;
+  animation-name: step1;
   animation-delay: 0s;
   animation-duration: 3s; 
 }
-.show6toInfinity {
+
+.show3to5 {
+  opacity: 0;
+  transform-origin: center;
+  animation-fill-mode: forwards;
+  animation-name: step2;
+  animation-delay: 2s;
+  animation-duration: 3s; 
+}
+.show5toInfinity {
   opacity: 0;
   animation-fill-mode: forwards;
-  animation-name: hideThenShow;
-  animation-delay: 2s;
+  animation-name: step3;
+  animation-delay: 5s;
   animation-duration: 3s
 }
 
