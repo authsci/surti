@@ -72,9 +72,15 @@ export default class Activities extends React.Component {
 											</div>
 										</div>
 
-                    <div className="logo step3">
+                    <div className="logo step3-a">
 											<div>
-												<span>Critical Theory from the Global South</span>
+												<span style={{marginTop: "-24px"}}>Critical Theory from</span>
+											</div>
+										</div>
+
+                    <div className="logo step3-b">
+											<div>
+												<span style={{marginTop: "24px"}}>the Global South</span>
 											</div>
 										</div>
 
@@ -120,8 +126,8 @@ export default class Activities extends React.Component {
 									autoPlay
 									muted
 								>
-									<source src="img/full.webm" type="video/webm"/>
-									<source src="img/full.ogv" type="video/ogv"/>
+									{/* <source src="img/full.webm" type="video/webm"/> */}
+									{/* <source src="img/full.ogv" type="video/ogv"/> */}
 									<source src="img/full.mp4" type="video/mp4" />
 									{/* <source src="img/watermark.mp4" type="video/mp4" /> */}
 								</video>

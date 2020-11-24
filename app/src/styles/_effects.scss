@@ -360,15 +360,30 @@
 
   }
 }
-@keyframes step3 {
+@keyframes step3-a {
   0% {
     opacity: 0;
+    transform: translateX(-20px);
   }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+    transform: translateX(0);
+  }
+}
+@keyframes step3-b {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
   }
 }
 
@@ -384,7 +399,7 @@
 @keyframes step5 {
   0% {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(20px);
   }
   100% {
     opacity: 1;
@@ -396,6 +411,7 @@
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: step1;
+  animation-timing-function: linear;
   animation-delay: 0s;
   animation-duration: 3s; 
 }
@@ -405,29 +421,42 @@
   transform-origin: center;
   animation-fill-mode: forwards;
   animation-name: step2;
-  animation-delay: 2s;
+  animation-timing-function: linear;
+  animation-delay: 3s;
   animation-duration: 3s; 
 }
-.step3 {
+.step3-a {
   opacity: 0;
   transform-origin: center;
   animation-fill-mode: forwards;
-  animation-name: step3;
-  animation-delay: 4s;
-  animation-duration: 3s; 
+  animation-name: step3-a;
+  animation-timing-function: ease-in-out;
+  animation-delay: 5s;
+  animation-duration: 5s; 
+}
+.step3-b {
+  opacity: 0;
+  transform-origin: center;
+  animation-fill-mode: forwards;
+  animation-name: step3-b;
+  animation-timing-function: ease-in-out;
+  animation-delay: 5.5s;
+  animation-duration: 5.5s; 
 }
 .step4 {
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: step4;
-  animation-delay: 6s;
-  animation-duration: 3s
+  animation-timing-function: linear;
+  animation-delay: 11s;
+  animation-duration: 2s
 }
 .step5 {
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: step5;
-  animation-delay: 6.5s;
+  animation-timing-function: linear;
+  animation-delay: 10s;
   animation-duration: 3s
 }
 

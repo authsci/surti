@@ -50,16 +50,20 @@ body {
 
   strong {
     color: $color-white;
-    font-size: $type-md;
+    font-size: $type-xl;
     display: block;
     padding: 4px 0;
     text-decoration: none;
+    text-shadow: 0 0 6px $color-black;
+
   }
   span {
     color: $color-white-medium;
-    font-size: $type-md;
+    font-size: $type-h2;
     text-decoration: none;
     display: block;
+    text-shadow: 0 0 6px $color-black;
+
   }
 
   img {
