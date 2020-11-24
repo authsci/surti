@@ -335,21 +335,18 @@
 
 @keyframes showThenHide {
   0% {
-    visibility: visible;
     opacity: 0;
+    transform: translateX(30px);
   }
   15% {
     opacity: 0;
   }
-  50% {
+  75% {
     opacity: 1;
-  }
-  80% {
-    opacity: 1;
+    transform: translateX(0);
   }
   100% {
     opacity: 0;
-    visibility: hidden;
   }
 }
 
@@ -357,8 +354,14 @@
   0% {
     opacity: 0;
   }
+  25% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
   100% {
     opacity: 1;
+    transform: translateX(0px);
+    pointer-events: visible;
   }
 }
 
@@ -367,13 +370,14 @@
   animation-fill-mode: forwards;
   animation-name: showThenHide;
   animation-delay: 0s;
-  animation-duration: 5s; 
+  animation-duration: 3s; 
 }
 .show6toInfinity {
   opacity: 0;
+  pointer-events: none;
   animation-fill-mode: forwards;
   animation-name: hideThenShow;
-  animation-delay: 4.5s;
+  animation-delay: 2s;
   animation-duration: 3s
 }
 
