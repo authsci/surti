@@ -61,7 +61,7 @@ export default class Activities extends React.Component {
 							<div className="iframe-wrapper">
 								<div className="iframe-overlay">
 									<div className="mainmenu-overlay">
-                    
+
 										<div className="logo show0to3">
 											<img src="img/logo-icon-white.png" />
 										</div>
@@ -82,11 +82,11 @@ export default class Activities extends React.Component {
 											</div>
 										</Link>
 
+                    <div className="mainmenu show5toInfinity">
 										{institutions.map(
 											(item, index) =>
 												item.fields.type == "org" && (
-													<div key={index} className="show5toInfinity">
-														<Link
+														<Link key={index}
 															to={"/institution/" + index}
 															className={`link-title-` + item.fields.color}
 														>
@@ -95,9 +95,10 @@ export default class Activities extends React.Component {
 																<small>{item.fields.name}</small>
 															</div>
 														</Link>
-													</div>
 												)
 										)}
+                    </div>
+
 									</div>
 
 									{/* <div className="nav-down">
