@@ -37,18 +37,16 @@ body {
 }
 
 .logo {
-
-    grid-column: 1 / -1;
-    display: flex;
-    grid-gap: 6px;
-    grid-template-columns: auto 100px;
-    align-items: center;
-    color: $color-white;
-    text-align: center;
-    position: absolute;
-    line-height: $type-xs;
+  grid-column: 1 / -1;
+  display: flex;
+  grid-gap: 6px;
+  grid-template-columns: auto 100px;
+  align-items: center;
+  color: $color-white;
+  text-align: center;
+  position: absolute;
+  line-height: $type-xs;
   margin: -50px 0 0 0;
-
 
   strong {
     color: $color-white;
@@ -59,7 +57,7 @@ body {
   }
   span {
     color: $color-white-medium;
-    font-size: $type-default;
+    font-size: $type-md;
     text-decoration: none;
     display: block;
   }
@@ -103,6 +101,19 @@ body {
     text-decoration: none;
     margin: 0 0 0 0;
 
+    strong {
+      color: $color-white;
+      font-size: $type-md;
+      display: block;
+      padding: 4px 0;
+      text-decoration: none;
+    }
+    span {
+      color: $color-white-medium;
+      font-size: $type-default;
+      text-decoration: none;
+      display: block;
+    }
   }
 }
 
@@ -115,12 +126,12 @@ body {
   align-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 50px 0 0 0;
+  margin: 40px 0 0 0;
 
   @media (min-width: $break-sm) {
     flex-direction: row;
     display: flex;
-    margin: 0 0 0 0;
+    margin: -50px 0 0 0;
   }
 }
 
@@ -133,7 +144,7 @@ body {
   align-content: center;
   align-items: center;
   flex-direction: column;
-  
+
   @media (min-width: $break-sm) {
     flex-direction: row;
     display: flex;

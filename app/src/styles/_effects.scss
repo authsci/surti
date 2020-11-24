@@ -336,20 +336,6 @@
 @keyframes step1 {
   0% {
     opacity: 0;
-    transform: scale(1.3);
-  }
-  15% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-}
-
-@keyframes step2 {
-  0% {
-    opacity: 0;
     transform: scale(1);
   }
   50% {
@@ -361,14 +347,44 @@
   }
 }
 
+@keyframes step2 {
+  0% {
+    opacity: 0;
+
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+
+  }
+}
 @keyframes step3 {
   0% {
     opacity: 0;
-    transform: translateX(10px);
   }
-  40% {
+  50% {
     opacity: 1;
-    
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes step4 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes step5 {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
   }
   100% {
     opacity: 1;
@@ -376,7 +392,7 @@
   }
 }
 
-.show0to3 {
+.step1 {
   opacity: 0;
   animation-fill-mode: forwards;
   animation-name: step1;
@@ -384,7 +400,7 @@
   animation-duration: 3s; 
 }
 
-.show3to5 {
+.step2 {
   opacity: 0;
   transform-origin: center;
   animation-fill-mode: forwards;
@@ -392,11 +408,26 @@
   animation-delay: 2s;
   animation-duration: 3s; 
 }
-.show5toInfinity {
+.step3 {
   opacity: 0;
+  transform-origin: center;
   animation-fill-mode: forwards;
   animation-name: step3;
-  animation-delay: 5s;
+  animation-delay: 4s;
+  animation-duration: 3s; 
+}
+.step4 {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: step4;
+  animation-delay: 6s;
+  animation-duration: 3s
+}
+.step5 {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: step5;
+  animation-delay: 6.5s;
   animation-duration: 3s
 }
 

@@ -62,19 +62,24 @@ export default class Activities extends React.Component {
 								<div className="iframe-overlay">
 									<div className="mainmenu-overlay">
 
-										<div className="logo show0to3">
+										<div className="logo step1">
 											<img src="img/logo-icon-white.png" />
 										</div>
 
-                    <div className="logo show3to5">
+                    <div className="logo step2">
 											<div>
 												<strong>Extimacies</strong>
+											</div>
+										</div>
+
+                    <div className="logo step3">
+											<div>
 												<span>Critical Theory from the Global South</span>
 											</div>
 										</div>
 
 
-										<Link to="/" className="logo-float show5toInfinity">
+										<Link to="/" className="logo-float step5">
 											<img src="img/logo-icon-white.png" />{" "}
 											<div>
 												<strong>Extimacies</strong>
@@ -82,7 +87,7 @@ export default class Activities extends React.Component {
 											</div>
 										</Link>
 
-                    <div className="mainmenu show5toInfinity">
+                    <div className="mainmenu step4">
 										{institutions.map(
 											(item, index) =>
 												item.fields.type == "org" && (
