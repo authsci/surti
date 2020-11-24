@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import UserSettings from "./UserSettings";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 export default class Nav extends React.Component {
 	constructor(props) {
@@ -22,13 +23,20 @@ export default class Nav extends React.Component {
 		window.removeEventListener("scroll", this.handleScroll);
 	}
 
-	handleScroll = () => {
-		if (window.scrollY < 60) {
-			this.setState({ showMenu: false });
-		} else {
-			this.setState({ showMenu: true });
-		}
+	goTop = () => {
+		scroll.scrollToTop({
+			duration: 400,
+			delay: 0,
+		});
 	};
+
+	// handleScroll = () => {
+	// 	if (window.scrollY < 60) {
+	// 		this.setState({ showMenu: false });
+	// 	} else {
+	// 		this.setState({ showMenu: true });
+	// 	}
+	// };
 
 	render() {
 		return (
@@ -41,20 +49,20 @@ export default class Nav extends React.Component {
 								: "nav-activities-left desktop"
 						}
 					>
-						{this.state.showMenu && (
-								<Link to="/" className="link-slug fade-in">
-                <img src="img/logo-icon-white.png" />{" "}
-                <div>
-                  <strong>Extimacies</strong>
-                  <span>Critical Theory from the Global South</span>
-                </div>
-              </Link>
-						)}
+						{/* {this.state.showMenu && ( */}
+						<Link to="/" className="link-slug fade-in" onClick={this.goTop()}>
+							<img src="img/logo-icon.png" />{" "}
+							<div>
+								<strong>Extimacies</strong>
+								<span>Critical Theory from the Global South</span>
+							</div>
+						</Link>
+						{/* )} */}
 					</div>
 
 					<div className="nav-activities-left mobile">
 						<Link to="/" className="link-slug fade-in">
-							<img src="img/logo-icon-white.png" />{" "}
+							<img src="img/logo-icon.png" />{" "}
 							<div>
 								<strong>Extimacies</strong>
 								<span>Critical Theory from the Global South</span>
@@ -62,19 +70,56 @@ export default class Nav extends React.Component {
 						</Link>
 					</div>
 
-					{/* <div
-						className={
-							this.state.showMenu
-								? "nav-activities-right nudge-left desktop"
-								: "nav-activities-right nudge-right desktop"
-						}
-					>
-						{this.state.showMenu && <UserSettings />}
-					</div> */}
+					<div className="nav-activities-right nudge-right">
+						<NavLink
+							to="/"
+							exact
+							activeClassName="link-menu-hilite"
+							className="link-menu desktop"
+						>
+							About
+						</NavLink>
 
-					<div
-						className="nav-activities-right nudge-right">
-						<UserSettings />
+						<NavLink
+							to="/list"
+							activeClassName="link-menu-hilite"
+							className="link-menu desktop"
+						>
+							People
+						</NavLink>
+
+						<NavLink
+							to="/events"
+							activeClassName="link-menu-hilite"
+							className="link-menu desktop"
+						>
+							Events
+						</NavLink>
+						<NavLink
+							to="/publications"
+							activeClassName="link-menu-hilite"
+							className="link-menu desktop"
+						>
+							Publications
+						</NavLink>
+						<NavLink
+							to="/initiatives"
+							activeClassName="link-menu-hilite"
+							className="link-menu desktop"
+						>
+							Initiatives
+						</NavLink>
+						<NavLink
+							to="/course"
+							activeClassName="link-menu-hilite"
+							className="link-menu desktop"
+						>
+							Course
+						</NavLink>
+
+						<span className="mobile">
+							<UserSettings />
+						</span>
 					</div>
 				</div>
 			</Fragment>

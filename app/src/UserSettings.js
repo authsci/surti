@@ -46,7 +46,7 @@ export default function SwipeableTemporaryDrawer() {
 			return;
 		}
 
-		window.scrollTo(0, 0);
+		// window.scrollTo(0, 0);
 
 		setState({ ...state, [side]: open });
 	};

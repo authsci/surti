@@ -578,13 +578,18 @@ a {
 
   &-sidepanel {
     cursor: pointer !important;
-    color: $color-white;
+    color: $color-gray-darkest;
     display: flex;
     text-align: center;
     text-decoration: none;
     width: auto;
     transition: $transition-background;
     font-size: $type-md;
+    margin-left: 24px;
+
+    i {
+      align-self: center;
+    }
 
     &:active {
       color: $color-white-half;
@@ -707,23 +712,23 @@ a {
     grid-gap: 0;
     grid-template-columns: 45px 200px;
     align-items: center;
-    color: $color-white;
+    color: $color-gray-darkest;
     text-align: left;
     line-height: $type-default;
     text-decoration: none;
 
     img {
-      height: 32px;
+      height: 40px;
     }
 
     strong {
-      color: $color-white;
+      color: $color-gray-darkest;
       font-size: $type-xs;
       display: block;
       padding: 4px 0;
     }
     span {
-      color: $color-white-medium;
+      color: $color-gray-dark;
       font-size: $type-default;
       display: block;
     }
@@ -888,7 +893,7 @@ a {
     margin: 0 12px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 0;
+    padding: 3px 0 0 0;
     border-bottom: 1px solid transparent;
 
     i {
@@ -899,6 +904,11 @@ a {
     b {
       font-weight: $regular;
     }
+
+    &:hover {
+      border-bottom: 1px solid $color-blue-medium;
+    }
+
 
     &-hilite b {
       @extend .link-menu;
@@ -985,7 +995,7 @@ a {
     color: $color-blue-default;
     font-weight: $regular;
     // font-size: $type-teeny;
-    padding: 1px 6px;
+    padding: 3px 6px;
     background: $color-blue-note;
     border-radius: $radius-slight;
 

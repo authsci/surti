@@ -60,19 +60,20 @@ export default class Activities extends React.Component {
 						<div className="video-fullscreen">
 							<div className="iframe-wrapper">
 								<div className="iframe-overlay">
-									{/* <div className="logo">
-										<img src="img/logo-icon-white.png" />
-										<div>
-											<strong>Extimacies</strong>
-											<span>Critical Theory from the Global South</span>
-										</div>
-									</div> */}
-
 									<div className="mainmenu-overlay">
+
+										<div className="logo show0to5">
+											<img src="img/logo-icon-white.png" />
+											<div>
+												<strong>Extimacies</strong>
+												<span>Critical Theory from the Global South</span>
+											</div>
+										</div>
+
 										{institutions.map(
 											(item, index) =>
 												item.fields.type == "org" && (
-													<Fragment key={index}>
+													<div key={index} className="show6toInfinity">
 														<Link
 															to={"/institution/" + index}
 															className={`link-title-` + item.fields.color}
@@ -82,7 +83,7 @@ export default class Activities extends React.Component {
 																<small>{item.fields.name}</small>
 															</div>
 														</Link>
-													</Fragment>
+													</div>
 												)
 										)}
 									</div>
@@ -101,14 +102,15 @@ export default class Activities extends React.Component {
 									autoPlay
 									muted
 								>
-									<source src="img/full.webm" type="video/webm"/>
+									{/* <source src="img/full.webm" type="video/webm"/> */}
 									{/* <source src="img/full.ogv" type="video/ogv"/> */}
 									<source src="img/full.mp4" type="video/mp4" />
+									{/* <source src="img/watermark.mp4" type="video/mp4" /> */}
 								</video>
 							</div>
 						</div>
 
-            <NavActivities />
+						<NavActivities />
 
 						<div className="nudge-xl"></div>
 

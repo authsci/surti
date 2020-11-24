@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
-import { Events, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 import Team from "./Team";
 
 const SPACE_ID = "yzeyubafmmte";

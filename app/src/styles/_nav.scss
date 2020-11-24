@@ -16,7 +16,7 @@
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-play-state: running;
-  z-index: $z-nav !important;
+  z-index: $z-base !important;
 
   &-left {
     display: inline-flex;
@@ -79,18 +79,23 @@
   &-activities {
     @extend .nav;
     display: flex;
+    padding: 12px;
+  // height: 55px;
     position: -webkit-sticky;
     position: sticky !important;
     top: 0;
-    background: linear-gradient(
-      -90deg,
-      $color-green,
-      $color-mid,
-      $color-blue,
-      $color-black,
-      $color-black,
-      $color-black
-    );
+    background: $color-white;
+    box-shadow: 0 12px 24px $color-gray-note;
+
+    // background: linear-gradient(
+    //   -90deg,
+    //   $color-green,
+    //   $color-mid,
+    //   $color-blue,
+    //   $color-black,
+    //   $color-black,
+    //   $color-black
+    // );
 
     background-size: 400% 400%;
     animation-name: blue2black;

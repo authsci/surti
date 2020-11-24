@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { Route, Switch, HashRouter as Router } from "react-router-dom";
 import { Offline, Online } from "react-detect-offline";
 import NavActivities from "./NavActivities";
-import NavBranded from "./NavBranded";
 import StartFull from "./StartFull";
 // import Start from "./Start";
 import Institution from "./Institution";
@@ -81,7 +80,6 @@ class App extends React.Component {
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
-												<NavBranded />
 												<Institution {...props} />
 											</Fragment>
 										)}
@@ -94,7 +92,6 @@ class App extends React.Component {
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
-												<NavBranded />
 												<People {...props} />
 											</Fragment>
 										)}
@@ -106,7 +103,6 @@ class App extends React.Component {
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
-												<NavBranded />
 												<PeopleList {...props} />
 											</Fragment>
 										)}

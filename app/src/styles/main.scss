@@ -37,10 +37,7 @@ body {
 }
 
 .logo {
-  display: none;
-  //hide on mobile
-
-  @media (min-width: $break-sm) {
+  
     grid-column: 1 / -1;
     display: grid;
     grid-gap: 6px;
@@ -50,7 +47,6 @@ body {
     text-align: left;
     position: absolute;
     line-height: $type-xs;
-  }
 
   &-mobile {
     @extend .logo;
@@ -116,7 +112,7 @@ body {
   align-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0;
+  margin: -75px 0 0 0;
 
   @media (min-width: $break-sm) {
     flex-direction: row;
@@ -227,13 +223,13 @@ strong {
   display: flex;
 
   @media (min-width: $break-sm) {
-    display: none !important;
+    display: none;
   }
 }
 
 .breadcrumbs {
   padding: 24px 0;
-  font-size: $type-xxs;
+  font-size: $type-default;
   font-weight: $regular;
 
   span {
@@ -653,7 +649,7 @@ canvas {
   line-height: $type-xl;
   font-size: $type-copy;
   color: $color-black;
-  margin-top: 60px;
+  margin-top: 30px;
 
   h1 {
     line-height: $type-h1-height;
