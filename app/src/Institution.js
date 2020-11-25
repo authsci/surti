@@ -67,7 +67,7 @@ export default class Activities extends React.Component {
 
 								<h1>{institutions.name}</h1>
 
-								<p>{institutions.desc}</p>
+								<Markdown>{institutions.desc}</Markdown>
 
 								<div className="nudge-md"></div>
 

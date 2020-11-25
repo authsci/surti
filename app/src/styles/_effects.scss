@@ -15,6 +15,23 @@
   }
 }
 
+.fade-out {
+  opacity: 1;
+  animation: fadeOut ease-in .4s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .spinner {
   animation: rotator 0.5s infinite linear;
   transform-origin: center center;
@@ -258,7 +275,7 @@
 
 .indicate {
 	animation-name: indicate;
-  animation-duration: .75s;
+  animation-duration: 2s;
 	animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
@@ -268,7 +285,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(6px);
+    transform: translateY(12px);
   }
   100% {
     transform: translateY(0);

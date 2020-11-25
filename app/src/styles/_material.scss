@@ -63,6 +63,10 @@
     
   }
 }
+.MuiCard-root {
+  padding: 12px !important;
+  z-index: $z-base !important;
+}
 
 .MuiToggleButton-label {
   font-weight: $regular !important;
@@ -156,7 +160,7 @@
   z-index: $z-ultimate !important;
   padding: 0 !important;
   margin: 0 !important;
-  overflow: hidden;
+  overflow: visible;
 
   @media (min-width: $break-sm) {
     width: 400px !important;
@@ -164,26 +168,6 @@
 
 }
 
-#video .MuiDrawer-paper {
-  width: 500px !important;
-  background: $color-white !important;
-  box-shadow: -4px 0 10px $color-gray-slight !important;
-  z-index: $z-ultimate !important;
-  padding: 24px 48px;
-  
-  h2, p {
-    color: $color-gray-darker !important;
-  }
-}
-
-#public .MuiDrawer-paper {
-  width: 100% !important;
-  height: 400px !important;
-  background: linear-gradient(to right, $color-gray-darkest 0%, $color-black 50%, $color-gray-darker 100%);
-  box-shadow: -4px 0 10px $color-gray-slight !important;
-  z-index: $z-ultimate !important;
-  padding: 24px;
-}
 
 .MuiListItem-root {
   width: 320px !important;

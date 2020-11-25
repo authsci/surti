@@ -40,6 +40,7 @@ export default class Activities extends React.Component {
 			delay: 0,
 		});
 	};
+	
 
 	render() {
 		let { loading, institutions } = this.state;

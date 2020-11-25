@@ -14,6 +14,8 @@ const contentfulAPI =
 	"/entries?access_token=" +
 	ACCESS_TOKEN;
 
+const myID = document.getElementById("myID");
+
 export default class Activities extends React.Component {
 	constructor(props) {
 		super(props);
@@ -32,7 +34,24 @@ export default class Activities extends React.Component {
 		});
 
 		window.scrollTo(0, 0);
+
+		window.addEventListener("scroll", this.handleScroll);
 	}
+
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.handleScroll);
+	}
+
+	handleScroll = () => {
+		const arrow = document.getElementById("arrow");
+
+		var y = window.scrollY;
+		if (y < 75) {
+			arrow.className = "nav-down fade-in";
+		} else {
+			arrow.className = "nav-down fade-out";
+		} 
+	};
 
 	goTop = () => {
 		scroll.scrollToTop({
@@ -61,29 +80,31 @@ export default class Activities extends React.Component {
 							<div className="iframe-wrapper">
 								<div className="iframe-overlay">
 									<div className="mainmenu-overlay">
-
 										<div className="logo step1">
 											<img src="img/logo-icon-white.png" />
 										</div>
 
-                    <div className="logo step2">
+										<div className="logo step2">
 											<div>
 												<strong>Extimacies</strong>
 											</div>
 										</div>
 
-                    <div className="logo step3-a">
+										<div className="logo step3-a">
 											<div>
-												<span style={{marginTop: "-24px"}}>Critical Theory from</span>
+												<span style={{ marginTop: "-24px" }}>
+													Critical Theory from
+												</span>
 											</div>
 										</div>
 
-                    <div className="logo step3-b">
+										<div className="logo step3-b">
 											<div>
-												<span style={{marginTop: "24px"}}>the Global South</span>
+												<span style={{ marginTop: "24px" }}>
+													the Global South
+												</span>
 											</div>
 										</div>
-
 
 										<Link to="/" className="logo-float step5">
 											<img src="img/logo-icon-white.png" />{" "}
@@ -93,11 +114,12 @@ export default class Activities extends React.Component {
 											</div>
 										</Link>
 
-                    <div className="mainmenu step4">
-										{institutions.map(
-											(item, index) =>
-												item.fields.type == "org" && (
-														<Link key={index}
+										<div className="mainmenu step4">
+											{institutions.map(
+												(item, index) =>
+													item.fields.type == "org" && (
+														<Link
+															key={index}
 															to={"/institution/" + index}
 															className={`link-title-` + item.fields.color}
 														>
@@ -106,15 +128,14 @@ export default class Activities extends React.Component {
 																<small>{item.fields.name}</small>
 															</div>
 														</Link>
-												)
-										)}
-                    </div>
-
+													)
+											)}
+										</div>
 									</div>
-
-									{/* <div className="nav-down">
-										<i className="fas fa-chevron-down indicate"></i>
-									</div> */}
+									<div className="nav-down" id="arrow">
+										{/* <i className="fas fa-chevron-down"></i> */}
+										<i className="fas fa-long-arrow-alt-down"></i>
+									</div>
 								</div>
 
 								<video
@@ -126,8 +147,8 @@ export default class Activities extends React.Component {
 									autoPlay
 									muted
 								>
-									{/* <source src="img/full.webm" type="video/webm"/> */}
-									{/* <source src="img/full.ogv" type="video/ogv"/> */}
+									<source src="img/full.webm" type="video/webm" />
+									<source src="img/full.ogv" type="video/ogv" />
 									<source src="img/full.mp4" type="video/mp4" />
 									{/* <source src="img/watermark.mp4" type="video/mp4" /> */}
 								</video>
@@ -136,7 +157,7 @@ export default class Activities extends React.Component {
 
 						<NavActivities />
 
-						<div className="nudge-xl"></div>
+						<div className="nudge-lg"></div>
 
 						<div className="contain">
 							<div className="home-hero">

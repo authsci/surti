@@ -15,13 +15,7 @@ export default class Nav extends React.Component {
 		};
 	}
 
-	componentDidMount() {
-		window.addEventListener("scroll", this.handleScroll);
-	}
 
-	componentWillUnmount() {
-		window.removeEventListener("scroll", this.handleScroll);
-	}
 
 	goTop = () => {
 		scroll.scrollToTop({
@@ -29,14 +23,6 @@ export default class Nav extends React.Component {
 			delay: 0,
 		});
 	};
-
-	// handleScroll = () => {
-	// 	if (window.scrollY < 60) {
-	// 		this.setState({ showMenu: false });
-	// 	} else {
-	// 		this.setState({ showMenu: true });
-	// 	}
-	// };
 
 	render() {
 		return (
@@ -77,7 +63,7 @@ export default class Nav extends React.Component {
 							activeClassName="link-menu-hilite"
 							className="link-menu desktop"
 						>
-							About
+							Home
 						</NavLink>
 
 						<NavLink

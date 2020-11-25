@@ -65,11 +65,12 @@ export default function SwipeableTemporaryDrawer() {
 				) : (
 					<div className="layout-row flex-right">
 						<a className="link-sidepanel" onClick={toggleDrawer("right", true)}>
-							{/* <i className="fas fa-bars"></i> */}
 							<span className="material-icons">menu</span>
 						</a>
 					</div>
 				)}
+
+
 
 				<SwipeableDrawer
 					anchor="right"
@@ -111,22 +112,7 @@ export default function SwipeableTemporaryDrawer() {
 						<Link to={"/institution/" + 3} onClick={toggleDrawer("right", false)}>FUABC - Federal University of ABC</Link>
 						<Link to={"/institution/" + 4} onClick={toggleDrawer("right", false)}>IUA - The Ibero-American University</Link>
 
-						{/* 					
-					<Link to="/login" className="link-text" data-tip data-for="username">
-						Change Password?
-					</Link>
-
-					<ReactTooltip place="top" type="dark" effect="float" id="username">
-						This will trigger SSO/Keycloak Flow
-					</ReactTooltip> */}
-						{/* <div className="dock-drawer">
-						<a className="link-save" onClick={toggleDrawer("right", false)}>
-							Save
-						</a>{" "}
-						<a className="link-cancel" onClick={toggleDrawer("right", false)}>
-							Cancel
-						</a>
-					</div> */}
+					
 					</div>
 				</SwipeableDrawer>
 			</Fragment>

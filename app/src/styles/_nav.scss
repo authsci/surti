@@ -16,7 +16,7 @@
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-play-state: running;
-  z-index: $z-base !important;
+  z-index: $z-ultimate !important;
 
   &-left {
     display: inline-flex;
@@ -80,10 +80,10 @@
     @extend .nav;
     display: flex;
     padding: 12px;
-  // height: 55px;
     position: -webkit-sticky;
     position: sticky !important;
-    top: 0;
+    top: 0 !important;
+    margin: 0 !important;
     background: $color-white;
     box-shadow: 0 12px 24px $color-gray-note;
 

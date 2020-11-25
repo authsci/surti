@@ -320,23 +320,24 @@ a {
     text-decoration: none;
     display: flex;
     min-width: 200px;
-    height: 80px;
+    height: 35px;
     justify-content: center;
     padding: 6px;
     text-shadow: 0 0 6px $color-black;
     margin: 6px 0 6px 0;
 
-    @media (max-width: $break-sm) {
-      margin: 0 6px 0 6px;
-      height: 60px !important;
-    }
 
     @media (min-width: $break-lg) {
-      min-width: 200px;
+      margin: 0 12px;
+      height: 55px;
+
+    }
+    @media (min-width: $break-lg) {
+      height: 55px;
       margin: 0 12px;
     }
     @media (min-width: $break-xl) {
-      min-width: 200px;
+      height: 55px;
       margin: 12px;
     }
 
