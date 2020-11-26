@@ -97,6 +97,10 @@ body {
       display: block;
       line-height: 14px;
     }
+
+    @media (min-width: $break-lg) {
+      left: 96px;
+    }
   }
 }
 
