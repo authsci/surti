@@ -19,9 +19,8 @@ export default class Activities extends React.Component {
 			loading: true,
 			keyword: "",
 			institutions: [],
-			id: this.props.match.params,
 		};
-		console.log("inst props", this.props.match.params);
+		console.log("inst props", this.props);
 	}
 
 	componentDidMount() {
@@ -58,7 +57,7 @@ export default class Activities extends React.Component {
 										Home
 									</Link>
 									<span>/</span>
-									<Link to="/institutions" className="link-breadcrumbs">
+									<Link to="/intro" className="link-breadcrumbs">
 										Institutions
 									</Link>
 									<span>/</span>

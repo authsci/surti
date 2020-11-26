@@ -606,10 +606,10 @@ canvas {
 .card {
   display: inline-block;
   padding: 0;
-  box-shadow: 6px 6px 6px $color-gray-note !important;
+  box-shadow: 0 0 6px $color-gray-note !important;
   // width: 100%;
   display: block;
-  margin: 0 0 12px 0 !important;
+  margin: 0 0 0 12px !important;
   border-radius: 0 !important;
   border: 1px solid transparent;
   transform: scale(1);
@@ -617,7 +617,7 @@ canvas {
   transition: $transition-boxshadow, $transition-scale !important;
 
   &:hover {
-    box-shadow: 12px 12px 12px $color-gray-slight !important;
+    box-shadow: 12px 12px 24px $color-gray-slight !important;
     transform: scale(1.01) !important;
     transition: $transition-scale, $transition-boxshadow !important;
   }
