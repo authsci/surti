@@ -82,6 +82,7 @@ export default class Activities extends React.Component {
 									<div className="mainmenu-overlay">
 										<div className="logo step1">
 											<img src="img/logo-icon-white.png" />
+                     
 										</div>
 
 										<div className="logo step2">
@@ -110,7 +111,7 @@ export default class Activities extends React.Component {
 											<img src="img/logo-icon-white.png" />{" "}
 											<div>
 												<strong>Extimacies</strong>
-												<span>Critical Theory from the Global South</span>
+												<span>Critical Theory from<br/>the Global South</span>
 											</div>
 										</Link>
 
@@ -133,8 +134,7 @@ export default class Activities extends React.Component {
 										</div>
 									</div>
 									<div className="nav-down" id="arrow">
-										{/* <i className="fas fa-chevron-down"></i> */}
-										<i className="fas fa-long-arrow-alt-down"></i>
+										<Link to="/home"><i class="fas fa-angle-down"></i></Link>
 									</div>
 								</div>
 

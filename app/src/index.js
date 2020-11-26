@@ -4,9 +4,11 @@ import { Route, Switch, HashRouter as Router } from "react-router-dom";
 import { Offline, Online } from "react-detect-offline";
 import NavActivities from "./NavActivities";
 import StartFull from "./StartFull";
+import Intro from "./Intro";
 // import Start from "./Start";
 import Institution from "./Institution";
 import People from "./People";
+import Home from "./Home";
 import PeopleList from "./PeopleList";
 
 import "./styles/main.scss";
@@ -70,6 +72,24 @@ class App extends React.Component {
 										render={(props) => (
 											<Fragment>
 												<StartFull />
+											</Fragment>
+										)}
+									/>
+									<Route
+										exact
+										path="/home"
+										render={(props) => (
+											<Fragment>
+												<Home />
+											</Fragment>
+										)}
+									/>
+									<Route
+										exact
+										path="/intro"
+										render={(props) => (
+											<Fragment>
+												<Intro />
 											</Fragment>
 										)}
 									/>

@@ -19,7 +19,6 @@ body {
   padding: 0;
   margin: 0;
   font-weight: $regular;
-  // overflow-x: hidden;
 }
 
 .mobile-placeholder {
@@ -95,7 +94,7 @@ body {
     grid-column: 1 / -1;
     display: grid;
     grid-gap: 6px;
-    grid-template-columns: auto 100px;
+    grid-template-columns: auto 300px;
     color: $color-white;
     text-align: left;
     position: absolute;
@@ -107,16 +106,17 @@ body {
 
     strong {
       color: $color-white;
-      font-size: $type-md;
+      font-size: $type-lg;
       display: block;
-      padding: 4px 0;
+      padding: 6px 0;
       text-decoration: none;
     }
     span {
       color: $color-white-medium;
-      font-size: $type-default;
+      font-size: $type-xs;
       text-decoration: none;
       display: block;
+      line-height: 14px;
     }
   }
 }
@@ -132,10 +132,10 @@ body {
   flex-direction: column;
   margin: 40px 0 0 0;
 
-  @media (min-width: $break-sm) {
+  @media (min-width: $break-lg) {
     flex-direction: row;
     display: flex;
-    margin: -50px 0 0 0;
+    margin: 15px 0 0 0;
   }
 }
 
@@ -169,7 +169,7 @@ body {
   align-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: $type-xl;
+  font-size: $type-lg;
 
   &--off {
     @extend .nav-down;
@@ -639,6 +639,7 @@ canvas {
   border-radius: 0 !important;
   border: 1px solid transparent;
   transform: scale(1);
+  overflow: visible;
   transition: $transition-boxshadow, $transition-scale !important;
   
   &:hover {
@@ -715,7 +716,7 @@ canvas {
     font-size: $type-copy;
 
     @media (min-width: $break-sm) {
-      font-size: $type-sm;
+      font-size: $type-md;
     }
   }
 
@@ -768,28 +769,14 @@ canvas {
     font-weight: $bold;
   }
 
-  &-hero {
-  }
+ 
 }
 
-// .about {
-//   margin: 0 auto;
-//   display: block;
-//   // text-align: center;
-//   position: absolute;
-//   padding: 12px 36px !important;
-//   line-height: $type-xl;
-
-//   @media (min-width: $break-sm) {
-//     width: 100%;
-//     padding: 12px 0 !important;
-//   }
-
-// }
 
 .contain {
   margin: 0 auto;
   max-width: 100%;
+  z-index: $z-base;
 
   @media (min-width: $break-sm) {
     max-width: 100%;

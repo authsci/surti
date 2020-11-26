@@ -1,7 +1,8 @@
 .sidepanel {
 
   position: relative;
-  top: 72px;
+  top: 24px;
+  z-index: $z-ultimate;
 
   ul {
     padding: 0;

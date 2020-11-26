@@ -53,16 +53,8 @@ export default function SwipeableTemporaryDrawer() {
 
 	return  (
 			<Fragment>
-				{state.right ? (
-					<div className="layout-row flex-right">
-						<a
-							className="link-sidepanel"
-							onClick={toggleDrawer("right", false)}
-						>
-							<span className="material-icons">close</span>
-						</a>
-					</div>
-				) : (
+				{!state.right && (
+				
 					<div className="layout-row flex-right">
 						<a className="link-sidepanel" onClick={toggleDrawer("right", true)}>
 							<span className="material-icons">menu</span>
@@ -79,9 +71,17 @@ export default function SwipeableTemporaryDrawer() {
 					onOpen={toggleDrawer("right", true)}
 					id="user"
 				>
+
+						<a
+							className="link-close"
+							onClick={toggleDrawer("right", false)}
+						>
+							<span className="material-icons">close</span>
+						</a>
+						
 					<div className="sidepanel">
 						<h3></h3>
-						<Link to="/" onClick={toggleDrawer("right", false)}>
+						<Link to="/intro" onClick={toggleDrawer("right", false)}>
 							Home
 						</Link>
 						{/* <a>About</a> */}

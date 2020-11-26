@@ -86,6 +86,8 @@
     margin: 0 !important;
     background: $color-white;
     box-shadow: 0 12px 24px $color-gray-note;
+    z-index: $z-title !important;
+
 
     // background: linear-gradient(
     //   -90deg,

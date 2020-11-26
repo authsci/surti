@@ -2,8 +2,9 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
-import { animateScroll as scroll } from "react-scroll";
+import { Events, animateScroll as scroll } from "react-scroll";
 import Team from "./Team";
+import NavActivities from "./NavActivities";
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -12,6 +13,8 @@ const contentfulAPI =
 	SPACE_ID +
 	"/entries?access_token=" +
 	ACCESS_TOKEN;
+
+const myID = document.getElementById("myID");
 
 export default class Activities extends React.Component {
 	constructor(props) {
@@ -28,11 +31,27 @@ export default class Activities extends React.Component {
 		axios.get(contentfulAPI).then((response) => {
 			const institutions = response.data.items;
 			this.setState({ institutions, loading: false });
-			console.log("institutions", institutions);
 		});
 
 		window.scrollTo(0, 0);
+
+		window.addEventListener("scroll", this.handleScroll);
 	}
+
+	componentWillUnmount() {
+		window.removeEventListener("scroll", this.handleScroll);
+	}
+
+	handleScroll = () => {
+		const arrow = document.getElementById("arrow");
+
+		var y = window.scrollY;
+		if (y < 75) {
+			arrow.className = "nav-down fade-in";
+		} else {
+			arrow.className = "nav-down fade-out";
+		} 
+	};
 
 	goTop = () => {
 		scroll.scrollToTop({
@@ -40,7 +59,6 @@ export default class Activities extends React.Component {
 			delay: 0,
 		});
 	};
-	
 
 	render() {
 		let { loading, institutions } = this.state;
@@ -58,27 +76,20 @@ export default class Activities extends React.Component {
 					</div>
 				) : (
 					<Fragment>
-						{/* <div className="mobile-placeholder mobile">
-							&nbsp;
-						</div> */}
+						<div className="video-fullscreen">
+							<div className="iframe-wrapper">
+								<div className="iframe-overlay">
+									<div className="mainmenu-overlay">
+									
 
-						<div className="outer-container">
-							<div className="inner-container">
-								<div className="video-overlay fade-in">
-									<div className="logo">
-										<img src="img/logo-icon-white.png" />
-										<div>
-											<strong>Extimacies</strong>
-											<span>Critical Theory from the Global South</span>
-										</div>
-									</div>
 
-									<div className="mainmenu">
-										{institutions.map(
-											(item, index) =>
-												item.fields.type == "org" && (
-													<Fragment key={index}>
+
+										<div className="mainmenu">
+											{institutions.map(
+												(item, index) =>
+													item.fields.type == "org" && (
 														<Link
+															key={index}
 															to={"/institution/" + index}
 															className={`link-title-` + item.fields.color}
 														>
@@ -87,13 +98,20 @@ export default class Activities extends React.Component {
 																<small>{item.fields.name}</small>
 															</div>
 														</Link>
-													</Fragment>
-												)
-										)}
-									</div>
+													)
+											)}
+										</div>
 
-									<div className="nav-down" id="arrow">
-										<Link to="/home"></Link><i class="fas fa-angle-down"></i>
+                    <Link to="/intro" className="logo-float">
+											<img src="img/logo-icon-white.png" />{" "}
+											<div>
+												<strong>Extimacies</strong>
+												<span>Critical Theory from<br/>the Global South</span>
+											</div>
+										</Link>
+									</div>
+                  <div className="nav-down" id="arrow">
+										<Link to="/home"><i class="fas fa-angle-down"></i></Link>
 									</div>
 								</div>
 
@@ -105,20 +123,23 @@ export default class Activities extends React.Component {
 									loop
 									autoPlay
 									muted
-									// src="img/starfield.mp4"
-									src="img/mobius.mp4"
-									type="video/mp4"
-									// poster="img/mobius.jpg"
-								></video>
+								>
+									<source src="img/full.webm" type="video/webm" />
+									<source src="img/full.ogv" type="video/ogv" />
+									<source src="img/full.mp4" type="video/mp4" />
+									{/* <source src="img/watermark.mp4" type="video/mp4" /> */}
+								</video>
 							</div>
 						</div>
 
-						<div className="nudge-xl"></div>
+						<NavActivities />
+
+						<div className="nudge-lg"></div>
 
 						<div className="contain">
-							<div className="copy-hero">
+							<div className="home-hero">
 								{institutions.map(
-									(item, index) => 
+									(item, index) =>
 										item.fields.type == "about" && (
 											<Fragment key={index}>
 												<Markdown>{item.fields.body}</Markdown>
@@ -128,18 +149,13 @@ export default class Activities extends React.Component {
 
 								<div className="nudge-xl"></div>
 
-								<Team/>
+								<Team />
 
 								<div className="nudge-xl"></div>
 							</div>
 						</div>
 					</Fragment>
 				)}
-
-				{/* <div className="footer desktop">
-					Copyright ©<Moment format="YYYY" /> Extimacies Program |{" "}
-					<Moment format="D-MMM-YYYY" />
-				</div> */}
 			</Fragment>
 		);
 	}

@@ -36,7 +36,7 @@ export default class Nav extends React.Component {
 						}
 					>
 						{/* {this.state.showMenu && ( */}
-						<Link to="/" className="link-slug fade-in" onClick={this.goTop()}>
+						<Link to="/intro" className="link-slug fade-in" onClick={this.goTop()}>
 							<img src="img/logo-icon.png" />{" "}
 							<div>
 								<strong>Extimacies</strong>
@@ -47,7 +47,7 @@ export default class Nav extends React.Component {
 					</div>
 
 					<div className="nav-activities-left mobile">
-						<Link to="/" className="link-slug fade-in">
+						<Link to="/intro" className="link-slug fade-in">
 							<img src="img/logo-icon.png" />{" "}
 							<div>
 								<strong>Extimacies</strong>
@@ -57,8 +57,8 @@ export default class Nav extends React.Component {
 					</div>
 
 					<div className="nav-activities-right nudge-right">
-						<NavLink
-							to="/"
+						{/* <NavLink
+							to="/home"
 							exact
 							activeClassName="link-menu-hilite"
 							className="link-menu desktop"
@@ -101,9 +101,9 @@ export default class Nav extends React.Component {
 							className="link-menu desktop"
 						>
 							Course
-						</NavLink>
+						</NavLink> */}
 
-						<span className="mobile">
+						<span>
 							<UserSettings />
 						</span>
 					</div>

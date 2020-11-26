@@ -54,7 +54,7 @@ export default class Activities extends React.Component {
 						<div className="contain">
 							<div className="copy">
 								<div className="breadcrumbs">
-									<Link to="/" className="link-breadcrumbs">
+									<Link to="/intro" className="link-breadcrumbs">
 										Home
 									</Link>
 									<span>/</span>

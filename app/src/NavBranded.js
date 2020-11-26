@@ -25,7 +25,7 @@ export default class Nav extends React.Component {
 				<div className="contain">
 					<div className="nav-branded">
 						<div className="nav-branded-left desktop">
-							<NavLink to="/">
+							<NavLink to="/intro">
 								<div className="logo">
 									<img src="img/logo-icon.png" />
 									<div>
