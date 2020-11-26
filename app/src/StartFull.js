@@ -80,34 +80,15 @@ export default class Activities extends React.Component {
 							<div className="iframe-wrapper">
 								<div className="iframe-overlay">
 									<div className="mainmenu-overlay">
-										<div className="logo step1">
+										<div className="logo step0">
 											<img src="img/logo-icon-white.png" />
-                     
-										</div>
-
-										<div className="logo step2">
 											<div>
 												<strong>Extimacies</strong>
+												<span>Critical Theory from<br/>the Global South</span>
 											</div>
 										</div>
 
-										<div className="logo step3-a">
-											<div>
-												<span style={{ marginTop: "-24px" }}>
-													Critical Theory from
-												</span>
-											</div>
-										</div>
-
-										<div className="logo step3-b">
-											<div>
-												<span style={{ marginTop: "24px" }}>
-													the Global South
-												</span>
-											</div>
-										</div>
-
-										<Link to="/" className="logo-float step5">
+										<Link to="/" className="logo-float stepLogo">
 											<img src="img/logo-icon-white.png" />{" "}
 											<div>
 												<strong>Extimacies</strong>
@@ -115,7 +96,7 @@ export default class Activities extends React.Component {
 											</div>
 										</Link>
 
-										<div className="mainmenu step4">
+										<div className="mainmenu stepMenu">
 											{institutions.map(
 												(item, index) =>
 													item.fields.type == "org" && (
@@ -134,7 +115,7 @@ export default class Activities extends React.Component {
 										</div>
 									</div>
 									<div className="nav-down" id="arrow">
-										<Link to="/home"><i class="fas fa-angle-down"></i></Link>
+										<Link to="/home"><i className="fas fa-angle-down"></i></Link>
 									</div>
 								</div>
 

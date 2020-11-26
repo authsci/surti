@@ -416,7 +416,7 @@
 @keyframes step5 {
   0% {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateY(-10px);
   }
   100% {
     opacity: 1;
@@ -424,6 +424,41 @@
   }
 }
 
+@keyframes step6 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.step0 {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: step1;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-duration: 5s; 
+}
+.stepMenu {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: step5;
+  animation-timing-function: linear;
+  animation-delay: 5s;
+  animation-duration: .5s; 
+}
+.stepLogo {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: step6;
+  animation-timing-function: linear;
+  animation-delay: 6s;
+  animation-duration: 1s; 
+}
 .step1 {
   opacity: 0;
   animation-fill-mode: forwards;

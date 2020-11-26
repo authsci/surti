@@ -93,7 +93,7 @@ export default class Activities extends React.Component {
 									</div>
 
 									<div className="nav-down" id="arrow">
-										<Link to="/home"></Link><i class="fas fa-angle-down"></i>
+										<Link to="/home"></Link><i className="fas fa-angle-down"></i>
 									</div>
 								</div>
 
