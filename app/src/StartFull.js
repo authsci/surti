@@ -84,7 +84,7 @@ export default class Activities extends React.Component {
 											<img src="img/logo-icon-white.png" />
 											<div>
 												<strong>Extimacies</strong>
-												<span>Critical Theory from<br/>the Global South</span>
+												<span>Critical Theory from <br/>the Global South</span>
 											</div>
 										</div>
 

@@ -416,11 +416,11 @@
 @keyframes step5 {
   0% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: scale(.98);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: scale(1);
   }
 }
 
@@ -432,8 +432,6 @@
     opacity: 1;
   }
 }
-
-
 
 .step0 {
   opacity: 0;
@@ -456,7 +454,7 @@
   animation-fill-mode: forwards;
   animation-name: step6;
   animation-timing-function: linear;
-  animation-delay: 6s;
+  animation-delay: 5s;
   animation-duration: 1s; 
 }
 .step1 {
