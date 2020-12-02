@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import { Events, animateScroll as scroll } from "react-scroll";
 import Team from "./Team";
@@ -35,12 +34,8 @@ export default class Activities extends React.Component {
 
 		window.scrollTo(0, 0);
 
-		window.addEventListener("scroll", this.handleScroll);
 	}
 
-	componentWillUnmount() {
-		window.removeEventListener("scroll", this.handleScroll);
-	}
 
 
 	goTop = () => {

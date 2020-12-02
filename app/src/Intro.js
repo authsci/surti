@@ -35,30 +35,8 @@ export default class Activities extends React.Component {
 
 		window.scrollTo(0, 0);
 
-		window.addEventListener("scroll", this.handleScroll);
 	}
 
-	componentWillUnmount() {
-		window.removeEventListener("scroll", this.handleScroll);
-	}
-
-	handleScroll = () => {
-		const arrow = document.getElementById("arrow");
-
-		var y = window.scrollY;
-		if (y < 75) {
-			arrow.className = "nav-down fade-in";
-		} else {
-			arrow.className = "nav-down fade-out";
-		} 
-	};
-
-	goTop = () => {
-		scroll.scrollToTop({
-			duration: 400,
-			delay: 0,
-		});
-	};
 
 	render() {
 		let { loading, institutions } = this.state;

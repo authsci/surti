@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
-import { Events, animateScroll as scroll } from "react-scroll";
 import Team from "./Team";
 import NavActivities from "./NavActivities";
 
@@ -24,6 +23,7 @@ export default class Activities extends React.Component {
 			loading: true,
 			keyword: "",
 			institutions: [],
+			timer: true
 		};
 	}
 
@@ -35,23 +35,16 @@ export default class Activities extends React.Component {
 
 		window.scrollTo(0, 0);
 
-		window.addEventListener("scroll", this.handleScroll);
+
+		setTimeout(
+			function () {
+				this.setState({ timer: false });
+			}.bind(this),
+			5000
+		);
+
 	}
 
-	componentWillUnmount() {
-		window.removeEventListener("scroll", this.handleScroll);
-	}
-
-	handleScroll = () => {
-		const arrow = document.getElementById("arrow");
-
-		var y = window.scrollY;
-		if (y < 75) {
-			arrow.className = "nav-down fade-in";
-		} else {
-			arrow.className = "nav-down fade-out";
-		} 
-	};
 
 	goTop = () => {
 		scroll.scrollToTop({
@@ -61,7 +54,7 @@ export default class Activities extends React.Component {
 	};
 
 	render() {
-		let { loading, institutions } = this.state;
+		let { loading, institutions, timer } = this.state;
 
 		return (
 			<Fragment>
@@ -103,7 +96,7 @@ export default class Activities extends React.Component {
 														<Link
 															key={index}
 															to={"/institution/" + index}
-															className={`link-title-` + item.fields.color}
+															className={`link-title-` + item.fields.color} style={ timer ? { pointerEvents:'none'} : { pointerEvents:'all'}}
 														>
 															<div>
 																<h1>{item.fields.code}</h1>

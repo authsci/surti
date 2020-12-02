@@ -104,7 +104,7 @@ export default class Nav extends React.Component {
 						</NavLink> */}
 
 						<span>
-							<UserSettings />
+							<UserSettings  />
 						</span>
 					</div>
 				</div>

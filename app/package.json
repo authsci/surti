@@ -15,21 +15,20 @@
   "author": "Greg Anderson <ganderson@1wa.org>",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-env": "^7.12.7",
     "@babel/preset-flow": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
-    "babel-loader": "^8.1.0",
+    "@babel/preset-react": "^7.12.7",
+    "babel-loader": "^8.2.2",
     "css-loader": "^2.1.1",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^7.3.1",
+    "sass-loader": "^7.2.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
+    "@material-ui/core": "^4.11.1",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
     "axios": "^0.19.2",
@@ -37,7 +36,8 @@
     "contentful-management": "^5.27.3",
     "markdown-to-jsx": "^6.11.4",
     "moment": "^2.27.0",
-    "moment-timezone": "^0.5.31",
+    "moment-timezone": "^0.5.32",
+    "node-sass": "^4.14.1",
     "npm-check-updates": "^4.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -58,7 +58,7 @@
     "react-slideshow-image": "^1.4.2",
     "react-spring": "^8.0.27",
     "react-tabs": "^3.1.1",
-    "react-tooltip": "^4.2.7",
+    "react-tooltip": "^4.2.11",
     "recharts": "^1.8.5"
   }
 }

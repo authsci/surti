@@ -744,27 +744,12 @@ a {
     cursor: pointer;
     outline: none;
     margin-right: 24px;
-    margin-top: 22px;
+    margin-top: 30px;
     transition: $transition-color;
 
     &:hover {
       transition: $transition-color;
       color: $color-gray-darkest;
-    }
-
-    &--modal {
-      @extend .link-close;
-      padding: 0 0 6px 0;
-    }
-
-    &--menu {
-      @extend .link-close--modal;
-      color: $color-white;
-      padding: 6px 12px 6px 12px;
-
-      &:hover {
-        color: $color-white;
-      }
     }
   }
 
@@ -782,37 +767,7 @@ a {
     }
   }
 
-  &-sso {
-    background: $color-blue-default;
-    color: $color-white;
-    font-size: $type-xxs;
-    text-decoration: none;
-    padding: 4px 6px;
-    text-align: center;
-    justify-content: center;
-    cursor: pointer;
-    display: flex;
-    width: 120px;
-    margin: 0 auto;
-    border-radius: $radius-slight;
-    transition: $transition-background;
-
-    &:hover {
-      background: $color-blue;
-    }
-
-    &-disabled {
-      @extend .link-sso;
-      background: $color-gray-light;
-      color: $color-gray;
-      cursor: not-allowed;
-
-      &:hover {
-        background: $color-gray-light;
-        color: $color-gray;
-      }
-    }
-  }
+ 
 
   &-login {
     font-size: $type-xxs;
@@ -830,62 +785,6 @@ a {
     &:hover {
       transition: $transition-background;
       background: $color-blue;
-    }
-  }
-
-  &-download {
-    font-size: $type-xxs;
-    font-weight: $regular;
-    justify-content: center;
-    display: block;
-    cursor: pointer;
-    background: $color-blue-default;
-    color: $color-white;
-    padding: 4px 12px;
-    border-radius: $radius-slight;
-    text-decoration: none;
-    margin: 0 6px;
-
-    &:hover {
-      transition: $transition-background;
-      background: $color-blue;
-    }
-  }
-
-  &-cancel {
-    @extend .link-login;
-    font-size: $type-xxs;
-    padding: 4px 6px;
-    background: $color-gray-slight;
-    color: $color-gray-dark;
-    width: 50%;
-    flex: 1;
-    margin: 6px 3px;
-    transition: $transition-background;
-    display: inline-flex;
-
-    &:hover {
-      background: $color-gray-light;
-      color: $color-gray-dark;
-      transition: $transition-background;
-    }
-  }
-
-  &-save {
-    @extend .link-login;
-    font-size: $type-xxs;
-    padding: 4px 6px;
-    background: $color-gray-darker;
-    color: $color-white;
-    width: 50%;
-    flex: 1;
-    margin: 6px 3px;
-    transition: $transition-background;
-    display: inline-flex;
-
-    &:hover {
-      background: $color-gray-darkest;
-      transition: $transition-background;
     }
   }
 
@@ -912,40 +811,6 @@ a {
       border-bottom: 1px solid $color-blue-medium;
     }
 
-    &-hilite b {
-      @extend .link-menu;
-      margin: 0;
-      font-weight: $regular;
-      border-bottom: 1px solid $color-blue-half;
-
-      &:hover {
-        border-bottom: 1px solid $color-blue-medium;
-      }
-    }
-
-    &--top {
-      @extend .link-menu;
-
-      i {
-        color: $color-white;
-        font-size: $type-md;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-
-    &-nav {
-      // @extend .link-menu;
-      margin: 0 6px;
-      cursor: pointer;
-
-      i {
-        color: $color-white !important;
-        font-size: $type-md;
-        justify-content: center;
-        align-items: flex-end;
-      }
-    }
   }
 
   &-signout {

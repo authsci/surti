@@ -70,7 +70,8 @@ export default class Activities extends React.Component {
 									{people.map(
 										(item, index) =>
 											item.fields.type == "people" && (
-												<Card key={index} className="card">
+												<Fragment key={index}>
+												<Card className="card">
 													<CardContent>
 														<div
 															data-tip
@@ -103,15 +104,7 @@ export default class Activities extends React.Component {
 															{item.fields.email}
 														</a>
 
-														<ReactTooltip
-															place="top"
-															type="dark"
-															effect="float"
-															className="desktop"
-															id={item.fields.email}
-														>
-															{item.fields.institution}
-														</ReactTooltip>
+												
 
 														<div className="nudge-sm"></div>
 														<Link to={`/people/` + index}>
@@ -141,8 +134,24 @@ export default class Activities extends React.Component {
 														</Link>
 													</CardContent>
 												</Card>
+
+<ReactTooltip
+place="top"
+type="dark"
+effect="float"
+className="desktop"
+id={item.fields.email}
+>
+{item.fields.institution}
+</ReactTooltip>
+
+</Fragment>
+
+												
 											)
 									)}
+
+									
 								</Fragment>
 								<div className="nudge-xxl"></div>
 							</div>

@@ -100,15 +100,7 @@ export default class Activities extends React.Component {
 
 										<h1>{people.firstname + " " + people.lastname}</h1>
 
-										<ReactTooltip
-											place="top"
-											type="dark"
-											effect="float"
-											id="profile"
-											className="desktop"
-										>
-											{people.institution}
-										</ReactTooltip>
+									
 
 										<h2>{people.position}</h2>
 
@@ -168,6 +160,16 @@ export default class Activities extends React.Component {
 								<div className="nudge-xxl"></div>
 							</div>
 						</div>
+
+						<ReactTooltip
+											place="top"
+											type="dark"
+											effect="float"
+											id="profile"
+											className="desktop"
+										>
+											{people.institution}
+										</ReactTooltip>
 					</Fragment>
 				)}
 			</Fragment>

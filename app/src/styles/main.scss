@@ -99,7 +99,7 @@ body {
     }
 
     @media (min-width: $break-lg) {
-      left: 96px;
+      left: 72px;
     }
   }
 }
@@ -107,7 +107,6 @@ body {
 .mainmenu {
   display: flex;
   width: 100%;
-  // height: 300px;
   justify-content: center;
   align-self: center;
   align-content: center;
@@ -259,7 +258,7 @@ strong {
 .breadcrumbs {
   font-size: $type-default;
   font-weight: $regular;
-  margin: 12px 0;
+  margin: 12px 0 24px 0;
 
   span {
     color: $color-gray-half;
@@ -729,11 +728,11 @@ canvas {
     font-size: $type-tiny;
   }
 
-  p {
+  p, span {
     font-size: $type-copy;
 
     @media (min-width: $break-sm) {
-      font-size: $type-sm;
+      font-size: $type-md;
     }
   }
 

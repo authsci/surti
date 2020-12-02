@@ -1,11 +1,15 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
-import { Route, Switch, HashRouter as Router } from "react-router-dom";
+import {
+	Route,
+	Redirect,
+	Switch,
+	HashRouter as Router,
+} from "react-router-dom";
 import { Offline, Online } from "react-detect-offline";
 import NavActivities from "./NavActivities";
 import StartFull from "./StartFull";
 import Intro from "./Intro";
-// import Start from "./Start";
 import Institution from "./Institution";
 import People from "./People";
 import Home from "./Home";
@@ -25,8 +29,7 @@ class App extends React.Component {
 			loading: true,
 		};
 
-		document.addEventListener("touchstart", function() {}, true);
-
+		document.addEventListener("touchstart", function () {}, true);
 	}
 
 	componentDidMount() {
@@ -89,12 +92,13 @@ class App extends React.Component {
 										path="/intro"
 										render={(props) => (
 											<Fragment>
+												{/* <NavMenu/> */}
 												<Intro />
 											</Fragment>
 										)}
 									/>
-								
-                	<Route
+
+									<Route
 										exact
 										path="/institution/:id"
 										render={(props) => (
@@ -104,7 +108,7 @@ class App extends React.Component {
 											</Fragment>
 										)}
 									/>
-                	
+
 									<Route
 										exact
 										// path="/people/:id/:name"
@@ -116,7 +120,7 @@ class App extends React.Component {
 											</Fragment>
 										)}
 									/>
-                	
+
 									<Route
 										exact
 										path="/list"

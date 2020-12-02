@@ -19,8 +19,8 @@ export default class Activities extends React.Component {
 			loading: true,
 			keyword: "",
 			institutions: [],
-		};
-		console.log("inst props", this.props);
+			id: this.props.match.params.id
+		}
 	}
 
 	componentDidMount() {
@@ -28,14 +28,14 @@ export default class Activities extends React.Component {
 			const institutions =
 				response.data.items[this.props.match.params.id].fields;
 			this.setState({ institutions, loading: false });
-			console.log("institutions", institutions);
 		});
 
 		window.scrollTo(0, 0);
 	}
 
+
 	render() {
-		let { loading, institutions } = this.state;
+		let { loading, institutions, location } = this.state;
 
 		return (
 			<Fragment>
@@ -67,6 +67,8 @@ export default class Activities extends React.Component {
 								<h1>{institutions.name}</h1>
 
 								<Markdown>{institutions.desc}</Markdown>
+
+								<br/>
 
 								<div className="nudge-md"></div>
 

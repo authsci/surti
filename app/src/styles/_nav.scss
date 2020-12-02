@@ -38,43 +38,16 @@
     font-weight: $regular;
   }
 
-  &-branded {
-    display: flex;
-    position: relative;
-    top: 80px;
-    padding: 0;
-    height: 80px;
+  &-menu {
     background: transparent;
-    z-index: $z-base !important;
-
-    &-left {
-      display: inline-flex;
-      flex: 1;
-      font-size: $type-sm;
-
-      .logo {
-        // top: 95px;
-        div {
-          a,
-          strong {
-            color: $color-gray-darkest;
-            text-decoration: none !important;
-          }
-          span {
-            color: $color-gray-dark;
-            text-decoration: none !important;
-          }
-        }
-      }
-    }
-
-    &-right {
-      display: flex;
-      color: $color-gray;
-      font-size: $type-xs;
-      align-self: center;
-    }
+    position: absolute;
+    right: 60px;
+    top: 60px;  display: flex;
+    z-index: $z-base;
+      color: $color-white !important;
   }
+
+ 
 
   &-activities {
     @extend .nav;
@@ -100,13 +73,13 @@
     // );
 
     background-size: 400% 400%;
-    animation-name: blue2black;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-play-state: running;
+    // animation-name: blue2black;
+    // animation-duration: 1s;
+    // animation-timing-function: ease-in-out;
+    // animation-direction: normal;
+    // animation-fill-mode: forwards;
+    // animation-iteration-count: 1;
+    // animation-play-state: running;
 
     &-left {
       @extend .nav-left;
