@@ -15,8 +15,6 @@ export default class Nav extends React.Component {
 		};
 	}
 
-
-
 	goTop = () => {
 		scroll.scrollToTop({
 			duration: 400,
@@ -36,7 +34,11 @@ export default class Nav extends React.Component {
 						}
 					>
 						{/* {this.state.showMenu && ( */}
-						<Link to="/intro" className="link-slug fade-in" onClick={this.goTop()}>
+						<Link
+							to="/intro"
+							className="link-slug fade-in"
+							onClick={this.goTop()}
+						>
 							<img src="img/logo-icon.png" />{" "}
 							<div>
 								<strong>Extimacies</strong>
@@ -104,7 +106,7 @@ export default class Nav extends React.Component {
 						</NavLink> */}
 
 						<span>
-							<UserSettings  />
+							<UserSettings />
 						</span>
 					</div>
 				</div>

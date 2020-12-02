@@ -31,6 +31,10 @@ export default class Activities extends React.Component {
 			const people = response.data.items;
 			this.setState({ media, people, loading: false });
 		});
+
+		console.log("team");
+
+
 		window.scrollTo(0, 0);
 	}
 

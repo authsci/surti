@@ -1,12 +1,8 @@
 import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Moment from "react-moment";
 import Markdown from "markdown-to-jsx";
 import ReactTooltip from "react-tooltip";
-import { Events, animateScroll as scroll } from "react-scroll";
-import { FilterableContent, FilterableSection } from "react-filterable-content";
-import TextField from "@material-ui/core/TextField";
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -29,9 +25,7 @@ export default class Activities extends React.Component {
 			name: this.props.match.params.name,
 		};
 
-		// this.props.history.push({
-		//   pathname: `/people/` + this.props.match.params.name
-		// });
+	
 	}
 
 	componentDidMount() {
@@ -40,6 +34,9 @@ export default class Activities extends React.Component {
 			const people = response.data.items[this.state.id].fields;
 			this.setState({ media, people, loading: false });
 		});
+
+		console.log("people");
+
 
 		window.scrollTo(0, 0);
 	}

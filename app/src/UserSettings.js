@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 
 const useStyles = makeStyles({
@@ -25,6 +25,9 @@ const useStyles = makeStyles({
 export default function SwipeableTemporaryDrawer() {
 	const classes = useStyles();
 	const [info, setInfo] = useState();
+
+	console.log("sidepanel");
+
 
   const [state, setState] = useState({
     right: false,

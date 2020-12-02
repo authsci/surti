@@ -13,8 +13,6 @@ const contentfulAPI =
 	"/entries?access_token=" +
 	ACCESS_TOKEN;
 
-const myID = document.getElementById("myID");
-
 export default class Activities extends React.Component {
 	constructor(props) {
 		super(props);
@@ -31,6 +29,8 @@ export default class Activities extends React.Component {
 			const institutions = response.data.items;
 			this.setState({ institutions, loading: false });
 		});
+
+		console.log("home");
 
 		window.scrollTo(0, 0);
 

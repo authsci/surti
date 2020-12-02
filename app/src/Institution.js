@@ -30,6 +30,9 @@ export default class Activities extends React.Component {
 			this.setState({ institutions, loading: false });
 		});
 
+		console.log("institution");
+
+
 		window.scrollTo(0, 0);
 	}
 
