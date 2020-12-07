@@ -252,24 +252,19 @@
   }
 }
 
-@keyframes load{
-  from {
-    width: 0%
-  }
+.load {
+  animation-name: load;
+  animation-duration:.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }
-@-webkit-keyframes load{
-  from {
-    width: 0%
+
+@keyframes load {
+  0% {
+    width: 0;
   }
-}
-@-moz-keyframes load{
-  from {
-    width: 0%
-  }
-}
-@-o-keyframes load{
-  from {
-    width: 0%
+  100% {
+    width: 100%;
   }
 }
 

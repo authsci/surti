@@ -15,7 +15,7 @@ const contentfulAPI =
 
 const myID = document.getElementById("myID");
 
-export default class Activities extends React.Component {
+export default class Start extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -23,7 +23,7 @@ export default class Activities extends React.Component {
 			loading: true,
 			keyword: "",
 			institutions: [],
-			timer: true
+			timer: true,
 		};
 	}
 
@@ -35,9 +35,7 @@ export default class Activities extends React.Component {
 
 		console.log("start");
 
-
 		window.scrollTo(0, 0);
-
 
 		setTimeout(
 			function () {
@@ -45,9 +43,7 @@ export default class Activities extends React.Component {
 			}.bind(this),
 			5000
 		);
-
 	}
-
 
 	goTop = () => {
 		scroll.scrollToTop({
@@ -80,7 +76,10 @@ export default class Activities extends React.Component {
 											<img src="img/logo-icon-white.png" />
 											<div>
 												<strong>Extimacies</strong>
-												<span>Critical Theory from <br/>the Global South</span>
+												<span>
+													Critical Theory from <br />
+													the Global South
+												</span>
 											</div>
 										</div>
 
@@ -88,30 +87,42 @@ export default class Activities extends React.Component {
 											<img src="img/logo-icon-white.png" />{" "}
 											<div>
 												<strong>Extimacies</strong>
-												<span>Critical Theory from<br/>the Global South</span>
+												<span>
+													Critical Theory from
+													<br />
+													the Global South
+												</span>
 											</div>
 										</Link>
 
 										<div className="mainmenu stepMenu">
-											{institutions.map(
-												(item, index) =>
-													item.fields.type == "org" && (
-														<Link
-															key={index}
-															to={"/institution/" + index}
-															className={`link-title-` + item.fields.color} style={ timer ? { pointerEvents:'none'} : { pointerEvents:'all'}}
-														>
-															<div>
-																<h1>{item.fields.code}</h1>
-																<small>{item.fields.name}</small>
-															</div>
-														</Link>
-													)
-											)}
+											{_.sortBy(institutions, "order")
+												.map(
+													(item, index) =>
+														item.fields.type == "org" && (
+															<Link
+																key={index}
+																to={"/institution/" + index  + "/" + item.fields.code} 
+																className={`link-title-` + item.fields.color}
+																style={
+																	timer
+																		? { pointerEvents: "none" }
+																		: { pointerEvents: "all" }
+																}
+															>
+																<div>
+																	<h1>{item.fields.code}</h1>
+																	<small>{item.fields.name}</small>
+																</div>
+															</Link>
+														)
+												).reverse()}
 										</div>
 									</div>
 									<div className="nav-down" id="arrow">
-										<Link to="/home"><i className="fas fa-angle-down"></i></Link>
+										<Link to="/home">
+											<i className="fas fa-angle-down"></i>
+										</Link>
 									</div>
 								</div>
 

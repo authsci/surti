@@ -84,7 +84,7 @@ export default function SwipeableTemporaryDrawer() {
 						
 					<div className="sidepanel">
 						<h3></h3>
-						<Link to="/intro" onClick={toggleDrawer("right", false)}>
+						<Link to="/home" onClick={toggleDrawer("right", false)}>
 							Home
 						</Link>
 						{/* <a>About</a> */}
@@ -95,7 +95,7 @@ export default function SwipeableTemporaryDrawer() {
 						<li>Publications</li>
 						<li>Initiatives</li>
 						<li>Courses</li>
-						<Link to={"/intro/"} onClick={toggleDrawer("right", false)}>
+						<Link to={"/institutions"} onClick={toggleDrawer("right", false)}>
 							Institutions
 						</Link>
 

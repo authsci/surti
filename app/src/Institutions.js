@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import axios from "axios";
 import Markdown from "markdown-to-jsx";
-import { Events, animateScroll as scroll } from "react-scroll";
-import Team from "./Team";
-import NavActivities from "./NavActivities";
+import ReactTooltip from "react-tooltip";
+import { Link } from "react-router-dom";
+import * as _ from "lodash";
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -13,7 +13,7 @@ const contentfulAPI =
 	"/entries?access_token=" +
 	ACCESS_TOKEN;
 
-export default class Activities extends React.Component {
+export default class Institutions extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -28,19 +28,12 @@ export default class Activities extends React.Component {
 		axios.get(contentfulAPI).then((response) => {
 			const institutions = response.data.items;
 			this.setState({ institutions, loading: false });
+			console.log("institutions", institutions);
 		});
 
-		console.log("home");
 
 		window.scrollTo(0, 0);
 	}
-
-	goTop = () => {
-		scroll.scrollToTop({
-			duration: 400,
-			delay: 0,
-		});
-	};
 
 	render() {
 		let { loading, institutions } = this.state;
@@ -58,25 +51,34 @@ export default class Activities extends React.Component {
 					</div>
 				) : (
 					<Fragment>
-						<NavActivities />
+						<div className="contain">
+							<div className="copy">
+								<div className="breadcrumbs">
+									<Link to="/home" className="link-breadcrumbs">
+										Home
+									</Link>
+									<span>/</span>
+									<b>Institutions</b>
+								</div>
 
-						<div className="contain fade-in">
-							<div className="home-hero">
+								<div className="nudge-xl"></div>
+
 								{_.sortBy(institutions, "order")
 									.map(
 										(item, index) =>
-											item.fields.type == "about" && (
-												<Fragment key={index}>
-													<Markdown>{item.fields.body}</Markdown>
-												</Fragment>
+											item.fields.type == "org" && (
+												<Link to={'/institution/' + index} key={index} className="link-list">
+													<span
+														className={`dept-` + item.fields.code.toLowerCase()}
+														data-tip
+														data-for={item.fields.code}
+													>
+														{item.fields.code}
+													</span>
+													<div>{item.fields.name}</div>
+												</Link>
 											)
 									).reverse()}
-
-								<div className="nudge-xl"></div>
-
-								<Team />
-
-								<div className="nudge-xl"></div>
 							</div>
 						</div>
 					</Fragment>

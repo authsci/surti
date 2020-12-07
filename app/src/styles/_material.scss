@@ -66,6 +66,12 @@
 .MuiCard-root {
   padding: 12px !important;
 
+  #dept {
+    text-decoration: none !important;
+    color: $color-white !important;
+    cursor: pointer;
+  }
+
 }
 
 .MuiToggleButton-label {

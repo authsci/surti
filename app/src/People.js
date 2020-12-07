@@ -12,7 +12,7 @@ const contentfulAPI =
 	"/entries?access_token=" +
 	ACCESS_TOKEN;
 
-export default class Activities extends React.Component {
+export default class People extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -24,7 +24,6 @@ export default class Activities extends React.Component {
 			id: this.props.match.params.id,
 			name: this.props.match.params.name,
 		};
-
 	
 	}
 
@@ -60,7 +59,7 @@ export default class Activities extends React.Component {
 						<div className="contain">
 							<div className="copy">
 								<div className="breadcrumbs">
-									<Link to="/intro" className="link-breadcrumbs">
+									<Link to="/home" className="link-breadcrumbs">
 										Home
 									</Link>
 									<span>/</span>
@@ -151,7 +150,9 @@ export default class Activities extends React.Component {
 								<div className="nudge-sm"></div>
 
 								<div className="profile-bio">
+								{people.bio &&
 									<Markdown>{people.bio}</Markdown>
+								}
 								</div>
 
 								<div className="nudge-xxl"></div>

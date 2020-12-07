@@ -13,7 +13,7 @@ const contentfulAPI =
 	"/entries?access_token=" +
 	ACCESS_TOKEN;
 
-export default class Activities extends React.Component {
+export default class Team extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -50,13 +50,20 @@ export default class Activities extends React.Component {
 							<Fragment key={index}>
 							<Card className="card">
 								<CardContent>
-									<div
+									{/* <div
 										data-tip
 										data-for={item.fields.email}
 										className={`dept-` + item.fields.dept.toLowerCase()}
 									>
 										{item.fields.dept}
-									</div>
+									</div> */}
+
+									<div id="dept" className={`dept-` + item.fields.dept.toLowerCase()}
+														data-tip
+														data-for={item.fields.email}>
+														{item.fields.dept}
+													<div>{item.fields.name}</div>
+												</div>
 
 									<h1>{item.fields.firstname + " " + item.fields.lastname}</h1>
 

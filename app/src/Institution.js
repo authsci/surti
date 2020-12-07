@@ -2,6 +2,10 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import Markdown from "markdown-to-jsx";
 import { Link } from "react-router-dom";
+import ReactTooltip from "react-tooltip";
+
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -19,26 +23,30 @@ export default class Activities extends React.Component {
 			loading: true,
 			keyword: "",
 			institutions: [],
-			id: this.props.match.params.id
-		}
+			people: [],
+			media: [],
+			id: this.props.match.params.id,
+			dept: this.props.match.params.dept,
+		};
 	}
 
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
-			const institutions =
+			const media = response.data;
+			const institution =
 				response.data.items[this.props.match.params.id].fields;
-			this.setState({ institutions, loading: false });
+
+			const people = response.data.items;
+
+			this.setState({ institution, media, people, loading: false });
+			console.log("institution", institution);
 		});
-
-		console.log("institution");
-
 
 		window.scrollTo(0, 0);
 	}
 
-
 	render() {
-		let { loading, institutions, location } = this.state;
+		let { loading, institution, people, media, dept } = this.state;
 
 		return (
 			<Fragment>
@@ -53,63 +61,125 @@ export default class Activities extends React.Component {
 					</div>
 				) : (
 					<Fragment>
+						<div
+							className={`load accent-` + institution.code.toLowerCase()}
+						></div>
+
 						<div className="contain">
 							<div className="copy">
 								<div className="breadcrumbs">
-									<Link to="/intro" className="link-breadcrumbs">
+									<Link to="/home" className="link-breadcrumbs">
 										Home
 									</Link>
 									<span>/</span>
-									<Link to="/intro" className="link-breadcrumbs">
+									<Link to="/institutions" className="link-breadcrumbs">
 										Institutions
 									</Link>
 									<span>/</span>
-									<b>{institutions.name}</b>
+									<b>{institution.name}</b>
 								</div>
 
-								<h1>{institutions.name}</h1>
+								<h1>{institution.name}</h1>
+								{institution.desc && <Markdown>{institution.desc}</Markdown>}
 
-								<Markdown>{institutions.desc}</Markdown>
-
-								<br/>
+								<br />
 
 								<div className="nudge-md"></div>
 
-								<a className="link-main">People</a>
+								{/* <a className="link-main">People</a>
 								<a className="link-main">Events</a>
 								<a className="link-main">Initiatives</a>
-								<a className="link-main">Publications</a>
+								<a className="link-main">Publications</a> */}
 
-								{/* <h2>{people.firstname + " " + people.lastname}</h2>
-								<span className={`dept-` + people.dept.toLowerCase()}>
-									{people.dept}
-								</span>
-								<br />
-								<div>{people.position}</div>
-								<a href={`mailto:` + people.email}>
-									<i className="far fa-envelope"></i>
-								</a>
-								<a className="link-default" href={`mailto:` + people.email}>
-									{people.email}
-								</a>
-								<div className="nudge-sm"></div>
+								{people.map(
+									(item, index) =>
+										item.fields.type == "people" && item.fields.dept == dept && (
+											<Fragment key={index}>
+												<Card className="card">
+													<CardContent>
+														{/* <div
+										data-tip
+										data-for={item.fields.email}
+										className={`dept-` + item.fields.dept.toLowerCase()}
+									>
+										{item.fields.dept}
+									</div> */}
 
-								<div className="profile">
-									{people.photo &&
-										media.includes.Asset.map(
-											(image, index) =>
-												people.photo.sys.id ==
-													media.includes.Asset[index].sys.id && (
-													<img
-														key={index}
-														src={media.includes.Asset[index].fields.file.url}
-													/>
-												)
-										)}
-								</div>
+														<div
+															id="dept"
+															className={
+																`dept-` + item.fields.dept.toLowerCase()
+															}
+															data-tip
+															data-for={item.fields.email}
+														>
+															{item.fields.dept}
+															<div>{item.fields.name}</div>
+														</div>
 
-								<Markdown>{people.bio}</Markdown>
-								<div className="nudge-xxl"></div> */}
+														<h1>
+															{item.fields.firstname +
+																" " +
+																item.fields.lastname}
+														</h1>
+
+														<h2>{item.fields.position}</h2>
+
+														<a
+															href={`mailto:` + item.fields.email}
+															className="link-icon"
+														>
+															<i className="far fa-envelope"></i>
+														</a>
+														<a
+															className="link-default"
+															href={`mailto:` + item.fields.email}
+														>
+															{item.fields.email}
+														</a>
+
+														<div className="nudge-sm"></div>
+														<Link to={`/people/` + index}>
+															{item.fields.photo &&
+																media.includes.Asset.map(
+																	(image, index) =>
+																		item.fields.photo.sys.id ==
+																			media.includes.Asset[index].sys.id && (
+																			<img
+																				key={index}
+																				src={
+																					media.includes.Asset[index].fields
+																						.file.url
+																				}
+																			/>
+																		)
+																)}
+														</Link>
+
+														<div className="nudge-sm"></div>
+
+														<Link
+															to={`/people/` + index}
+															className="link-default"
+														>
+															View {item.fields.firstname + `'s`} Profile
+														</Link>
+													</CardContent>
+												</Card>
+												<ReactTooltip
+													place="top"
+													type="dark"
+													effect="float"
+													className="desktop"
+													id={item.fields.email}
+												>
+													{item.fields.institution}
+												</ReactTooltip>
+											</Fragment>
+										)
+								)}
+
+								<div className="nudge-xl"></div>
 							</div>
 						</div>
 					</Fragment>

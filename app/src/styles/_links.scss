@@ -85,170 +85,33 @@ a {
   }
 
   &-list {
-    @extend .link-default;
-    padding: 4px 6px;
-    margin: 6px !important;
-    display: inline-block;
-    min-width: 65px;
-    text-align: center;
-    font-size: $type-default;
+    padding: 0 !important;
+    margin: 24px 0;
+    text-decoration: none;
+    font-size: $type-lg;
     font-weight: $regular;
-    background: $color-brand-note;
-    color: $color-brand;
-
-    &:hover {
-      background: $color-brand-slight;
-
-      .MuiBadge-badge {
-        margin: -14px -24px 0 0;
-        background-color: $color-blue-medium !important;
-        color: $color-white !important;
-        font-size: $type-teeny !important;
-        flex-wrap: nowrap !important;
-        transform: scale(1) !important;
-
-        &:after {
-          content: "";
-          font-size: $type-note !important;
-          white-space: pre;
-        }
-      }
-    }
-
-    &-more {
-      @extend .link-list;
-      background: transparent !important;
-      color: $color-gray-dark;
-      min-width: 65px !important;
-      padding: 0 4px;
-      font-size: $type-default;
-
-      strong {
-        color: $color-black;
-      }
-
-      &:hover {
-        background: transparent;
-        color: $color-gray-darker;
-      }
-    }
-
-    &-alert {
-      @extend .link-list;
-      background: $color-red-note !important;
-      color: $color-red-medium !important;
-
-      &:hover {
-        background: $color-red-slight;
-        color: $color-red;
-      }
-    }
-  }
-
-  &-cta {
-    text-align: center;
-    justify-content: center;
-    font-size: $type-default;
-    display: inline-flex;
-    padding: 2px;
-    min-width: 150px;
-    background: $color-blue-default;
-    color: $color-white;
-    border-radius: $radius-slight;
+    color: $color-gray-darkest;
+    display: table;
     cursor: pointer;
-    transition: $transition-background;
-    text-decoration: none !important;
+    border-bottom: 1px solid transparent;
 
-    &--submitted {
-      @extend .link-cta;
-      background: transparent;
-      color: $color-blue;
-      padding: 1px 0;
-      border: 1px solid transparent;
+    span {
+      display: inline-flex;
+      margin: 3px 0;
+      font-size: $type-xxs !important;
     }
 
-    &--register {
-      @extend .link-cta;
-      background: $color-blue;
-      color: $color-white;
-      padding: 1px 0;
-      border: 1px solid transparent;
+    div {
+      padding: 0;
+      font-size: $type-md;
+      margin: 0;
     }
-
-    &--registered {
-      @extend .link-cta;
-      background: transparent;
-      color: $color-green;
-      padding: 1px 0;
-      border: 1px solid transparent;
-
-      i {
-        color: $color-green;
-      }
-
-      &:hover {
-        color: $color-white !important;
-        background: $color-green !important;
-        transition: $transition-background;
-
-        i {
-          color: $color-white;
-        }
-      }
-    }
-
-    &--excluded {
-      color: $color-gray-darkest;
-      font-size: $type-default;
-      text-align: center;
-    }
-
-    i {
-      font-size: $type-tiny;
-      padding: 0 0 0 6px;
-      align-self: center;
-      color: $color-blue-half;
-    }
-
+    
     &:hover {
-      color: $color-white !important;
-      background: $color-blue;
-      transition: $transition-background;
-
-      i {
-        color: $color-white;
-      }
-    }
-  }
-
-  &-switch {
-    @extend .link-cta;
-    font-size: $type-teeny;
-    color: $color-white;
-    border: 1px solid $color-white-half;
-    cursor: pointer;
-    margin-left: 6px;
-    transition: $transition-background;
-
-    &-role {
-      // align-items: center;
-
-      i {
-        font-size: $type-xxs;
-        background: $color-blue-slight;
-        color: $color-blue-medium;
-        border-radius: $radius-slight;
-        display: inline-flex;
-        padding: 4px;
-      }
+      border-bottom: 1px solid $color-gray;
     }
 
-    &:hover {
-      border: 1px solid $color-mid;
-      color: $color-white;
-      background: $color-mid;
-      transition: $transition-background;
-    }
+  
   }
 
   &-main {
@@ -324,6 +187,7 @@ a {
     padding: 6px;
     text-shadow: 0 0 6px $color-black;
     margin: 6px 0 6px 0;
+    transition: $transition-border;
 
     @media (min-width: $break-lg) {
       height: 55px;
@@ -336,7 +200,6 @@ a {
       margin: 12px;
     }
 
-    transition: $transition-border;
 
     &:hover {
       transition: $transition-border;
@@ -357,6 +220,7 @@ a {
         }
       }
     }
+
 
     div {
       align-items: center;

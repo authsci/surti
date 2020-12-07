@@ -596,10 +596,41 @@ canvas {
     @extend .dept;
     background: $color-orange;
   }
-  &-uia {
+  &-iua {
     @extend .dept;
     background: $color-pink;
   }
+
+
+}
+
+.accent {
+  position: absolute;
+  top: 80px;
+  height: 3px;
+
+  &-auc {
+    @extend .accent;
+    background: $color-green;
+  }
+  &-aub {
+    @extend .accent;
+    background: $color-yellow;
+  }
+  &-fuabc {
+    @extend .accent;
+    background: $color-mid;
+  }
+  &-vu {
+    @extend .accent;
+    background: $color-orange;
+  }
+  &-iua {
+    @extend .accent;
+    background: $color-pink;
+  }
+
+  
 }
 
 .card {
@@ -655,7 +686,7 @@ canvas {
 }
 
 .home-hero {
-  margin: 0 auto;
+  margin: 60px auto;
   display: block;
   padding: 0 36px;
   line-height: $type-xl;

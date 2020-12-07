@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 import {
 	Route,
-	Redirect,
 	Switch,
 	HashRouter as Router,
 } from "react-router-dom";
@@ -13,6 +12,7 @@ import Intro from "./Intro";
 import Institution from "./Institution";
 import People from "./People";
 import Home from "./Home";
+import Institutions from "./Institutions";
 import PeopleList from "./PeopleList";
 
 import "./styles/main.scss";
@@ -100,11 +100,21 @@ class App extends React.Component {
 
 									<Route
 										exact
-										path="/institution/:id"
+										path="/institution/:id/:dept"
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
 												<Institution {...props} />
+											</Fragment>
+										)}
+									/>
+								
+									<Route
+										exact
+										path="/institutions/"
+										render={(props) => (
+											<Fragment>
+												<Intro />
 											</Fragment>
 										)}
 									/>

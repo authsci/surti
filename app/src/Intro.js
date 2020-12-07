@@ -14,7 +14,7 @@ const contentfulAPI =
 	"/entries?access_token=" +
 	ACCESS_TOKEN;
 
-export default class Activities extends React.Component {
+export default class Intro extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -33,11 +33,8 @@ export default class Activities extends React.Component {
 
 		console.log("intro");
 
-
 		window.scrollTo(0, 0);
-
 	}
-
 
 	render() {
 		let { loading, institutions } = this.state;
@@ -59,12 +56,10 @@ export default class Activities extends React.Component {
 							<div className="iframe-wrapper">
 								<div className="iframe-overlay">
 									<div className="mainmenu-overlay">
-									
-
-
-
 										<div className="mainmenu">
-											{institutions.map(
+											{/* {_.sortBy(institutions, "order")
+										.reverse()
+										.map(
 												(item, index) =>
 													item.fields.type == "org" && (
 														<Link
@@ -78,19 +73,43 @@ export default class Activities extends React.Component {
 															</div>
 														</Link>
 													)
-											)}
+											)} */}
+
+											{_.sortBy(institutions, "order")
+												.map(
+													(item, index) =>
+														item.fields.type == "org" && (
+															<Link
+																to={"/institution/" + index + "/" + item.fields.code}
+																key={index}
+																className={`link-title-` + item.fields.color}
+															>
+																<div>
+																	<h1>{item.fields.code}</h1>
+																	<small>{item.fields.name}</small>
+																</div>
+															</Link>
+														)
+												)
+												.reverse()}
 										</div>
 
-                    <Link to="/intro" className="logo-float">
+										<Link to="/home" className="logo-float">
 											<img src="img/logo-icon-white.png" />{" "}
 											<div>
 												<strong>Extimacies</strong>
-												<span>Critical Theory from<br/>the Global South</span>
+												<span>
+													Critical Theory from
+													<br />
+													the Global South
+												</span>
 											</div>
 										</Link>
 									</div>
-                  <div className="nav-down" id="arrow">
-										<Link to="/home"><i className="fas fa-angle-down"></i></Link>
+									<div className="nav-down" id="arrow">
+										<Link to="/home">
+											<i className="fas fa-angle-down"></i>
+										</Link>
 									</div>
 								</div>
 
