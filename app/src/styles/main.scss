@@ -34,6 +34,15 @@ body {
     text-decoration: none;
     align-items: flex-start;
 
+    small {
+      font-size: $type-default;
+    }
+
+    a {
+      line-height: $type-sm;
+      font-size: $type-xxs;
+    }
+
     img {
       width: 125px;
     }
