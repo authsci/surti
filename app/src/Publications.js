@@ -90,7 +90,7 @@ export default class Institutions extends React.Component {
 													<small>{item.fields.subtext}</small>
 													<p>{item.fields.author}</p>
 													<p>{item.fields.year}</p>
-													<a href={item.fields.link}>Available Here</a>
+													<a href={item.fields.link} target="_blank">Available Here</a>
 												</div>
 
 								<div className="nudge-md"></div>
