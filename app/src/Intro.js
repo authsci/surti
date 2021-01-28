@@ -5,6 +5,8 @@ import Markdown from "markdown-to-jsx";
 import { Events, animateScroll as scroll } from "react-scroll";
 import Team from "./Team";
 import NavActivities from "./NavActivities";
+const setDate = Date.now()
+
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -12,7 +14,7 @@ const contentfulAPI =
 	"https://cdn.contentful.com/spaces/" +
 	SPACE_ID +
 	"/entries?access_token=" +
-	ACCESS_TOKEN;
+	ACCESS_TOKEN + "&" + setDate;
 
 export default class Intro extends React.Component {
 	constructor(props) {
@@ -29,9 +31,10 @@ export default class Intro extends React.Component {
 		axios.get(contentfulAPI).then((response) => {
 			const institutions = response.data.items;
 			this.setState({ institutions, loading: false });
+
 		});
 
-		console.log("intro");
+		console.log("Intro.js");
 
 		window.scrollTo(0, 0);
 	}
@@ -42,14 +45,7 @@ export default class Intro extends React.Component {
 		return (
 			<Fragment>
 				{loading ? (
-					<div className="loader fade-in">
-						<div className="loader-ellipsis">
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
-					</div>
+					<div className="loading"></div>
 				) : (
 					<Fragment>
 						<div className="video-fullscreen">
@@ -80,7 +76,7 @@ export default class Intro extends React.Component {
 													(item, index) =>
 														item.fields.type == "org" && (
 															<Link
-																to={"/institution/" + index + "/" + item.fields.code}
+																to={"/institution/" + item.fields.code}
 																key={index}
 																className={`link-title-` + item.fields.color}
 															>

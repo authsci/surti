@@ -5,13 +5,15 @@ import { Events, animateScroll as scroll } from "react-scroll";
 import Team from "./Team";
 import NavActivities from "./NavActivities";
 
+const setDate = Date.now()
+
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
 const contentfulAPI =
 	"https://cdn.contentful.com/spaces/" +
 	SPACE_ID +
 	"/entries?access_token=" +
-	ACCESS_TOKEN;
+	ACCESS_TOKEN + "&" + setDate;
 
 export default class Activities extends React.Component {
 	constructor(props) {
@@ -30,7 +32,7 @@ export default class Activities extends React.Component {
 			this.setState({ institutions, loading: false });
 		});
 
-		console.log("home");
+		console.log("Home.js");
 
 		window.scrollTo(0, 0);
 	}
@@ -48,14 +50,7 @@ export default class Activities extends React.Component {
 		return (
 			<Fragment>
 				{loading ? (
-					<div className="loader fade-in">
-						<div className="loader-ellipsis">
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
-					</div>
+					<div className="loading"></div>
 				) : (
 					<Fragment>
 						<NavActivities />
@@ -70,7 +65,8 @@ export default class Activities extends React.Component {
 													<Markdown>{item.fields.body}</Markdown>
 												</Fragment>
 											)
-									).reverse()}
+									)
+									.reverse()}
 
 								<div className="nudge-xl"></div>
 

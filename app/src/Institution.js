@@ -2,10 +2,11 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import Markdown from "markdown-to-jsx";
 import { Link } from "react-router-dom";
-import ReactTooltip from "react-tooltip";
 
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
+const setDate = Date.now()
+
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -13,9 +14,9 @@ const contentfulAPI =
 	"https://cdn.contentful.com/spaces/" +
 	SPACE_ID +
 	"/entries?access_token=" +
-	ACCESS_TOKEN;
+	ACCESS_TOKEN + "&" + setDate;
 
-export default class Activities extends React.Component {
+export default class Institution extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -23,7 +24,7 @@ export default class Activities extends React.Component {
 			loading: true,
 			keyword: "",
 			institutions: [],
-			people: [],
+			data: [],
 			media: [],
 			id: this.props.match.params.id,
 			dept: this.props.match.params.dept,
@@ -33,89 +34,75 @@ export default class Activities extends React.Component {
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
 			const media = response.data;
-			const institution =
-				response.data.items[this.props.match.params.id].fields;
 
-			const people = response.data.items;
+			const data = response.data.items;
 
-			this.setState({ institution, media, people, loading: false });
-			console.log("institution", institution);
+			this.setState({ media, data, loading: false });
 		});
 
 		window.scrollTo(0, 0);
+
+		console.log("Institution.js");
 	}
 
 	render() {
-		let { loading, institution, people, media, dept } = this.state;
+		let { loading, data, media, dept } = this.state;
 
 		return (
 			<Fragment>
 				{loading ? (
-					<div className="loader fade-in">
-						<div className="loader-ellipsis">
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
-					</div>
+					<div className="loading"></div>
 				) : (
 					<Fragment>
-						<div
-							className={`load accent-` + institution.code.toLowerCase()}
-						></div>
+						<div className={`load accent-` + dept.toLowerCase()}></div>
 
 						<div className="contain">
 							<div className="copy">
-								<div className="breadcrumbs">
+
+							<div className="breadcrumbs">
 									<Link to="/home" className="link-breadcrumbs">
 										Home
 									</Link>
 									<span>/</span>
-									<Link to="/institutions" className="link-breadcrumbs">
-										Institutions
+									<Link to="/Institutions" className="link-breadcrumbs">
+									Institutions
 									</Link>
 									<span>/</span>
-									<b>{institution.name}</b>
+									{dept}
+
 								</div>
 
-								<h1>{institution.name}</h1>
-								{institution.desc && <Markdown>{institution.desc}</Markdown>}
-
-								<br />
-
 								<div className="nudge-md"></div>
-
-								{/* <a className="link-main">People</a>
-								<a className="link-main">Events</a>
-								<a className="link-main">Initiatives</a>
-								<a className="link-main">Publications</a> */}
-
-								{people.map(
+								
+								{data.map(
 									(item, index) =>
-										item.fields.type == "people" && item.fields.dept == dept && (
+										item.fields.type == "org" &&
+										item.fields.code == dept && (
+											<div key={index}>
+												<span
+													className={`dept-` + item.fields.code.toLowerCase()}
+													data-tip
+													data-for={item.fields.code}
+												>
+													{item.fields.code}
+												</span>
+												<h1>{item.fields.name}</h1>
+												{item.fields.desc && (
+													<Markdown>{item.fields.desc}</Markdown>
+												)}
+											</div>
+										)
+								)}
+								<div className="nudge-lg"></div>
+								<h1>People</h1>
+								{data.map(
+									(item, index) =>
+										item.fields.type == "people" &&
+										item.fields.dept == dept && (
 											<Fragment key={index}>
 												<Card className="card">
 													<CardContent>
-														{/* <div
-										data-tip
-										data-for={item.fields.email}
-										className={`dept-` + item.fields.dept.toLowerCase()}
-									>
-										{item.fields.dept}
-									</div> */}
-
-														<div
-															id="dept"
-															className={
-																`dept-` + item.fields.dept.toLowerCase()
-															}
-															data-tip
-															data-for={item.fields.email}
-														>
-															{item.fields.dept}
-															<div>{item.fields.name}</div>
-														</div>
+														<div>{item.fields.name}</div>
 
 														<h1>
 															{item.fields.firstname +
@@ -166,20 +153,21 @@ export default class Activities extends React.Component {
 														</Link>
 													</CardContent>
 												</Card>
-												<ReactTooltip
-													place="top"
-													type="dark"
-													effect="float"
-													className="desktop"
-													id={item.fields.email}
-												>
-													{item.fields.institution}
-												</ReactTooltip>
 											</Fragment>
 										)
 								)}
 
-								<div className="nudge-xl"></div>
+								<div className="nudge-lg"></div>
+
+								<h1>Events</h1>
+								<p>Coming Soon</p>
+								<div className="nudge-md"></div>
+								<h1>Initiatives</h1>
+								<p>Coming Soon</p>
+								<div className="nudge-md"></div>
+								<h1>Publications</h1>
+								<p>Coming Soon</p>
+								<div className="nudge-md"></div>
 							</div>
 						</div>
 					</Fragment>

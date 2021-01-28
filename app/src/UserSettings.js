@@ -26,7 +26,6 @@ export default function SwipeableTemporaryDrawer() {
 	const classes = useStyles();
 	const [info, setInfo] = useState();
 
-	console.log("sidepanel");
 
 
   const [state, setState] = useState({
@@ -91,10 +90,11 @@ export default function SwipeableTemporaryDrawer() {
 						<Link to={"/list/"} onClick={toggleDrawer("right", false)}>
 							People
 						</Link>
-						<li>Events</li>
-						<li>Publications</li>
+						{/* <li>Events</li> */}
+						<Link to={"/publications/"} onClick={toggleDrawer("right", false)}>
+						Publications
+						</Link>
 						<li>Initiatives</li>
-						<li>Courses</li>
 						<Link to={"/institutions"} onClick={toggleDrawer("right", false)}>
 							Institutions
 						</Link>

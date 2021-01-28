@@ -1,10 +1,6 @@
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
-import {
-	Route,
-	Switch,
-	HashRouter as Router,
-} from "react-router-dom";
+import { Route, Switch, HashRouter as Router } from "react-router-dom";
 import { Offline, Online } from "react-detect-offline";
 import NavActivities from "./NavActivities";
 import StartFull from "./StartFull";
@@ -12,7 +8,7 @@ import Intro from "./Intro";
 import Institution from "./Institution";
 import People from "./People";
 import Home from "./Home";
-import Institutions from "./Institutions";
+import Publications from "./Publications";
 import PeopleList from "./PeopleList";
 
 import "./styles/main.scss";
@@ -57,14 +53,7 @@ class App extends React.Component {
 
 				<Online>
 					{this.state.loading ? (
-						<div className="loader fade-in">
-							<div className="loader-ellipsis">
-								<div></div>
-								<div></div>
-								<div></div>
-								<div></div>
-							</div>
-						</div>
+						<div className="loading"></div>
 					) : (
 						<Fragment>
 							<Router>
@@ -100,7 +89,7 @@ class App extends React.Component {
 
 									<Route
 										exact
-										path="/institution/:id/:dept"
+										path="/institution/:dept"
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
@@ -108,13 +97,24 @@ class App extends React.Component {
 											</Fragment>
 										)}
 									/>
-								
+
 									<Route
 										exact
 										path="/institutions/"
 										render={(props) => (
 											<Fragment>
 												<Intro />
+											</Fragment>
+										)}
+									/>
+						
+									<Route
+										exact
+										path="/publications/"
+										render={(props) => (
+											<Fragment>
+												<NavActivities />
+												<Publications {...props}/>
 											</Fragment>
 										)}
 									/>

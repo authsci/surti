@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import Team from "./Team";
 import NavActivities from "./NavActivities";
+const setDate = Date.now()
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -11,7 +12,7 @@ const contentfulAPI =
 	"https://cdn.contentful.com/spaces/" +
 	SPACE_ID +
 	"/entries?access_token=" +
-	ACCESS_TOKEN;
+	ACCESS_TOKEN + "&" + setDate;
 
 const myID = document.getElementById("myID");
 
@@ -33,7 +34,7 @@ export default class Start extends React.Component {
 			this.setState({ institutions, loading: false });
 		});
 
-		console.log("start");
+		console.log("StartFull.js");
 
 		window.scrollTo(0, 0);
 
@@ -58,14 +59,7 @@ export default class Start extends React.Component {
 		return (
 			<Fragment>
 				{loading ? (
-					<div className="loader fade-in">
-						<div className="loader-ellipsis">
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
-					</div>
+					<div className="loading"></div>
 				) : (
 					<Fragment>
 						<div className="video-fullscreen">
@@ -102,7 +96,12 @@ export default class Start extends React.Component {
 														item.fields.type == "org" && (
 															<Link
 																key={index}
-																to={"/institution/" + index  + "/" + item.fields.code} 
+																to={
+																	"/institution/" +
+																	index +
+																	"/" +
+																	item.fields.code
+																}
 																className={`link-title-` + item.fields.color}
 																style={
 																	timer
@@ -116,7 +115,8 @@ export default class Start extends React.Component {
 																</div>
 															</Link>
 														)
-												).reverse()}
+												)
+												.reverse()}
 										</div>
 									</div>
 									<div className="nav-down" id="arrow">

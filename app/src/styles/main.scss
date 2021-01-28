@@ -3,6 +3,7 @@
 
 @import "effects";
 @import "flex";
+@import "loaders";
 @import "links";
 @import "nav";
 @import "material";
@@ -20,6 +21,39 @@ body {
   margin: 0;
   font-weight: $regular;
 }
+
+.publication {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 200px auto;
+    align-items: center;
+    color: $color-gray-darkest;
+    text-align: left;
+    line-height: $type-default;
+    text-decoration: none;
+
+    img {
+      height: 250px;
+    }
+
+    h1 {
+      font-size: $type-lg;
+      line-height: $type-lg;
+    }
+
+    strong {
+      color: $color-gray-darkest;
+      font-size: $type-sm;
+      display: block;
+      padding: 3px 0;
+    }
+    span {
+      color: $color-gray-dark;
+      font-size: $type-xxs;
+      display: block;
+    }
+  }
 
 .mobile-placeholder {
   background-image: url("/img/mobius.png");
@@ -256,7 +290,7 @@ strong {
 }
 
 .breadcrumbs {
-  font-size: $type-default;
+  font-size: $type-xxs;
   font-weight: $regular;
   margin: 12px 0 24px 0;
 
@@ -569,8 +603,9 @@ canvas {
 }
 
 .dept {
-  color: $color-white;
+  color: $color-white !important;
   display: inline-flex;
+  text-decoration: none;
   padding: 0 4px;
   text-transform: uppercase;
   color: $color-white;
@@ -736,10 +771,11 @@ canvas {
   line-height: $type-xl;
   font-size: $type-copy;
   color: $color-black;
-  margin-top: 30px;
+  margin-top: 48px;
 
   h1 {
     line-height: $type-h1-height;
+    margin-top: 6px;
   }
 
   a {

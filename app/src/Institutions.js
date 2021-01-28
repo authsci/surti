@@ -4,6 +4,8 @@ import Markdown from "markdown-to-jsx";
 import ReactTooltip from "react-tooltip";
 import { Link } from "react-router-dom";
 import * as _ from "lodash";
+const setDate = Date.now()
+
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -11,7 +13,7 @@ const contentfulAPI =
 	"https://cdn.contentful.com/spaces/" +
 	SPACE_ID +
 	"/entries?access_token=" +
-	ACCESS_TOKEN;
+	ACCESS_TOKEN + "&" + setDate;
 
 export default class Institutions extends React.Component {
 	constructor(props) {
@@ -28,9 +30,9 @@ export default class Institutions extends React.Component {
 		axios.get(contentfulAPI).then((response) => {
 			const institutions = response.data.items;
 			this.setState({ institutions, loading: false });
-			console.log("institutions", institutions);
 		});
 
+		console.log("Institutions.js");
 
 		window.scrollTo(0, 0);
 	}
@@ -41,14 +43,7 @@ export default class Institutions extends React.Component {
 		return (
 			<Fragment>
 				{loading ? (
-					<div className="loader fade-in">
-						<div className="loader-ellipsis">
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
-					</div>
+					<div className="loading"></div>
 				) : (
 					<Fragment>
 						<div className="contain">
@@ -62,6 +57,8 @@ export default class Institutions extends React.Component {
 								</div>
 
 								<div className="nudge-xl"></div>
+
+								<h1>People</h1>
 
 								{_.sortBy(institutions, "order")
 									.map(
@@ -79,6 +76,8 @@ export default class Institutions extends React.Component {
 												</Link>
 											)
 									).reverse()}
+
+
 							</div>
 						</div>
 					</Fragment>

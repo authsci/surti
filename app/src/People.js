@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import ReactTooltip from "react-tooltip";
 
+const setDate = Date.now()
+
+
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
 const contentfulAPI =
 	"https://cdn.contentful.com/spaces/" +
 	SPACE_ID +
 	"/entries?access_token=" +
-	ACCESS_TOKEN;
+	ACCESS_TOKEN + "&" + setDate;
 
 export default class People extends React.Component {
 	constructor(props) {
@@ -34,7 +37,7 @@ export default class People extends React.Component {
 			this.setState({ media, people, loading: false });
 		});
 
-		console.log("people");
+		console.log("People.js");
 
 
 		window.scrollTo(0, 0);
@@ -46,14 +49,7 @@ export default class People extends React.Component {
 		return (
 			<Fragment>
 				{loading ? (
-					<div className="loader fade-in">
-						<div className="loader-ellipsis">
-							<div></div>
-							<div></div>
-							<div></div>
-							<div></div>
-						</div>
-					</div>
+					<div className="loading"></div>
 				) : (
 					<Fragment>
 						<div className="contain">
@@ -86,17 +82,15 @@ export default class People extends React.Component {
 											)}
 									</div>
 									<div>
-										<div
+									<Link to={`/institution/`+ people.dept}
 											className={`dept-` + people.dept.toLowerCase()}
 											data-tip
 											data-for="profile"
 										>
 											{people.dept}
-										</div>
+										</Link>
 
 										<h1>{people.firstname + " " + people.lastname}</h1>
-
-									
 
 										<h2>{people.position}</h2>
 
@@ -155,7 +149,12 @@ export default class People extends React.Component {
 								}
 								</div>
 
-								<div className="nudge-xxl"></div>
+								<div className="nudge-lg"></div>
+
+<h1>Publications</h1>
+<p>Publication XYZ</p>
+<div className="nudge-md"></div>
+
 							</div>
 						</div>
 
@@ -164,7 +163,6 @@ export default class People extends React.Component {
 											type="dark"
 											effect="float"
 											id="profile"
-											className="desktop"
 										>
 											{people.institution}
 										</ReactTooltip>
