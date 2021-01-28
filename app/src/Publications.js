@@ -16,7 +16,7 @@ const contentfulAPI =
 	"&" +
 	setDate;
 
-export default class Institutions extends React.Component {
+export default class Publications extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -67,13 +67,21 @@ export default class Institutions extends React.Component {
 								{publications.map(
 									(item, index) =>
 										item.fields.type == "publication" && (
-											<div className="publication" key={index}>
+											<div className={ item.fields.graphic ? 'publication' : 'publication-list' } key={index}>
 												<div>
 													{item.fields.graphic &&
 														media.includes.Asset.map(
 															(image, index) =>
 																item.fields.graphic.sys.id ==
 																	media.includes.Asset[index].sys.id && (
+                                    item.fields.link ? <a href={item.fields.link} target="_blank" className="link-inert" key={index}><img
+																		key={index}
+																		src={
+																			media.includes.Asset[index].fields.file
+																				.url
+																		}
+                                  /></a> :
+                                  
 																	<img
 																		key={index}
 																		src={
