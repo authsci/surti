@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import Team from "./Team";
 import NavActivities from "./NavActivities";
+import * as _ from "lodash";
+
 const setDate = Date.now();
 
 const SPACE_ID = "yzeyubafmmte";
@@ -92,31 +94,26 @@ export default class Start extends React.Component {
 										</Link>
 
 										<div className="mainmenu stepMenu">
-											{_.sortBy(institutions, "order")
-												.map(
-													(item, index) =>
-														item.fields.type == "org" && (
-															<Link
-																key={index}
-																to={
-																	"/institution/" +
-																	item.fields.code
-																}
-																className={`link-title-` + item.fields.color}
-																style={
-																	timer
-																		? { pointerEvents: "none" }
-																		: { pointerEvents: "all" }
-																}
-															>
-																<div>
-																	<h1>{item.fields.code}</h1>
-																	<small>{item.fields.name}</small>
-																</div>
-															</Link>
-														)
-												)
-												.reverse()}
+										{institutions.sort((a, b) => b['code'] - a['code']).map(
+												(item, index) =>
+													item.fields.type == "org" && (
+														<Link
+															key={index}
+															to={"/institution/" + item.fields.code}
+															className={`link-title-` + item.fields.color}
+															style={
+																timer
+																	? { pointerEvents: "none" }
+																	: { pointerEvents: "all" }
+															}
+														>
+															<div>
+																<h1>{item.fields.code}</h1>
+																<small>{item.fields.name}</small>
+															</div>
+														</Link>
+													)
+											)}
 										</div>
 									</div>
 									<div className="nav-down" id="arrow">

@@ -64,7 +64,7 @@ export default class Publications extends React.Component {
 
 								<div className="nudge-md"></div>
 								{/* {_.sortBy(publications, "order") */}
-								{publications.map(
+								{_.sortBy(publications, "order").map(
 									(item, index) =>
 										item.fields.type == "publication" && (
 <Fragment key={index}>
@@ -96,9 +96,12 @@ export default class Publications extends React.Component {
 
 												<div>
 													<h2>{item.fields.title}</h2>
-													<small>{item.fields.subtext}</small>
-													<p>{item.fields.author}</p>
-													<p>{item.fields.year}</p>
+													<h4>{item.fields.subtext}</h4>
+                          <div className="nudge-sm"></div>
+													<small>{item.fields.author}</small>
+													<small>{item.fields.year}</small>
+                          {item.fields.abstract && <Markdown>{item.fields.abstract}</Markdown> }
+                          <div className="nudge-sm"></div>
 													{item.fields.link && <a href={item.fields.link} target="_blank">Available Here</a>}
 												</div>
 

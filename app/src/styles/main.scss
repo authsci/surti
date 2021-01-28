@@ -23,58 +23,60 @@ body {
 }
 
 .publication {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-gap: 12px;
-    grid-template-columns: 125px auto;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 125px auto;
+  color: $color-gray-darkest;
+  text-align: left;
+  font-size: $type-default;
+  text-decoration: none;
+  align-items: flex-start;
+  padding: 36px 0;
+  border-top: 1px solid $color-gray-light;
+
+  h2 {
+    font-size: $type-lg;
+    line-height: $type-xl !important;
+  }
+  h4 {
+    font-size: $type-md;
+    line-height: $type-lg;
+  }
+
+  small {
+    font-size: $type-sm;
+    line-height: $type-md;
+  }
+
+  a {
+    line-height: $type-sm;
+    font-size: $type-sm;
+  }
+
+  img {
+    width: 125px;
+    height: auto;
+  }
+
+  strong {
     color: $color-gray-darkest;
-    text-align: left;
-    line-height: $type-default;
-    text-decoration: none;
-    align-items: flex-start;
-    padding: 36px 0;
-    border-bottom: 1px solid $color-gray-slight;
+    font-size: $type-sm;
+    display: block;
+    padding: 3px 0;
+  }
+  span {
+    font-size: $type-xs !important;
+    line-height: $type-default !important;
+  }
 
-    small {
-      font-size: $type-xxs;
-      line-height: $type-md;
-    }
-
-    a {
-      line-height: $type-sm;
-      font-size: $type-xxs;
-    }
-
-    img {
-      width: 125px;
-      height: auto;
-    }
-
-    h2 {
-      font-size: $type-lg;
-      line-height: $type-xl !important;
-    }
-
-    strong {
-      color: $color-gray-darkest;
-      font-size: $type-sm;
-      display: block;
-      padding: 3px 0;
-    }
-    span {
-      color: $color-gray-dark;
-      font-size: $type-xxs;
-      display: block;
-    }
-
-    &-list {
-      @extend .publication;
+  &-list {
+    @extend .publication;
 
     display: flex;
     grid-gap: 0;
-    
-    }
   }
+}
 
 .mobile-placeholder {
   background-image: url("/img/mobius.png");
@@ -133,7 +135,7 @@ body {
     text-align: left;
     position: absolute;
     line-height: $type-xxs;
-    
+
     top: 60px;
     text-decoration: none;
     margin: 0 0 0 0;
@@ -652,12 +654,10 @@ canvas {
     @extend .dept;
     background: $color-orange;
   }
-  &-iua {
+  &-uia {
     @extend .dept;
     background: $color-pink;
   }
-
-
 }
 
 .accent {
@@ -685,8 +685,6 @@ canvas {
     @extend .accent;
     background: $color-pink;
   }
-
-  
 }
 
 .card {
@@ -814,7 +812,8 @@ canvas {
     font-size: $type-tiny;
   }
 
-  p, span {
+  p,
+  span {
     font-size: $type-copy;
 
     @media (min-width: $break-sm) {
