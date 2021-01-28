@@ -27,12 +27,13 @@ body {
     display: grid;
     grid-gap: 12px;
     grid-template-columns: 125px auto;
-    align-items: center;
     color: $color-gray-darkest;
     text-align: left;
     line-height: $type-default;
     text-decoration: none;
     align-items: flex-start;
+    padding: 36px 0;
+    border-bottom: 1px solid $color-gray-slight;
 
     small {
       font-size: $type-xxs;
@@ -63,6 +64,14 @@ body {
       color: $color-gray-dark;
       font-size: $type-xxs;
       display: block;
+    }
+
+    &-list {
+      @extend .publication;
+
+    display: flex;
+    grid-gap: 0;
+    
     }
   }
 

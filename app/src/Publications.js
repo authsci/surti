@@ -67,7 +67,8 @@ export default class Publications extends React.Component {
 								{publications.map(
 									(item, index) =>
 										item.fields.type == "publication" && (
-											<div className={ item.fields.graphic ? 'publication' : 'publication-list' } key={index}>
+<Fragment key={index}>
+											<div className={ item.fields.graphic ? 'publication' : 'publication-list' } >
 												<div>
 													{item.fields.graphic &&
 														media.includes.Asset.map(
@@ -101,9 +102,9 @@ export default class Publications extends React.Component {
 													{item.fields.link && <a href={item.fields.link} target="_blank">Available Here</a>}
 												</div>
 
-								<div className="nudge-md"></div>
 
 											</div>
+                </Fragment>
 										)
 								)}
 								{/* ).reverse()} */}
