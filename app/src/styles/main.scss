@@ -32,14 +32,15 @@ body {
     text-align: left;
     line-height: $type-default;
     text-decoration: none;
+    align-items: flex-start;
 
     img {
       height: 250px;
     }
 
-    h1 {
+    h2 {
       font-size: $type-lg;
-      line-height: $type-lg;
+      line-height: $type-xl !important;
     }
 
     strong {
