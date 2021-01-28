@@ -88,7 +88,12 @@ export default class Institutions extends React.Component {
 												<div>
 													<h2>{item.fields.title}</h2>
 													<p>{item.fields.author}</p>
+													<p>{item.fields.year}</p>
+													<a heef={item.fields.link}>{item.fields.link}</a>
 												</div>
+
+								<div className="nudge-md"></div>
+
 											</div>
 										)
 								)}
