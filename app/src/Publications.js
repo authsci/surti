@@ -75,7 +75,7 @@ export default class Publications extends React.Component {
 															(image, index) =>
 																item.fields.graphic.sys.id ==
 																	media.includes.Asset[index].sys.id && (
-                                    item.fields.link ? <a href={item.fields.link} target="_blank" className="link-inert" key={index}><img
+                                    item.fields.link ? <a href={item.fields.link} target="_blank"  key={index}><img
 																		key={index}
 																		src={
 																			media.includes.Asset[index].fields.file
