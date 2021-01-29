@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import Team from "./Team";
 import NavActivities from "./NavActivities";
-import * as _ from "lodash";
+import sortBy from "lodash/sortBy";
 
 const setDate = Date.now();
 
@@ -36,9 +36,9 @@ export default class Start extends React.Component {
 		axios.get(contentfulAPI).then((response) => {
 			const institutions = response.data.items;
 			this.setState({ institutions, loading: false });
+			console.log("StartFull.js", response);
 		});
 
-		console.log("StartFull.js");
 
 		window.scrollTo(0, 0);
 
@@ -59,7 +59,9 @@ export default class Start extends React.Component {
 
 	render() {
 		let { loading, institutions, timer } = this.state;
-
+		let mapped = institutions.map(function(el) {
+			return { code: el.fields.code, name: el.fields.name, color: el.fields.color };
+		})
 		return (
 			<Fragment>
 				{loading ? (
@@ -94,26 +96,25 @@ export default class Start extends React.Component {
 										</Link>
 
 										<div className="mainmenu stepMenu">
-										{institutions.sort((a, b) => b['code'] - a['code']).map(
-												(item, index) =>
-													item.fields.type == "org" && (
-														<Link
-															key={index}
-															to={"/institution/" + item.fields.code}
-															className={`link-title-` + item.fields.color}
-															style={
-																timer
-																	? { pointerEvents: "none" }
-																	: { pointerEvents: "all" }
-															}
-														>
-															<div>
-																<h1>{item.fields.code}</h1>
-																<small>{item.fields.name}</small>
-															</div>
-														</Link>
-													)
-											)}
+										{_.sortBy(mapped, "code").map(
+													(item, index) =>(
+															<Link
+																key={index}
+																to={"/institution/" + item.code}
+																className={`link-title-` + item.color}
+																style={
+																	timer
+																		? { pointerEvents: "none" }
+																		: { pointerEvents: "all" }
+																}
+															>
+																<div>
+																	<h1>{item.code}</h1>
+																	<small>{item.name}</small>
+																</div>
+															</Link>
+														)
+												)}
 										</div>
 									</div>
 									<div className="nav-down" id="arrow">

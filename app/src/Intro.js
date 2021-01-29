@@ -41,6 +41,9 @@ export default class Intro extends React.Component {
 
 	render() {
 		let { loading, institutions } = this.state;
+		let mapped = institutions.map(function(el) {
+			return { code: el.fields.code, name: el.fields.name, color: el.fields.color };
+		})
 
 		return (
 			<Fragment>
@@ -53,41 +56,21 @@ export default class Intro extends React.Component {
 								<div className="iframe-overlay">
 									<div className="mainmenu-overlay">
 										<div className="mainmenu">
-											{/* {_.sortBy(institutions, "order")
-										.reverse()
-										.map(
-												(item, index) =>
-													item.fields.type == "org" && (
-														<Link
-															key={index}
-															to={"/institution/" + index}
-															className={`link-title-` + item.fields.color}
-														>
-															<div>
-																<h1>{item.fields.code}</h1>
-																<small>{item.fields.name}</small>
-															</div>
-														</Link>
-													)
-											)} */}
 
-											{_.sortBy(institutions, "order")
-												.map(
-													(item, index) =>
-														item.fields.type == "org" && (
+										{_.sortBy(mapped, "code").map(
+													(item, index) =>(
 															<Link
-																to={"/institution/" + item.fields.code}
 																key={index}
-																className={`link-title-` + item.fields.color}
+																to={"/institution/" + item.code}
+																className={`link-title-` + item.color}
 															>
 																<div>
-																	<h1>{item.fields.code}</h1>
-																	<small>{item.fields.name}</small>
+																	<h1>{item.code}</h1>
+																	<small>{item.name}</small>
 																</div>
 															</Link>
 														)
-												)
-												.reverse()}
+												)}
 										</div>
 
 										<Link to="/home" className="logo-float">
@@ -121,7 +104,6 @@ export default class Intro extends React.Component {
 									<source src="img/full.webm" type="video/webm" />
 									<source src="img/full.ogv" type="video/ogv" />
 									<source src="img/full.mp4" type="video/mp4" />
-									{/* <source src="img/watermark.mp4" type="video/mp4" /> */}
 								</video>
 							</div>
 						</div>
