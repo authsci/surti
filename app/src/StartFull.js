@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import Team from "./Team";
 import NavActivities from "./NavActivities";
-import sortBy from "lodash/sortBy";
+import _ from "lodash";
 
 const setDate = Date.now();
 

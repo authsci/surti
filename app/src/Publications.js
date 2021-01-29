@@ -63,8 +63,7 @@ export default class Publications extends React.Component {
 								<h1>Publications</h1>
 
 								<div className="nudge-md"></div>
-								{/* {_.sortBy(publications, "order") */}
-								{_.sortBy(publications, "order").map(
+								{publications.map(
 									(item, index) =>
 										item.fields.type == "publication" && (
 <Fragment key={index}>

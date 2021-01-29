@@ -2,9 +2,10 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
-import { Events, animateScroll as scroll } from "react-scroll";
 import Team from "./Team";
 import NavActivities from "./NavActivities";
+import _ from "lodash";
+
 const setDate = Date.now()
 
 
@@ -123,7 +124,7 @@ export default class Intro extends React.Component {
 										)
 								)}
 
-								<div className="nudge-xl"></div>
+								<div className="nudge-lg"></div>
 
 								<Team />
 

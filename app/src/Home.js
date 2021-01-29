@@ -15,7 +15,7 @@ const contentfulAPI =
 	"/entries?access_token=" +
 	ACCESS_TOKEN + "&" + setDate;
 
-export default class Activities extends React.Component {
+export default class Home extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -57,8 +57,7 @@ export default class Activities extends React.Component {
 
 						<div className="contain fade-in">
 							<div className="home-hero">
-								{_.sortBy(institutions, "order")
-									.map(
+								{institutions.map(
 										(item, index) =>
 											item.fields.type == "about" && (
 												<Fragment key={index}>
@@ -68,7 +67,7 @@ export default class Activities extends React.Component {
 									)
 									.reverse()}
 
-								<div className="nudge-xl"></div>
+								<div className="nudge-lg"></div>
 
 								<Team />
 

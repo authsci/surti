@@ -35,6 +35,14 @@ body {
   padding: 36px 0;
   border-top: 1px solid $color-gray-light;
 
+  &:hover {
+    img {
+      filter: grayscale(0);
+      transition: $transition-filter;
+    }
+
+  }
+
   h2 {
     font-size: $type-lg;
     line-height: $type-xl !important;
@@ -57,7 +65,17 @@ body {
   img {
     width: 125px;
     height: auto;
+    filter: grayscale(.4);
+    transition: $transition-filter;
+    
+    &:hover {
+      filter: grayscale(0);
+      transition: $transition-filter;
+
+    }
   }
+
+
 
   strong {
     color: $color-gray-darkest;
@@ -316,9 +334,10 @@ strong {
   font-size: $type-xxs;
   font-weight: $regular;
   margin: 12px 0 24px 0;
+  color: $color-gray-darkest;
 
   span {
-    color: $color-gray-half;
+    color: $color-gray;
     padding: 0 3px;
   }
 
@@ -639,12 +658,11 @@ canvas {
 
   &-auc {
     @extend .dept;
-    background: $color-green;
+    background: $color-violet;
   }
   &-aub {
     @extend .dept;
-    background: $color-yellow;
-    color: $color-gray-darkest;
+    background: $color-green;
   }
   &-fuabc {
     @extend .dept;
@@ -658,6 +676,8 @@ canvas {
     @extend .dept;
     background: $color-pink;
   }
+
+  
 }
 
 .accent {
@@ -667,11 +687,11 @@ canvas {
 
   &-auc {
     @extend .accent;
-    background: $color-green;
+    background: $color-violet;
   }
   &-aub {
     @extend .accent;
-    background: $color-yellow;
+    background: $color-green;
   }
   &-fuabc {
     @extend .accent;
@@ -735,6 +755,31 @@ canvas {
 
     @media (min-width: $break-sm) {
       width: 100%;
+    }
+  }
+
+
+  &-compact {
+    
+    display: block;
+    padding: 12px 6px;
+    border-top: 1px solid $color-gray-light;
+    font-size: $type-sm;
+    
+
+    h3 {
+      font-size: $type-md;
+    }
+    h4 {
+      font-size: $type-sm;
+    }
+
+    img {
+      width: 100px;
+    }
+
+    &:hover {
+      background: $color-gray-note;
     }
   }
 }

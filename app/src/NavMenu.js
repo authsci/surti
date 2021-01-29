@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
 import UserSettings from "./UserSettings";
-import { NavLink, Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 
-export default class Nav extends React.Component {
+export default class NavMenu extends React.Component {
 	constructor(props) {
 		super(props);
 
