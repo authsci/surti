@@ -5,6 +5,7 @@ import Markdown from "markdown-to-jsx";
 import Team from "./Team";
 import NavActivities from "./NavActivities";
 import _ from "lodash";
+import NavMenu from "./NavMenu";
 
 const setDate = Date.now();
 
@@ -39,7 +40,6 @@ export default class Start extends React.Component {
 			console.log("StartFull.js", response);
 		});
 
-
 		window.scrollTo(0, 0);
 
 		setTimeout(
@@ -59,9 +59,13 @@ export default class Start extends React.Component {
 
 	render() {
 		let { loading, institutions, timer } = this.state;
-		let mapped = institutions.map(function(el) {
-			return { code: el.fields.code, name: el.fields.name, color: el.fields.color };
-		})
+		let mapped = institutions.map(function (el) {
+			return {
+				code: el.fields.code,
+				name: el.fields.name,
+				color: el.fields.color,
+			};
+		});
 		return (
 			<Fragment>
 				{loading ? (
@@ -72,6 +76,8 @@ export default class Start extends React.Component {
 							<div className="iframe-wrapper">
 								<div className="iframe-overlay">
 									<div className="mainmenu-overlay">
+											<NavMenu />
+
 										<div className="logo step0">
 											<img src="img/logo-icon-white.png" />
 											<div>
@@ -96,25 +102,23 @@ export default class Start extends React.Component {
 										</Link>
 
 										<div className="mainmenu stepMenu">
-										{_.sortBy(mapped, "code").map(
-													(item, index) =>(
-															<Link
-																key={index}
-																to={"/institution/" + item.code}
-																className={`link-title-` + item.color}
-																style={
-																	timer
-																		? { pointerEvents: "none" }
-																		: { pointerEvents: "all" }
-																}
-															>
-																<div>
-																	<h1>{item.code}</h1>
-																	<small>{item.name}</small>
-																</div>
-															</Link>
-														)
-												)}
+											{_.sortBy(mapped, "code").map((item, index) => (
+												<Link
+													key={index}
+													to={"/institution/" + item.code}
+													className={`link-title-` + item.color}
+													style={
+														timer
+															? { pointerEvents: "none" }
+															: { pointerEvents: "all" }
+													}
+												>
+													<div>
+														<h1>{item.code}</h1>
+														<small>{item.name}</small>
+													</div>
+												</Link>
+											))}
 										</div>
 									</div>
 									<div className="nav-down" id="arrow">

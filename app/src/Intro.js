@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import Team from "./Team";
 import NavActivities from "./NavActivities";
+import NavMenu from "./NavMenu";
 import _ from "lodash";
 
 const setDate = Date.now()
@@ -57,6 +58,9 @@ export default class Intro extends React.Component {
 								<div className="iframe-overlay">
 									<div className="mainmenu-overlay">
 										<div className="mainmenu">
+
+										<NavMenu/>
+
 
 										{_.sortBy(mapped, "code").map(
 													(item, index) =>(
@@ -112,6 +116,7 @@ export default class Intro extends React.Component {
 						<NavActivities />
 
 						<div className="nudge-lg"></div>
+
 
 						<div className="contain">
 							<div className="home-hero">

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import UserSettings from "./UserSettings";
+import UserSettingsLight from "./UserSettingsLight";
 import { animateScroll as scroll } from "react-scroll";
 
 export default class NavMenu extends React.Component {
@@ -24,8 +24,8 @@ export default class NavMenu extends React.Component {
 	render() {
 		return (
 			<Fragment>
-				<div className="nav-menu desktop">
-							<UserSettings />
+				<div className="nav-menu desktop fade-in">
+							<UserSettingsLight />
 				</div>
 			</Fragment>
 		);

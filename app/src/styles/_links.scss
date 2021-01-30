@@ -253,7 +253,7 @@ a {
       }
     }
 
-    &-blue {
+    &-mid {
       @extend .link-title;
       background: transparent;
       margin: 3px 0;
@@ -266,13 +266,26 @@ a {
         }
       }
     }
+    &-blue {
+      @extend .link-title;
+      background: transparent;
+      margin: 3px 0;
+
+      border: 2px solid transparent;
+      @media (min-width: $break-sm) {
+        &:hover {
+          border: 2px solid $color-blue;
+          background: $color-blue-slight;
+        }
+      }
+    }
     &-pink {
       @extend .link-title;
       background: transparent;
       border: 2px solid transparent;
       @media (min-width: $break-sm) {
         &:hover {
-          border: 2px solid $color-pink;
+          border: 2px solid $color-pink-half;
           background: $color-pink-slight;
         }
       }
@@ -458,6 +471,16 @@ a {
 
     &:active {
       color: $color-white-half;
+    }
+
+    &-light {
+      @extend .link-sidepanel;
+      z-index: $z-ultimate;
+    color: $color-white;
+    &:active {
+      color: $color-white;
+    }
+
     }
   }
 

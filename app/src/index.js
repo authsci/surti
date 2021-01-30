@@ -81,7 +81,6 @@ class App extends React.Component {
 										path="/intro"
 										render={(props) => (
 											<Fragment>
-												{/* <NavMenu/> */}
 												<Intro />
 											</Fragment>
 										)}

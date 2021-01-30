@@ -662,7 +662,7 @@ canvas {
   }
   &-aub {
     @extend .dept;
-    background: $color-green;
+    background: $color-blue;
   }
   &-fuabc {
     @extend .dept;
@@ -674,7 +674,7 @@ canvas {
   }
   &-uia {
     @extend .dept;
-    background: $color-pink;
+    background: $color-pink-medium;
   }
 
   
@@ -684,6 +684,7 @@ canvas {
   position: absolute;
   top: 80px;
   height: 3px;
+  background: $color-green;
 
   &-auc {
     @extend .accent;
@@ -691,7 +692,7 @@ canvas {
   }
   &-aub {
     @extend .accent;
-    background: $color-green;
+    background: $color-blue;
   }
   &-fuabc {
     @extend .accent;
@@ -703,7 +704,7 @@ canvas {
   }
   &-uia {
     @extend .accent;
-    background: $color-pink;
+    background: $color-pink-medium;
   }
 }
 

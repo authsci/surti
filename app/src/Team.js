@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import ReactTooltip from "react-tooltip";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+import _ from "lodash";
+
 const setDate = Date.now();
 
 const SPACE_ID = "yzeyubafmmte";
@@ -26,6 +25,7 @@ export default class Team extends React.Component {
 			people: [],
 			media: [],
 		};
+
 	}
 
 	componentDidMount() {
@@ -33,6 +33,8 @@ export default class Team extends React.Component {
 			const media = response.data;
 			const people = response.data.items;
 			this.setState({ media, people, loading: false });
+
+			console.log(response.data.items);
 		});
 
 		console.log("Team.js");
@@ -43,45 +45,37 @@ export default class Team extends React.Component {
 	render() {
 		let { media, people, loading } = this.state;
 
+		let mapped = people.map(function (el, index) {
+			return {
+				order: el.fields.order,
+				type: el.fields.type,
+				scholar: el.fields.scholar,
+				firstname: el.fields.firstname,
+				lastname: el.fields.lastname,
+				institution: el.fields.institution,
+				position: el.fields.position,
+				id: index,
+			};
+		});
+
 		return (
 			<Fragment>
 				{loading ? (
 					<div className="loading"></div>
 				) : (
 					<Fragment>
-						{people.map(
+						{_.sortBy(mapped, "order").map(
 							(item, index) =>
-								item.fields.type == "people" &&
-								item.fields.scholar && (
-									<Fragment key={index}>
+								item.type == "people" &&
+								item.scholar && (
+									<Fragment key={item.id}>
 										<div className="card-compact">
-											{/* <Link to={`/people/` + index}>
-													{item.fields.photo &&
-														media.includes.Asset.map(
-															(image, index) =>
-																item.fields.photo.sys.id ==
-																	media.includes.Asset[index].sys.id && (
-																	<img
-																		key={index}
-																		src={
-																			media.includes.Asset[index].fields.file
-																				.url
-																		}
-																	/>
-																)
-														)}
-												</Link>
-
-											<div> */}
-
-											<Link to={`/people/` + index} className="link-default">
+											<Link to={`/people/` + item.id} className="link-default">
 												<h3>
-													{item.fields.firstname + " " + item.fields.lastname} | {item.fields.position} | {item.fields.institution}
+													{item.firstname + " " + item.lastname} |{" "}
+													{item.position} | {item.institution}
 												</h3>
 											</Link>
-
-
-											{/* </div> */}
 										</div>
 									</Fragment>
 								)
