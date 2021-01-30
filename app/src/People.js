@@ -151,9 +151,6 @@ export default class People extends React.Component {
 
 								<div className="nudge-lg"></div>
 
-<h1>Publications</h1>
-<p>Publication XYZ</p>
-<div className="nudge-md"></div>
 
 							</div>
 						</div>
