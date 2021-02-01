@@ -100,24 +100,6 @@ export default function SwipeableTemporaryDrawer() {
 
 						<div className="nudge-md"></div>
 
-						{/* <h3>Institutions</h3> */}
-						 {/* {info.map((item, index) => (
-      <Fragment key={index}>{item.fields.name}</Fragment>
-    ))} */}
-						{/* {info.map(
-							(item, index) =>
-								item.fields.type == "org" && (
-									<Link key={index} to={"/institution/" + index} onClick={toggleDrawer("right", false)}>{item.fields.code} - {item.fields.name}</Link>
-								)
-						)} */}
-
-						{/* <Link to={"/institution/" + 0} onClick={toggleDrawer("right", false)}>VU - Villanova University</Link>
-						<Link to={"/institution/" + 1} onClick={toggleDrawer("right", false)}>AUB - The American University of Beirut</Link>
-						<Link to={"/institution/" + 2} onClick={toggleDrawer("right", false)}>AUC - The American University in Cairo</Link>
-						<Link to={"/institution/" + 3} onClick={toggleDrawer("right", false)}>FUABC - Federal University of ABC</Link>
-						<Link to={"/institution/" + 4} onClick={toggleDrawer("right", false)}>IUA - The Ibero-American University</Link> */}
-
-					
 					</div>
 				</SwipeableDrawer>
 			</Fragment>

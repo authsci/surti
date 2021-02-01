@@ -133,6 +133,7 @@ export default class People extends React.Component {
 
 								<div className="nudge-md"></div>
 
+								<div className="mobile">
 								{people.photo &&
 									media.includes.Asset.map(
 										(image, index) =>
@@ -144,6 +145,7 @@ export default class People extends React.Component {
 												/>
 											)
 									)}
+									</div>
 
 								<div className="nudge-lg"></div>
 							</div>

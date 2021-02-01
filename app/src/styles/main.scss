@@ -23,10 +23,9 @@ body {
 }
 
 .publication {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-gap: 12px;
-  grid-template-columns: 125px auto;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 0;
   color: $color-gray-darkest;
   text-align: left;
   font-size: $type-default;
@@ -35,12 +34,19 @@ body {
   padding: 36px 0;
   border-top: 1px solid $color-gray-light;
 
+  @media (min-width: $break-sm) {
+    flex-direction: row;
+    grid-template-columns: 125px auto;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-gap: 12px;
+  }
+
   &:hover {
     img {
       filter: grayscale(0);
       transition: $transition-filter;
     }
-
   }
 
   h2 {
@@ -63,19 +69,20 @@ body {
   }
 
   img {
-    width: 125px;
     height: auto;
-    filter: grayscale(.4);
+    filter: grayscale(0.4);
     transition: $transition-filter;
-    
+    width: 60%;
+
     &:hover {
       filter: grayscale(0);
       transition: $transition-filter;
+    }
 
+    @media (min-width: $break-sm) {
+      width: 125px;
     }
   }
-
-
 
   strong {
     color: $color-gray-darkest;
@@ -84,8 +91,12 @@ body {
     padding: 3px 0;
   }
   span {
-    font-size: $type-xs !important;
+    font-size: $type-copy !important;
     line-height: $type-default !important;
+
+    @media (min-width: $break-sm) {
+      font-size: $type-sm !important;
+    }
   }
 
   &-list {
@@ -548,6 +559,10 @@ h4 {
     font-weight: $light;
     line-height: $type-xl;
 
+    span {
+      text-align: justify;
+    }
+
     @media (min-width: $break-sm) {
       font-size: $type-lg;
       font-weight: $light;
@@ -677,8 +692,6 @@ canvas {
     @extend .dept;
     background: $color-pink-medium;
   }
-
-  
 }
 
 .accent {
@@ -760,17 +773,16 @@ canvas {
     }
   }
 
-
   &-compact {
-    
     display: block;
     padding: 12px 6px;
     border-top: 1px solid $color-gray-light;
     font-size: $type-sm;
-    
 
     h3 {
       font-size: $type-md;
+
+      
     }
     h4 {
       font-size: $type-sm;
@@ -815,10 +827,13 @@ canvas {
 
   p {
     font-size: $type-copy;
+    line-height: $type-xl;
     text-align: justify;
 
     @media (min-width: $break-sm) {
-      font-size: $type-lg;
+      font-size: $type-h2;
+      font-weight: $light;
+      line-height: $type-xxl;
     }
   }
 

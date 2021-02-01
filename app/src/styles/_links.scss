@@ -106,12 +106,10 @@ a {
       font-size: $type-md;
       margin: 0;
     }
-    
+
     &:hover {
       border-bottom: 1px solid $color-gray;
     }
-
-  
   }
 
   &-main {
@@ -193,13 +191,11 @@ a {
       height: 55px;
       margin: 0 12px;
       padding: 12px 6px;
-      
     }
     @media (min-width: $break-xl) {
       height: 55px;
       margin: 12px;
     }
-
 
     &:hover {
       transition: $transition-border;
@@ -220,7 +216,6 @@ a {
         }
       }
     }
-
 
     div {
       align-items: center;
@@ -456,7 +451,7 @@ a {
 
   &-sidepanel {
     cursor: pointer !important;
-    color: $color-gray-darkest;
+    color: $color-white;
     display: flex;
     text-align: center;
     text-decoration: none;
@@ -476,11 +471,10 @@ a {
     &-light {
       @extend .link-sidepanel;
       z-index: $z-ultimate;
-    color: $color-white;
-    &:active {
       color: $color-white;
-    }
-
+      &:active {
+        color: $color-white;
+      }
     }
   }
 
@@ -597,10 +591,10 @@ a {
   &-slug {
     grid-column: 1 / -1;
     display: grid;
-    grid-gap: 0;
+    grid-gap: 6px;
     grid-template-columns: 45px 200px;
     align-items: center;
-    color: $color-gray-darkest;
+    color: $color-white;
     text-align: left;
     line-height: $type-default;
     text-decoration: none;
@@ -610,13 +604,13 @@ a {
     }
 
     strong {
-      color: $color-gray-darkest;
+      color: $color-white;
       font-size: $type-sm;
       display: block;
       padding: 3px 0;
     }
     span {
-      color: $color-gray-dark;
+      color: $color-white-medium;
       font-size: $type-xxs;
       display: block;
     }
@@ -653,8 +647,6 @@ a {
       color: $color-blue-medium;
     }
   }
-
- 
 
   &-login {
     font-size: $type-xxs;
@@ -697,7 +689,6 @@ a {
     &:hover {
       border-bottom: 1px solid $color-blue-medium;
     }
-
   }
 
   &-signout {

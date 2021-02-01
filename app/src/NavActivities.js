@@ -39,7 +39,7 @@ export default class Nav extends React.Component {
 							className="link-slug fade-in"
 							onClick={this.goTop()}
 						>
-							<img src="img/logo-icon.png" />{" "}
+							<img src="img/logo-icon-white.png" />{" "}
 							<div>
 								<strong>Extimacies</strong>
 								<span>Critical Theory from the Global South</span>
@@ -50,7 +50,7 @@ export default class Nav extends React.Component {
 
 					<div className="nav-activities-left mobile">
 						<Link to="/intro" className="link-slug fade-in">
-							<img src="img/logo-icon.png" />{" "}
+							<img src="img/logo-icon-white.png" />{" "}
 							<div>
 								<strong>Extimacies</strong>
 								<span>Critical Theory from the Global South</span>

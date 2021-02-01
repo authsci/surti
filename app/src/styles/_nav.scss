@@ -57,29 +57,10 @@
     position: sticky !important;
     top: 0 !important;
     margin: 0 !important;
-    background: $color-white;
+    background: $color-gray-darkest;
     box-shadow: 0 12px 24px $color-gray-note;
     z-index: $z-title !important;
 
-
-    // background: linear-gradient(
-    //   -90deg,
-    //   $color-green,
-    //   $color-mid,
-    //   $color-blue,
-    //   $color-black,
-    //   $color-black,
-    //   $color-black
-    // );
-
-    background-size: 400% 400%;
-    // animation-name: blue2black;
-    // animation-duration: 1s;
-    // animation-timing-function: ease-in-out;
-    // animation-direction: normal;
-    // animation-fill-mode: forwards;
-    // animation-iteration-count: 1;
-    // animation-play-state: running;
 
     &-left {
       @extend .nav-left;
