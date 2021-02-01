@@ -59,51 +59,7 @@ export default class Nav extends React.Component {
 					</div>
 
 					<div className="nav-activities-right nudge-right">
-						{/* <NavLink
-							to="/home"
-							exact
-							activeClassName="link-menu-hilite"
-							className="link-menu desktop"
-						>
-							Home
-						</NavLink>
-
-						<NavLink
-							to="/list"
-							activeClassName="link-menu-hilite"
-							className="link-menu desktop"
-						>
-							People
-						</NavLink>
-
-						<NavLink
-							to="/events"
-							activeClassName="link-menu-hilite"
-							className="link-menu desktop"
-						>
-							Events
-						</NavLink>
-						<NavLink
-							to="/publications"
-							activeClassName="link-menu-hilite"
-							className="link-menu desktop"
-						>
-							Publications
-						</NavLink>
-						<NavLink
-							to="/initiatives"
-							activeClassName="link-menu-hilite"
-							className="link-menu desktop"
-						>
-							Initiatives
-						</NavLink>
-						<NavLink
-							to="/course"
-							activeClassName="link-menu-hilite"
-							className="link-menu desktop"
-						>
-							Course
-						</NavLink> */}
+						
 
 						<span>
 							<UserSettings />

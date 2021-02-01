@@ -44,7 +44,7 @@ export default class Intro extends React.Component {
 	render() {
 		let { loading, institutions } = this.state;
 		let mapped = institutions.map(function(el) {
-			return { code: el.fields.code, name: el.fields.name, color: el.fields.color };
+			return { type: el.fields.type, code: el.fields.code, name: el.fields.name, color: el.fields.color };
 		})
 
 		return (
@@ -63,7 +63,7 @@ export default class Intro extends React.Component {
 
 
 										{_.sortBy(mapped, "code").map(
-													(item, index) =>(
+													(item, index) => ( item.type == "org" &&
 															<Link
 																key={index}
 																to={"/institution/" + item.code}

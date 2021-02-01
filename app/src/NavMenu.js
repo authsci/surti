@@ -24,7 +24,7 @@ export default class NavMenu extends React.Component {
 	render() {
 		return (
 			<Fragment>
-				<div className="nav-menu desktop fade-in">
+				<div className="nav-menu fade-in">
 							<UserSettingsLight />
 				</div>
 			</Fragment>

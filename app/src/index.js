@@ -117,6 +117,17 @@ class App extends React.Component {
 											</Fragment>
 										)}
 									/>
+						
+									<Route
+										exact
+										path="/events/"
+										render={(props) => (
+											<Fragment>
+												<NavActivities />
+												<Events {...props}/>
+											</Fragment>
+										)}
+									/>
 
 									<Route
 										exact

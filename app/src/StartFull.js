@@ -61,6 +61,7 @@ export default class Start extends React.Component {
 		let { loading, institutions, timer } = this.state;
 		let mapped = institutions.map(function (el) {
 			return {
+				type: el.fields.type,
 				code: el.fields.code,
 				name: el.fields.name,
 				color: el.fields.color,
@@ -102,23 +103,20 @@ export default class Start extends React.Component {
 										</Link>
 
 										<div className="mainmenu stepMenu">
-											{_.sortBy(mapped, "code").map((item, index) => (
-												<Link
-													key={index}
-													to={"/institution/" + item.code}
-													className={`link-title-` + item.color}
-													style={
-														timer
-															? { pointerEvents: "none" }
-															: { pointerEvents: "all" }
-													}
-												>
-													<div>
-														<h1>{item.code}</h1>
-														<small>{item.name}</small>
-													</div>
-												</Link>
-											))}
+										{_.sortBy(mapped, "code").map(
+													(item, index) => ( item.type == "org" &&
+															<Link
+																key={index}
+																to={"/institution/" + item.code}
+																className={`link-title-` + item.color}
+															>
+																<div>
+																	<h1>{item.code}</h1>
+																	<small>{item.name}</small>
+																</div>
+															</Link>
+														)
+												)}
 										</div>
 									</div>
 									<div className="nav-down" id="arrow">

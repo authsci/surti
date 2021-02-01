@@ -814,9 +814,10 @@ canvas {
 
   p {
     font-size: $type-copy;
+    text-align: justify;
 
     @media (min-width: $break-sm) {
-      font-size: $type-md;
+      font-size: $type-lg;
     }
   }
 
@@ -837,6 +838,7 @@ canvas {
   font-size: $type-copy;
   color: $color-black;
   margin-top: 48px;
+  text-align: justify;
 
   h1 {
     line-height: $type-h1-height;
