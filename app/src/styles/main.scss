@@ -152,9 +152,10 @@ body {
     color: $color-white;
     text-align: left;
     position: absolute;
+    left: 36px;
+    top: 36px;
     line-height: $type-xxs;
 
-    top: 60px;
     text-decoration: none;
     margin: 0 0 0 0;
 
@@ -838,7 +839,6 @@ canvas {
   font-size: $type-copy;
   color: $color-black;
   margin-top: 48px;
-  text-align: justify;
 
   h1 {
     line-height: $type-h1-height;
