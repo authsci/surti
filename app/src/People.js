@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
+import PublicationsSolo from "./PublicationsSolo";
 import ReactTooltip from "react-tooltip";
 
 const setDate = Date.now();
@@ -28,6 +29,8 @@ export default class People extends React.Component {
 			id: this.props.match.params.id,
 			name: this.props.match.params.name,
 		};
+
+		console.log(this.props.match.params.id);
 	}
 
 	componentDidMount() {
@@ -37,7 +40,6 @@ export default class People extends React.Component {
 			this.setState({ media, people, loading: false });
 		});
 
-		console.log("People.js");
 
 		window.scrollTo(0, 0);
 	}
@@ -51,7 +53,7 @@ export default class People extends React.Component {
 					<div className="loading"></div>
 				) : (
 					<Fragment>
-						<div className="contain fade-in">
+						{/* <div className="contain fade-in">
 							<div className="copy">
 								<div className="breadcrumbs">
 									<Link to="/home" className="link-breadcrumbs">
@@ -131,9 +133,9 @@ export default class People extends React.Component {
 									{people.bio && <Markdown>{people.bio}</Markdown>}
 								</div>
 
-								<div className="nudge-md"></div>
 
 								<div className="mobile">
+								<div className="nudge-md"></div>
 								{people.photo &&
 									media.includes.Asset.map(
 										(image, index) =>
@@ -147,13 +149,19 @@ export default class People extends React.Component {
 									)}
 									</div>
 
+								<div className="nudge-md"></div>
+
+
+									<PublicationsSolo email={people.email}/>
+
+
 								<div className="nudge-lg"></div>
 							</div>
 						</div>
 
 						<ReactTooltip place="top" type="dark" effect="float" id="profile">
 							{people.institution}
-						</ReactTooltip>
+						</ReactTooltip> */}
 					</Fragment>
 				)}
 			</Fragment>

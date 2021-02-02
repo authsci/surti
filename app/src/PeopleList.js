@@ -113,7 +113,7 @@ export default class PeopleList extends React.Component {
 															</a>
 
 															<div className="nudge-sm"></div>
-															<Link to={`/people/` + index}>
+															<Link to={`/people/` + item.sys.id}>
 																{item.fields.photo &&
 																	media.includes.Asset.map(
 																		(image, index) =>
