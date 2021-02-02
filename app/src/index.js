@@ -58,7 +58,7 @@ class App extends React.Component {
 						<Fragment>
 							<Router>
 								<Switch>
-									<Route
+									{/* <Route
 										exact
 										path="/"
 										render={(props) => (
@@ -150,7 +150,7 @@ class App extends React.Component {
 												<PeopleList {...props} />
 											</Fragment>
 										)}
-									/>
+									/> */}
 								</Switch>
 							</Router>
 						</Fragment>
