@@ -115,6 +115,8 @@ export default class Profile extends React.Component {
 																				{item.fields.code}
 																			</Link>
 
+
+
 																		<ReactTooltip
 																			place="top"
 																			type="dark"
@@ -123,10 +125,15 @@ export default class Profile extends React.Component {
 																		>
 																			{item.fields.name}
 																		</ReactTooltip>
+
+																		<h2>{item.fields.name}</h2>
+
 																	</Fragment>
 																)
 														)}
 													</Fragment>
+
+													
 												))}
 											<h1>
 												{item.fields.firstname + " " + item.fields.lastname}
@@ -138,6 +145,8 @@ export default class Profile extends React.Component {
 										<a className="link-email" href={`mailto:` + item.fields.email}>
 											{item.fields.email}
 										</a>
+
+										
 									
 										</div>
 									</div>

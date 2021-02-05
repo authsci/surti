@@ -524,7 +524,7 @@ h4 {
   h2 {
     font-size: $type-h2;
     color: $color-gray-darker;
-    padding: 0;
+    padding: 3px 0 !important;
     margin: 0;
     font-weight: $light;
     line-height: $type-h2;

@@ -94,6 +94,7 @@ export default class ProfileCard extends React.Component {
 																				{item.fields.code}
 																			</Link>
 
+
 																		<ReactTooltip
 																			place="top"
 																			type="dark"
