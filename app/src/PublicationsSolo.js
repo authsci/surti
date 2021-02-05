@@ -23,8 +23,10 @@ export default class PublicationsSolo extends React.Component {
 			keyword: "",
 			publications: [],
       media: [],
-      email: this.props.email
+      id: this.props.id
 		};
+
+		console.log(this.props.id)
 
 
 	}
@@ -42,7 +44,7 @@ export default class PublicationsSolo extends React.Component {
 	}
 
 	render() {
-    let { loading, publications, media, email } = this.state;
+    let { loading, publications, media, id } = this.state;
     
   
 		return (
@@ -55,7 +57,7 @@ export default class PublicationsSolo extends React.Component {
 						<div className="nudge-md"></div>
 						{publications.map(
 							(item, index) =>
-								item.fields.type == "publication" && item.fields.email == email && (
+								item.fields.type == "publication" && item.fields.writtenBy && id == item.fields.writtenBy.sys.id &&(
 									<Fragment key={index}>
 
 										<div

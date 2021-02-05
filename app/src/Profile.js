@@ -27,6 +27,8 @@ export default class Profile extends React.Component {
 			media: [],
 			id: this.props.match.params.id,
 		};
+
+		console.log(this.props.match.params.id);
 	}
 
 	componentDidMount() {
@@ -166,7 +168,7 @@ export default class Profile extends React.Component {
 
 										<div className="nudge-md"></div>
 
-										<PublicationsSolo email={item.fields.email} />
+										<PublicationsSolo id={id} />
 									</div>
 								)
 						)}
