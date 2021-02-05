@@ -592,9 +592,26 @@ h4 {
       width: 90px;
       border: 1px solid $color-gray-slight;
     }
+    
+    &-lg {
+      @extend .profile-card;
+      background: transparent;
+      padding: 0;
+      box-shadow:none;
+    grid-template-columns: 150px auto;
+
+
+      img {
+        width: 150px;
+        border: 1px solid $color-gray-slight;
+      }
+    }
+    
 
   
   }
+
+
 
   &-bio {
     width: 100%;
@@ -712,7 +729,7 @@ canvas {
   text-transform: uppercase;
   color: $color-white;
   cursor: pointer;
-  margin: 0 6px 6px 0;
+  margin: 0 6px 0 0;
   font-size: $type-default !important;
   line-height: $type-md;
 
