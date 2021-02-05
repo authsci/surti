@@ -514,15 +514,15 @@ h4 {
 
 .profile {
   h1 {
-    font-size: $type-h1;
+    font-size: $type-lg;
     color: $color-gray-darkest;
-    padding: 3px 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
     font-weight: $light;
   }
 
   h2 {
-    font-size: $type-h2;
+    font-size: $type-md;
     color: $color-gray-darker;
     padding: 3px 0 !important;
     margin: 0;
