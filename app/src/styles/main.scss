@@ -729,13 +729,13 @@ canvas {
   color: $color-white !important;
   display: inline-flex;
   text-decoration: none;
-  padding: 0 4px;
+  padding: 3px;
   text-transform: uppercase;
   color: $color-white;
   cursor: pointer;
-  margin: 0 6px 0 0;
-  font-size: $type-default !important;
-  line-height: $type-md;
+  margin: 0 6px 3px 0;
+  font-size: $type-xxs !important;
+  line-height: $type-xxs;
 
   &-auc {
     @extend .dept;

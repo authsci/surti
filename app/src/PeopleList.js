@@ -92,7 +92,7 @@ export default class PeopleList extends React.Component {
 										item.fields.type == "people" &&
 										!item.fields.scholar && (
 											<Fragment key={index}>
-												<ProfileCard id={item.sys.id} />
+												<ProfileCard id={item.sys.id} showDept={true} />
 											</Fragment>
 										)
 								)}
