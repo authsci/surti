@@ -25,7 +25,6 @@ body {
 .publication {
   display: flex;
   flex-direction: column;
-  grid-gap: 0;
   color: $color-gray-darkest;
   text-align: left;
   font-size: $type-default;
@@ -34,12 +33,18 @@ body {
   padding: 36px 0;
   border-top: 1px solid $color-gray-light;
 
+  img {
+    width: 50px;
+    
+  }
+
   @media (min-width: $break-sm) {
     flex-direction: row;
-    grid-template-columns: 125px auto;
+    grid-template-columns: 150px auto;
     grid-column: 1 / -1;
     display: grid;
-    grid-gap: 12px;
+    grid-gap: 16px;
+
   }
 
   &:hover {
@@ -72,16 +77,14 @@ body {
     height: auto;
     filter: grayscale(0.4);
     transition: $transition-filter;
-    width: 60%;
+    width: 150px;
 
     &:hover {
       filter: grayscale(0);
       transition: $transition-filter;
     }
 
-    @media (min-width: $break-sm) {
-      width: 125px;
-    }
+   
   }
 
   strong {
@@ -104,6 +107,7 @@ body {
 
     display: flex;
     grid-gap: 0;
+  
   }
 }
 
