@@ -126,11 +126,13 @@ export default class Profile extends React.Component {
 																			{item.fields.name}
 																		</ReactTooltip>
 
-																		<h2>{item.fields.name}</h2>
-
 																	</Fragment>
+
+																	
 																)
 														)}
+
+
 													</Fragment>
 
 													
