@@ -54,7 +54,7 @@ export default class Team extends React.Component {
 				lastname: el.fields.lastname,
 				institution: el.fields.institution,
 				position: el.fields.position,
-				id: index,
+				id: el.sys.id,
 			};
 		});
 
@@ -70,7 +70,7 @@ export default class Team extends React.Component {
 								item.scholar && (
 									<Fragment key={item.id}>
 										<div className="card-compact">
-											<Link to={`/people/` + item.id} className="link-default">
+											<Link to={`/profile/` + item.id} className="link-default">
 												<h3>
 													{item.firstname + " " + item.lastname} |{" "}
 													{item.position} | {item.institution}

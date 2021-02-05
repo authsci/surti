@@ -10,6 +10,7 @@ import People from "./People";
 import Home from "./Home";
 import Publications from "./Publications";
 import PeopleList from "./PeopleList";
+import Profile from "./Profile";
 
 import "./styles/main.scss";
 
@@ -58,7 +59,7 @@ class App extends React.Component {
 						<Fragment>
 							<Router>
 								<Switch>
-									{/* <Route
+									<Route
 										exact
 										path="/"
 										render={(props) => (
@@ -131,15 +132,16 @@ class App extends React.Component {
 
 									<Route
 										exact
-										// path="/people/:id/:name"
-										path="/people/:id"
+										path="/profile/:id"
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
-												<People {...props} />
+												<Profile {...props} />
 											</Fragment>
 										)}
 									/>
+								
+							
 
 									<Route
 										exact
@@ -150,7 +152,7 @@ class App extends React.Component {
 												<PeopleList {...props} />
 											</Fragment>
 										)}
-									/> */}
+									/>
 								</Switch>
 							</Router>
 						</Fragment>

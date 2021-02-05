@@ -17,7 +17,7 @@
 
 .fade-out {
   opacity: 1;
-  animation: fadeOut ease-in .4s;
+  animation: fadeOut ease-in 0.4s;
   -webkit-animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
@@ -48,13 +48,12 @@
 
 .pulse {
   animation-name: pulse;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-direction: normal;
   animation-iteration-count: infinite;
   animation-play-state: inherit;
 }
-
 
 .pulse-fast {
   animation-name: pulse;
@@ -119,7 +118,6 @@
   }
 }
 
-
 .slide {
   animation-name: slide;
   animation-duration: 0.3s;
@@ -181,21 +179,19 @@
 
 @keyframes black2blue {
   0% {
-		background-position: 0% 50%;
-	}
-	100% {
-		background-position: 100% 50%;
-	}
-
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 @keyframes blue2black {
   0% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes dark2light {
@@ -211,7 +207,6 @@
     border-bottom-color: $color-white-half;
   }
 }
-
 
 @keyframes pulseAlert {
   0% {
@@ -254,7 +249,7 @@
 
 .load {
   animation-name: load;
-  animation-duration:.5s;
+  animation-duration: 0.3s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
 }
@@ -269,9 +264,9 @@
 }
 
 .indicate {
-	animation-name: indicate;
+  animation-name: indicate;
   animation-duration: 2s;
-	animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
@@ -286,9 +281,6 @@
     transform: translateY(0);
   }
 }
-
-
-
 
 @keyframes step1 {
   0% {
@@ -307,14 +299,12 @@
 @keyframes step2 {
   0% {
     opacity: 0;
-
   }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-
   }
 }
 @keyframes step3-a {
@@ -356,11 +346,16 @@
 @keyframes step5 {
   0% {
     opacity: 0;
-    transform: scale(.98);
+    transform: scale(0.98);
+    pointer-events: none !important;
+  }
+  90% {
+    pointer-events: none !important;
   }
   100% {
     opacity: 1;
     transform: scale(1);
+    pointer-events: visible;
   }
 }
 
@@ -379,7 +374,7 @@
   animation-name: step1;
   animation-timing-function: linear;
   animation-delay: 0s;
-  animation-duration: 5s; 
+  animation-duration: 5s;
 }
 .stepMenu {
   opacity: 0;
@@ -387,7 +382,7 @@
   animation-name: step5;
   animation-timing-function: linear;
   animation-delay: 5s;
-  animation-duration: .5s; 
+  animation-duration: 0.5s;
 }
 .stepLogo {
   opacity: 0;
@@ -395,7 +390,7 @@
   animation-name: step6;
   animation-timing-function: linear;
   animation-delay: 5s;
-  animation-duration: 1s; 
+  animation-duration: 1s;
 }
 .step1 {
   opacity: 0;
@@ -403,7 +398,7 @@
   animation-name: step1;
   animation-timing-function: linear;
   animation-delay: 0s;
-  animation-duration: 8s; 
+  animation-duration: 8s;
 }
 
 .step2 {
@@ -413,7 +408,7 @@
   animation-name: step2;
   animation-timing-function: linear;
   animation-delay: 3s;
-  animation-duration: 3s; 
+  animation-duration: 3s;
 }
 .step3-a {
   opacity: 0;
@@ -422,7 +417,7 @@
   animation-name: step3-a;
   animation-timing-function: ease-in-out;
   animation-delay: 5s;
-  animation-duration: 5s; 
+  animation-duration: 5s;
 }
 .step3-b {
   opacity: 0;
@@ -431,7 +426,7 @@
   animation-name: step3-b;
   animation-timing-function: ease-in-out;
   animation-delay: 5.5s;
-  animation-duration: 5.5s; 
+  animation-duration: 5.5s;
 }
 .step4 {
   opacity: 0;
@@ -439,7 +434,7 @@
   animation-name: step4;
   animation-timing-function: linear;
   animation-delay: 11s;
-  animation-duration: 2s
+  animation-duration: 2s;
 }
 .step5 {
   opacity: 0;
@@ -447,6 +442,5 @@
   animation-name: step5;
   animation-timing-function: linear;
   animation-delay: 10s;
-  animation-duration: 3s
+  animation-duration: 3s;
 }
-

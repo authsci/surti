@@ -5,6 +5,16 @@ a {
   -ms-user-select: none;
   user-select: none;
 
+  &-h1 {
+    color: $color-blue;
+    text-decoration: none;
+    border-bottom: 1px solid $color-blue-light;
+    display: inline-block;
+    font-size: $type-lg !important;
+    font-weight: $light;
+    width: auto;
+  }
+
   &-urgent {
     font-size: $type-tiny;
     color: $color-blue-default;

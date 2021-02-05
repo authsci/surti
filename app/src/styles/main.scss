@@ -523,27 +523,31 @@ h4 {
     padding: 0;
     margin: 0;
     font-weight: $light;
+    line-height: $type-h2;
+  }
+
+  a {
+    font-size: $type-xxs;
   }
 
   @media (min-width: $break-sm) {
     grid-column: 1 / -1;
     display: grid;
     grid-gap: 12px;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 200px auto;
     align-items: flex-start;
 
     h1 {
-      font-size: $type-big;
-      color: $color-gray-darkest;
-      padding: 12px 0 6px 0;
-      margin: 0;
+      font-size: $type-lg;
+      padding: 0 !important;
+      margin: 0 !important;
       font-weight: $light;
     }
 
     h2 {
-      font-size: $type-h2;
+      font-size: $type-sm;
       color: $color-gray-darker;
-      margin: 6px 0 !important;
+      margin: 0 !important;
       font-weight: $light;
     }
   }
@@ -551,6 +555,45 @@ h4 {
   img {
     width: 100%;
     padding: 0;
+
+    @media (min-width: $break-sm) {
+      width: 200px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    width: 100%;
+    @media (min-width: $break-sm) {
+      width: 50%;
+      display: inline-flex;
+    }
+    @media (min-width: $break-lg) {
+      width: 33%;
+      display: inline-flex;
+    }
+  }
+
+  &-card {
+    @extend .profile;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 90px auto;
+    color: $color-white;
+    text-align: left;
+    box-shadow: 0 0 6px $color-gray-slight;
+    background: $color-white;
+    padding: 24px;
+    margin: 0 12px 12px 0;
+    align-items: flex-start;
+    flex: 1;
+
+    img {
+      width: 90px;
+      border: 1px solid $color-gray-slight;
+    }
+
+  
   }
 
   &-bio {
@@ -558,6 +601,7 @@ h4 {
     font-size: $type-md;
     font-weight: $light;
     line-height: $type-xl;
+    text-align: justify;
 
     span {
       text-align: justify;
@@ -668,9 +712,9 @@ canvas {
   text-transform: uppercase;
   color: $color-white;
   cursor: pointer;
-  margin: 0;
-  font-size: $type-xxs;
-  font-weight: $bold;
+  margin: 0 6px 6px 0;
+  font-size: $type-default !important;
+  line-height: $type-md;
 
   &-auc {
     @extend .dept;
@@ -697,7 +741,8 @@ canvas {
 .accent {
   position: absolute;
   top: 79px;
-  height: 5px;
+  right: 0;
+  height: 6px;
   background: $color-green;
 
   &-auc {
@@ -781,8 +826,6 @@ canvas {
 
     h3 {
       font-size: $type-md;
-
-      
     }
     h4 {
       font-size: $type-sm;
@@ -829,6 +872,7 @@ canvas {
     font-size: $type-copy;
     line-height: $type-xl;
     text-align: justify;
+    font-weight: $light;
 
     @media (min-width: $break-sm) {
       font-size: $type-h2;
@@ -878,6 +922,7 @@ canvas {
   p,
   span {
     font-size: $type-copy;
+    font-weight: $light;
 
     @media (min-width: $break-sm) {
       font-size: $type-md;

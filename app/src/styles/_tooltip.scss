@@ -1,7 +1,7 @@
 .__react_component_tooltip.type-dark {
   background-color: $color-gray-darkest;
   opacity: 1;
-  padding: 6px 12px !important;
+  padding: 6px !important;
   line-height: $type-tiny !important;
   font-size: $type-tiny !important;
   text-align: center !important;
@@ -9,6 +9,7 @@
   border-radius: 2px !important;
   text-transform: uppercase !important;
   z-index: $z-ultimate !important;
+  max-width: 120px !important;
 
   &:after {
     opacity: 1;
