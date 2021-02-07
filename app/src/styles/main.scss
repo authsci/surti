@@ -35,7 +35,6 @@ body {
 
   img {
     width: 50px;
-    
   }
 
   @media (min-width: $break-sm) {
@@ -44,7 +43,6 @@ body {
     grid-column: 1 / -1;
     display: grid;
     grid-gap: 16px;
-
   }
 
   &:hover {
@@ -83,8 +81,6 @@ body {
       filter: grayscale(0);
       transition: $transition-filter;
     }
-
-   
   }
 
   strong {
@@ -107,7 +103,6 @@ body {
 
     display: flex;
     grid-gap: 0;
-  
   }
 }
 
@@ -596,27 +591,37 @@ h4 {
       width: 90px;
       height: 100%;
       border: 1px solid $color-gray-slight;
+
+      @media (min-width: $break-sm) {
+        width: 90px;
+      }
     }
-    
+
     &-lg {
       @extend .profile-card;
       background: transparent;
       padding: 0;
-      box-shadow:none;
-    grid-template-columns: 150px auto;
+      box-shadow: none;
+      display: flex;
+      width: 100%;
 
+      @media (min-width: $break-sm) {
+        grid-template-columns: 150px auto;
+
+      }
+
+
+      h1 {
+        font-size: $type-h1;
+        margin: 3px 0 !important;
+      }
 
       img {
         width: 150px;
         border: 1px solid $color-gray-slight;
       }
     }
-    
-
-  
   }
-
-
 
   &-bio {
     width: 100%;
@@ -728,15 +733,14 @@ canvas {
 
 .dept {
   color: $color-white !important;
-  display: inline-flex;
   text-decoration: none;
-  padding: 3px;
+  padding: 2px 6px;
   text-transform: uppercase;
   color: $color-white;
   cursor: pointer;
+  display: inline;
   margin: 0 6px 3px 0;
   font-size: $type-xxs !important;
-  line-height: $type-xxs;
 
   &-auc {
     @extend .dept;

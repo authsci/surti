@@ -47,11 +47,9 @@ export default class ProfileCard extends React.Component {
 	render() {
 		let { loading, media, data, id, showDept } = this.state;
 
-		return (
+		return !loading && (
 			<Fragment>
-				{loading ? (
-					<div className="loading"></div>
-				) : (
+			
 					<div className="profile-container">
 						{data.map(
 							(item, index) =>
@@ -123,7 +121,6 @@ export default class ProfileCard extends React.Component {
 								)
 						)}
 					</div>
-				)}
 			</Fragment>
 		);
 	}

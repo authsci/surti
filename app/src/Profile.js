@@ -56,115 +56,140 @@ export default class Profile extends React.Component {
 							(item, index) =>
 								id == item.sys.id && (
 									<div key={index} className="copy">
-
-<div className="breadcrumbs">
-								<Link to="/home" className="link-breadcrumbs">
-									Home
-								</Link>
-								<span>/</span>
-								<Link to="/list" className="link-breadcrumbs">
-									People
-								</Link>
-								<span>/</span>
-								{data.map(
-										(item, index) =>
-											id == item.sys.id && (
-												<b key={index}>
-													{item.fields.firstname} {item.fields.lastname}
-												</b>
-											)
-									)}
-							</div>
-
-						{data.map(
-							(item, index) =>
-								id == item.sys.id && (
-									<div key={index} className="profile-card-lg">
-										<Link to={`/profile/` + item.sys.id} className="link-inert">
-											{item.fields.photo &&
-												media.includes.Asset.map(
-													(image, index) =>
-														item.fields.photo.sys.id ==
-															media.includes.Asset[index].sys.id && (
-															<img
-																key={index}
-																src={
-																	media.includes.Asset[index].fields.file.url
-																}
-															/>
-														)
-												)}
-										</Link>
-
-										<div>
-											{item.fields.inst &&
-												item.fields.inst.map((itemInst, index) => (
-													<Fragment key={index}>
-														{data.map(
-															(item, index) =>
-																item.sys.id == itemInst.sys.id &&
-																item.fields.type == "org" && (
-																	<Fragment key={index}>
-																			<Link
-																				to={`/institution/` + item.fields.code}
-																				className={
-																					`dept-` +
-																					item.fields.code.toLowerCase()
-																				}
-																				data-tip
-																				data-for={item.fields.code}
-																			>
-																				{item.fields.code}
-																			</Link>
-
-
-
-																		<ReactTooltip
-																			place="top"
-																			type="dark"
-																			effect="float"
-																			id={item.fields.code}
-																		>
-																			{item.fields.name}
-																		</ReactTooltip>
-
-																	</Fragment>
-
-																	
-																)
-														)}
-
-
-													</Fragment>
-
-													
-												))}
-											<h1>
-												{item.fields.firstname + " " + item.fields.lastname}
-											</h1>
-											<h2>{item.fields.position}</h2>
-											<a href={`mailto:` + item.fields.email} className="link-icon">
-											<i className="far fa-envelope"></i>
-										</a>
-										<a className="link-email" href={`mailto:` + item.fields.email}>
-											{item.fields.email}
-										</a>
-
-										
-									
+										<div className="breadcrumbs">
+											<Link to="/home" className="link-breadcrumbs">
+												Home
+											</Link>
+											<span>/</span>
+											<Link to="/list" className="link-breadcrumbs">
+												People
+											</Link>
+											<span>/</span>
+											{data.map(
+												(item, index) =>
+													id == item.sys.id && (
+														<b key={index}>
+															{item.fields.firstname} {item.fields.lastname}
+														</b>
+													)
+											)}
 										</div>
-									</div>
-								)
-						)}
 
-										<div className="nudge-md"></div>
+										{data.map(
+											(item, index) =>
+												id == item.sys.id && (
+													<div key={index} className="profile-card-lg">
+														<Link
+															to={`/profile/` + item.sys.id}
+															className="link-inert desktop"
+														>
+															{item.fields.photo &&
+																media.includes.Asset.map(
+																	(image, index) =>
+																		item.fields.photo.sys.id ==
+																			media.includes.Asset[index].sys.id && (
+																			<Fragment key={index}>
+																				<img
+																					src={
+																						media.includes.Asset[index].fields
+																							.file.url
+																					}
+																				/>
+																			</Fragment>
+																		)
+																)}
+														</Link>
+
+														<div>
+															{item.fields.inst &&
+																item.fields.inst.map((itemInst, index) => (
+																	<Fragment key={index}>
+																		{data.map(
+																			(item, index) =>
+																				item.sys.id == itemInst.sys.id &&
+																				item.fields.type == "org" && (
+																					<Fragment key={index}>
+																						<Link
+																							to={
+																								`/institution/` +
+																								item.fields.code
+																							}
+																							className={
+																								`dept-` +
+																								item.fields.code.toLowerCase()
+																							}
+																							data-tip
+																							data-for={item.fields.code}
+																						>
+																							{item.fields.code}
+																						</Link>
+
+																						<ReactTooltip
+																							place="top"
+																							type="dark"
+																							effect="float"
+																							id={item.fields.code}
+																						>
+																							{item.fields.name}
+																						</ReactTooltip>
+																					</Fragment>
+																				)
+																		)}
+																	</Fragment>
+																))}
+															<h1>
+																{item.fields.firstname +
+																	" " +
+																	item.fields.lastname}
+															</h1>
+															<h2>{item.fields.position}</h2>
+
+															<a
+																href={`mailto:` + item.fields.email}
+																className="link-icon"
+															>
+																<i className="far fa-envelope"></i>
+															</a>
+															<a
+																className="link-email"
+																href={`mailto:` + item.fields.email}
+															>
+																{item.fields.email}
+															</a>
+														</div>
+													</div>
+												)
+										)}
+
+										<div className="nudge-sm"></div>
 
 										<div className="profile-bio">
 											{item.fields.bio && (
 												<Markdown>{item.fields.bio}</Markdown>
-											)}
+												)}
+
+												<div className="nudge-md"></div>
+											<Link
+												to={`/profile/` + item.sys.id}
+												className="link-inert mobile"
+											>
+												{item.fields.photo &&
+													media.includes.Asset.map(
+														(image, index) =>
+															item.fields.photo.sys.id ==
+																media.includes.Asset[index].sys.id && (
+																<Fragment key={index}>
+																	<img
+																		src={
+																			media.includes.Asset[index].fields.file
+																				.url
+																		}
+																	/>
+																</Fragment>
+															)
+													)}
+											</Link>
 										</div>
-								
 
 										<div className="nudge-md"></div>
 
