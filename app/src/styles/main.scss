@@ -472,7 +472,7 @@ h3 {
   font-weight: $regular;
   padding: 0 !important;
   margin: 0 !important;
-  display: flex;
+  // display: flex;
 
   @media (min-width: $break-sm) {
     font-size: $type-xs;
@@ -628,10 +628,11 @@ h4 {
     font-size: $type-md;
     font-weight: $light;
     line-height: $type-xl;
-    text-align: justify;
+    text-align: left;
+    
 
     span {
-      text-align: justify;
+      text-align: left;
     }
 
     @media (min-width: $break-sm) {
@@ -897,7 +898,7 @@ canvas {
   p {
     font-size: $type-copy;
     line-height: $type-xl;
-    text-align: justify;
+    text-align: left;
     font-weight: $light;
 
     @media (min-width: $break-sm) {

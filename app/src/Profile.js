@@ -166,9 +166,9 @@ export default class Profile extends React.Component {
 										<div className="profile-bio">
 											{item.fields.bio && (
 												<Markdown>{item.fields.bio}</Markdown>
-												)}
+											)}
 
-												<div className="nudge-md"></div>
+											<div className="nudge-md"></div>
 											<Link
 												to={`/profile/` + item.sys.id}
 												className="link-inert mobile"

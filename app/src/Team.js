@@ -25,7 +25,6 @@ export default class Team extends React.Component {
 			people: [],
 			media: [],
 		};
-
 	}
 
 	componentDidMount() {
@@ -72,8 +71,7 @@ export default class Team extends React.Component {
 										<div className="card-compact">
 											<Link to={`/profile/` + item.id} className="link-default">
 												<h3>
-													{item.firstname + " " + item.lastname} |{" "}
-													{item.position} | {item.institution}
+													<b>{item.firstname + " " + item.lastname}</b> {item.position}
 												</h3>
 											</Link>
 										</div>
