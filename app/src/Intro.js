@@ -36,7 +36,6 @@ export default class Intro extends React.Component {
 
 		});
 
-		console.log("Intro.js");
 
 		window.scrollTo(0, 0);
 	}

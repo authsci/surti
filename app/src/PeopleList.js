@@ -5,7 +5,6 @@ import { animateScroll as scroll } from "react-scroll";
 import ProfileCard from "./ProfileCard";
 
 const setDate = Date.now();
-console.log(setDate);
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -42,7 +41,6 @@ export default class PeopleList extends React.Component {
 			this.setState({ media, people, loading: false });
 		});
 
-		console.log("PeopleList.js");
 	}
 
 	goTop = () => {

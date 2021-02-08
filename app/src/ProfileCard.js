@@ -30,7 +30,6 @@ export default class ProfileCard extends React.Component {
 			showDept: this.props.showDept
 		};
 
-		console.log("props",this.props.showDept);
 	}
 
 	componentDidMount() {

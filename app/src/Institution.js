@@ -3,6 +3,8 @@ import axios from "axios";
 import Markdown from "markdown-to-jsx";
 import { Link } from "react-router-dom";
 import ProfileCard from "./ProfileCard";
+import EventsInstitution from "./EventsInstitution";
+import PublicationsInstitution from "./PublicationsInstitution";
 const setDate = Date.now();
 
 const SPACE_ID = "yzeyubafmmte";
@@ -27,7 +29,7 @@ export default class Institution extends React.Component {
 			media: [],
 			id: this.props.match.params.id,
 			dept: this.props.match.params.dept,
-			showDept: false
+			showDept: false,
 		};
 	}
 
@@ -38,14 +40,13 @@ export default class Institution extends React.Component {
 			const data = response.data.items;
 
 			this.setState({ media, data, loading: false });
-			console.log("Institution.js", response);
 		});
 
 		window.scrollTo(0, 0);
 	}
 
 	render() {
-		let { loading, data, dept, showDept } = this.state;
+		let { loading, data, dept } = this.state;
 
 		return (
 			<Fragment>
@@ -92,107 +93,35 @@ export default class Institution extends React.Component {
 
 												<h1>People</h1>
 
-												{item.fields.people.map(
-									(item, index) => (
-											<Fragment key={index}>
-												<ProfileCard id={item.sys.id} showDept={false} />
-											</Fragment>
-										)
-								)}
+												{item.fields.people.map((item, index) => (
+													<Fragment key={index}>
+														<ProfileCard id={item.sys.id} showDept={false} />
+													</Fragment>
+												))}
 
-
-
-												{/* {item.fields.people &&
-													item.fields.people.map((item, index) => (
-														<Fragment key={index}>
-															{data.map(
-																(profile, index) =>
-																	profile.fields.type == "people" &&
-																	item.sys.id == profile.sys.id && (
-																		<Fragment key={index}>
-																			<Card className="card">
-																				<CardContent>
-																					<div>{profile.fields.name}</div>
-
-																					<h1>
-																						{profile.fields.firstname +
-																							" " +
-																							profile.fields.lastname}
-																					</h1>
-
-																					<h2>{profile.fields.position}</h2>
-
-																					<a
-																						href={
-																							`mailto:` + profile.fields.email
-																						}
-																						className="link-icon"
-																					>
-																						<i className="far fa-envelope"></i>
-																					</a>
-																					<a
-																						className="link-default"
-																						href={
-																							`mailto:` + profile.fields.email
-																						}
-																					>
-																						{profile.fields.email}
-																					</a>
-
-																					<div className="nudge-sm"></div>
-																					<Link
-																						to={`/profile/` + profile.sys.id}
-																					>
-																						{profile.fields.photo &&
-																							media.includes.Asset.map(
-																								(image, index) =>
-																									profile.fields.photo.sys.id ==
-																										media.includes.Asset[index]
-																											.sys.id && (
-																										<img
-																											key={index}
-																											src={
-																												media.includes.Asset[
-																													index
-																												].fields.file.url
-																											}
-																										/>
-																									)
-																							)}
-																					</Link>
-
-																					<div className="nudge-sm"></div>
-
-																					<Link
-																						to={`/profile/` + profile.sys.id}
-																						className="link-default"
-																					>
-																						View{" "}
-																						{profile.fields.firstname + `'s`}{" "}
-																						Profile
-																					</Link>
-																				</CardContent>
-																			</Card>
-																		</Fragment>
-																	)
-															)}
-														</Fragment>
-													))} */}
+												<div className="nudge-md"></div>
+												
+												{item.fields.events && item.fields.events.map((item, index) => (
+													<Fragment key={index}>
+														<EventsInstitution id={item.sys.id} />
+													</Fragment>
+												))}
+												
+												<div className="nudge-md"></div>
+												{item.fields.publications && item.fields.publications.map((item, index) => (
+													<Fragment key={index}>
+														<PublicationsInstitution id={item.sys.id} />
+													</Fragment>
+												))}
 											</Fragment>
 										)
 								)}
 
 								<div className="nudge-lg"></div>
 
-								<h1>Events</h1>
-								<p>Coming Soon</p>
-								<div className="nudge-md"></div>
-								<h1>Initiatives</h1>
-								<p>Coming Soon</p>
-								<div className="nudge-md"></div>
-								<h1>Publications</h1>
-								<p>Coming Soon</p>
-								<div className="nudge-md"></div>
+					
+							
+					
 							</div>
 						</div>
 					</Fragment>

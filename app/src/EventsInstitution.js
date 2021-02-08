@@ -21,20 +21,19 @@ export default class PublicationsSolo extends React.Component {
 		this.state = {
 			loading: true,
 			keyword: "",
-			publications: [],
+			events: [],
       media: [],
       id: this.props.id
 		};
-
 
 
 	}
 
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
-			const publications = response.data.items;
+			const events = response.data.items;
 			const media = response.data;
-			this.setState({ media, publications, loading: false });
+			this.setState({ media, events, loading: false });
     });
     
 
@@ -42,7 +41,7 @@ export default class PublicationsSolo extends React.Component {
 	}
 
 	render() {
-    let { loading, publications, media, id } = this.state;
+    let { loading, events, media, id } = this.state;
     
   
 		return (
@@ -53,9 +52,12 @@ export default class PublicationsSolo extends React.Component {
 					<Fragment>
 
 						<div className="nudge-md"></div>
-						{publications.map(
+
+            <h1>Events</h1>
+
+						{events.map(
 							(item, index) =>
-								item.sys.contentType.sys.id == "publications" && item.fields.writtenBy && id == item.fields.writtenBy[0].sys.id && (
+								item.sys.contentType.sys.id == "events" && (
 									<Fragment key={index}>
 
 										<div
@@ -99,7 +101,7 @@ export default class PublicationsSolo extends React.Component {
 												<h4>{item.fields.subtext}</h4>
 												<div className="nudge-sm"></div>
 												<small>{item.fields.author}</small>
-												<small>{item.fields.year}</small>
+												<small>{item.fields.eventDate}</small>
 												{item.fields.abstract && (
 													<Markdown>{item.fields.abstract}</Markdown>
 												)}
@@ -112,7 +114,7 @@ export default class PublicationsSolo extends React.Component {
 											</div>
 										</div>
 									</Fragment>
-								))}
+                ))}
 					</Fragment>
         )}
 			</Fragment>

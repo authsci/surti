@@ -37,7 +37,6 @@ export default class Start extends React.Component {
 		axios.get(contentfulAPI).then((response) => {
 			const institutions = response.data.items;
 			this.setState({ institutions, loading: false });
-			console.log("StartFull.js", response);
 		});
 
 		window.scrollTo(0, 0);

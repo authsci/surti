@@ -26,6 +26,7 @@ export default class PublicationsSolo extends React.Component {
       id: this.props.id
 		};
 
+		console.log(this.props.id)
 
 
 	}
@@ -35,7 +36,10 @@ export default class PublicationsSolo extends React.Component {
 			const publications = response.data.items;
 			const media = response.data;
 			this.setState({ media, publications, loading: false });
+      console.log("publications", response)
     });
+
+
     
 
 		window.scrollTo(0, 0);
@@ -53,10 +57,14 @@ export default class PublicationsSolo extends React.Component {
 					<Fragment>
 
 						<div className="nudge-md"></div>
+
+            <h1>Publications</h1>
 						{publications.map(
 							(item, index) =>
-								item.sys.contentType.sys.id == "publications" && item.fields.writtenBy && id == item.fields.writtenBy[0].sys.id && (
+								item.fields.publications && id == item.fields.publications[0].sys.id && (
 									<Fragment key={index}>
+
+										{item.fields.title}
 
 										<div
 											className={
@@ -112,7 +120,7 @@ export default class PublicationsSolo extends React.Component {
 											</div>
 										</div>
 									</Fragment>
-								))}
+                ))}
 					</Fragment>
         )}
 			</Fragment>

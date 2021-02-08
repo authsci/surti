@@ -32,12 +32,6 @@ export default function SwipeableTemporaryDrawer() {
     right: false,
   });
 
-	// useEffect(() => {
-	// 	axios.get(contentfulAPI).then(({ data }) => {
-	// 		setInfo(data);
-	// 		console.log(data);
-	// 	});
-	// });
 
 	const toggleDrawer = (side, open) => (event) => {
 		if (
@@ -91,6 +85,9 @@ export default function SwipeableTemporaryDrawer() {
 							People
 						</Link>
 						{/* <li>Events</li> */}
+						<Link to={"/events/"} onClick={toggleDrawer("right", false)}>
+						Events
+						</Link>
 						<Link to={"/publications/"} onClick={toggleDrawer("right", false)}>
 						Publications
 						</Link>

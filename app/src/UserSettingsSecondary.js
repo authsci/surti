@@ -91,6 +91,9 @@ export default function SwipeableTemporaryDrawer() {
 							People
 						</Link>
 						{/* <li>Events</li> */}
+						<Link to={"/events/"} onClick={toggleDrawer("right", false)}>
+						Events
+						</Link>
 						<Link to={"/publications/"} onClick={toggleDrawer("right", false)}>
 						Publications
 						</Link>

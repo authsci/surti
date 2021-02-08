@@ -33,10 +33,8 @@ export default class Team extends React.Component {
 			const people = response.data.items;
 			this.setState({ media, people, loading: false });
 
-			console.log(response.data.items);
 		});
 
-		console.log("Team.js");
 
 		window.scrollTo(0, 0);
 	}

@@ -35,7 +35,6 @@ export default class People extends React.Component {
 			const data = response.data.items;
 			this.setState({ media, data, loading: false });
 
-			console.log("data", data);
 		});
 
 		window.scrollTo(0, 0);

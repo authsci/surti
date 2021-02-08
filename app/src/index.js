@@ -6,7 +6,7 @@ import NavActivities from "./NavActivities";
 import StartFull from "./StartFull";
 import Intro from "./Intro";
 import Institution from "./Institution";
-import People from "./People";
+import Events from "./Events";
 import Home from "./Home";
 import Publications from "./Publications";
 import PeopleList from "./PeopleList";
@@ -115,6 +115,16 @@ class App extends React.Component {
 											<Fragment>
 												<NavActivities />
 												<Publications {...props}/>
+											</Fragment>
+										)}
+									/>
+									<Route
+										exact
+										path="/events/"
+										render={(props) => (
+											<Fragment>
+												<NavActivities />
+												<Events {...props}/>
 											</Fragment>
 										)}
 									/>

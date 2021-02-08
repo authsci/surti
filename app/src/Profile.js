@@ -28,7 +28,6 @@ export default class Profile extends React.Component {
 			id: this.props.match.params.id,
 		};
 
-		console.log(this.props.match.params.id);
 	}
 
 	componentDidMount() {
@@ -37,7 +36,6 @@ export default class Profile extends React.Component {
 			const data = response.data.items;
 			this.setState({ media, data, loading: false });
 
-			console.log("data", data);
 		});
 
 		window.scrollTo(0, 0);

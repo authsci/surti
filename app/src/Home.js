@@ -32,7 +32,6 @@ export default class Home extends React.Component {
 			this.setState({ institutions, loading: false });
 		});
 
-		console.log("Home.js");
 
 		window.scrollTo(0, 0);
 	}
