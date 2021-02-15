@@ -30,6 +30,8 @@ export default class ProfileCard extends React.Component {
 			showDept: this.props.showDept
 		};
 
+	
+
 	}
 
 	componentDidMount() {
@@ -37,7 +39,7 @@ export default class ProfileCard extends React.Component {
 			const media = response.data;
 			const data = response.data.items;
 			this.setState({ media, data, loading: false });
-
+console.log(data);
 		});
 
 		window.scrollTo(0, 0);
