@@ -508,17 +508,6 @@ h4 {
 }
 
 .profile {
-
-
-  img {
-    width: 320px !important;
-    padding: 0;
-
-    @media (min-width: $break-sm) {
-      width: 200px;
-    }
-  }
-
   h1 {
     font-size: $type-lg;
     color: $color-gray-darkest;
@@ -562,6 +551,14 @@ h4 {
     }
   }
 
+  img {
+    width: 100%;
+    padding: 0;
+
+    @media (min-width: $break-sm) {
+      width: 200px;
+    }
+  }
 
   &-container {
     display: flex;
