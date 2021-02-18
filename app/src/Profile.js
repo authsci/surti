@@ -49,7 +49,7 @@ export default class Profile extends React.Component {
 				{loading ? (
 					<div className="loading"></div>
 				) : (
-					<div className="contain fade-in">
+					<div className="contain">
 						{data.map(
 							(item, index) =>
 								id == item.sys.id && (

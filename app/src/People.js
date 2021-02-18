@@ -49,7 +49,7 @@ export default class People extends React.Component {
 					<div className="loading"></div>
 				) : (
 					<Fragment>
-						<div className="contain fade-in">
+						<div className="contain">
 							<div className="copy">
 								<div className="breadcrumbs">
 									<Link to="/home" className="link-breadcrumbs">

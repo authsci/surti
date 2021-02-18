@@ -56,7 +56,7 @@ export default class PeopleList extends React.Component {
 		return (
 			!loading && (
 				<Fragment>
-					<div className="contain fade-in">
+					<div className="contain">
 						<div className="copy">
 							<div className="breadcrumbs">
 								<Link to="/home" className="link-breadcrumbs">

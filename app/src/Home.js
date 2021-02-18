@@ -54,7 +54,7 @@ export default class Home extends React.Component {
 					<Fragment>
 						<NavActivities />
 
-						<div className="contain fade-in">
+						<div className="contain">
 							<div className="home-hero">
 								{institutions.map(
 										(item, index) =>
