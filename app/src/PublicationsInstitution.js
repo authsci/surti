@@ -57,8 +57,7 @@ export default class PublicationsSolo extends React.Component {
 					<Fragment>
 
 						<div className="nudge-md"></div>
-
-            <h1>Publications</h1>
+										<h1>Publications</h1>
 						{publications.map(
 							(item, index) =>
 								item.fields.publications && id == item.fields.publications[0].sys.id && (

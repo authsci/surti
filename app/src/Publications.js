@@ -62,39 +62,29 @@ export default class Publications extends React.Component {
 								<h1>Publications</h1>
 
 								<div className="nudge-md"></div>
-								{publications.map(
-									(item, index) =>
-										item.sys.contentType.sys.id == "publications" &&
-										item.fields.showInMainPublications && (
-											<Fragment key={index}>
-												<div
-													className={
-														item.fields.graphic
-															? "publication"
-															: "publication-list"
-													}
-												>
-													<div>
-														{item.fields.graphic &&
-															media.includes.Asset.map(
-																(image, index) =>
-																	item.fields.graphic.sys.id ==
-																		media.includes.Asset[index].sys.id &&
-																	(item.fields.link ? (
-																		<a
-																			href={item.fields.link}
-																			target="_blank"
-																			key={index}
-																		>
-																			<img
-																				key={index}
-																				src={
-																					media.includes.Asset[index].fields
-																						.file.url
-																				}
-																			/>
-																		</a>
-																	) : (
+								{publications.map((item, index) =>
+									item.sys.contentType.sys.id == "publications" &&
+									item.fields.showInMainPublications && (
+										<Fragment key={index}>
+											<div
+												className={
+													item.fields.graphic
+														? "publication"
+														: "publication-list"
+												}
+											>
+												<div>
+													{item.fields.graphic &&
+														media.includes.Asset.map(
+															(image, index) =>
+																item.fields.graphic.sys.id ==
+																	media.includes.Asset[index].sys.id &&
+																(item.fields.link ? (
+																	<a
+																		href={item.fields.link}
+																		target="_blank"
+																		key={index}
+																	>
 																		<img
 																			key={index}
 																			src={
@@ -102,31 +92,42 @@ export default class Publications extends React.Component {
 																					.url
 																			}
 																		/>
-																	))
-															)}
-													</div>
-
-													<div>
-														<h2>{item.fields.title}</h2>
-														<h4>{item.fields.subtext}</h4>
-														<div className="nudge-sm"></div>
-														<small>{item.fields.author}</small>
-														<small>{item.fields.year}</small>
-														{item.fields.abstract && (
-															<Markdown>{item.fields.abstract}</Markdown>
+																	</a>
+																) : (
+																	<img
+																		key={index}
+																		src={
+																			media.includes.Asset[index].fields.file
+																				.url
+																		}
+																	/>
+																))
 														)}
-														<div className="nudge-sm"></div>
-														{item.fields.link && (
-															<a href={item.fields.link} target="_blank">
-																Available Here
-															</a>
-														)}
-													</div>
 												</div>
-											</Fragment>
-										)
+
+												<div>
+													<h2>{item.fields.title}</h2>
+													<h4>{item.fields.subtext}</h4>
+													<div className="nudge-sm"></div>
+													<small>{item.fields.author}</small>
+													<small>{item.fields.year}</small>
+													{item.fields.abstract && (
+														<Markdown>{item.fields.abstract}</Markdown>
+													)}
+													<div className="nudge-sm"></div>
+													{item.fields.link && (
+														<a href={item.fields.link} target="_blank">
+															Available Here
+														</a>
+													)}
+												</div>
+											</div>
+										</Fragment>
+									)
 								)}
 
+<p>Coming Soon.</p>
+								
 							</div>
 						</div>
 					</Fragment>

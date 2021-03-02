@@ -74,7 +74,7 @@ export default class PeopleList extends React.Component {
 								{people.map(
 									(item, index) =>
 										item.fields.type == "people" &&
-										item.fields.scholar && (
+										item.fields.role == "Scholar"  && (
 											<Fragment key={index}>
 												<ProfileCard id={item.sys.id} showDept={true} />
 											</Fragment>
@@ -88,7 +88,7 @@ export default class PeopleList extends React.Component {
 								{people.map(
 									(item, index) =>
 										item.fields.type == "people" &&
-										!item.fields.scholar && (
+										item.fields.role !== "Scholar"  && (
 											<Fragment key={index}>
 												<ProfileCard id={item.sys.id} showDept={true} />
 											</Fragment>

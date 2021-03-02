@@ -127,6 +127,7 @@ export default class Events extends React.Component {
 										)
 								)}
 
+								<p>{events.length && `More `}Coming Soon.</p>
 							</div>
 						</div>
 					</Fragment>

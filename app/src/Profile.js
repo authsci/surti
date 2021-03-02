@@ -189,9 +189,10 @@ export default class Profile extends React.Component {
 											</Link>
 										</div>
 
-										<div className="nudge-md"></div>
-
+										<div className="nudge-lg"></div>
 										<PublicationsSolo id={id} />
+										<div className="nudge-lg"></div>
+
 									</div>
 								)
 						)}

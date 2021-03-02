@@ -39,22 +39,15 @@ export default class Start extends React.Component {
 			this.setState({ institutions, loading: false });
 		});
 
-		window.scrollTo(0, 0);
+		// window.scrollTo(0, 0);
 
-		setTimeout(
-			function () {
-				this.setState({ timer: false });
-			}.bind(this),
-			5000
-		);
+		// setTimeout(
+		// 	function () {
+		// 		this.setState({ timer: false });
+		// 	}.bind(this),
+		// 	5000
+		// );
 	}
-
-	goTop = () => {
-		scroll.scrollToTop({
-			duration: 400,
-			delay: 0,
-		});
-	};
 
 	render() {
 		let { loading, institutions, timer } = this.state;
@@ -76,7 +69,9 @@ export default class Start extends React.Component {
 							<div className="iframe-wrapper">
 								<div className="iframe-overlay">
 									<div className="mainmenu-overlay">
+										<div className="stepLogo">
 											<NavMenu />
+										</div>
 
 										<div className="logo step0">
 											<img src="img/logo-icon-white.png" />
@@ -157,7 +152,7 @@ export default class Start extends React.Component {
 										)
 								)}
 
-								<div className="nudge-xl"></div>
+								<div className="nudge-sm"></div>
 
 								<Team />
 

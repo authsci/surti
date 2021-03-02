@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import PublicationsSolo from "./PublicationsSolo";
 import ReactTooltip from "react-tooltip";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
 
 const setDate = Date.now();
 

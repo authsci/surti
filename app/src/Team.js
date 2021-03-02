@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import _ from "lodash";
+import ProfileRows from "./ProfileRows";
 
 const setDate = Date.now();
 
@@ -46,7 +47,7 @@ export default class Team extends React.Component {
 			return {
 				order: el.fields.order,
 				type: el.fields.type,
-				scholar: el.fields.scholar,
+				role: el.fields.role,
 				firstname: el.fields.firstname,
 				lastname: el.fields.lastname,
 				institution: el.fields.institution,
@@ -63,18 +64,10 @@ export default class Team extends React.Component {
 					<Fragment>
 						{_.sortBy(mapped, "order").map(
 							(item, index) =>
-								item.type == "people" &&
-								item.scholar && (
-									<Fragment key={item.id}>
-										<div className="card-compact">
-											<Link to={`/profile/` + item.id} className="link-default">
-												<h3>
-													<b>{item.firstname + " " + item.lastname}</b> {item.position}
-												</h3>
-											</Link>
-										</div>
-									</Fragment>
-								)
+							item.type == "people" &&
+							item.role == "Scholar"  && (
+									<ProfileRows id={item.id} showDept={true} key={index} />
+							)
 						)}
 					</Fragment>
 				)}

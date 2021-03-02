@@ -53,7 +53,8 @@ export default class PublicationsSolo extends React.Component {
 
 						<div className="nudge-md"></div>
 
-            <h1>Events</h1>
+									<h1>Events</h1>
+							
 
 						{events.map(
 							(item, index) =>
@@ -115,6 +116,8 @@ export default class PublicationsSolo extends React.Component {
 										</div>
 									</Fragment>
                 ))}
+								<p>{events.length && `More `}Coming Soon.</p>
+
 					</Fragment>
         )}
 			</Fragment>

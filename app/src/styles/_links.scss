@@ -183,9 +183,39 @@ a {
     padding: 0 3px 0 0;
     align-self: flex-start;
 
- 
-
   }
+
+  &-profile {
+    font-size: $type-md !important;
+    color: $color-gray-darkest !important;
+    padding: 12px 6px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    border-top: 1px solid $color-gray-light;
+
+    
+
+    strong {
+      font-weight: $bold;
+    }
+
+    span {
+      color: $color-gray-dark;
+      padding: 0 6px;
+    }
+
+    &:hover {
+      background: $color-gray-note;
+
+      .inst {
+        opacity: 1;
+      }
+    }
+  }
+
+
 
   &-title {
     cursor: pointer !important;

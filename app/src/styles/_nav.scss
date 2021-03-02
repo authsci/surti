@@ -33,8 +33,9 @@
     display: flex;
     color: $color-white;
     font-size: $type-xxs;
-    justify-content: flex-end;
-    align-items: center;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
     font-weight: $regular;
   }
 
@@ -42,12 +43,11 @@
     background: transparent;
     position: absolute;
     right: 36px;
-    top: 48px;  display: flex;
+    top: 32px;
+    display: flex;
     z-index: $z-base;
-      color: $color-white !important;
+    color: $color-white !important;
   }
-
- 
 
   &-activities {
     @extend .nav;
@@ -60,7 +60,6 @@
     background: $color-gray-darkest;
     box-shadow: 0 12px 24px $color-gray-note;
     z-index: $z-title !important;
-
 
     &-left {
       @extend .nav-left;

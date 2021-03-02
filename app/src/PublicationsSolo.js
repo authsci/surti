@@ -22,12 +22,9 @@ export default class PublicationsSolo extends React.Component {
 			loading: true,
 			keyword: "",
 			publications: [],
-      media: [],
-      id: this.props.id
+			media: [],
+			id: this.props.id,
 		};
-
-
-
 	}
 
 	componentDidMount() {
@@ -35,29 +32,28 @@ export default class PublicationsSolo extends React.Component {
 			const publications = response.data.items;
 			const media = response.data;
 			this.setState({ media, publications, loading: false });
-    });
-    
+		});
 
 		window.scrollTo(0, 0);
 	}
 
 	render() {
-    let { loading, publications, media, id } = this.state;
-    
-  
+		let { loading, publications, media, id } = this.state;
+
 		return (
 			<Fragment>
-				{loading  ?  (
+				{loading ? (
 					<div className="loading"></div>
 				) : (
 					<Fragment>
-
 						<div className="nudge-md"></div>
+						
 						{publications.map(
 							(item, index) =>
-								item.sys.contentType.sys.id == "publications" && item.fields.writtenBy && id == item.fields.writtenBy[0].sys.id && (
+								item.sys.contentType.sys.id == "publications" &&
+								item.fields.writtenBy &&
+								id == item.fields.writtenBy[0].sys.id && (
 									<Fragment key={index}>
-
 										<div
 											className={
 												item.fields.graphic ? "publication" : "publication-list"
@@ -112,9 +108,10 @@ export default class PublicationsSolo extends React.Component {
 											</div>
 										</div>
 									</Fragment>
-								))}
+								)
+						)}
 					</Fragment>
-        )}
+				)}
 			</Fragment>
 		);
 	}
