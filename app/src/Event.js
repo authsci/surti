@@ -25,7 +25,11 @@ export default class Events extends React.Component {
 			keyword: "",
 			events: [],
 			media: [],
+			id: this.props.match.params.id,
+			name: this.props.match.params.name,
 		};
+
+		console.log(this.props);
 	}
 
 	componentDidMount() {
@@ -39,7 +43,7 @@ export default class Events extends React.Component {
 	}
 
 	render() {
-		let { loading, events, media } = this.state;
+		let { loading, events, media, id, name } = this.state;
 
 		return (
 			<Fragment>
@@ -54,18 +58,20 @@ export default class Events extends React.Component {
 										Home
 									</Link>
 									<span>/</span>
-									<b>Events</b>
+									<Link to="/events" className="link-breadcrumbs">
+										Events
+									</Link>
+									<span>/</span>
+									<b>{name}</b>
+
 								</div>
 
 								<div className="nudge-md"></div>
 
-								<h1>Events</h1>
-
 								<div className="nudge-md"></div>
 								{events.map(
 									(item, index) =>
-										item.sys.contentType.sys.id == "events" &&
-										item.fields.showInMainEvents && (
+								id == item.sys.id && (
 											<Fragment key={index}>
 												<div
 													className={
@@ -109,16 +115,14 @@ export default class Events extends React.Component {
 													<div>
 														<h2>{item.fields.title}</h2>
 														<h4>{item.fields.subtext}</h4>
-														<div className="nudge-sm"></div>
 														<small>{item.fields.author}</small>
 														<small>{item.fields.eventDate}</small>
 														{item.fields.abstract && (
 															<Markdown>{item.fields.abstract}</Markdown>
 														)}
-														<div className="nudge-sm"></div>
 														{item.fields.link && (
 															<a href={item.fields.link} target="_blank">
-																Available Here
+																More Event Info Here
 															</a>
 														)}
 													</div>

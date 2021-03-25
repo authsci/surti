@@ -23,7 +23,7 @@ body {
 }
 
 p {
-  word-break: break-all !important;
+  word-wrap: break-word !important;
 }
 
 .publication {
@@ -107,6 +107,11 @@ p {
 
     display: flex;
     grid-gap: 0;
+    padding: 24px 12px;
+
+    &:hover {
+      background: $color-gray-note;
+    }
   }
 }
 

@@ -6,7 +6,8 @@ import NavActivities from "./NavActivities";
 import StartFull from "./StartFull";
 import Intro from "./Intro";
 import Institution from "./Institution";
-import Events from "./Events";
+import EventList from "./EventList";
+import Event from "./Event";
 import Home from "./Home";
 import Publications from "./Publications";
 import PeopleList from "./PeopleList";
@@ -107,14 +108,14 @@ class App extends React.Component {
 											</Fragment>
 										)}
 									/>
-						
+
 									<Route
 										exact
 										path="/publications/"
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
-												<Publications {...props}/>
+												<Publications {...props} />
 											</Fragment>
 										)}
 									/>
@@ -124,18 +125,18 @@ class App extends React.Component {
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
-												<Events {...props}/>
+												<EventList {...props} />
 											</Fragment>
 										)}
 									/>
-						
+
 									<Route
 										exact
-										path="/events/"
+										path="/event/:id/:name"
 										render={(props) => (
 											<Fragment>
 												<NavActivities />
-												<Events {...props}/>
+												<Event {...props} />
 											</Fragment>
 										)}
 									/>
@@ -150,8 +151,6 @@ class App extends React.Component {
 											</Fragment>
 										)}
 									/>
-								
-							
 
 									<Route
 										exact
