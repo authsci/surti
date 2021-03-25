@@ -71,37 +71,44 @@ export default class Events extends React.Component {
 											<Fragment key={index}>
 												<Link
 													to={"/event/" + item.sys.id + "/" + item.fields.title}
-													className="publication-list"
+													className={
+														item.fields.graphic
+															? "publication"
+															: "publication-list"
+													}
 												>
 													<div>
 														{item.fields.graphic &&
 															media.includes.Asset.map(
 																(image, index) =>
 																	item.fields.graphic.sys.id ==
-																		media.includes.Asset[index].sys.id &&
+																		media.includes.Asset[index].sys.id && (
 																		<img
-																		key={index}
-																		style={{paddingRight: "12px"}}
-																		src={
-																			media.includes.Asset[index].fields.file
-																				.url
-																		}
-																	/>
+																			key={index}
+																			style={{ paddingRight: "12px" }}
+																			src={
+																				media.includes.Asset[index].fields.file
+																					.url
+																			}
+																		/>
+																	)
 															)}
 													</div>
-													<h2>
-														{item.fields.title}
-													</h2>
+													<div>
+													<h2>{item.fields.title}</h2>
 														<b>{item.fields.subtext}</b>
-													{/* <b>{item.fields.author}</b> */}
-													 { item.fields.eventDate &&
-													<b>Event Date: <Moment
-																		format="LL"
-																		date={item.fields.eventDate}
-																	/></b>
-													 }
+														{/* <b>{item.fields.author}</b> */}
+														{item.fields.eventDate && (
+															<b>
+																Event Date:{" "}
+																<Moment
+																	format="LL"
+																	date={item.fields.eventDate}
+																/>
+															</b>
+														)}
+													</div>
 												</Link>
-											
 											</Fragment>
 										)
 								)}

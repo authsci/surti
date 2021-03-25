@@ -26,6 +26,7 @@ p {
   word-wrap: break-word !important;
 }
 
+
 .publication {
   display: flex;
   flex-direction: column;
@@ -37,6 +38,13 @@ p {
   padding: 36px 0;
   border-top: 1px solid $color-gray-light;
 
+  b {
+    display: flex !important;
+    color: $color-gray-darkest;
+    font-size: $type-sm;
+    margin: 3px 0 0 0;
+  }
+  
   img {
     width: 50px;
   }
@@ -108,9 +116,9 @@ p {
     display: flex;
     grid-gap: 0;
     padding: 24px 12px;
-    flex-direction: column;
 
     b {
+      display: flex !important;
       color: $color-gray-darkest;
       font-size: $type-sm;
       margin: 3px 0 0 0;
