@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import axios from "axios";
 import Markdown from "markdown-to-jsx";
 import ReactTooltip from "react-tooltip";
+import Moment from "react-moment";
+
 import { Link } from "react-router-dom";
 import * as _ from "lodash";
 const setDate = Date.now();
@@ -92,10 +94,15 @@ export default class Events extends React.Component {
 														<br />
 														<small>{item.fields.subtext}</small>
 													</h2>
-
 													<small>{item.fields.author}</small>
-													<small>{item.fields.eventDate}</small>
+													 { item.fields.eventDate &&
+													<b>Event Date: <Moment
+																		format="LL"
+																		date={item.fields.eventDate}
+																	/></b>
+													 }
 												</Link>
+											
 											</Fragment>
 										)
 								)}

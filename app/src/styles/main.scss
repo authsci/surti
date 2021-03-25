@@ -108,6 +108,13 @@ p {
     display: flex;
     grid-gap: 0;
     padding: 24px 12px;
+    flex-direction: column;
+
+    b {
+      color: $color-gray-darkest;
+      font-size: $type-sm;
+      margin: 6px 0;
+    }
 
     &:hover {
       background: $color-gray-note;
