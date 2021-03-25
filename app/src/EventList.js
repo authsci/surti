@@ -91,10 +91,9 @@ export default class Events extends React.Component {
 													</div>
 													<h2>
 														{item.fields.title}
-														<br />
-														<small>{item.fields.subtext}</small>
 													</h2>
-													<small>{item.fields.author}</small>
+														<b>{item.fields.subtext}</b>
+													{/* <b>{item.fields.author}</b> */}
 													 { item.fields.eventDate &&
 													<b>Event Date: <Moment
 																		format="LL"
