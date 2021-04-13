@@ -26,7 +26,6 @@ p {
   word-wrap: break-word !important;
 }
 
-
 .publication {
   display: flex;
   flex-direction: column;
@@ -44,7 +43,7 @@ p {
     font-size: $type-sm;
     margin: 3px 0 0 0;
   }
-  
+
   img {
     width: 50px;
   }
@@ -587,53 +586,65 @@ h4 {
   &-container {
     display: flex;
     width: 100%;
+    
     @media (min-width: $break-sm) {
-      width: 50%;
+      width: 33%;
       display: inline-flex;
     }
     @media (min-width: $break-lg) {
-      width: 33%;
+      width: 24%;
       display: inline-flex;
     }
   }
 
   &-card {
     @extend .profile;
-    display: grid;
-    grid-gap: 16px;
-    grid-template-columns: 90px auto;
+    display: flex;
+    flex-direction: column;
+    // display: grid;
+    // grid-gap: 16px;
+    // grid-template-columns: 90px auto;
     color: $color-white;
-    text-align: left;
     box-shadow: 0 0 6px $color-gray-slight;
     background: $color-white;
     padding: 24px;
-    margin: 0 12px 12px 0;
-    align-items: flex-start;
-    flex: 1;
-
+    margin: 0 0 12px 0 !important;
+    // align-items: flex-start;
+    // flex: 1;
+    width: 100% !important;
+    
     img {
-      width: 90px;
       height: 100%;
-      border: 1px solid $color-gray-slight;
-
-      @media (min-width: $break-sm) {
-        width: 100% !important;
-      }
+    }
+    
+    @media (min-width: $break-sm) {
+      margin: 0 12px 12px 0 !important; 
     }
 
     &-lg {
-      @extend .profile-card;
+      // @extend .profile-card;
       background: transparent;
       padding: 0;
       box-shadow: none;
       display: flex;
       width: 100%;
 
-      @media (min-width: $break-sm) {
-        grid-template-columns: 150px auto;
-
+      img {
+        width: 100%;
+        padding: 0;
+    
+        @media (min-width: $break-sm) {
+          width: 300px;
+        }
       }
 
+      @media (min-width: $break-sm) {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-gap: 12px;
+        grid-template-columns: 300px auto;
+        align-items: flex-start;
+      }
 
       h1 {
         font-size: $type-h1;
@@ -665,27 +676,20 @@ h4 {
     line-height: $type-xl;
     text-align: left;
 
-  
-
-
     img {
       width: 300px;
-       height: auto;
+      height: auto;
     }
-    
 
     span {
       text-align: left;
       font-size: $type-copy !important;
-
     }
 
     @media (min-width: $break-sm) {
       font-size: $type-lg;
       font-weight: $light;
       line-height: $type-xxl;
-
-  
     }
   }
 }
