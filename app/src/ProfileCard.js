@@ -1,11 +1,7 @@
 import React, { Fragment } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Markdown from "markdown-to-jsx";
-import PublicationsSolo from "./PublicationsSolo";
 import ReactTooltip from "react-tooltip";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
 
 const setDate = Date.now();
 
@@ -41,7 +37,6 @@ export default class ProfileCard extends React.Component {
 			const media = response.data;
 			const data = response.data.items;
 			this.setState({ media, data, loading: false });
-console.log(data);
 		});
 
 		window.scrollTo(0, 0);

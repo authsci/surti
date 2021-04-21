@@ -58,66 +58,77 @@ export default class Events extends React.Component {
 									<span>/</span>
 									<b>Events</b>
 								</div>
-
 								<div className="nudge-md"></div>
-
 								<h1>Events</h1>
-
+								(Order by Event date)
 								<div className="nudge-md"></div>
-								{events.map(
-									(item, index) =>
-										item.sys.contentType.sys.id == "events" &&
-										item.fields.showInMainEvents && (
-											<Fragment key={index}>
-												<Link
-													to={"/event/" + item.sys.id + "/" + item.fields.title}
-													className={
-														item.fields.graphic
-															? "publication"
-															: "publication-list"
-													}
-												>
-													<div>
-														{item.fields.graphic &&
-															media.includes.Asset.map(
-																(image, index) =>
-																	item.fields.graphic.sys.id ==
-																		media.includes.Asset[index].sys.id && (
-																		<img
-																			key={index}
-																			style={{ paddingRight: "12px" }}
-																			src={
-																				media.includes.Asset[index].fields.file
-																					.url
-																			}
-																		/>
-																	)
+									{events.map(
+										(item, index) =>
+											item.sys.contentType.sys.id == "events" &&
+											item.fields.showInMainEvents && (
+												<div key={index} className="event-container">
+													<div className="event-card">
+														<Link
+															to={
+																"/event/" +
+																item.sys.id +
+																"/" +
+																item.fields.title
+															}
+															className="link-inert"
+														>
+															{item.fields.graphic && (
+																media.includes.Asset.map(
+																	(image, index) =>
+																		item.fields.graphic.sys.id ==
+																			media.includes.Asset[index].sys.id && (
+																			<img
+																				key={index}
+																				src={
+																					media.includes.Asset[index].fields
+																						.file.url
+																				}
+																			/>
+																		)
+																)
 															)}
-													</div>
-													<div>
-													<h2>{item.fields.title}</h2>
-														<b>{item.fields.subtext}</b>
-														{/* <b>{item.fields.author}</b> */}
-														{item.fields.eventDate && (
-															<b>
-																Event Date:{" "}
-																<Moment
-																	format="LL"
-																	date={item.fields.eventDate}
-																/>
-															</b>
-														)}
-													</div>
-												</Link>
-											</Fragment>
-										)
-								)}
+														</Link>
 
-								<p>{events.length && `More `}Coming Soon.</p>
+														<div>
+															<h1>{item.fields.title}</h1>
+															<h2>{item.fields.subtext}</h2>
+															{item.fields.year && (
+																<p>
+																	<strong>
+																		<Moment
+																			format="LL"
+																			date={item.fields.eventDate}
+																		/>
+																	</strong>
+																</p>
+															)}
+															<Link
+																to={
+																	"/event/" +
+																	item.sys.id +
+																	"/" +
+																	item.fields.title
+																}
+																className="link-default"
+															>
+																View Event Details
+															</Link>
+														</div>
+													</div>
+												</div>
+											)
+									)}
 							</div>
 
-							<div className="nudge-xl"></div>
+							{/* <p>{events.length && `More `}Coming Soon.</p> */}
 						</div>
+
+						<div className="nudge-xl"></div>
 					</Fragment>
 				)}
 			</Fragment>

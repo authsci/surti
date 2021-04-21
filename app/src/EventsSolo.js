@@ -22,50 +22,42 @@ export default class PublicationsSolo extends React.Component {
 			loading: true,
 			keyword: "",
 			publications: [],
-      media: [],
-      id: this.props.id
+			media: [],
+			id: this.props.id,
 		};
-
-
-
 	}
 
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
-			const publications = response.data.items;
+			const events = response.data.items;
 			const media = response.data;
-			this.setState({ media, publications, loading: false });
-    });
-
-
-    
+			this.setState({ media, events, loading: false });
+		});
 
 		window.scrollTo(0, 0);
 	}
 
 	render() {
-    let { loading, publications, media, id } = this.state;
-    
-  
+		let { loading, events, media, id } = this.state;
+
 		return (
 			<Fragment>
-				{loading  ?  (
+				{loading ? (
 					<div className="loading"></div>
 				) : (
 					<Fragment>
-
 						<div className="nudge-md"></div>
-										<h1>Publications</h1>
-						{publications.map(
+						
+						{events.map(
 							(item, index) =>
-								item.fields.publications && id == item.fields.publications[0].sys.id && (
+								item.sys.contentType.sys.id == "events" &&
+								item.fields.writtenBy &&
+								id == item.fields.writtenBy[0].sys.id && (
 									<Fragment key={index}>
-
-										{item.fields.title}
-
 										<div
 											className={
-												item.fields.graphic ? "publication" : "publication-list"
+												item.fields.graphic ? "event-detail"
+                        : "event-detail-list"
 											}
 										>
 											<div>
@@ -115,11 +107,17 @@ export default class PublicationsSolo extends React.Component {
 													</a>
 												)}
 											</div>
+
+											
 										</div>
+
+
+
 									</Fragment>
-                ))}
+								)
+						)}
 					</Fragment>
-        )}
+				)}
 			</Fragment>
 		);
 	}

@@ -36,7 +36,6 @@ export default class ProfileCard extends React.Component {
 			const media = response.data;
 			const data = response.data.items;
 			this.setState({ media, data, loading: false });
-			console.log(data);
 		});
 
 		window.scrollTo(0, 0);
@@ -51,10 +50,11 @@ export default class ProfileCard extends React.Component {
 					{data.map(
 						(item, index) =>
 							id == item.sys.id && (
+
+								<Fragment key={index}>
 								<Link
 									to={`/profile/` + item.sys.id}
-									className="link-profile"
-									key={index}
+									className="link-profile desktop"
 								>
 									<strong>
 										{item.fields.firstname + " " + item.fields.lastname}{" "}
@@ -81,6 +81,33 @@ export default class ProfileCard extends React.Component {
 											</Fragment>
 										))}
 								</Link>
+
+								<Link
+									to={`/profile/` + item.sys.id}
+									className="link-profile mobile" style={{flexDirection: "column", alignItems: "flex-start"}}
+								>
+										<h2>{item.fields.firstname + " " + item.fields.lastname}</h2>
+									{item.fields.position} 
+									<br/>
+									{item.fields.inst &&
+										item.fields.inst.map((itemInst, index) => (
+											<Fragment key={index}>
+												{showDept == true &&
+													data.map(
+														(item, index) =>
+															item.sys.id == itemInst.sys.id &&
+															item.fields.type == "org" && (
+																<Fragment key={index}>
+																	{item.fields.name} 
+																</Fragment>
+
+															)
+													)}
+											</Fragment>
+										))}
+								</Link>
+
+								</Fragment>
 							)
 					)}
 				</Fragment>

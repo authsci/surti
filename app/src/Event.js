@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
 import axios from "axios";
 import Markdown from "markdown-to-jsx";
-import ReactTooltip from "react-tooltip";
 import { Link } from "react-router-dom";
 import * as _ from "lodash";
 const setDate = Date.now();
+import Moment from "react-moment";
+
 
 const SPACE_ID = "yzeyubafmmte";
 const ACCESS_TOKEN = "3uqmp9O_VOmdmZhd7VGyTEDbuwrKAyTMLnAfHSZYkdM";
@@ -28,8 +29,6 @@ export default class Events extends React.Component {
 			id: this.props.match.params.id,
 			name: this.props.match.params.name,
 		};
-
-		console.log(this.props);
 	}
 
 	componentDidMount() {
@@ -63,23 +62,36 @@ export default class Events extends React.Component {
 									</Link>
 									<span>/</span>
 									<b>{name}</b>
-
 								</div>
-
-								<div className="nudge-md"></div>
 
 								<div className="nudge-md"></div>
 								{events.map(
 									(item, index) =>
-								id == item.sys.id && (
+										id == item.sys.id && (
 											<Fragment key={index}>
-												<div
+												<div style={{textAlign: "justify"}}
 													className={
 														item.fields.graphic
-															? "publication"
-															: "publication-list"
+															? "event-detail"
+															: "event-detail-list"
 													}
 												>
+													<h1>{item.fields.title}</h1>
+													{item.fields.subtext && (
+														<h2>{item.fields.subtext}</h2>
+													)}
+													<p>{item.fields.author}</p>
+													
+													{item.fields.year && <h3>{item.fields.year}</h3> }
+
+
+													{ item.fields.showEventDate && <p><Moment
+																format="LL"
+																date={item.fields.eventDate}
+															/></p>
+													}
+													
+
 													<div>
 														{item.fields.graphic &&
 															media.includes.Asset.map(
@@ -112,13 +124,15 @@ export default class Events extends React.Component {
 															)}
 													</div>
 
+													
+
 													<div>
-														<h2>{item.fields.title}</h2>
-														<h4>{item.fields.subtext}</h4>
-														<small>{item.fields.author}</small>
-														<small>{item.fields.eventDate}</small>
 														{item.fields.abstract && (
+															<Fragment>
+
 															<Markdown>{item.fields.abstract}</Markdown>
+															</Fragment>
+
 														)}
 														{item.fields.link && (
 															<a href={item.fields.link} target="_blank">
@@ -126,14 +140,19 @@ export default class Events extends React.Component {
 															</a>
 														)}
 													</div>
+
+													
 												</div>
+
 											</Fragment>
 										)
 								)}
-
-								<p>{events.length && `More `}Coming Soon.</p>
 							</div>
+
+
 						</div>
+
+
 					</Fragment>
 				)}
 			</Fragment>

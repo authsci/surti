@@ -54,6 +54,8 @@ export default class PublicationsSolo extends React.Component {
 								item.fields.writtenBy &&
 								id == item.fields.writtenBy[0].sys.id && (
 									<Fragment key={index}>
+											<h3>Publication</h3>
+
 										<div
 											className={
 												item.fields.graphic ? "publication" : "publication-list"

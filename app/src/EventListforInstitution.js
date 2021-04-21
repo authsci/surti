@@ -14,17 +14,19 @@ const contentfulAPI =
 	"&" +
 	setDate;
 
-export default class PublicationsSolo extends React.Component {
+export default class EventListforInstitution extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
 			loading: true,
 			keyword: "",
-			publications: [],
+			events: [],
       media: [],
       id: this.props.id
 		};
+
+		console.log("props", this.props.id);
 
 
 
@@ -32,10 +34,13 @@ export default class PublicationsSolo extends React.Component {
 
 	componentDidMount() {
 		axios.get(contentfulAPI).then((response) => {
-			const publications = response.data.items;
+			const events = response.data.items;
 			const media = response.data;
-			this.setState({ media, publications, loading: false });
+			this.setState({ media, events, loading: false });
+
+			console.log("events", events);
     });
+
 
 
     
@@ -44,7 +49,7 @@ export default class PublicationsSolo extends React.Component {
 	}
 
 	render() {
-    let { loading, publications, media, id } = this.state;
+    let { loading, events, media, id } = this.state;
     
   
 		return (
@@ -55,13 +60,11 @@ export default class PublicationsSolo extends React.Component {
 					<Fragment>
 
 						<div className="nudge-md"></div>
-										<h1>Publications</h1>
-						{publications.map(
-							(item, index) =>
-								item.fields.publications && id == item.fields.publications[0].sys.id && (
+						{events.map(
+							(item, index) => (
 									<Fragment key={index}>
 
-										{item.fields.title}
+										<h2>Events</h2>
 
 										<div
 											className={

@@ -55,7 +55,6 @@ export default class PublicationsSolo extends React.Component {
 
 									<h1>Events</h1>
 							
-
 						{events.map(
 							(item, index) =>
 								item.sys.contentType.sys.id == "events" && (

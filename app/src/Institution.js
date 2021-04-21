@@ -3,7 +3,7 @@ import axios from "axios";
 import Markdown from "markdown-to-jsx";
 import { Link } from "react-router-dom";
 import ProfileCard from "./ProfileCard";
-import EventsInstitution from "./EventsInstitution";
+import EventListforInstitution from "./EventListforInstitution";
 import PublicationsInstitution from "./PublicationsInstitution";
 const setDate = Date.now();
 
@@ -37,6 +37,8 @@ export default class Institution extends React.Component {
 		axios.get(contentfulAPI).then((response) => {
 			const media = response.data;
 
+			console.log("response", response);
+
 			const data = response.data.items;
 
 			this.setState({ media, data, loading: false });
@@ -47,7 +49,7 @@ export default class Institution extends React.Component {
 	}
 
 	render() {
-		let { loading, data, dept } = this.state;
+		let { loading, data, dept, id } = this.state;
 
 		return (
 			<Fragment>
@@ -101,12 +103,10 @@ export default class Institution extends React.Component {
 												))}
 
 												<div className="nudge-md"></div>
-												
-												{item.fields.events && item.fields.events.map((item, index) => (
+{/* 												
 													<Fragment key={index}>
-														<EventsInstitution id={item.sys.id} />
-													</Fragment>
-												))}
+														<EventListforInstitution id={item.sys.id} />
+													</Fragment> */}
 												
 												<div className="nudge-md"></div>
 												{item.fields.publications && item.fields.publications.map((item, index) => (

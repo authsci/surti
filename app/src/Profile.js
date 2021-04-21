@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
 import PublicationsSolo from "./PublicationsSolo";
+import EventListforProfile from "./EventListforProfile";
 import ReactTooltip from "react-tooltip";
 
 const setDate = Date.now();
@@ -188,10 +189,15 @@ export default class Profile extends React.Component {
 													)}
 											</Link>
 										</div>
+							
+										<div className="nudge-lg"></div>
+										<EventListforProfile id={id} />
+										<div className="nudge-lg"></div>
 
 										<div className="nudge-lg"></div>
 										<PublicationsSolo id={id} />
 										<div className="nudge-lg"></div>
+
 
 									</div>
 								)

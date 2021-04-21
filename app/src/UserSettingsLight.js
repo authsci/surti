@@ -35,7 +35,6 @@ export default function SwipeableTemporaryDrawer() {
 	// useEffect(() => {
 	// 	axios.get(contentfulAPI).then(({ data }) => {
 	// 		setInfo(data);
-	// 		console.log(data);
 	// 	});
 	// });
 
