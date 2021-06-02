@@ -59,8 +59,7 @@ export default class EventListforInstitution extends React.Component {
 
 						{events.map(
 							(item, index) =>
-								item.sys.contentType.sys.id == "events" &&
-								item.fields.showInMainEvents && (
+								item.sys.contentType.sys.id == "events" && (
 									<div key={index} className="event-container">
 										<div className="event-card">
 											<Link
@@ -107,17 +106,20 @@ export default class EventListforInstitution extends React.Component {
 											<div>
 												<h1>{item.fields.title}</h1>
 												<h2>{item.fields.subtext}</h2>
-												{item.fields.year && (
-													<p>
-														<strong>
-															<Moment
+										
+										
+												{item.fields.year && <h3>{item.fields.year}
+													<div className="nudge-sm"></div>
+													</h3> }
+
+
+													{ item.fields.showEventDate && <p><Moment
 																format="LL"
 																date={item.fields.eventDate}
-															/>
-														</strong>
-													</p>
-												)}
-												<Link
+															/></p>
+													}
+													
+															<Link
 													to={"/event/" + item.sys.id + "/" + item.fields.title}
 													className="link-default"
 												>

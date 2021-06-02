@@ -112,16 +112,16 @@ export default class Events extends React.Component {
 													<div>
 														<h1>{item.fields.title}</h1>
 														<h2>{item.fields.subtext}</h2>
-														{item.fields.year && (
-															<p>
-																<strong>
-																	<Moment
-																		format="LL"
-																		date={item.fields.eventDate}
-																	/>
-																</strong>
-															</p>
-														)}
+														{item.fields.year && <h3>{item.fields.year}
+													<div className="nudge-sm"></div>
+													</h3> }
+
+
+													{ item.fields.showEventDate && <p><Moment
+																format="LL"
+																date={item.fields.eventDate}
+															/></p>
+													}
 														<Link
 															to={
 																"/event/" +

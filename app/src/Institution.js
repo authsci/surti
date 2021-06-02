@@ -103,12 +103,13 @@ export default class Institution extends React.Component {
 												))}
 
 												<div className="nudge-md"></div>
-												
+										
+
 													{item.fields.events && item.fields.events.map((item, index) => (
-														<Fragment key={index}>
+													<Fragment key={index}>
 														<EventListforInstitution id={item.sys.id} />
-														</Fragment>
-													))}
+													</Fragment>
+												))}
 												
 												<div className="nudge-md"></div>
 												{item.fields.publications && item.fields.publications.map((item, index) => (
