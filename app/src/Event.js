@@ -82,7 +82,9 @@ export default class Events extends React.Component {
 													)}
 													<p>{item.fields.author}</p>
 													
-													{item.fields.year && <h3>{item.fields.year}</h3> }
+													{item.fields.year && <h3>{item.fields.year}
+													<div className="nudge-sm"></div>
+													</h3> }
 
 
 													{ item.fields.showEventDate && <p><Moment
@@ -90,6 +92,7 @@ export default class Events extends React.Component {
 																date={item.fields.eventDate}
 															/></p>
 													}
+
 													
 
 													<div>
@@ -123,8 +126,6 @@ export default class Events extends React.Component {
 																	))
 															)}
 													</div>
-
-													
 
 													<div>
 														{item.fields.abstract && (

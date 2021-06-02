@@ -60,14 +60,68 @@ export default class Events extends React.Component {
 								</div>
 								<div className="nudge-md"></div>
 								<h1>Events</h1>
-								(Order by Event date)
 								<div className="nudge-md"></div>
-									{events.map(
-										(item, index) =>
-											item.sys.contentType.sys.id == "events" &&
-											item.fields.showInMainEvents && (
-												<div key={index} className="event-container">
-													<div className="event-card">
+								{events.map(
+									(item, index) =>
+										item.sys.contentType.sys.id == "events" &&
+										item.fields.showInMainEvents && (
+											<div key={index} className="event-container">
+												<div className="event-card">
+													<Link
+														to={
+															"/event/" + item.sys.id + "/" + item.fields.title
+														}
+														className="link-inert"
+													>
+														{item.fields.graphic ? (
+															media.includes.Asset.map(
+																(image, index) =>
+																	item.fields.graphic.sys.id ==
+																		media.includes.Asset[index].sys.id && (
+																		<div
+																			key={index}
+																			style={{
+																				backgroundImage:
+																					"url(" +
+																					media.includes.Asset[index].fields
+																						.file.url +
+																					")",
+																				backgroundSize: "cover",
+																				backgroundPosition: "center center",
+																				height: "175px",
+																				width: "100%",
+																				backgroundRepeat: "no-repeat",
+																			}}
+																		></div>
+																	)
+															)
+														) : (
+															<div
+																key={index}
+																style={{
+																	backgroundImage: 'url("img/placeholder.png")',
+																	backgroundSize: "cover",
+																	backgroundPosition: "center center",
+																	height: "175px",
+																	width: "100%",
+																}}
+															></div>
+														)}
+													</Link>
+
+													<div>
+														<h1>{item.fields.title}</h1>
+														<h2>{item.fields.subtext}</h2>
+														{item.fields.year && (
+															<p>
+																<strong>
+																	<Moment
+																		format="LL"
+																		date={item.fields.eventDate}
+																	/>
+																</strong>
+															</p>
+														)}
 														<Link
 															to={
 																"/event/" +
@@ -75,54 +129,15 @@ export default class Events extends React.Component {
 																"/" +
 																item.fields.title
 															}
-															className="link-inert"
+															className="link-default"
 														>
-															{item.fields.graphic && (
-																media.includes.Asset.map(
-																	(image, index) =>
-																		item.fields.graphic.sys.id ==
-																			media.includes.Asset[index].sys.id && (
-																			<img
-																				key={index}
-																				src={
-																					media.includes.Asset[index].fields
-																						.file.url
-																				}
-																			/>
-																		)
-																)
-															)}
+															View Event Details
 														</Link>
-
-														<div>
-															<h1>{item.fields.title}</h1>
-															<h2>{item.fields.subtext}</h2>
-															{item.fields.year && (
-																<p>
-																	<strong>
-																		<Moment
-																			format="LL"
-																			date={item.fields.eventDate}
-																		/>
-																	</strong>
-																</p>
-															)}
-															<Link
-																to={
-																	"/event/" +
-																	item.sys.id +
-																	"/" +
-																	item.fields.title
-																}
-																className="link-default"
-															>
-																View Event Details
-															</Link>
-														</div>
 													</div>
 												</div>
-											)
-									)}
+											</div>
+										)
+								)}
 							</div>
 
 							{/* <p>{events.length && `More `}Coming Soon.</p> */}

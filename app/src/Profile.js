@@ -195,7 +195,7 @@ export default class Profile extends React.Component {
 										<div className="nudge-lg"></div>
 
 										<div className="nudge-lg"></div>
-										<PublicationsSolo id={id} />
+										<PublicationsSolo id={item.sys.id} />
 										<div className="nudge-lg"></div>
 
 

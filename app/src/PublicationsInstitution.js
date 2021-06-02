@@ -118,6 +118,8 @@ export default class PublicationsSolo extends React.Component {
 										</div>
 									</Fragment>
                 ))}
+						<p>More coming soon.</p>
+
 					</Fragment>
         )}
 			</Fragment>

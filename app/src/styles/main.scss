@@ -18,18 +18,17 @@ body {
   background: $color-background;
   color: $color-gray-darker;
   padding: 0;
-  margin: 0; 
+  margin: 0;
   font-weight: $regular;
   height: 100%;
 }
 
-
 .sidebar-image {
   background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 240px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 240px;
 }
 
 p {
@@ -135,11 +134,41 @@ p {
 
 .event-card {
 
+  // display: flex;
+  // flex-direction: column !important;
+  // color: $color-white;
+  // box-shadow: 0 0 6px $color-gray-slight;
+  // background: $color-white;
+  // padding: 24px;
+  // margin: 0 0 12px 0 !important;
+  // width: 100% !important;
+  min-height: 400px;
+
+  display: flex;
+    flex-direction: column;
+    color: $color-white;
+    box-shadow: 0 0 6px $color-gray-slight;
+    background: $color-white;
+    padding: 24px;
+    margin: 0 0 12px 0 !important;
+    align-self: flex-start;
+    width: 100% !important;
+
+    
+    @media (min-width: $break-sm) {
+      margin: 0 12px 12px 0 !important;
+    }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
   h1 {
     font-size: $type-lg;
     color: $color-gray-darkest;
     padding: 0 !important;
-    margin: 0 !important;
+    margin: 12px 0 0 0 !important;
     font-weight: $light;
   }
 
@@ -157,11 +186,9 @@ p {
   }
 
   @media (min-width: $break-sm) {
-
     h1 {
       font-size: $type-lg;
       padding: 0 !important;
-      margin: 0 !important;
       font-weight: $light;
     }
 
@@ -173,26 +200,10 @@ p {
     }
   }
 
-    display: flex;
-    flex-direction: column !important;
-    color: $color-white;
-    box-shadow: 0 0 6px $color-gray-slight;
-    background: $color-white;
-    padding: 24px;
-    margin: 0 0 12px 0 !important;
-    width: 100% !important;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
-
-    @media (min-width: $break-sm) {
-      margin: 0 12px 12px 0 !important;
-    }
+ 
 }
 .event-container {
-  display: block;
+  display: flex;
   width: 100%;
 
   @media (min-width: $break-sm) {
@@ -208,14 +219,17 @@ p {
 .event-detail {
   // @extend .publication;
 
+  p {
+    margin: 0 0 12px 0;
+  }
+
   img {
     height: auto;
     width: 100%;
     float: right;
     padding: 0;
     margin-bottom: 12px;
-    
-    
+
     @media (min-width: $break-md) {
       width: 500px;
       margin: 0 0 0 12px;
@@ -588,7 +602,6 @@ h2 {
   margin: 0 !important;
 }
 
-
 h3 {
   font-size: $type-h3 !important;
   color: $color-gray-darker;
@@ -635,7 +648,7 @@ h4 {
     font-size: $type-lg;
     color: $color-gray-darkest;
     padding: 0 !important;
-    margin: 0 !important;
+    margin: 6px 0 !important;
     font-weight: $light;
   }
 
@@ -710,6 +723,7 @@ h4 {
     padding: 24px;
     margin: 0 0 12px 0 !important;
     // align-items: flex-start;
+    align-self: flex-start;
     // flex: 1;
     width: 100% !important;
 
