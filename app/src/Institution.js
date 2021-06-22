@@ -102,9 +102,11 @@ export default class Institution extends React.Component {
 												))}
 
 												<div className="nudge-md"></div>
+												{item.fields.events && 
+				<h1>Events</h1>
+												}
 
-												<h1>Events</h1>
-										
+
 													{item.fields.events && item.fields.events.map((item, index) => (
 													<Fragment key={index}>
 														

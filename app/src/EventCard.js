@@ -47,6 +47,7 @@ export default class ProfileCard extends React.Component {
 
 		return !loading && (
 			<Fragment>
+
 			
 					<div className="profile-container">
 
@@ -71,17 +72,7 @@ export default class ProfileCard extends React.Component {
 										</Link>
 
 										<div>
-											{item.fields.inst &&
-												item.fields.inst.map((itemInst, index) => (
-													<Fragment key={index}>
-														{showDept == true && data.map(
-															(item, index) =>
-																item.sys.id == itemInst.sys.id && (
-																<div>test</div>
-																)
-														)}
-													</Fragment>
-												))}
+											
 											<h1>
 												{item.fields.title}
 											</h1>
@@ -90,7 +81,7 @@ export default class ProfileCard extends React.Component {
 												to={`/event/` + item.sys.id}
 												className="link-default"
 											>
-												View {item.fields.firstname + `'s`} Profile
+												View Event Details
 											</Link>
 										</div>
 									</div>
