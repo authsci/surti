@@ -58,7 +58,7 @@ export default class PublicationsSolo extends React.Component {
 										<h1>Publications</h1>
 						{publications.map(
 							(item, index) =>
-								item.fields.publications && id == item.fields.publications[0].sys.id && (
+								item.fields.publications && (
 									<Fragment key={index}>
 
 										{item.fields.title}

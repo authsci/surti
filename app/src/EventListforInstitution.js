@@ -58,8 +58,7 @@ export default class EventListforInstitution extends React.Component {
 						<h1>Events</h1>
 
 						{events.map(
-							(item, index) =>
-								item.sys.contentType.sys.id == "events" && (
+							(item, index) =>(
 									<div key={index} className="event-container">
 										<div className="event-card">
 											<Link

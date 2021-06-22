@@ -3,7 +3,7 @@ import axios from "axios";
 import Markdown from "markdown-to-jsx";
 import { Link } from "react-router-dom";
 import ProfileCard from "./ProfileCard";
-import EventListforInstitution from "./EventListforInstitution";
+import EventCard from "./EventCard";
 import PublicationsInstitution from "./PublicationsInstitution";
 const setDate = Date.now();
 
@@ -77,7 +77,6 @@ export default class Institution extends React.Component {
 
 								{data.map(
 									(item, index) =>
-										item.fields.type == "org" &&
 										item.fields.code == dept && (
 											<Fragment key={index}>
 												<span
@@ -103,11 +102,13 @@ export default class Institution extends React.Component {
 												))}
 
 												<div className="nudge-md"></div>
-										
 
+												<h1>Events</h1>
+										
 													{item.fields.events && item.fields.events.map((item, index) => (
 													<Fragment key={index}>
-														<EventListforInstitution id={item.sys.id} />
+														
+														<EventCard id={item.sys.id} />
 													</Fragment>
 												))}
 												
